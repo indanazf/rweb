@@ -19,6 +19,7 @@ class Faq_question_model extends CI_Model
     function get_all()
     {
         $this->db->order_by($this->id, $this->order);
+        $this->db->join('faq_answer', 'faq_answer.ID_ANSWER=faq_question.ID_ANSWER');
         return $this->db->get($this->table)->result();
     }
 
@@ -26,15 +27,16 @@ class Faq_question_model extends CI_Model
     function get_by_id($id)
     {
         $this->db->where($this->id, $id);
+        $this->db->join('faq_answer', 'faq_answer.ID_ANSWER=faq_question.ID_ANSWER');
         return $this->db->get($this->table)->row();
     }
     
     // get total rows
     function total_rows($q = NULL) {
         $this->db->like('ID_QUESTION', $q);
-	$this->db->or_like('ID_ANSWER', $q);
-	$this->db->or_like('QUESTION', $q);
-	$this->db->from($this->table);
+    	$this->db->or_like('ID_ANSWER', $q);
+    	$this->db->or_like('QUESTION', $q);
+    	$this->db->from($this->table);
         return $this->db->count_all_results();
     }
 
@@ -42,9 +44,9 @@ class Faq_question_model extends CI_Model
     function get_limit_data($limit, $start = 0, $q = NULL) {
         $this->db->order_by($this->id, $this->order);
         $this->db->like('ID_QUESTION', $q);
-	$this->db->or_like('ID_ANSWER', $q);
-	$this->db->or_like('QUESTION', $q);
-	$this->db->limit($limit, $start);
+    	$this->db->or_like('ID_ANSWER', $q);
+    	$this->db->or_like('QUESTION', $q);
+    	$this->db->limit($limit, $start);
         return $this->db->get($this->table)->result();
     }
 

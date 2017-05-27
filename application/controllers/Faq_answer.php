@@ -10,6 +10,9 @@ class Faq_answer extends CI_Controller
     function __construct()
     {
         parent::__construct();
+        if(!$this->session->userdata['username']){
+            redirect(site_url('auth/login'));
+        }
         $this->load->model('Faq_answer_model');
         $this->load->library('form_validation');
     }

@@ -28,6 +28,7 @@ class Faq_answer_model extends CI_Model
         $this->db->where($this->id, $id);
         return $this->db->get($this->table)->row();
     }
+
     
     // get total rows
     function total_rows($q = NULL) {
@@ -50,6 +51,7 @@ class Faq_answer_model extends CI_Model
     function insert($data)
     {
         $this->db->insert($this->table, $data);
+        return $this->db->insert_id();
     }
 
     // update data
