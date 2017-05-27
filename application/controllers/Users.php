@@ -63,7 +63,7 @@ class Users extends CI_Controller
     {
         $data = array(
             'button' => 'Create',
-            'action' => site_url('users/create_action'),
+            'action' => site_url('auth/create_user'),
 	    'id' => set_value('id'),
 	    'ip_address' => set_value('ip_address'),
 	    'username' => set_value('username'),
@@ -126,7 +126,7 @@ class Users extends CI_Controller
         if ($row) {
             $data = array(
                 'button' => 'Update',
-                'action' => site_url('users/update_action'),
+                'action' => site_url("auth/edit_user/$id"),
 		'id' => set_value('id', $row->id),
 		'ip_address' => set_value('ip_address', $row->ip_address),
 		'username' => set_value('username', $row->username),

@@ -16,22 +16,11 @@
             <thead>
                 <tr>
                     <th width="80px">No</th>
-		    <th>Ip Address</th>
-		    <th>Username</th>
-		    <th>Password</th>
-		    <th>Salt</th>
-		    <th>Email</th>
-		    <th>Activation Code</th>
-		    <th>Forgotten Password Code</th>
-		    <th>Forgotten Password Time</th>
-		    <th>Remember Code</th>
-		    <th>Created On</th>
-		    <th>Last Login</th>
-		    <th>Active</th>
 		    <th>First Name</th>
 		    <th>Last Name</th>
-		    <th>Company</th>
 		    <th>Phone</th>
+		    <th>Username</th>
+		    <th>Email</th>
 		    <th>Action</th>
                 </tr>
             </thead>
@@ -43,22 +32,11 @@
                 ?>
                 <tr>
 		    <td><?php echo ++$start ?></td>
-		    <td><?php echo $users->ip_address ?></td>
-		    <td><?php echo $users->username ?></td>
-		    <td><?php echo $users->password ?></td>
-		    <td><?php echo $users->salt ?></td>
-		    <td><?php echo $users->email ?></td>
-		    <td><?php echo $users->activation_code ?></td>
-		    <td><?php echo $users->forgotten_password_code ?></td>
-		    <td><?php echo $users->forgotten_password_time ?></td>
-		    <td><?php echo $users->remember_code ?></td>
-		    <td><?php echo $users->created_on ?></td>
-		    <td><?php echo $users->last_login ?></td>
-		    <td><?php echo $users->active ?></td>
 		    <td><?php echo $users->first_name ?></td>
 		    <td><?php echo $users->last_name ?></td>
-		    <td><?php echo $users->company ?></td>
 		    <td><?php echo $users->phone ?></td>
+		    <td><?php echo $users->username ?></td>
+		    <td><?php echo $users->email ?></td>
 		    <td style="text-align:center" width="140px">
 			<?php 
 			echo anchor(site_url('users/read/'.$users->id),'<i class="fa fa-eye"></i>',array('title'=>'detail','class'=>'btn btn-primary btn-sm')); 
