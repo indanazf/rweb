@@ -5,41 +5,43 @@
             <div class='col-xs-12'>
               <div class='box'>
                 <div class='box-header'>
-                  <h3 class='box-title'>CONTENT_TYPE LIST</h3><div class='pull-right'>
-				  <?php echo anchor('content_type/create/','<i class="fa fa-plus"></i> Create',array('class'=>'btn btn-default btn-sm'));?>
-		<?php echo anchor(site_url('content_type/excel'), ' <i class="fa fa-file-excel-o"></i> Excel', 'class="btn btn-success btn-sm"'); ?>
-		<?php echo anchor(site_url('content_type/word'), '<i class="fa fa-file-word-o"></i> Word', 'class="btn btn-primary btn-sm"'); ?>
-		<?php echo anchor(site_url('content_type/pdf'), '<i class="fa fa-file-pdf-o"></i> PDF', 'class="btn btn-warning btn-sm"'); ?></div>
+                  <h3 class='box-title'>CONTACT_US LIST</h3><div class='pull-right'>
+				  <?php echo anchor('contact_us/create/','<i class="fa fa-plus"></i> Create',array('class'=>'btn btn-default btn-sm'));?>
+		<?php echo anchor(site_url('contact_us/excel'), ' <i class="fa fa-file-excel-o"></i> Excel', 'class="btn btn-success btn-sm"'); ?>
+		<?php echo anchor(site_url('contact_us/word'), '<i class="fa fa-file-word-o"></i> Word', 'class="btn btn-primary btn-sm"'); ?>
+		<?php echo anchor(site_url('contact_us/pdf'), '<i class="fa fa-file-pdf-o"></i> PDF', 'class="btn btn-warning btn-sm"'); ?></div>
                 </div><!-- /.box-header -->
                 <div class='box-body'>
         <table class="table table-bordered table-striped" id="mytable">
             <thead>
                 <tr>
                     <th width="80px">No</th>
-		    <th>TYPE</th>
-		    <th>INFORMATION TYPE</th>
-		    <th>ICON TYPE</th>
+		    <th>NAME CONTACT</th>
+		    <th>NO CONTACT</th>
+		    <th>EMAIL</th>
+		    <th>TEXT</th>
 		    <th>Action</th>
                 </tr>
             </thead>
 	    <tbody>
             <?php
             $start = 0;
-            foreach ($content_type_data as $content_type)
+            foreach ($contact_us_data as $contact_us)
             {
                 ?>
                 <tr>
 		    <td><?php echo ++$start ?></td>
-		    <td><?php echo $content_type->TYPE ?></td>
-		    <td><?php echo $content_type->INFORMATION_TYPE ?></td>
-		    <td><?php echo $content_type->ICON_TYPE ?></td>
+		    <td><?php echo $contact_us->NAME_CONTACT ?></td>
+		    <td><?php echo $contact_us->NO_CONTACT ?></td>
+		    <td><?php echo $contact_us->EMAIL ?></td>
+		    <td><?php echo $contact_us->TEXT ?></td>
 		    <td style="text-align:center" width="140px">
 			<?php 
-			echo anchor(site_url('content_type/read/'.$content_type->ID_TYPE),'<i class="fa fa-eye"></i>',array('title'=>'detail','class'=>'btn btn-primary btn-sm')); 
+			echo anchor(site_url('contact_us/read/'.$contact_us->ID_CONTACT),'<i class="fa fa-eye"></i>',array('title'=>'detail','class'=>'btn btn-primary btn-sm')); 
 			echo '  '; 
-			echo anchor(site_url('content_type/update/'.$content_type->ID_TYPE),'<i class="fa fa-pencil-square-o"></i>',array('title'=>'edit','class'=>'btn btn-warning btn-sm')); 
+			echo anchor(site_url('contact_us/update/'.$contact_us->ID_CONTACT),'<i class="fa fa-pencil-square-o"></i>',array('title'=>'edit','class'=>'btn btn-warning btn-sm')); 
 			echo '  '; 
-			echo anchor(site_url('content_type/delete/'.$content_type->ID_TYPE),'<i class="fa fa-trash-o"></i>','title="delete" class="btn btn-danger btn-sm" onclick="javasciprt: return confirm(\'Are You Sure ?\')"'); 
+			echo anchor(site_url('contact_us/delete/'.$contact_us->ID_CONTACT),'<i class="fa fa-trash-o"></i>','title="delete" class="btn btn-danger btn-sm" onclick="javasciprt: return confirm(\'Are You Sure ?\')"'); 
 			?>
 		    </td>
 	        </tr>

@@ -16,23 +16,21 @@
         </style>
     </head>
     <body>
-        <h2>Content_type List</h2>
+        <h2>Faq_question List</h2>
         <table class="word-table" style="margin-bottom: 10px">
             <tr>
                 <th>No</th>
-		<th>TYPE</th>
-		<th>INFORMATION TYPE</th>
-		<th>ICON TYPE</th>
+		<th>ID ANSWER</th>
+		<th>QUESTION</th>
 		
             </tr><?php
-            foreach ($content_type_data as $content_type)
+            foreach ($faq_question_data as $faq_question)
             {
                 ?>
                 <tr>
 		      <td><?php echo ++$start ?></td>
-		      <td><?php echo $content_type->TYPE ?></td>
-		      <td><?php echo $content_type->INFORMATION_TYPE ?></td>
-		      <td><?php echo $content_type->ICON_TYPE ?></td>	
+		      <td><?php echo $faq_question->ID_ANSWER ?></td>
+		      <td><?php echo $faq_question->QUESTION ?></td>	
                 </tr>
                 <?php
             }

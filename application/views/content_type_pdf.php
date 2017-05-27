@@ -20,8 +20,9 @@
         <table class="word-table" style="margin-bottom: 10px">
             <tr>
                 <th>No</th>
-		<th>Content Type</th>
-		<th>Created Date</th>
+		<th>TYPE</th>
+		<th>INFORMATION TYPE</th>
+		<th>ICON TYPE</th>
 		
             </tr><?php
             foreach ($content_type_data as $content_type)
@@ -29,8 +30,9 @@
                 ?>
                 <tr>
 		      <td><?php echo ++$start ?></td>
-		      <td><?php echo $content_type->content_type ?></td>
-		      <td><?php echo $content_type->created_date ?></td>	
+		      <td><?php echo $content_type->TYPE ?></td>
+		      <td><?php echo $content_type->INFORMATION_TYPE ?></td>
+		      <td><?php echo $content_type->ICON_TYPE ?></td>	
                 </tr>
                 <?php
             }

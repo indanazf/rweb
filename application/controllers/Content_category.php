@@ -32,9 +32,10 @@ class Content_category extends CI_Controller
         $row = $this->Content_category_model->get_by_id($id);
         if ($row) {
             $data = array(
-		'id_category' => $row->id_category,
-		'category' => $row->category,
-		'created_date' => $row->created_date,
+		'ID_CATEGORY' => $row->ID_CATEGORY,
+		'CATEGORY' => $row->CATEGORY,
+		'INFORMATION_CATEGORY' => $row->INFORMATION_CATEGORY,
+		'ICON_CATEGORY' => $row->ICON_CATEGORY,
 		'judul' => 'CONTENT_CATEGORY',
 		'subjudul' =>'Read',
 	    );
@@ -50,9 +51,10 @@ class Content_category extends CI_Controller
         $data = array(
             'button' => 'Create',
             'action' => site_url('content_category/create_action'),
-	    'id_category' => set_value('id_category'),
-	    'category' => set_value('category'),
-	    'created_date' => set_value('created_date'),
+	    'ID_CATEGORY' => set_value('ID_CATEGORY'),
+	    'CATEGORY' => set_value('CATEGORY'),
+	    'INFORMATION_CATEGORY' => set_value('INFORMATION_CATEGORY'),
+	    'ICON_CATEGORY' => set_value('ICON_CATEGORY'),
 		'judul' => 'CONTENT_CATEGORY',
 		'subjudul' =>'Create',
 	);
@@ -67,8 +69,9 @@ class Content_category extends CI_Controller
             $this->create();
         } else {
             $data = array(
-		'category' => $this->input->post('category',TRUE),
-		'created_date' => $this->input->post('created_date',TRUE),
+		'CATEGORY' => $this->input->post('CATEGORY',TRUE),
+		'INFORMATION_CATEGORY' => $this->input->post('INFORMATION_CATEGORY',TRUE),
+		'ICON_CATEGORY' => $this->input->post('ICON_CATEGORY',TRUE),
 	    );
 
             $this->Content_category_model->insert($data);
@@ -85,9 +88,10 @@ class Content_category extends CI_Controller
             $data = array(
                 'button' => 'Update',
                 'action' => site_url('content_category/update_action'),
-		'id_category' => set_value('id_category', $row->id_category),
-		'category' => set_value('category', $row->category),
-		'created_date' => set_value('created_date', $row->created_date),
+		'ID_CATEGORY' => set_value('ID_CATEGORY', $row->ID_CATEGORY),
+		'CATEGORY' => set_value('CATEGORY', $row->CATEGORY),
+		'INFORMATION_CATEGORY' => set_value('INFORMATION_CATEGORY', $row->INFORMATION_CATEGORY),
+		'ICON_CATEGORY' => set_value('ICON_CATEGORY', $row->ICON_CATEGORY),
 		'judul' => 'CONTENT_CATEGORY',
 		'subjudul' =>'Update',
 	    );
@@ -103,14 +107,15 @@ class Content_category extends CI_Controller
         $this->_rules();
 
         if ($this->form_validation->run() == FALSE) {
-            $this->update($this->input->post('id_category', TRUE));
+            $this->update($this->input->post('ID_CATEGORY', TRUE));
         } else {
             $data = array(
-		'category' => $this->input->post('category',TRUE),
-		'created_date' => $this->input->post('created_date',TRUE),
+		'CATEGORY' => $this->input->post('CATEGORY',TRUE),
+		'INFORMATION_CATEGORY' => $this->input->post('INFORMATION_CATEGORY',TRUE),
+		'ICON_CATEGORY' => $this->input->post('ICON_CATEGORY',TRUE),
 	    );
 
-            $this->Content_category_model->update($this->input->post('id_category', TRUE), $data);
+            $this->Content_category_model->update($this->input->post('ID_CATEGORY', TRUE), $data);
             $this->session->set_flashdata('message', 'Update Record Success');
             redirect(site_url('content_category'));
         }
@@ -132,10 +137,11 @@ class Content_category extends CI_Controller
 
     public function _rules() 
     {
-	$this->form_validation->set_rules('category', 'category', 'trim|required');
-	$this->form_validation->set_rules('created_date', 'created date', 'trim|required');
+	$this->form_validation->set_rules('CATEGORY', 'category', 'trim|required');
+	$this->form_validation->set_rules('INFORMATION_CATEGORY', 'information category', 'trim|required');
+	$this->form_validation->set_rules('ICON_CATEGORY', 'icon category', 'trim|required');
 
-	$this->form_validation->set_rules('id_category', 'id_category', 'trim');
+	$this->form_validation->set_rules('ID_CATEGORY', 'ID_CATEGORY', 'trim');
 	$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
     }
 
@@ -161,16 +167,18 @@ class Content_category extends CI_Controller
 
         $kolomhead = 0;
         xlsWriteLabel($tablehead, $kolomhead++, "No");
-	xlsWriteLabel($tablehead, $kolomhead++, "Category");
-	xlsWriteLabel($tablehead, $kolomhead++, "Created Date");
+	xlsWriteLabel($tablehead, $kolomhead++, "CATEGORY");
+	xlsWriteLabel($tablehead, $kolomhead++, "INFORMATION CATEGORY");
+	xlsWriteLabel($tablehead, $kolomhead++, "ICON CATEGORY");
 
 	foreach ($this->Content_category_model->get_all() as $data) {
             $kolombody = 0;
 
             //ubah xlsWriteLabel menjadi xlsWriteNumber untuk kolom numeric
             xlsWriteNumber($tablebody, $kolombody++, $nourut);
-	    xlsWriteLabel($tablebody, $kolombody++, $data->category);
-	    xlsWriteLabel($tablebody, $kolombody++, $data->created_date);
+	    xlsWriteLabel($tablebody, $kolombody++, $data->CATEGORY);
+	    xlsWriteLabel($tablebody, $kolombody++, $data->INFORMATION_CATEGORY);
+	    xlsWriteLabel($tablebody, $kolombody++, $data->ICON_CATEGORY);
 
 	    $tablebody++;
             $nourut++;
@@ -213,5 +221,5 @@ class Content_category extends CI_Controller
 /* End of file Content_category.php */
 /* Location: ./application/controllers/Content_category.php */
 /* Please DO NOT modify this information : */
-/* Generated by Harviacode Codeigniter CRUD Generator 2017-05-25 16:46:29 */
+/* Generated by Harviacode Codeigniter CRUD Generator 2017-05-27 05:15:18 */
 /* http://harviacode.com */

@@ -16,23 +16,25 @@
         </style>
     </head>
     <body>
-        <h2>Content_type List</h2>
+        <h2>Content_image List</h2>
         <table class="word-table" style="margin-bottom: 10px">
             <tr>
                 <th>No</th>
-		<th>TYPE</th>
-		<th>INFORMATION TYPE</th>
-		<th>ICON TYPE</th>
+		<th>ID CONTENT</th>
+		<th>IMAGE</th>
+		<th>THUMBNAIL</th>
+		<th>NAME CONTACT</th>
 		
             </tr><?php
-            foreach ($content_type_data as $content_type)
+            foreach ($content_image_data as $content_image)
             {
                 ?>
                 <tr>
 		      <td><?php echo ++$start ?></td>
-		      <td><?php echo $content_type->TYPE ?></td>
-		      <td><?php echo $content_type->INFORMATION_TYPE ?></td>
-		      <td><?php echo $content_type->ICON_TYPE ?></td>	
+		      <td><?php echo $content_image->ID_CONTENT ?></td>
+		      <td><?php echo $content_image->IMAGE ?></td>
+		      <td><?php echo $content_image->THUMBNAIL ?></td>
+		      <td><?php echo $content_image->NAME_CONTACT ?></td>	
                 </tr>
                 <?php
             }

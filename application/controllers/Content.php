@@ -32,15 +32,19 @@ class Content extends CI_Controller
         $row = $this->Content_model->get_by_id($id);
         if ($row) {
             $data = array(
-		'id_content' => $row->id_content,
-		'id_type' => $row->id_type,
-		'id_category' => $row->id_category,
-		'subject' => $row->subject,
-		'content' => $row->content,
-		'tags' => $row->tags,
-		'created_date' => $row->created_date,
-		'created_by' => $row->created_by,
-		'last_update' => $row->last_update,
+		'ID_CONTENT' => $row->ID_CONTENT,
+		'ID_TYPE' => $row->ID_TYPE,
+		'ID_CATEGORY' => $row->ID_CATEGORY,
+		'SUBJECT' => $row->SUBJECT,
+		'CONTENT' => $row->CONTENT,
+		'CONTENT_NUMMBER' => $row->CONTENT_NUMMBER,
+		'TAGS' => $row->TAGS,
+		'CREATED_BY' => $row->CREATED_BY,
+		'CREATED_DATE' => $row->CREATED_DATE,
+		'UPDATE_BY' => $row->UPDATE_BY,
+		'LAST_UPDATE' => $row->LAST_UPDATE,
+		'ICON_TYPE' => $row->ICON_TYPE,
+		'IMG' => $row->IMG,
 		'judul' => 'CONTENT',
 		'subjudul' =>'Read',
 	    );
@@ -56,15 +60,19 @@ class Content extends CI_Controller
         $data = array(
             'button' => 'Create',
             'action' => site_url('content/create_action'),
-	    'id_content' => set_value('id_content'),
-	    'id_type' => set_value('id_type'),
-	    'id_category' => set_value('id_category'),
-	    'subject' => set_value('subject'),
-	    'content' => set_value('content'),
-	    'tags' => set_value('tags'),
-	    'created_date' => set_value('created_date'),
-	    'created_by' => set_value('created_by'),
-	    'last_update' => set_value('last_update'),
+	    'ID_CONTENT' => set_value('ID_CONTENT'),
+	    'ID_TYPE' => set_value('ID_TYPE'),
+	    'ID_CATEGORY' => set_value('ID_CATEGORY'),
+	    'SUBJECT' => set_value('SUBJECT'),
+	    'CONTENT' => set_value('CONTENT'),
+	    'CONTENT_NUMMBER' => set_value('CONTENT_NUMMBER'),
+	    'TAGS' => set_value('TAGS'),
+	    'CREATED_BY' => set_value('CREATED_BY'),
+	    'CREATED_DATE' => set_value('CREATED_DATE'),
+	    'UPDATE_BY' => set_value('UPDATE_BY'),
+	    'LAST_UPDATE' => set_value('LAST_UPDATE'),
+	    'ICON_TYPE' => set_value('ICON_TYPE'),
+	    'IMG' => set_value('IMG'),
 		'judul' => 'CONTENT',
 		'subjudul' =>'Create',
 	);
@@ -79,14 +87,18 @@ class Content extends CI_Controller
             $this->create();
         } else {
             $data = array(
-		'id_type' => $this->input->post('id_type',TRUE),
-		'id_category' => $this->input->post('id_category',TRUE),
-		'subject' => $this->input->post('subject',TRUE),
-		'content' => $this->input->post('content',TRUE),
-		'tags' => $this->input->post('tags',TRUE),
-		'created_date' => $this->input->post('created_date',TRUE),
-		'created_by' => $this->input->post('created_by',TRUE),
-		'last_update' => $this->input->post('last_update',TRUE),
+		'ID_TYPE' => $this->input->post('ID_TYPE',TRUE),
+		'ID_CATEGORY' => $this->input->post('ID_CATEGORY',TRUE),
+		'SUBJECT' => $this->input->post('SUBJECT',TRUE),
+		'CONTENT' => $this->input->post('CONTENT',TRUE),
+		'CONTENT_NUMMBER' => $this->input->post('CONTENT_NUMMBER',TRUE),
+		'TAGS' => $this->input->post('TAGS',TRUE),
+		'CREATED_BY' => $this->input->post('CREATED_BY',TRUE),
+		'CREATED_DATE' => $this->input->post('CREATED_DATE',TRUE),
+		'UPDATE_BY' => $this->input->post('UPDATE_BY',TRUE),
+		'LAST_UPDATE' => $this->input->post('LAST_UPDATE',TRUE),
+		'ICON_TYPE' => $this->input->post('ICON_TYPE',TRUE),
+		'IMG' => $this->input->post('IMG',TRUE),
 	    );
 
             $this->Content_model->insert($data);
@@ -103,15 +115,19 @@ class Content extends CI_Controller
             $data = array(
                 'button' => 'Update',
                 'action' => site_url('content/update_action'),
-		'id_content' => set_value('id_content', $row->id_content),
-		'id_type' => set_value('id_type', $row->id_type),
-		'id_category' => set_value('id_category', $row->id_category),
-		'subject' => set_value('subject', $row->subject),
-		'content' => set_value('content', $row->content),
-		'tags' => set_value('tags', $row->tags),
-		'created_date' => set_value('created_date', $row->created_date),
-		'created_by' => set_value('created_by', $row->created_by),
-		'last_update' => set_value('last_update', $row->last_update),
+		'ID_CONTENT' => set_value('ID_CONTENT', $row->ID_CONTENT),
+		'ID_TYPE' => set_value('ID_TYPE', $row->ID_TYPE),
+		'ID_CATEGORY' => set_value('ID_CATEGORY', $row->ID_CATEGORY),
+		'SUBJECT' => set_value('SUBJECT', $row->SUBJECT),
+		'CONTENT' => set_value('CONTENT', $row->CONTENT),
+		'CONTENT_NUMMBER' => set_value('CONTENT_NUMMBER', $row->CONTENT_NUMMBER),
+		'TAGS' => set_value('TAGS', $row->TAGS),
+		'CREATED_BY' => set_value('CREATED_BY', $row->CREATED_BY),
+		'CREATED_DATE' => set_value('CREATED_DATE', $row->CREATED_DATE),
+		'UPDATE_BY' => set_value('UPDATE_BY', $row->UPDATE_BY),
+		'LAST_UPDATE' => set_value('LAST_UPDATE', $row->LAST_UPDATE),
+		'ICON_TYPE' => set_value('ICON_TYPE', $row->ICON_TYPE),
+		'IMG' => set_value('IMG', $row->IMG),
 		'judul' => 'CONTENT',
 		'subjudul' =>'Update',
 	    );
@@ -127,20 +143,24 @@ class Content extends CI_Controller
         $this->_rules();
 
         if ($this->form_validation->run() == FALSE) {
-            $this->update($this->input->post('id_content', TRUE));
+            $this->update($this->input->post('ID_CONTENT', TRUE));
         } else {
             $data = array(
-		'id_type' => $this->input->post('id_type',TRUE),
-		'id_category' => $this->input->post('id_category',TRUE),
-		'subject' => $this->input->post('subject',TRUE),
-		'content' => $this->input->post('content',TRUE),
-		'tags' => $this->input->post('tags',TRUE),
-		'created_date' => $this->input->post('created_date',TRUE),
-		'created_by' => $this->input->post('created_by',TRUE),
-		'last_update' => $this->input->post('last_update',TRUE),
+		'ID_TYPE' => $this->input->post('ID_TYPE',TRUE),
+		'ID_CATEGORY' => $this->input->post('ID_CATEGORY',TRUE),
+		'SUBJECT' => $this->input->post('SUBJECT',TRUE),
+		'CONTENT' => $this->input->post('CONTENT',TRUE),
+		'CONTENT_NUMMBER' => $this->input->post('CONTENT_NUMMBER',TRUE),
+		'TAGS' => $this->input->post('TAGS',TRUE),
+		'CREATED_BY' => $this->input->post('CREATED_BY',TRUE),
+		'CREATED_DATE' => $this->input->post('CREATED_DATE',TRUE),
+		'UPDATE_BY' => $this->input->post('UPDATE_BY',TRUE),
+		'LAST_UPDATE' => $this->input->post('LAST_UPDATE',TRUE),
+		'ICON_TYPE' => $this->input->post('ICON_TYPE',TRUE),
+		'IMG' => $this->input->post('IMG',TRUE),
 	    );
 
-            $this->Content_model->update($this->input->post('id_content', TRUE), $data);
+            $this->Content_model->update($this->input->post('ID_CONTENT', TRUE), $data);
             $this->session->set_flashdata('message', 'Update Record Success');
             redirect(site_url('content'));
         }
@@ -162,16 +182,20 @@ class Content extends CI_Controller
 
     public function _rules() 
     {
-	$this->form_validation->set_rules('id_type', 'id type', 'trim|required');
-	$this->form_validation->set_rules('id_category', 'id category', 'trim|required');
-	$this->form_validation->set_rules('subject', 'subject', 'trim|required');
-	$this->form_validation->set_rules('content', 'content', 'trim|required');
-	$this->form_validation->set_rules('tags', 'tags', 'trim|required');
-	$this->form_validation->set_rules('created_date', 'created date', 'trim|required');
-	$this->form_validation->set_rules('created_by', 'created by', 'trim|required');
-	$this->form_validation->set_rules('last_update', 'last update', 'trim|required');
+	$this->form_validation->set_rules('ID_TYPE', 'id type', 'trim|required');
+	$this->form_validation->set_rules('ID_CATEGORY', 'id category', 'trim|required');
+	$this->form_validation->set_rules('SUBJECT', 'subject', 'trim|required');
+	$this->form_validation->set_rules('CONTENT', 'content', 'trim|required');
+	$this->form_validation->set_rules('CONTENT_NUMMBER', 'content nummber', 'trim|required|numeric');
+	$this->form_validation->set_rules('TAGS', 'tags', 'trim|required');
+	$this->form_validation->set_rules('CREATED_BY', 'created by', 'trim|required');
+	$this->form_validation->set_rules('CREATED_DATE', 'created date', 'trim|required');
+	$this->form_validation->set_rules('UPDATE_BY', 'update by', 'trim|required');
+	$this->form_validation->set_rules('LAST_UPDATE', 'last update', 'trim|required');
+	$this->form_validation->set_rules('ICON_TYPE', 'icon type', 'trim|required');
+	$this->form_validation->set_rules('IMG', 'img', 'trim|required');
 
-	$this->form_validation->set_rules('id_content', 'id_content', 'trim');
+	$this->form_validation->set_rules('ID_CONTENT', 'ID_CONTENT', 'trim');
 	$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
     }
 
@@ -197,28 +221,36 @@ class Content extends CI_Controller
 
         $kolomhead = 0;
         xlsWriteLabel($tablehead, $kolomhead++, "No");
-	xlsWriteLabel($tablehead, $kolomhead++, "Id Type");
-	xlsWriteLabel($tablehead, $kolomhead++, "Id Category");
-	xlsWriteLabel($tablehead, $kolomhead++, "Subject");
-	xlsWriteLabel($tablehead, $kolomhead++, "Content");
-	xlsWriteLabel($tablehead, $kolomhead++, "Tags");
-	xlsWriteLabel($tablehead, $kolomhead++, "Created Date");
-	xlsWriteLabel($tablehead, $kolomhead++, "Created By");
-	xlsWriteLabel($tablehead, $kolomhead++, "Last Update");
+	xlsWriteLabel($tablehead, $kolomhead++, "ID TYPE");
+	xlsWriteLabel($tablehead, $kolomhead++, "ID CATEGORY");
+	xlsWriteLabel($tablehead, $kolomhead++, "SUBJECT");
+	xlsWriteLabel($tablehead, $kolomhead++, "CONTENT");
+	xlsWriteLabel($tablehead, $kolomhead++, "CONTENT NUMMBER");
+	xlsWriteLabel($tablehead, $kolomhead++, "TAGS");
+	xlsWriteLabel($tablehead, $kolomhead++, "CREATED BY");
+	xlsWriteLabel($tablehead, $kolomhead++, "CREATED DATE");
+	xlsWriteLabel($tablehead, $kolomhead++, "UPDATE BY");
+	xlsWriteLabel($tablehead, $kolomhead++, "LAST UPDATE");
+	xlsWriteLabel($tablehead, $kolomhead++, "ICON TYPE");
+	xlsWriteLabel($tablehead, $kolomhead++, "IMG");
 
 	foreach ($this->Content_model->get_all() as $data) {
             $kolombody = 0;
 
             //ubah xlsWriteLabel menjadi xlsWriteNumber untuk kolom numeric
             xlsWriteNumber($tablebody, $kolombody++, $nourut);
-	    xlsWriteNumber($tablebody, $kolombody++, $data->id_type);
-	    xlsWriteNumber($tablebody, $kolombody++, $data->id_category);
-	    xlsWriteLabel($tablebody, $kolombody++, $data->subject);
-	    xlsWriteLabel($tablebody, $kolombody++, $data->content);
-	    xlsWriteLabel($tablebody, $kolombody++, $data->tags);
-	    xlsWriteLabel($tablebody, $kolombody++, $data->created_date);
-	    xlsWriteLabel($tablebody, $kolombody++, $data->created_by);
-	    xlsWriteLabel($tablebody, $kolombody++, $data->last_update);
+	    xlsWriteNumber($tablebody, $kolombody++, $data->ID_TYPE);
+	    xlsWriteNumber($tablebody, $kolombody++, $data->ID_CATEGORY);
+	    xlsWriteLabel($tablebody, $kolombody++, $data->SUBJECT);
+	    xlsWriteLabel($tablebody, $kolombody++, $data->CONTENT);
+	    xlsWriteNumber($tablebody, $kolombody++, $data->CONTENT_NUMMBER);
+	    xlsWriteLabel($tablebody, $kolombody++, $data->TAGS);
+	    xlsWriteNumber($tablebody, $kolombody++, $data->CREATED_BY);
+	    xlsWriteLabel($tablebody, $kolombody++, $data->CREATED_DATE);
+	    xlsWriteNumber($tablebody, $kolombody++, $data->UPDATE_BY);
+	    xlsWriteLabel($tablebody, $kolombody++, $data->LAST_UPDATE);
+	    xlsWriteLabel($tablebody, $kolombody++, $data->ICON_TYPE);
+	    xlsWriteLabel($tablebody, $kolombody++, $data->IMG);
 
 	    $tablebody++;
             $nourut++;
@@ -261,5 +293,5 @@ class Content extends CI_Controller
 /* End of file Content.php */
 /* Location: ./application/controllers/Content.php */
 /* Please DO NOT modify this information : */
-/* Generated by Harviacode Codeigniter CRUD Generator 2017-05-25 16:46:21 */
+/* Generated by Harviacode Codeigniter CRUD Generator 2017-05-27 05:15:09 */
 /* http://harviacode.com */

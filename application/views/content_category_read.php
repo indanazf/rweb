@@ -7,8 +7,9 @@
                 <div class='box-header'>
                 <h3 class='box-title'>Content_category Read</h3>
         <table class="table table-bordered">
-	    <tr><td>Category</td><td><?php echo $category; ?></td></tr>
-	    <tr><td>Created Date</td><td><?php echo $created_date; ?></td></tr>
+	    <tr><td>CATEGORY</td><td><?php echo $CATEGORY; ?></td></tr>
+	    <tr><td>INFORMATION CATEGORY</td><td><?php echo $INFORMATION_CATEGORY; ?></td></tr>
+	    <tr><td>ICON CATEGORY</td><td><?php echo $ICON_CATEGORY; ?></td></tr>
 	    <tr><td></td><td><a href="<?php echo site_url('content_category') ?>" class="btn btn-default">Back</a></td></tr>
 	</table>
         </div><!-- /.box-body -->

@@ -16,14 +16,18 @@
             <thead>
                 <tr>
                     <th width="80px">No</th>
-		    <th>Id Type</th>
-		    <th>Id Category</th>
-		    <th>Subject</th>
-		    <th>Content</th>
-		    <th>Tags</th>
-		    <th>Created Date</th>
-		    <th>Created By</th>
-		    <th>Last Update</th>
+		    <th>ID TYPE</th>
+		    <th>ID CATEGORY</th>
+		    <th>SUBJECT</th>
+		    <th>CONTENT</th>
+		    <th>CONTENT NUMMBER</th>
+		    <th>TAGS</th>
+		    <th>CREATED BY</th>
+		    <th>CREATED DATE</th>
+		    <th>UPDATE BY</th>
+		    <th>LAST UPDATE</th>
+		    <th>ICON TYPE</th>
+		    <th>IMG</th>
 		    <th>Action</th>
                 </tr>
             </thead>
@@ -35,21 +39,25 @@
                 ?>
                 <tr>
 		    <td><?php echo ++$start ?></td>
-		    <td><?php echo $content->id_type ?></td>
-		    <td><?php echo $content->id_category ?></td>
-		    <td><?php echo $content->subject ?></td>
-		    <td><?php echo $content->content ?></td>
-		    <td><?php echo $content->tags ?></td>
-		    <td><?php echo $content->created_date ?></td>
-		    <td><?php echo $content->created_by ?></td>
-		    <td><?php echo $content->last_update ?></td>
+		    <td><?php echo $content->ID_TYPE ?></td>
+		    <td><?php echo $content->ID_CATEGORY ?></td>
+		    <td><?php echo $content->SUBJECT ?></td>
+		    <td><?php echo $content->CONTENT ?></td>
+		    <td><?php echo $content->CONTENT_NUMMBER ?></td>
+		    <td><?php echo $content->TAGS ?></td>
+		    <td><?php echo $content->CREATED_BY ?></td>
+		    <td><?php echo $content->CREATED_DATE ?></td>
+		    <td><?php echo $content->UPDATE_BY ?></td>
+		    <td><?php echo $content->LAST_UPDATE ?></td>
+		    <td><?php echo $content->ICON_TYPE ?></td>
+		    <td><?php echo $content->IMG ?></td>
 		    <td style="text-align:center" width="140px">
 			<?php 
-			echo anchor(site_url('content/read/'.$content->id_content),'<i class="fa fa-eye"></i>',array('title'=>'detail','class'=>'btn btn-primary btn-sm')); 
+			echo anchor(site_url('content/read/'.$content->ID_CONTENT),'<i class="fa fa-eye"></i>',array('title'=>'detail','class'=>'btn btn-primary btn-sm')); 
 			echo '  '; 
-			echo anchor(site_url('content/update/'.$content->id_content),'<i class="fa fa-pencil-square-o"></i>',array('title'=>'edit','class'=>'btn btn-warning btn-sm')); 
+			echo anchor(site_url('content/update/'.$content->ID_CONTENT),'<i class="fa fa-pencil-square-o"></i>',array('title'=>'edit','class'=>'btn btn-warning btn-sm')); 
 			echo '  '; 
-			echo anchor(site_url('content/delete/'.$content->id_content),'<i class="fa fa-trash-o"></i>','title="delete" class="btn btn-danger btn-sm" onclick="javasciprt: return confirm(\'Are You Sure ?\')"'); 
+			echo anchor(site_url('content/delete/'.$content->ID_CONTENT),'<i class="fa fa-trash-o"></i>','title="delete" class="btn btn-danger btn-sm" onclick="javasciprt: return confirm(\'Are You Sure ?\')"'); 
 			?>
 		    </td>
 	        </tr>

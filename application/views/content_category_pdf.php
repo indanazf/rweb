@@ -20,8 +20,9 @@
         <table class="word-table" style="margin-bottom: 10px">
             <tr>
                 <th>No</th>
-		<th>Category</th>
-		<th>Created Date</th>
+		<th>CATEGORY</th>
+		<th>INFORMATION CATEGORY</th>
+		<th>ICON CATEGORY</th>
 		
             </tr><?php
             foreach ($content_category_data as $content_category)
@@ -29,8 +30,9 @@
                 ?>
                 <tr>
 		      <td><?php echo ++$start ?></td>
-		      <td><?php echo $content_category->category ?></td>
-		      <td><?php echo $content_category->created_date ?></td>	
+		      <td><?php echo $content_category->CATEGORY ?></td>
+		      <td><?php echo $content_category->INFORMATION_CATEGORY ?></td>
+		      <td><?php echo $content_category->ICON_CATEGORY ?></td>	
                 </tr>
                 <?php
             }

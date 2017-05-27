@@ -32,9 +32,10 @@ class Content_type extends CI_Controller
         $row = $this->Content_type_model->get_by_id($id);
         if ($row) {
             $data = array(
-		'id_type' => $row->id_type,
-		'content_type' => $row->content_type,
-		'created_date' => $row->created_date,
+		'ID_TYPE' => $row->ID_TYPE,
+		'TYPE' => $row->TYPE,
+		'INFORMATION_TYPE' => $row->INFORMATION_TYPE,
+		'ICON_TYPE' => $row->ICON_TYPE,
 		'judul' => 'CONTENT_TYPE',
 		'subjudul' =>'Read',
 	    );
@@ -50,9 +51,10 @@ class Content_type extends CI_Controller
         $data = array(
             'button' => 'Create',
             'action' => site_url('content_type/create_action'),
-	    'id_type' => set_value('id_type'),
-	    'content_type' => set_value('content_type'),
-	    'created_date' => set_value('created_date'),
+	    'ID_TYPE' => set_value('ID_TYPE'),
+	    'TYPE' => set_value('TYPE'),
+	    'INFORMATION_TYPE' => set_value('INFORMATION_TYPE'),
+	    'ICON_TYPE' => set_value('ICON_TYPE'),
 		'judul' => 'CONTENT_TYPE',
 		'subjudul' =>'Create',
 	);
@@ -67,8 +69,9 @@ class Content_type extends CI_Controller
             $this->create();
         } else {
             $data = array(
-		'content_type' => $this->input->post('content_type',TRUE),
-		'created_date' => $this->input->post('created_date',TRUE),
+		'TYPE' => $this->input->post('TYPE',TRUE),
+		'INFORMATION_TYPE' => $this->input->post('INFORMATION_TYPE',TRUE),
+		'ICON_TYPE' => $this->input->post('ICON_TYPE',TRUE),
 	    );
 
             $this->Content_type_model->insert($data);
@@ -85,9 +88,10 @@ class Content_type extends CI_Controller
             $data = array(
                 'button' => 'Update',
                 'action' => site_url('content_type/update_action'),
-		'id_type' => set_value('id_type', $row->id_type),
-		'content_type' => set_value('content_type', $row->content_type),
-		'created_date' => set_value('created_date', $row->created_date),
+		'ID_TYPE' => set_value('ID_TYPE', $row->ID_TYPE),
+		'TYPE' => set_value('TYPE', $row->TYPE),
+		'INFORMATION_TYPE' => set_value('INFORMATION_TYPE', $row->INFORMATION_TYPE),
+		'ICON_TYPE' => set_value('ICON_TYPE', $row->ICON_TYPE),
 		'judul' => 'CONTENT_TYPE',
 		'subjudul' =>'Update',
 	    );
@@ -103,14 +107,15 @@ class Content_type extends CI_Controller
         $this->_rules();
 
         if ($this->form_validation->run() == FALSE) {
-            $this->update($this->input->post('id_type', TRUE));
+            $this->update($this->input->post('ID_TYPE', TRUE));
         } else {
             $data = array(
-		'content_type' => $this->input->post('content_type',TRUE),
-		'created_date' => $this->input->post('created_date',TRUE),
+		'TYPE' => $this->input->post('TYPE',TRUE),
+		'INFORMATION_TYPE' => $this->input->post('INFORMATION_TYPE',TRUE),
+		'ICON_TYPE' => $this->input->post('ICON_TYPE',TRUE),
 	    );
 
-            $this->Content_type_model->update($this->input->post('id_type', TRUE), $data);
+            $this->Content_type_model->update($this->input->post('ID_TYPE', TRUE), $data);
             $this->session->set_flashdata('message', 'Update Record Success');
             redirect(site_url('content_type'));
         }
@@ -132,10 +137,11 @@ class Content_type extends CI_Controller
 
     public function _rules() 
     {
-	$this->form_validation->set_rules('content_type', 'content type', 'trim|required');
-	$this->form_validation->set_rules('created_date', 'created date', 'trim|required');
+	$this->form_validation->set_rules('TYPE', 'type', 'trim|required');
+	$this->form_validation->set_rules('INFORMATION_TYPE', 'information type', 'trim|required');
+	$this->form_validation->set_rules('ICON_TYPE', 'icon type', 'trim|required');
 
-	$this->form_validation->set_rules('id_type', 'id_type', 'trim');
+	$this->form_validation->set_rules('ID_TYPE', 'ID_TYPE', 'trim');
 	$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
     }
 
@@ -161,16 +167,18 @@ class Content_type extends CI_Controller
 
         $kolomhead = 0;
         xlsWriteLabel($tablehead, $kolomhead++, "No");
-	xlsWriteLabel($tablehead, $kolomhead++, "Content Type");
-	xlsWriteLabel($tablehead, $kolomhead++, "Created Date");
+	xlsWriteLabel($tablehead, $kolomhead++, "TYPE");
+	xlsWriteLabel($tablehead, $kolomhead++, "INFORMATION TYPE");
+	xlsWriteLabel($tablehead, $kolomhead++, "ICON TYPE");
 
 	foreach ($this->Content_type_model->get_all() as $data) {
             $kolombody = 0;
 
             //ubah xlsWriteLabel menjadi xlsWriteNumber untuk kolom numeric
             xlsWriteNumber($tablebody, $kolombody++, $nourut);
-	    xlsWriteLabel($tablebody, $kolombody++, $data->content_type);
-	    xlsWriteLabel($tablebody, $kolombody++, $data->created_date);
+	    xlsWriteLabel($tablebody, $kolombody++, $data->TYPE);
+	    xlsWriteLabel($tablebody, $kolombody++, $data->INFORMATION_TYPE);
+	    xlsWriteLabel($tablebody, $kolombody++, $data->ICON_TYPE);
 
 	    $tablebody++;
             $nourut++;
@@ -213,5 +221,5 @@ class Content_type extends CI_Controller
 /* End of file Content_type.php */
 /* Location: ./application/controllers/Content_type.php */
 /* Please DO NOT modify this information : */
-/* Generated by Harviacode Codeigniter CRUD Generator 2017-05-25 16:46:37 */
+/* Generated by Harviacode Codeigniter CRUD Generator 2017-05-27 05:15:54 */
 /* http://harviacode.com */

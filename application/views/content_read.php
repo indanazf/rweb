@@ -7,14 +7,18 @@
                 <div class='box-header'>
                 <h3 class='box-title'>Content Read</h3>
         <table class="table table-bordered">
-	    <tr><td>Id Type</td><td><?php echo $id_type; ?></td></tr>
-	    <tr><td>Id Category</td><td><?php echo $id_category; ?></td></tr>
-	    <tr><td>Subject</td><td><?php echo $subject; ?></td></tr>
-	    <tr><td>Content</td><td><?php echo $content; ?></td></tr>
-	    <tr><td>Tags</td><td><?php echo $tags; ?></td></tr>
-	    <tr><td>Created Date</td><td><?php echo $created_date; ?></td></tr>
-	    <tr><td>Created By</td><td><?php echo $created_by; ?></td></tr>
-	    <tr><td>Last Update</td><td><?php echo $last_update; ?></td></tr>
+	    <tr><td>ID TYPE</td><td><?php echo $ID_TYPE; ?></td></tr>
+	    <tr><td>ID CATEGORY</td><td><?php echo $ID_CATEGORY; ?></td></tr>
+	    <tr><td>SUBJECT</td><td><?php echo $SUBJECT; ?></td></tr>
+	    <tr><td>CONTENT</td><td><?php echo $CONTENT; ?></td></tr>
+	    <tr><td>CONTENT NUMMBER</td><td><?php echo $CONTENT_NUMMBER; ?></td></tr>
+	    <tr><td>TAGS</td><td><?php echo $TAGS; ?></td></tr>
+	    <tr><td>CREATED BY</td><td><?php echo $CREATED_BY; ?></td></tr>
+	    <tr><td>CREATED DATE</td><td><?php echo $CREATED_DATE; ?></td></tr>
+	    <tr><td>UPDATE BY</td><td><?php echo $UPDATE_BY; ?></td></tr>
+	    <tr><td>LAST UPDATE</td><td><?php echo $LAST_UPDATE; ?></td></tr>
+	    <tr><td>ICON TYPE</td><td><?php echo $ICON_TYPE; ?></td></tr>
+	    <tr><td>IMG</td><td><?php echo $IMG; ?></td></tr>
 	    <tr><td></td><td><a href="<?php echo site_url('content') ?>" class="btn btn-default">Back</a></td></tr>
 	</table>
         </div><!-- /.box-body -->

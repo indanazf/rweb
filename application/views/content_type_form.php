@@ -8,13 +8,16 @@
                   <h3 class='box-title'>CONTENT_TYPE</h3>
                       <div class='box box-primary'>
         <form action="<?php echo $action; ?>" method="post"><table class='table table-bordered'>
-	    <tr><td>Content Type <?php echo form_error('content_type') ?></td>
-            <td><input type="text" class="form-control" name="content_type" id="content_type" placeholder="Content Type" value="<?php echo $content_type; ?>" />
+	    <tr><td>TYPE <?php echo form_error('TYPE') ?></td>
+            <td><input type="text" class="form-control" name="TYPE" id="TYPE" placeholder="TYPE" value="<?php echo $TYPE; ?>" />
         </td>
-	    <tr><td>Created Date <?php echo form_error('created_date') ?></td>
-            <td><input type="text" class="form-control" name="created_date" id="created_date" placeholder="Created Date" value="<?php echo $created_date; ?>" />
+	    <tr><td>INFORMATION TYPE <?php echo form_error('INFORMATION_TYPE') ?></td>
+            <td><input type="text" class="form-control" name="INFORMATION_TYPE" id="INFORMATION_TYPE" placeholder="INFORMATION TYPE" value="<?php echo $INFORMATION_TYPE; ?>" />
         </td>
-	    <input type="hidden" name="id_type" value="<?php echo $id_type; ?>" /> 
+	    <tr><td>ICON TYPE <?php echo form_error('ICON_TYPE') ?></td>
+            <td><input type="text" class="form-control" name="ICON_TYPE" id="ICON_TYPE" placeholder="ICON TYPE" value="<?php echo $ICON_TYPE; ?>" />
+        </td>
+	    <input type="hidden" name="ID_TYPE" value="<?php echo $ID_TYPE; ?>" /> 
 	    <tr><td colspan='2'><button type="submit" class="btn btn-primary"><?php echo $button ?></button> 
 	    <a href="<?php echo site_url('content_type') ?>" class="btn btn-default">Cancel</a></td></tr>
 	
