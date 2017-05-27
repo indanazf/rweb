@@ -16,6 +16,7 @@
             <thead>
                 <tr>
                     <th width="80px">No</th>
+		    <th>ID MENU</th>
 		    <th>CATEGORY</th>
 		    <th>INFORMATION CATEGORY</th>
 		    <th>ICON CATEGORY</th>
@@ -30,6 +31,7 @@
                 ?>
                 <tr>
 		    <td><?php echo ++$start ?></td>
+		    <td><?php echo $content_category->ID_MENU ?></td>
 		    <td><?php echo $content_category->CATEGORY ?></td>
 		    <td><?php echo $content_category->INFORMATION_CATEGORY ?></td>
 		    <td><?php echo $content_category->ICON_CATEGORY ?></td>

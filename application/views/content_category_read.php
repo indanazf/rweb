@@ -7,6 +7,7 @@
                 <div class='box-header'>
                 <h3 class='box-title'>Content_category Read</h3>
         <table class="table table-bordered">
+	    <tr><td>ID MENU</td><td><?php echo $ID_MENU; ?></td></tr>
 	    <tr><td>CATEGORY</td><td><?php echo $CATEGORY; ?></td></tr>
 	    <tr><td>INFORMATION CATEGORY</td><td><?php echo $INFORMATION_CATEGORY; ?></td></tr>
 	    <tr><td>ICON CATEGORY</td><td><?php echo $ICON_CATEGORY; ?></td></tr>
