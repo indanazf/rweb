@@ -19,7 +19,8 @@
 		    <th>ID CONTENT</th>
 		    <th>IMAGE</th>
 		    <th>THUMBNAIL</th>
-		    <th>NAME CONTACT</th>
+		    <th>NAME IMAGE</th>
+		    <th>INFO</th>
 		    <th>Action</th>
                 </tr>
             </thead>
@@ -34,7 +35,8 @@
 		    <td><?php echo $content_image->ID_CONTENT ?></td>
 		    <td><?php echo $content_image->IMAGE ?></td>
 		    <td><?php echo $content_image->THUMBNAIL ?></td>
-		    <td><?php echo $content_image->NAME_CONTACT ?></td>
+		    <td><?php echo $content_image->NAME_IMAGE ?></td>
+		    <td><?php echo $content_image->INFO ?></td>
 		    <td style="text-align:center" width="140px">
 			<?php 
 			echo anchor(site_url('content_image/read/'.$content_image->ID_IMAGE),'<i class="fa fa-eye"></i>',array('title'=>'detail','class'=>'btn btn-primary btn-sm')); 

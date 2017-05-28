@@ -24,39 +24,22 @@ class About_Us_model extends CI_Model
         $this->db->join('content_type', 'content_type.ID_TYPE = content.ID_TYPE','LEFT');
         $this->db->join('users AS updated_users', 'updated_users.ID = content.UPDATE_BY');
         $this->db->join('users AS created_users', 'created_users.ID = content.CREATED_BY');
-        $this->db->where('content_category.ID_MENU', 24);
+        $this->db->join('menu', 'menu.id = content_category.ID_MENU');
+        $this->db->where('menu.name', 'About Us');
         return $this->db->get()->result();
     }
 
-    function get_slider(){
+
+    function get_by_category($category){
         $this->db->select('content.*');
         $this->db->from($this->table);
         $this->db->join('content_category', 'content_category.ID_CATEGORY = content.ID_CATEGORY');
         $this->db->join('menu', 'menu.id = content_category.ID_MENU');
         $this->db->where('menu.name', 'About Us');
-        $this->db->where('content_category.CATEGORY', 'slider_image');
+        $this->db->where('content_category.CATEGORY', $category);
         return $this->db->get()->result();
     }
 
-    function get_introducing(){
-        $this->db->select('content.*');
-        $this->db->from($this->table);
-        $this->db->join('content_category', 'content_category.ID_CATEGORY = content.ID_CATEGORY');
-        $this->db->join('menu', 'menu.id = content_category.ID_MENU');
-        $this->db->where('menu.name', 'About Us');
-        $this->db->where('content_category.CATEGORY', 'introducing');
-        return $this->db->get()->result();
-    }
-
-    function get_vision(){
-        $this->db->select('content.*');
-        $this->db->from($this->table);
-        $this->db->join('content_category', 'content_category.ID_CATEGORY = content.ID_CATEGORY');
-        $this->db->join('menu', 'menu.id = content_category.ID_MENU');
-        $this->db->where('menu.name', 'About Us');
-        $this->db->where('content_category.CATEGORY', 'vision');
-        return $this->db->get()->result();
-    }
 
     // get data by id
     function get_by_id($id)

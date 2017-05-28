@@ -63,66 +63,86 @@ class Content extends CI_Controller
         $data = array(
             'button' => 'Create',
             'action' => site_url('content/create_action'),
-	    'ID_CONTENT' => set_value('ID_CONTENT'),
-	    'ID_TYPE' => set_value('ID_TYPE'),
-	    'ID_CATEGORY' => set_value('ID_CATEGORY'),
-	    'SUBJECT' => set_value('SUBJECT'),
-	    'CONTENT' => set_value('CONTENT'),
-	    'CONTENT_NUMMBER' => set_value('CONTENT_NUMMBER'),
-	    'TAGS' => set_value('TAGS'),
-	    'CREATED_BY' => set_value('CREATED_BY'),
-	    'CREATED_DATE' => set_value('CREATED_DATE'),
-	    'UPDATE_BY' => set_value('UPDATE_BY'),
-	    'LAST_UPDATE' => set_value('LAST_UPDATE'),
-	    'ICON_TYPE' => set_value('ICON_TYPE'),
-	    'IMG' => set_value('IMG'),
-		'judul' => 'CONTENT',
-		'subjudul' =>'Create',
-	);
+	        'ID_CONTENT' => set_value('ID_CONTENT'),
+    	    'ID_TYPE' => set_value('ID_TYPE'),
+    	    'ID_CATEGORY' => set_value('ID_CATEGORY'),
+    	    'SUBJECT' => set_value('SUBJECT'),
+    	    'CONTENT' => set_value('CONTENT'),
+    	    'CONTENT_NUMMBER' => set_value('CONTENT_NUMMBER'),
+    	    'TAGS' => set_value('TAGS'),
+    	    'CREATED_BY' => set_value('CREATED_BY'),
+    	    'CREATED_DATE' => set_value('CREATED_DATE'),
+    	    'UPDATE_BY' => set_value('UPDATE_BY'),
+    	    'LAST_UPDATE' => set_value('LAST_UPDATE'),
+    	    'ICON_TYPE' => set_value('ICON_TYPE'),
+    	    'IMG' => set_value('IMG'),
+    		'judul' => 'CONTENT',
+    		'subjudul' =>'Create',
+    	);
         $this->template->load('template','content_form', $data);
     }
     
     public function create_action() 
     {
         $this->_rules();
+        $dt = date("Y-m-d H:i:s");
 
         if ($this->form_validation->run() == FALSE) {
             $this->create();
         } else {
-            $config['upload_path']          = './uploads/';
-            $config['allowed_types']        = 'gif|jpg|png|jpeg';
-
-            $dt = date("Y-m-d H:i:s");
-            $this->load->library('upload', $config);
-
-            if ( ! $this->upload->do_upload('IMG')){
-                $error = array('error' => $this->upload->display_errors());
-                $this->create();
-            }else{
-                $data_img = array('upload_data' => $this->upload->data());
-                $filename = $data_img['upload_data']['file_name'];
-
+            if(!isset($_FILES['file_upload'])){
                 $data = array(
-                    'ID_TYPE' => $this->input->post('ID_TYPE',TRUE),
-                    'ID_CATEGORY' => $this->input->post('ID_CATEGORY',TRUE),
-                    'SUBJECT' => $this->input->post('SUBJECT',TRUE),
-                    'CONTENT' => $this->input->post('CONTENT',TRUE),
-                    'CONTENT_NUMMBER' => $this->input->post('CONTENT_NUMMBER',TRUE),
-                    'TAGS' => $this->input->post('TAGS',TRUE),
-                    'CREATED_BY' => $this->session->userdata['user_id'],
-                    'CREATED_DATE' => $dt,
-                    'UPDATE_BY' => $this->session->userdata['user_id'],
-                    'LAST_UPDATE' => $dt,
-                    'ICON_TYPE' => $this->input->post('ICON_TYPE',TRUE),
-                    'IMG' => $filename
+                        'ID_TYPE' => $this->input->post('ID_TYPE',TRUE),
+                        'ID_CATEGORY' => $this->input->post('ID_CATEGORY',TRUE),
+                        'SUBJECT' => $this->input->post('SUBJECT',TRUE),
+                        'CONTENT' => $this->input->post('CONTENT',TRUE),
+                        'CONTENT_NUMMBER' => $this->input->post('CONTENT_NUMMBER',TRUE),
+                        'TAGS' => $this->input->post('TAGS',TRUE),
+                        'CREATED_BY' => $this->session->userdata['user_id'],
+                        'CREATED_DATE' => $dt,
+                        'UPDATE_BY' => $this->session->userdata['user_id'],
+                        'LAST_UPDATE' => $dt,
+                        'ICON_TYPE' => $this->input->post('ICON_TYPE',TRUE)
                 );
                 $this->Content_model->insert($data);
                 $this->session->set_flashdata('message', 'Create Record Success');
                 redirect(site_url('content'));
-            }
+
+            }else{
+                $config['upload_path']          = './uploads/';
+                $config['allowed_types']        = 'gif|jpg|png|jpeg';
+
+                
+                $this->load->library('upload', $config);
+
+                if ( ! $this->upload->do_upload('IMG')){
+                    $error = array('error' => $this->upload->display_errors());
+                    $this->create();
+                }else{
+                    $data_img = array('upload_data' => $this->upload->data());
+                    $filename = $data_img['upload_data']['file_name'];
+
+                    $data = array(
+                        'ID_TYPE' => $this->input->post('ID_TYPE',TRUE),
+                        'ID_CATEGORY' => $this->input->post('ID_CATEGORY',TRUE),
+                        'SUBJECT' => $this->input->post('SUBJECT',TRUE),
+                        'CONTENT' => $this->input->post('CONTENT',TRUE),
+                        'CONTENT_NUMMBER' => $this->input->post('CONTENT_NUMMBER',TRUE),
+                        'TAGS' => $this->input->post('TAGS',TRUE),
+                        'CREATED_BY' => $this->session->userdata['user_id'],
+                        'CREATED_DATE' => $dt,
+                        'UPDATE_BY' => $this->session->userdata['user_id'],
+                        'LAST_UPDATE' => $dt,
+                        'ICON_TYPE' => $this->input->post('ICON_TYPE',TRUE),
+                        'IMG' => $filename
+                    );
+                    $this->Content_model->insert($data);
+                    $this->session->set_flashdata('message', 'Create Record Success');
+                    redirect(site_url('content'));
+                }
 
            
-
+            }
             
         }
     }
@@ -159,39 +179,57 @@ class Content extends CI_Controller
     public function update_action() 
     {
         $this->_rules();
+        $dt = date("Y-m-d H:i:s");
 
         if ($this->form_validation->run() == FALSE) {
             $this->update($this->input->post('ID_CONTENT', TRUE));
         } else {
-            $config['upload_path']          = './uploads/';
-            $config['allowed_types']        = 'gif|jpg|png|jpeg';
-
-            $dt = date("Y-m-d H:i:s");
-            $this->load->library('upload', $config);
-
-            if ( ! $this->upload->do_upload('IMG')){
-                $error = array('error' => $this->upload->display_errors());
-                $this->update($this->input->post('ID_CONTENT', TRUE));
-            }else{
-                $data_img = array('upload_data' => $this->upload->data());
-                $filename = $data_img['upload_data']['file_name'];
-
+            if(!isset($_FILES['file_upload'])){
                 $data = array(
-                    'ID_TYPE' => $this->input->post('ID_TYPE',TRUE),
-                    'ID_CATEGORY' => $this->input->post('ID_CATEGORY',TRUE),
-                    'SUBJECT' => $this->input->post('SUBJECT',TRUE),
-                    'CONTENT' => $this->input->post('CONTENT',TRUE),
-                    'CONTENT_NUMMBER' => $this->input->post('CONTENT_NUMMBER',TRUE),
-                    'TAGS' => $this->input->post('TAGS',TRUE),
-                    'UPDATE_BY' => $this->session->userdata['user_id'],
-                    'LAST_UPDATE' => $dt,
-                    'ICON_TYPE' => $this->input->post('ICON_TYPE',TRUE),
-                    'IMG' => $filename
+                        'ID_TYPE' => $this->input->post('ID_TYPE',TRUE),
+                        'ID_CATEGORY' => $this->input->post('ID_CATEGORY',TRUE),
+                        'SUBJECT' => $this->input->post('SUBJECT',TRUE),
+                        'CONTENT' => $this->input->post('CONTENT',TRUE),
+                        'CONTENT_NUMMBER' => $this->input->post('CONTENT_NUMMBER',TRUE),
+                        'TAGS' => $this->input->post('TAGS',TRUE),
+                        'UPDATE_BY' => $this->session->userdata['user_id'],
+                        'LAST_UPDATE' => $dt,
+                        'ICON_TYPE' => $this->input->post('ICON_TYPE',TRUE)
                 );
 
                 $this->Content_model->update($this->input->post('ID_CONTENT', TRUE), $data);
                 $this->session->set_flashdata('message', 'Update Record Success');
                 redirect(site_url('content'));
+            }else{
+                $config['upload_path']          = './uploads/';
+                $config['allowed_types']        = 'gif|jpg|png|jpeg';
+
+                $this->load->library('upload', $config);
+
+                if ( ! $this->upload->do_upload('IMG')){
+                    $error = array('error' => $this->upload->display_errors());
+                    $this->update($this->input->post('ID_CONTENT', TRUE));
+                }else{
+                    $data_img = array('upload_data' => $this->upload->data());
+                    $filename = $data_img['upload_data']['file_name'];
+
+                    $data = array(
+                        'ID_TYPE' => $this->input->post('ID_TYPE',TRUE),
+                        'ID_CATEGORY' => $this->input->post('ID_CATEGORY',TRUE),
+                        'SUBJECT' => $this->input->post('SUBJECT',TRUE),
+                        'CONTENT' => $this->input->post('CONTENT',TRUE),
+                        'CONTENT_NUMMBER' => $this->input->post('CONTENT_NUMMBER',TRUE),
+                        'TAGS' => $this->input->post('TAGS',TRUE),
+                        'UPDATE_BY' => $this->session->userdata['user_id'],
+                        'LAST_UPDATE' => $dt,
+                        'ICON_TYPE' => $this->input->post('ICON_TYPE',TRUE),
+                        'IMG' => $filename
+                    );
+
+                    $this->Content_model->update($this->input->post('ID_CONTENT', TRUE), $data);
+                    $this->session->set_flashdata('message', 'Update Record Success');
+                    redirect(site_url('content'));
+                }
             }
                 
         }

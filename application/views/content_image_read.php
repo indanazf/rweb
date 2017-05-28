@@ -10,7 +10,8 @@
 	    <tr><td>ID CONTENT</td><td><?php echo $ID_CONTENT; ?></td></tr>
 	    <tr><td>IMAGE</td><td><?php echo $IMAGE; ?></td></tr>
 	    <tr><td>THUMBNAIL</td><td><?php echo $THUMBNAIL; ?></td></tr>
-	    <tr><td>NAME CONTACT</td><td><?php echo $NAME_CONTACT; ?></td></tr>
+	    <tr><td>NAME IMAGE</td><td><?php echo $NAME_IMAGE; ?></td></tr>
+	    <tr><td>INFO</td><td><?php echo $INFO; ?></td></tr>
 	    <tr><td></td><td><a href="<?php echo site_url('content_image') ?>" class="btn btn-default">Back</a></td></tr>
 	</table>
         </div><!-- /.box-body -->

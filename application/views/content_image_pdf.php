@@ -23,7 +23,8 @@
 		<th>ID CONTENT</th>
 		<th>IMAGE</th>
 		<th>THUMBNAIL</th>
-		<th>NAME CONTACT</th>
+		<th>NAME IMAGE</th>
+		<th>INFO</th>
 		
             </tr><?php
             foreach ($content_image_data as $content_image)
@@ -34,7 +35,8 @@
 		      <td><?php echo $content_image->ID_CONTENT ?></td>
 		      <td><?php echo $content_image->IMAGE ?></td>
 		      <td><?php echo $content_image->THUMBNAIL ?></td>
-		      <td><?php echo $content_image->NAME_CONTACT ?></td>	
+		      <td><?php echo $content_image->NAME_IMAGE ?></td>
+		      <td><?php echo $content_image->INFO ?></td>	
                 </tr>
                 <?php
             }

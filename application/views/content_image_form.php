@@ -7,18 +7,33 @@
                 
                   <h3 class='box-title'>CONTENT_IMAGE</h3>
                       <div class='box box-primary'>
-        <form action="<?php echo $action; ?>" method="post"><table class='table table-bordered'>
+       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data"><table class='table table-bordered'>
 	    <tr><td>ID CONTENT <?php echo form_error('ID_CONTENT') ?></td>
-            <td><input type="text" class="form-control" name="ID_CONTENT" id="ID_CONTENT" placeholder="ID CONTENT" value="<?php echo $ID_CONTENT; ?>" />
+            <td>
+            <select name="ID_CONTENT" id="ID_CONTENT" class="form-control">
+                    <option value=''></option>
+                    <?php
+                        $cat = $this->db->get('content');
+                        foreach ($cat->result() as $c){
+                            echo "<option value='$c->ID_CONTENT' ";
+                            echo $c->ID_CONTENT==$ID_CONTENT?'selected':'';
+                            echo">".  strtoupper($c->SUBJECT)."</option>";
+                        }
+                    ?>
+                </select>
         </td>
 	    <tr><td>IMAGE <?php echo form_error('IMAGE') ?></td>
-            <td><input type="text" class="form-control" name="IMAGE" id="IMAGE" placeholder="IMAGE" value="<?php echo $IMAGE; ?>" />
+            <td> <input type="file" class="form-control" name="IMAGE" id="IMAGE" placeholder="IMAGE" value="<?php echo $IMAGE; ?>" size="20" />
         </td>
 	    <tr><td>THUMBNAIL <?php echo form_error('THUMBNAIL') ?></td>
-            <td><input type="text" class="form-control" name="THUMBNAIL" id="THUMBNAIL" placeholder="THUMBNAIL" value="<?php echo $THUMBNAIL; ?>" />
+            <td>
+             <input type="file" class="form-control" name="THUMBNAIL" id="THUMBNAIL" placeholder="THUMBNAIL" value="<?php echo $THUMBNAIL; ?>" size="20" />
         </td>
-	    <tr><td>NAME CONTACT <?php echo form_error('NAME_CONTACT') ?></td>
-            <td><input type="text" class="form-control" name="NAME_CONTACT" id="NAME_CONTACT" placeholder="NAME CONTACT" value="<?php echo $NAME_CONTACT; ?>" />
+	    <tr><td>NAME IMAGE <?php echo form_error('NAME_IMAGE') ?></td>
+            <td><input type="text" class="form-control" name="NAME_IMAGE" id="NAME_IMAGE" placeholder="NAME IMAGE" value="<?php echo $NAME_IMAGE; ?>" />
+        </td>
+	    <tr><td>INFO <?php echo form_error('INFO') ?></td>
+            <td><input type="text" class="form-control" name="INFO" id="INFO" placeholder="INFO" value="<?php echo $INFO; ?>" />
         </td>
 	    <input type="hidden" name="ID_IMAGE" value="<?php echo $ID_IMAGE; ?>" /> 
 	    <tr><td colspan='2'><button type="submit" class="btn btn-primary"><?php echo $button ?></button> 

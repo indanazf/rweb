@@ -12,6 +12,7 @@
 	    <tr><td>TYPE <?php echo form_error('ID_TYPE') ?></td>
             <td>
                 <select name="ID_TYPE" id="ID_TYPE" class="form-control">
+                    <option value=''></option>
                     <?php
                         $cat = $this->db->get('content_type');
                         foreach ($cat->result() as $c){
