@@ -35,7 +35,8 @@
 		    <td><?php echo $contact_us->NO_CONTACT ?></td>
 		    <td><?php echo $contact_us->EMAIL ?></td>
 		    <td><?php echo $contact_us->TEXT ?></td>
-		    <td style="text-align:center" width="140px">
+		    <td style="text-align:center" width="180px">
+            <a class="btn btn-success btn-sm" title="reply" href="mailto:<?= $contact_us->EMAIL?>"="_top"><i class="fa fa-reply"></i></a>
 			<?php 
 			echo anchor(site_url('contact_us/read/'.$contact_us->ID_CONTACT),'<i class="fa fa-eye"></i>',array('title'=>'detail','class'=>'btn btn-primary btn-sm')); 
 			echo '  '; 
