@@ -368,7 +368,7 @@ class Auth extends CI_Controller {
             $this->form_validation->set_rules('email', $this->lang->line('create_user_validation_email_label'), 'required|valid_email|is_unique[' . $tables['users'] . '.email]');
         }
         $this->form_validation->set_rules('phone', $this->lang->line('create_user_validation_phone_label'), 'trim');
-        $this->form_validation->set_rules('company', $this->lang->line('create_user_validation_company_label'), 'trim');
+        $this->form_validation->set_rules('username', $this->lang->line('create_user_validation_username_label'), 'trim');
         $this->form_validation->set_rules('password', $this->lang->line('create_user_validation_password_label'), 'required|min_length[' . $this->config->item('min_password_length', 'ion_auth') . ']|max_length[' . $this->config->item('max_password_length', 'ion_auth') . ']|matches[password_confirm]');
         $this->form_validation->set_rules('password_confirm', $this->lang->line('create_user_validation_password_confirm_label'), 'required');
 
@@ -382,6 +382,8 @@ class Auth extends CI_Controller {
                 'username' => $this->input->post('username'),
                 'last_name' => $this->input->post('last_name'),
                 'phone' => $this->input->post('phone'),
+                'judul' => 'USERS',
+                'subjudul' =>'Create',
                 );
         }
         if ($this->form_validation->run() == true && $this->ion_auth->register($identity, $password, $email, $additional_data)) {
@@ -415,14 +417,14 @@ class Auth extends CI_Controller {
             $this->data['email'] = array(
                 'name' => 'email',
                 'id' => 'email',
-                'type' => 'text',
+                'type' => 'email',
                 'value' => $this->form_validation->set_value('email'),
                 );
-            $this->data['company'] = array(
-                'name' => 'company',
-                'id' => 'company',
+            $this->data['username'] = array(
+                'name' => 'username',
+                'id' => 'username',
                 'type' => 'text',
-                'value' => $this->form_validation->set_value('company'),
+                'value' => $this->form_validation->set_value('username'),
                 );
             $this->data['phone'] = array(
                 'name' => 'phone',
@@ -442,6 +444,8 @@ class Auth extends CI_Controller {
                 'type' => 'password',
                 'value' => $this->form_validation->set_value('password_confirm'),
                 );
+            $this->data['judul'] = 'USER';
+            $this->data['subjudul'] = 'Create';
 
             $this->template->load('template','auth/create_user', $this->data);
             // $this->_render_page('auth/create_user', $this->data);
@@ -453,8 +457,7 @@ class Auth extends CI_Controller {
         $this->data['title'] = "Edit User";
 
         if (!$this->ion_auth->logged_in() || (!$this->ion_auth->is_admin() && !($this->ion_auth->user()->row()->id == $id))) {
-            //redirect('auth', 'refresh');
-            echo aaaa;
+            redirect('auth', 'refresh');
         }
 
         $user = $this->ion_auth->user($id)->row();
@@ -465,12 +468,13 @@ class Auth extends CI_Controller {
         $this->form_validation->set_rules('first_name', $this->lang->line('edit_user_validation_fname_label'), 'required');
         $this->form_validation->set_rules('last_name', $this->lang->line('edit_user_validation_lname_label'), 'required');
         $this->form_validation->set_rules('phone', $this->lang->line('edit_user_validation_phone_label'), 'required');
-        $this->form_validation->set_rules('company', $this->lang->line('edit_user_validation_company_label'), 'required');
+        $this->form_validation->set_rules('username', $this->lang->line('edit_user_validation_username_label'), 'required');
 
         if (isset($_POST) && !empty($_POST)) {
             // do we have a valid request?
             //if ($this->_valid_csrf_nonce() === FALSE || $id != $this->input->post('id')) {
             if ($id != $this->input->post('id')) {
+                echo"aaa";
                 show_error($this->lang->line('error_csrf'));
             }
 
@@ -554,11 +558,11 @@ class Auth extends CI_Controller {
             'type' => 'text',
             'value' => $this->form_validation->set_value('last_name', $user->last_name),
             );
-        $this->data['company'] = array(
-            'name' => 'company',
-            'id' => 'company',
+        $this->data['username'] = array(
+            'name' => 'username',
+            'id' => 'username',
             'type' => 'text',
-            'value' => $this->form_validation->set_value('company', $user->company),
+            'value' => $this->form_validation->set_value('username', $user->username),
             );
         $this->data['phone'] = array(
             'name' => 'phone',

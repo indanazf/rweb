@@ -92,6 +92,10 @@ class Users_model extends CI_Model
     // delete data
     function delete($id)
     {
+
+        $this->db->where('user_id', $id);
+        $this->db->delete('users_groups');
+
         $this->db->where($this->id, $id);
         $this->db->delete($this->table);
     }
