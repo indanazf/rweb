@@ -40,7 +40,7 @@
 
                 <tr><td><b><?php echo lang('edit_user_groups_heading');?></b></td>
                 <td><?php foreach ($groups as $group):?>
-                  <label class="checkbox">
+                  <label class="checkbox" style="margin-left: 20px;">
                     <?php
                     $gID=$group['id'];
                     $checked = null;

@@ -474,7 +474,6 @@ class Auth extends CI_Controller {
             // do we have a valid request?
             //if ($this->_valid_csrf_nonce() === FALSE || $id != $this->input->post('id')) {
             if ($id != $this->input->post('id')) {
-                echo"aaa";
                 show_error($this->lang->line('error_csrf'));
             }
 
@@ -580,6 +579,8 @@ class Auth extends CI_Controller {
             'id' => 'password_confirm',
             'type' => 'password'
             );
+            $this->data['judul'] = 'USER';
+            $this->data['subjudul'] = 'Edit';
 
         //$this->_render_page('auth/edit_user', $this->data);
             $this->template->load('template','auth/edit_user', $this->data);
