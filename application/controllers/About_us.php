@@ -34,7 +34,7 @@ class About_us extends CI_Controller
         print_r($data);
     }
 
-    public function list(){
+    public function admin(){
         $content = $this->About_Us_model->get_all();
 
         $data = array(
