@@ -10,6 +10,9 @@ class Content extends CI_Controller
     function __construct()
     {
         parent::__construct();
+        if(!$this->session->userdata['username']){
+            redirect(site_url('auth/login'));
+        }
         $this->load->model('Content_model');
         $this->load->library('form_validation');
     }
@@ -17,7 +20,7 @@ class Content extends CI_Controller
     public function index()
     {
         $content = $this->Content_model->get_all();
-
+        
         $data = array(
             'content_data' => $content,
 			'judul' => 'CONTENT',
@@ -86,24 +89,41 @@ class Content extends CI_Controller
         if ($this->form_validation->run() == FALSE) {
             $this->create();
         } else {
-            $data = array(
-		'ID_TYPE' => $this->input->post('ID_TYPE',TRUE),
-		'ID_CATEGORY' => $this->input->post('ID_CATEGORY',TRUE),
-		'SUBJECT' => $this->input->post('SUBJECT',TRUE),
-		'CONTENT' => $this->input->post('CONTENT',TRUE),
-		'CONTENT_NUMMBER' => $this->input->post('CONTENT_NUMMBER',TRUE),
-		'TAGS' => $this->input->post('TAGS',TRUE),
-		'CREATED_BY' => $this->input->post('CREATED_BY',TRUE),
-		'CREATED_DATE' => $this->input->post('CREATED_DATE',TRUE),
-		'UPDATE_BY' => $this->input->post('UPDATE_BY',TRUE),
-		'LAST_UPDATE' => $this->input->post('LAST_UPDATE',TRUE),
-		'ICON_TYPE' => $this->input->post('ICON_TYPE',TRUE),
-		'IMG' => $this->input->post('IMG',TRUE),
-	    );
+            $config['upload_path']          = './uploads/';
+            $config['allowed_types']        = 'gif|jpg|png|jpeg';
 
-            $this->Content_model->insert($data);
-            $this->session->set_flashdata('message', 'Create Record Success');
-            redirect(site_url('content'));
+            $dt = date("Y-m-d H:i:s");
+            $this->load->library('upload', $config);
+
+            if ( ! $this->upload->do_upload('IMG')){
+                $error = array('error' => $this->upload->display_errors());
+                $this->create();
+            }else{
+                $data_img = array('upload_data' => $this->upload->data());
+                $filename = $data_img['upload_data']['file_name'];
+
+                $data = array(
+                    'ID_TYPE' => $this->input->post('ID_TYPE',TRUE),
+                    'ID_CATEGORY' => $this->input->post('ID_CATEGORY',TRUE),
+                    'SUBJECT' => $this->input->post('SUBJECT',TRUE),
+                    'CONTENT' => $this->input->post('CONTENT',TRUE),
+                    'CONTENT_NUMMBER' => $this->input->post('CONTENT_NUMMBER',TRUE),
+                    'TAGS' => $this->input->post('TAGS',TRUE),
+                    'CREATED_BY' => $this->session->userdata['user_id'],
+                    'CREATED_DATE' => $dt,
+                    'UPDATE_BY' => $this->session->userdata['user_id'],
+                    'LAST_UPDATE' => $dt,
+                    'ICON_TYPE' => $this->input->post('ICON_TYPE',TRUE),
+                    'IMG' => $filename
+                );
+                $this->Content_model->insert($data);
+                $this->session->set_flashdata('message', 'Create Record Success');
+                redirect(site_url('content'));
+            }
+
+           
+
+            
         }
     }
     
@@ -115,21 +135,19 @@ class Content extends CI_Controller
             $data = array(
                 'button' => 'Update',
                 'action' => site_url('content/update_action'),
-		'ID_CONTENT' => set_value('ID_CONTENT', $row->ID_CONTENT),
-		'ID_TYPE' => set_value('ID_TYPE', $row->ID_TYPE),
-		'ID_CATEGORY' => set_value('ID_CATEGORY', $row->ID_CATEGORY),
-		'SUBJECT' => set_value('SUBJECT', $row->SUBJECT),
-		'CONTENT' => set_value('CONTENT', $row->CONTENT),
-		'CONTENT_NUMMBER' => set_value('CONTENT_NUMMBER', $row->CONTENT_NUMMBER),
-		'TAGS' => set_value('TAGS', $row->TAGS),
-		'CREATED_BY' => set_value('CREATED_BY', $row->CREATED_BY),
-		'CREATED_DATE' => set_value('CREATED_DATE', $row->CREATED_DATE),
-		'UPDATE_BY' => set_value('UPDATE_BY', $row->UPDATE_BY),
-		'LAST_UPDATE' => set_value('LAST_UPDATE', $row->LAST_UPDATE),
-		'ICON_TYPE' => set_value('ICON_TYPE', $row->ICON_TYPE),
-		'IMG' => set_value('IMG', $row->IMG),
-		'judul' => 'CONTENT',
-		'subjudul' =>'Update',
+        		'ID_CONTENT' => set_value('ID_CONTENT', $row->ID_CONTENT),
+                'CATEGORY' => set_value('CATEGORY', $row->CATEGORY),
+                'TYPE' => set_value('TYPE', $row->TYPE),
+        		'ID_TYPE' => set_value('ID_TYPE', $row->ID_TYPE),
+        		'ID_CATEGORY' => set_value('ID_CATEGORY', $row->ID_CATEGORY),
+        		'SUBJECT' => set_value('SUBJECT', $row->SUBJECT),
+        		'CONTENT' => set_value('CONTENT', $row->CONTENT),
+        		'CONTENT_NUMMBER' => set_value('CONTENT_NUMMBER', $row->CONTENT_NUMMBER),
+        		'TAGS' => set_value('TAGS', $row->TAGS),
+        		'ICON_TYPE' => set_value('ICON_TYPE', $row->ICON_TYPE),
+        		'IMG' => set_value('IMG', $row->IMG),
+        		'judul' => 'CONTENT',
+        		'subjudul' =>'Update',
 	    );
             $this->template->load('template','content_form', $data);
         } else {
@@ -145,24 +163,37 @@ class Content extends CI_Controller
         if ($this->form_validation->run() == FALSE) {
             $this->update($this->input->post('ID_CONTENT', TRUE));
         } else {
-            $data = array(
-		'ID_TYPE' => $this->input->post('ID_TYPE',TRUE),
-		'ID_CATEGORY' => $this->input->post('ID_CATEGORY',TRUE),
-		'SUBJECT' => $this->input->post('SUBJECT',TRUE),
-		'CONTENT' => $this->input->post('CONTENT',TRUE),
-		'CONTENT_NUMMBER' => $this->input->post('CONTENT_NUMMBER',TRUE),
-		'TAGS' => $this->input->post('TAGS',TRUE),
-		'CREATED_BY' => $this->input->post('CREATED_BY',TRUE),
-		'CREATED_DATE' => $this->input->post('CREATED_DATE',TRUE),
-		'UPDATE_BY' => $this->input->post('UPDATE_BY',TRUE),
-		'LAST_UPDATE' => $this->input->post('LAST_UPDATE',TRUE),
-		'ICON_TYPE' => $this->input->post('ICON_TYPE',TRUE),
-		'IMG' => $this->input->post('IMG',TRUE),
-	    );
+            $config['upload_path']          = './uploads/';
+            $config['allowed_types']        = 'gif|jpg|png|jpeg';
 
-            $this->Content_model->update($this->input->post('ID_CONTENT', TRUE), $data);
-            $this->session->set_flashdata('message', 'Update Record Success');
-            redirect(site_url('content'));
+            $dt = date("Y-m-d H:i:s");
+            $this->load->library('upload', $config);
+
+            if ( ! $this->upload->do_upload('IMG')){
+                $error = array('error' => $this->upload->display_errors());
+                $this->update($this->input->post('ID_CONTENT', TRUE));
+            }else{
+                $data_img = array('upload_data' => $this->upload->data());
+                $filename = $data_img['upload_data']['file_name'];
+
+                $data = array(
+                    'ID_TYPE' => $this->input->post('ID_TYPE',TRUE),
+                    'ID_CATEGORY' => $this->input->post('ID_CATEGORY',TRUE),
+                    'SUBJECT' => $this->input->post('SUBJECT',TRUE),
+                    'CONTENT' => $this->input->post('CONTENT',TRUE),
+                    'CONTENT_NUMMBER' => $this->input->post('CONTENT_NUMMBER',TRUE),
+                    'TAGS' => $this->input->post('TAGS',TRUE),
+                    'UPDATE_BY' => $this->session->userdata['user_id'],
+                    'LAST_UPDATE' => $dt,
+                    'ICON_TYPE' => $this->input->post('ICON_TYPE',TRUE),
+                    'IMG' => $filename
+                );
+
+                $this->Content_model->update($this->input->post('ID_CONTENT', TRUE), $data);
+                $this->session->set_flashdata('message', 'Update Record Success');
+                redirect(site_url('content'));
+            }
+                
         }
     }
     
@@ -182,18 +213,18 @@ class Content extends CI_Controller
 
     public function _rules() 
     {
-	$this->form_validation->set_rules('ID_TYPE', 'id type', 'trim|required');
+	//$this->form_validation->set_rules('ID_TYPE', 'id type', 'trim|required');
 	$this->form_validation->set_rules('ID_CATEGORY', 'id category', 'trim|required');
 	$this->form_validation->set_rules('SUBJECT', 'subject', 'trim|required');
 	$this->form_validation->set_rules('CONTENT', 'content', 'trim|required');
-	$this->form_validation->set_rules('CONTENT_NUMMBER', 'content nummber', 'trim|required|numeric');
-	$this->form_validation->set_rules('TAGS', 'tags', 'trim|required');
-	$this->form_validation->set_rules('CREATED_BY', 'created by', 'trim|required');
-	$this->form_validation->set_rules('CREATED_DATE', 'created date', 'trim|required');
-	$this->form_validation->set_rules('UPDATE_BY', 'update by', 'trim|required');
-	$this->form_validation->set_rules('LAST_UPDATE', 'last update', 'trim|required');
-	$this->form_validation->set_rules('ICON_TYPE', 'icon type', 'trim|required');
-	$this->form_validation->set_rules('IMG', 'img', 'trim|required');
+	//$this->form_validation->set_rules('CONTENT_NUMMBER', 'content nummber', 'trim|required|numeric');
+	//$this->form_validation->set_rules('TAGS', 'tags', 'trim|required');
+	//$this->form_validation->set_rules('CREATED_BY', 'created by', 'trim|required');
+	//$this->form_validation->set_rules('CREATED_DATE', 'created date', 'trim|required');
+	//$this->form_validation->set_rules('UPDATE_BY', 'update by', 'trim|required');
+	//$this->form_validation->set_rules('LAST_UPDATE', 'last update', 'trim|required');
+	//$this->form_validation->set_rules('ICON_TYPE', 'icon type', 'trim|required');
+	//$this->form_validation->set_rules('IMG', 'img', 'trim|required');
 
 	$this->form_validation->set_rules('ID_CONTENT', 'ID_CONTENT', 'trim');
 	$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
@@ -293,5 +324,5 @@ class Content extends CI_Controller
 /* End of file Content.php */
 /* Location: ./application/controllers/Content.php */
 /* Please DO NOT modify this information : */
-/* Generated by Harviacode Codeigniter CRUD Generator 2017-05-27 05:15:09 */
+/* Generated by Harviacode Codeigniter CRUD Generator 2017-05-27 08:54:10 */
 /* http://harviacode.com */

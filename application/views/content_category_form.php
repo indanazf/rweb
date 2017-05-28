@@ -9,7 +9,17 @@
                       <div class='box box-primary'>
         <form action="<?php echo $action; ?>" method="post"><table class='table table-bordered'>
 	    <tr><td>ID MENU <?php echo form_error('ID_MENU') ?></td>
-            <td><input type="text" class="form-control" name="ID_MENU" id="ID_MENU" placeholder="ID MENU" value="<?php echo $ID_MENU; ?>" />
+            <td>
+            <select name="ID_MENU" id="ID_MENU" class="form-control">
+                <?php
+                    $menu = $this->db->get('menu');
+                    foreach ($menu->result() as $c){
+                        echo "<option value='$c->id' ";
+                        echo $c->id==$ID_MENU?'selected':'';
+                        echo">".  strtoupper($c->name)."</option>";
+                    }
+                ?>
+            </select>
         </td>
 	    <tr><td>CATEGORY <?php echo form_error('CATEGORY') ?></td>
             <td><input type="text" class="form-control" name="CATEGORY" id="CATEGORY" placeholder="CATEGORY" value="<?php echo $CATEGORY; ?>" />
