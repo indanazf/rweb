@@ -44,7 +44,7 @@ class About_us extends CI_Controller
         );
         
 
-        $this->template->load('template','about_us_list', $data);
+         $this->template->load('template','content_list', $data);
     }
 
     public function read($id) 
