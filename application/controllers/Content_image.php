@@ -84,17 +84,57 @@ class Content_image extends CI_Controller
         if ($this->form_validation->run() == FALSE) {
             $this->create();
         } else {
-            $data = array(
-		'ID_CONTENT' => $this->input->post('ID_CONTENT',TRUE),
-		'IMAGE' => $this->input->post('IMAGE',TRUE),
-		'THUMBNAIL' => $this->input->post('THUMBNAIL',TRUE),
-		'NAME_IMAGE' => $this->input->post('NAME_IMAGE',TRUE),
-		'INFO' => $this->input->post('INFO',TRUE),
-	    );
+            if(!isset($_FILES['IMAGE'])){
+                $data = array(
+                'ID_CONTENT' => $this->input->post('ID_CONTENT',TRUE),
+                'NAME_IMAGE' => $this->input->post('NAME_IMAGE',TRUE),
+                'INFO' => $this->input->post('INFO',TRUE),
+                );
 
-            $this->Content_image_model->insert($data);
-            $this->session->set_flashdata('message', 'Create Record Success');
-            redirect(site_url('content_image'));
+                $this->Content_image_model->insert($data);
+                $this->session->set_flashdata('message', 'Create Record Success');
+                redirect(site_url('content_image'));
+            }else{
+                $config['upload_path']          = './uploads/';
+                $config['allowed_types']        = 'gif|jpg|png|jpeg';
+
+                $this->load->library('upload', $config);
+
+                if ( ! $this->upload->do_upload('IMAGE')){
+                    $error = array('error' => $this->upload->display_errors());
+                    echo $error;
+                    $this->create();
+                }else{
+                    $data_img = array('upload_data' => $this->upload->data());
+                    $filename = $data_img['upload_data']['file_name'];
+                    $this->gallery_path = realpath(APPPATH . '../uploads');//fetching path
+
+
+                    $config1 = array(
+                      'source_image' => $data_img['upload_data']['full_path'], //get original image
+                      'new_image' => $this->gallery_path.'/thumbs', //save as new image //need to create thumbs first
+                      'maintain_ratio' => true,
+                      'width' => 150,
+                      'height' => 100
+                       
+                    );
+                    $this->load->library('image_lib', $config1); //load library
+                    $thumb = $this->image_lib->resize(); //generating thumb
+
+                    $data = array(
+                        'ID_CONTENT' => $this->input->post('ID_CONTENT',TRUE),
+                        'NAME_IMAGE' => $this->input->post('NAME_IMAGE',TRUE),
+                        'INFO' => $this->input->post('INFO',TRUE),
+                        'IMAGE' => $filename,
+                        'THUMBNAIL' => $filename
+                    );
+
+                    $this->Content_image_model->insert($data);
+                    $this->session->set_flashdata('message', 'Create Record Success');
+                    redirect(site_url('content_image'));
+                }
+            }
+            
         }
     }
     
@@ -106,14 +146,14 @@ class Content_image extends CI_Controller
             $data = array(
                 'button' => 'Update',
                 'action' => site_url('content_image/update_action'),
-		'ID_IMAGE' => set_value('ID_IMAGE', $row->ID_IMAGE),
-		'ID_CONTENT' => set_value('ID_CONTENT', $row->ID_CONTENT),
-		'IMAGE' => set_value('IMAGE', $row->IMAGE),
-		'THUMBNAIL' => set_value('THUMBNAIL', $row->THUMBNAIL),
-		'NAME_IMAGE' => set_value('NAME_IMAGE', $row->NAME_IMAGE),
-		'INFO' => set_value('INFO', $row->INFO),
-		'judul' => 'CONTENT_IMAGE',
-		'subjudul' =>'Update',
+        		'ID_IMAGE' => set_value('ID_IMAGE', $row->ID_IMAGE),
+        		'ID_CONTENT' => set_value('ID_CONTENT', $row->ID_CONTENT),
+        		'IMAGE' => set_value('IMAGE', $row->IMAGE),
+        		'THUMBNAIL' => set_value('THUMBNAIL', $row->THUMBNAIL),
+        		'NAME_IMAGE' => set_value('NAME_IMAGE', $row->NAME_IMAGE),
+        		'INFO' => set_value('INFO', $row->INFO),
+        		'judul' => 'CONTENT_IMAGE',
+        		'subjudul' =>'Update',
 	    );
             $this->template->load('template','content_image_form', $data);
         } else {
@@ -129,17 +169,54 @@ class Content_image extends CI_Controller
         if ($this->form_validation->run() == FALSE) {
             $this->update($this->input->post('ID_IMAGE', TRUE));
         } else {
-            $data = array(
-		'ID_CONTENT' => $this->input->post('ID_CONTENT',TRUE),
-		'IMAGE' => $this->input->post('IMAGE',TRUE),
-		'THUMBNAIL' => $this->input->post('THUMBNAIL',TRUE),
-		'NAME_IMAGE' => $this->input->post('NAME_IMAGE',TRUE),
-		'INFO' => $this->input->post('INFO',TRUE),
-	    );
+            if(!is_uploaded_file($_FILES['IMAGE'])){
+                $data = array(
+                'ID_CONTENT' => $this->input->post('ID_CONTENT',TRUE),
+                'NAME_IMAGE' => $this->input->post('NAME_IMAGE',TRUE),
+                'INFO' => $this->input->post('INFO',TRUE),
+                );
+                $this->Content_image_model->update($this->input->post('ID_IMAGE', TRUE), $data);
+                $this->session->set_flashdata('message', 'Update Record Success');
+                redirect(site_url('content_image'));
+            }else{
+                $config['upload_path']          = './uploads/';
+                $config['allowed_types']        = 'gif|jpg|png|jpeg';
 
-            $this->Content_image_model->update($this->input->post('ID_IMAGE', TRUE), $data);
-            $this->session->set_flashdata('message', 'Update Record Success');
-            redirect(site_url('content_image'));
+                $this->load->library('upload', $config);
+
+                if ( ! $this->upload->do_upload('IMAGE')){
+                    $error = array('error' => $this->upload->display_errors());
+                    $this->update($this->input->post('ID_IMAGE', TRUE));
+                }else{
+                    $data_img = array('upload_data' => $this->upload->data());
+                    $filename = $data_img['upload_data']['file_name'];
+                    $this->gallery_path = realpath(APPPATH . '../uploads');//fetching path
+
+
+                    $config1 = array(
+                      'source_image' => $data_img['upload_data']['full_path'], //get original image
+                      'new_image' => $this->gallery_path.'/thumbs', //save as new image //need to create thumbs first
+                      'maintain_ratio' => true,
+                      'width' => 150,
+                      'height' => 100
+                       
+                    );
+                    $this->load->library('image_lib', $config1); //load library
+                    $thumb = $this->image_lib->resize(); //generating thumb
+
+                    $data = array(
+                        'ID_CONTENT' => $this->input->post('ID_CONTENT',TRUE),
+                        'NAME_IMAGE' => $this->input->post('NAME_IMAGE',TRUE),
+                        'INFO' => $this->input->post('INFO',TRUE),
+                        'IMAGE' => $filename,
+                        'THUMBNAIL' => $filename
+                    );
+
+                    $this->Content_image_model->update($this->input->post('ID_IMAGE', TRUE), $data);
+                    $this->session->set_flashdata('message', 'Update Record Success');
+                    redirect(site_url('content_image'));
+                }
+            }
         }
     }
     
@@ -160,10 +237,10 @@ class Content_image extends CI_Controller
     public function _rules() 
     {
 	$this->form_validation->set_rules('ID_CONTENT', 'id content', 'trim|required');
-	$this->form_validation->set_rules('IMAGE', 'image', 'trim|required');
-	$this->form_validation->set_rules('THUMBNAIL', 'thumbnail', 'trim|required');
-	$this->form_validation->set_rules('NAME_IMAGE', 'name image', 'trim|required');
-	$this->form_validation->set_rules('INFO', 'info', 'trim|required');
+	//$this->form_validation->set_rules('IMAGE', 'image', 'trim|required');
+	//$this->form_validation->set_rules('THUMBNAIL', 'thumbnail', 'trim|required');
+	//$this->form_validation->set_rules('NAME_IMAGE', 'name image', 'trim|required');
+	//$this->form_validation->set_rules('INFO', 'info', 'trim|required');
 
 	$this->form_validation->set_rules('ID_IMAGE', 'ID_IMAGE', 'trim');
 	$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');

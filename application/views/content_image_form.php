@@ -25,10 +25,6 @@
 	    <tr><td>IMAGE <?php echo form_error('IMAGE') ?></td>
             <td> <input type="file" class="form-control" name="IMAGE" id="IMAGE" placeholder="IMAGE" value="<?php echo $IMAGE; ?>" size="20" />
         </td>
-	    <tr><td>THUMBNAIL <?php echo form_error('THUMBNAIL') ?></td>
-            <td>
-             <input type="file" class="form-control" name="THUMBNAIL" id="THUMBNAIL" placeholder="THUMBNAIL" value="<?php echo $THUMBNAIL; ?>" size="20" />
-        </td>
 	    <tr><td>NAME IMAGE <?php echo form_error('NAME_IMAGE') ?></td>
             <td><input type="text" class="form-control" name="NAME_IMAGE" id="NAME_IMAGE" placeholder="NAME IMAGE" value="<?php echo $NAME_IMAGE; ?>" />
         </td>

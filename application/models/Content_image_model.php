@@ -18,8 +18,10 @@ class Content_image_model extends CI_Model
     // get all
     function get_all()
     {
-        $this->db->order_by($this->id, $this->order);
-        return $this->db->get($this->table)->result();
+        $this->db->select('content_image.*,content.*');
+        $this->db->from($this->table);
+        $this->db->join('content', 'content_image.ID_CONTENT = content.ID_CONTENT');
+        return $this->db->get()->result();
     }
 
     function get_by_menu($menu){

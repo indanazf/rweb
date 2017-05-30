@@ -32,9 +32,9 @@
                 ?>
                 <tr>
 		    <td><?php echo ++$start ?></td>
-		    <td><?php echo $content_image->ID_CONTENT ?></td>
-		    <td><?php echo $content_image->IMAGE ?></td>
-		    <td><?php echo $content_image->THUMBNAIL ?></td>
+		    <td><?php echo $content_image->SUBJECT ?></td>
+		    <td><img src="<?php echo base_url('uploads/'. $content_image->IMAGE);?>" class="img-thumbnail"></td>
+		    <td><img src="<?php echo base_url('uploads/thumbs/'. $content_image->THUMBNAIL);?>" class="img-thumbnail"></td>
 		    <td><?php echo $content_image->NAME_IMAGE ?></td>
 		    <td><?php echo $content_image->INFO ?></td>
 		    <td style="text-align:center" width="140px">
