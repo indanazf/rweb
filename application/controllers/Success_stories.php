@@ -3,7 +3,7 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-class Join_us extends CI_Controller
+class Success_stories extends CI_Controller
 {
     
     
@@ -13,7 +13,7 @@ class Join_us extends CI_Controller
         if(!$this->session->userdata['username']){
             redirect(site_url('auth/login'));
         }
-        $this->load->model('Join_us_model');
+        $this->load->model('Success_stories_model');
         $this->load->library('form_validation');
     }
 
@@ -21,21 +21,21 @@ class Join_us extends CI_Controller
 
     public function index()
     {
-        $content = $this->Join_us_model->get_by_category('slider');
+        $content = $this->Success_stories_model->get_limit_data('');
         $data = array(
             'content' => $content,
-            'judul' => 'Join Us'
+            'judul' => 'Success Stories'
             );
 
         print_r($data);
     }
 
     public function admin(){
-        $content = $this->Join_us_model->get_all();
+        $content = $this->Success_stories_model->get_all();
 
         $data = array(
             'content_data' => $content,
-            'judul' => 'Join Us',
+            'judul' => 'Success Stories',
             'subjudul' =>'',
             );
         
