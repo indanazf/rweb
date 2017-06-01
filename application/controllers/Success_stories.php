@@ -21,7 +21,7 @@ class Success_stories extends CI_Controller
 
     public function index()
     {
-        $content = $this->Success_stories_model->get_limit_data('');
+        $content = $this->Success_stories_model->get_limit_data('success_strories');
         $data = array(
             'content' => $content,
             'judul' => 'Success Stories'

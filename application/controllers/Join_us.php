@@ -21,7 +21,7 @@ class Join_us extends CI_Controller
 
     public function index()
     {
-        $content = $this->Join_us_model->get_by_category('slider');
+        $content = $this->Join_us_model->get_by_category('join_us');
         $data = array(
             'content' => $content,
             'judul' => 'Join Us'
