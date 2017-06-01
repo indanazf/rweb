@@ -25,7 +25,7 @@ class Content_image_model extends CI_Model
     }
 
     function get_by_menu($menu){
-        $this->db->select('content_image.*');
+        $this->db->select('content_image.*,content.*');
         $this->db->from($this->table);
         $this->db->join('content', 'content.ID_CONTENT = content_image.ID_CONTENT');
         $this->db->join('content_category', 'content_category.ID_CATEGORY = content.ID_CATEGORY');

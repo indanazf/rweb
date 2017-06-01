@@ -90,7 +90,7 @@ class Content extends CI_Controller
         if ($this->form_validation->run() == FALSE) {
             $this->create();
         } else {
-            if(!isset($_FILES['IMG'])){
+            if(isset($_FILES['IMG']) && $_FILES['IMG']['error'] > 0){
                 $data = array(
                         'ID_TYPE' => $this->input->post('ID_TYPE',TRUE),
                         'ID_CATEGORY' => $this->input->post('ID_CATEGORY',TRUE),
@@ -184,7 +184,7 @@ class Content extends CI_Controller
         if ($this->form_validation->run() == FALSE) {
             $this->update($this->input->post('ID_CONTENT', TRUE));
         } else {
-            if(!isset($_FILES['IMG'])){
+            if(isset($_FILES['IMG']) && $_FILES['IMG']['error'] > 0){
                 $data = array(
                         'ID_TYPE' => $this->input->post('ID_TYPE',TRUE),
                         'ID_CATEGORY' => $this->input->post('ID_CATEGORY',TRUE),

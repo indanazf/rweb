@@ -27,17 +27,7 @@ class Content_image extends CI_Controller
         $this->template->load('template','content_image_list', $data);
     }
 
-    public function about_us(){
-        $content_image = $this->Content_image_model->get_by_menu('about_us');
-
-        $data = array(
-            'content_image_data' => $content_image,
-            'judul' => 'CONTENT_IMAGE',
-            'subjudul' =>'',
-        );
-
-        $this->template->load('template','content_image_list', $data);
-    }
+    
 
     public function read($id) 
     {
@@ -84,7 +74,7 @@ class Content_image extends CI_Controller
         if ($this->form_validation->run() == FALSE) {
             $this->create();
         } else {
-            if(!isset($_FILES['IMAGE'])){
+            if(isset($_FILES['IMG']) && $_FILES['IMG']['error'] > 0){
                 $data = array(
                 'ID_CONTENT' => $this->input->post('ID_CONTENT',TRUE),
                 'NAME_IMAGE' => $this->input->post('NAME_IMAGE',TRUE),
@@ -169,7 +159,7 @@ class Content_image extends CI_Controller
         if ($this->form_validation->run() == FALSE) {
             $this->update($this->input->post('ID_IMAGE', TRUE));
         } else {
-            if(!is_uploaded_file($_FILES['IMAGE'])){
+            if(isset($_FILES['IMG']) && $_FILES['IMG']['error'] > 0){
                 $data = array(
                 'ID_CONTENT' => $this->input->post('ID_CONTENT',TRUE),
                 'NAME_IMAGE' => $this->input->post('NAME_IMAGE',TRUE),
