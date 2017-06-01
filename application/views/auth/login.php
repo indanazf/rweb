@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Adoc | Log in</title>
+        <title>Admin | Log in</title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <!-- Bootstrap 3.3.5 -->
@@ -16,8 +16,8 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>template/dist/css/AdminLTE.min.css">
         <!-- iCheck -->
         <link rel="stylesheet" href="<?php echo base_url(); ?>template/plugins/iCheck/square/blue.css">
-        <link rel="shortcut icon" type="image/png" href="<?php echo base_url() ?>template/aci.ico"/>
-        <link rel="shortcut icon" type="image/png" href="<?php echo base_url() ?>template/aci.ico"/>
+        <!-- <link rel="shortcut icon" type="image/png" href="<?php echo base_url() ?>template/aci.ico"/> -->
+        
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,7 +29,7 @@
     <body class="hold-transition login-page">
         <div class="login-box">
             <div class="login-logo">
-                <a href="<?php echo base_url(); ?>"><b>Adoc</b> Login</a>
+                <a href="<?php echo base_url(); ?>"><b>Admin</b> Login</a>
             </div><!-- /.login-logo -->
             <div class="login-box-body">
                 <p class="login-box-msg"><?php echo $message; ?></p>
