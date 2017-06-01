@@ -3,10 +3,10 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-class Team_model extends CI_Model
+class Team extends CI_Model
 {
 
-    public $table = 'content';
+    public $table = 'content_image';
     public $id = 'ID_CONTENT';
     public $order = 'DESC';
 
@@ -30,11 +30,12 @@ class Team_model extends CI_Model
     }
 
     function get_by_category($category=null){
-        $this->db->select('content.*');
+        $this->db->select('content_image.*');
         $this->db->from($this->table);
+        $this->db->join('content', 'content_image.ID_CONTENT = content.ID_CONTENT');
         $this->db->join('content_category', 'content_category.ID_CATEGORY = content.ID_CATEGORY');
         $this->db->join('menu', 'menu.id = content_category.ID_MENU');
-        $this->db->where('menu.name', 'Join Us');
+        $this->db->where('menu.name', 'About Us');
         $this->db->where('content_category.CATEGORY', $category);
         return $this->db->get()->result();
     }

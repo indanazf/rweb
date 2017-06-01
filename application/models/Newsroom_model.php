@@ -3,7 +3,7 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-class Our_Works_model extends CI_Model
+class Newsroom_model extends CI_Model
 {
 
     public $table = 'content';
@@ -25,7 +25,7 @@ class Our_Works_model extends CI_Model
         $this->db->join('users AS updated_users', 'updated_users.ID = content.UPDATE_BY');
         $this->db->join('users AS created_users', 'created_users.ID = content.CREATED_BY');
         $this->db->join('menu', 'menu.id = content_category.ID_MENU');
-        $this->db->where('menu.name', 'Our Works');
+        $this->db->where('menu.name', 'Newsroom');
         return $this->db->get()->result();
     }
 
@@ -34,21 +34,11 @@ class Our_Works_model extends CI_Model
         $this->db->from($this->table);
         $this->db->join('content_category', 'content_category.ID_CATEGORY = content.ID_CATEGORY');
         $this->db->join('menu', 'menu.id = content_category.ID_MENU');
-        $this->db->where('menu.name', 'Our Works');
+        $this->db->where('menu.name', 'Newsroom');
         $this->db->where('content_category.CATEGORY', $category);
         return $this->db->get()->result();
     }
 
-    function get_by_category_image($category=null){
-        $this->db->select('content_image.*');
-        $this->db->from('content_image');
-        $this->db->join('content', 'content_image.ID_CONTENT = content.ID_CONTENT');
-        $this->db->join('content_category', 'content_category.ID_CATEGORY = content.ID_CATEGORY');
-        $this->db->join('menu', 'menu.id = content_category.ID_MENU');
-        $this->db->where('menu.name', 'Our Works');
-        $this->db->where('content_category.CATEGORY', $category);
-        return $this->db->get()->result();
-    }
 
     // get data by id
     function get_by_id($id)
