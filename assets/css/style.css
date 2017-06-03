@@ -3,6 +3,15 @@ body {
 	background: #eee;
 }
 
+.button__readmore {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 36px;
+	height: 36px;
+	background: url("../images/read-more.png");
+}
+
 .header {
 	height: 98px;
 	line-height: 98px;
@@ -234,11 +243,11 @@ body {
 	bottom: 0;
 }
 
-.banner3__content__infografis__frame {
+.banner-3__content__infografis__frame {
 	margin-top: 50px;
 }
 
-.banner3__content__infografis {
+.banner-3__content__infografis {
 	margin-right: 10px;
 	margin-bottom: 10px;
 	padding: 10px;
@@ -247,24 +256,119 @@ body {
 	display: inline-block;
 }
 
-.banner3__content__infografis__img {
+.banner-3__content__infografis__img {
 	width: 80px;
 	height: 80px;
 	float: left;
 }
 
-.banner3__content__infografis__content {
+.banner-3__content__infografis__content {
 	margin-top: 10px;
 	width: 180px;
 	float: right;
 }
 
-.banner3__content__infografis__content__title {
+.banner-3__content__infografis__content__title {
 	font-size: 12px;
 	color: #999;
 }
 
 
-.banner3__content__infografis__content__value {
+.banner-3__content__infografis__content__value {
 	font-size: 30px;
+}
+
+.banner-4 {
+	min-height: 600px;
+	background: #999;
+}
+
+.banner-4__content {
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 350px;
+	margin-bottom: 50px;
+}
+
+.banner-4__content__title {
+	font-size: 48px;
+	color: #fff;
+	font-weight: bold;
+}
+
+.banner-4__content__desc {
+	background: #231f20;
+	padding: 20px;
+	position: relative;
+	color: #999;
+}
+
+.banner-4__join-us {
+	width: 100%;
+	height: 300px;
+	background: #2381aa;
+	overflow: auto;
+}
+
+.banner-4__join-us__circle {
+	opacity: 0.75;
+	background: #fff;
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+	margin-top: 50px;
+	border-radius: 50%;
+	text-align: center;
+	font-size: 36px;
+	color: #2381aa;
+	font-weight: bold;
+	line-height: 200px;
+}
+
+.banner-4__contact-us {
+	width: 50%;
+	float: left;
+	height: 300px;
+	background: #3ead4b;
+}
+
+.banner-4__contact-us__icon {
+	width: 117px;
+	height: 117px;
+	text-align: center;
+	background: url("../images/banner-4__contact-us.png") no-repeat center center;
+	margin: 0 auto;
+	margin-top: 60px;
+}
+
+.banner-4__contact-us__title {
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 36px;
+	font-weight: bold;
+}
+
+.banner-4__faq {
+	width: 50%;
+	float: right;
+	height: 300px;
+	background: #b3cd5a;
+}
+
+.banner-4__faq__icon {
+	width: 117px;
+	height: 117px;
+	text-align: center;
+	background: url("../images/banner-4__faq.png") no-repeat center center;
+	margin: 0 auto;
+	margin-top: 60px;
+}
+
+.banner-4__faq__title {
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 36px;
+	font-weight: bold;
 }
