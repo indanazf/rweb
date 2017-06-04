@@ -40,7 +40,13 @@ class About_us extends CI_Controller
             'judul' => 'About Us'
         );
 
-        print_r($data);
+        //print_r($data);
+        $this->load->view('layouts/header');
+        $this->load->view('layouts/about_us/section1');
+        $this->load->view('layouts/about_us/section2');
+        $this->load->view('layouts/about_us/section3');
+        $this->load->view('layouts/about_us/section4');
+        $this->load->view('layouts/footer');
     }
 
     public function admin(){
