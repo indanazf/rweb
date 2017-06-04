@@ -1,6 +1,15 @@
 body {
 	font-family: arial;
-	background: #eee;
+	background: #fff;
+}
+
+.container-own {
+	position: relative;
+	min-height: 700px;
+}
+
+.clear {
+	clear: both;
 }
 
 .button__readmore {
@@ -10,6 +19,22 @@ body {
 	width: 36px;
 	height: 36px;
 	background: url("../images/read-more.png");
+}
+
+.u-pad {
+	padding: 0 !important;
+}
+
+.background-cover {
+	background: url("../images/banner1.jpg") no-repeat top center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.images-cover {
+	background-size: cover;
 }
 
 .header {
@@ -71,9 +96,9 @@ body {
 
 .banner {
 	width: 100%;
-	height: 700px;
-	background: #ccc;
+	min-height: 700px;
 	border-bottom: 3px solid #000;
+	position: relative;
 }
 
 .banner-1 {
@@ -84,25 +109,29 @@ body {
   background-size: cover;
 }
 
+.banner-overlay {
+	position: absolute; 
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.banner-overlay img{
+	width: 100%;
+	min-width: 1200px;
+}
+
 .banner-2 {
 	background: #fff;
 }
 
-.banner-2__frame {
-	background: url("../images/banner2.jpg") no-repeat;
-	background-size: 68%;
-	position: absolute; 
-}
-
 .banner-3 {
-	background: url("../images/banner3.jpg") #fff no-repeat bottom center; 
-  background-size: 80%;
+	background: #fff;
 }
-
 
 .banner-1__content {
 	background: #fff;
-	width: 40%;
+	width: 100%;
 	position: absolute;
 	margin-top: 150px;
 	padding-top: 80px;
@@ -135,14 +164,13 @@ body {
 
 .banner-2__content {
 	background: #3C81A7;
-	width: 40%;
-	position: absolute;
+	width: 100%;
 	margin-top: 100px;
 	padding: 30px 50px;
 	padding-bottom: 60px;
-	right: 10%;
 	color: #fff;
 	border:1px solid #3C81A7;
+	position: relative;
 }
 
 .banner-2__content__title {
@@ -169,11 +197,9 @@ body {
 }
 
 .banner-2-2__content {
-	width: 40%;
-	position: absolute;
-	margin-top: 380px;
+	width: 100%;
 	padding: 30px;
-	padding-bottom: 60px;
+	padding-bottom: 100px;
 	right: 10%;
 }
 
@@ -371,4 +397,146 @@ body {
 	color: #fff;
 	font-size: 36px;
 	font-weight: bold;
+}
+
+.banner-5 {
+	width: 100%;
+	min-height: 600px;
+}
+
+.banner-5__left {
+	width: 100%;
+	height: 600px;
+	overflow: auto;
+	position: relative;
+}
+
+.banner-5__left__icon {
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	margin-top: 200px;
+	text-align: center;
+	background: url("../images/sample-icon.png") no-repeat center center;
+	background-size: 100%;
+}
+
+.banner-5__left__title {
+	color: #fff;
+	font-size: 36px;
+	font-weight: bold;
+	text-align: center;
+	width: 100%;
+	margin-top: 20px;
+}
+
+.banner-5__right {
+	width: 100%;
+	height: 600px;
+	overflow: auto;
+	position: relative;
+}
+
+.banner-5__right__icon {
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	margin-top: 200px;
+	text-align: center;
+	background: url("../images/sample-icon.png") no-repeat center center;
+	background-size: 100%;
+}
+
+.banner-5__right__title {
+	color: #fff;
+	font-size: 36px;
+	font-weight: bold;
+	text-align: center;
+	width: 100%;
+	margin-top: 20px;
+}
+
+.banner-6 {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.banner-6__item {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.banner-6__item__head {
+	background: #2381aa;
+	text-align: center;
+	padding: 20px;
+}
+
+.banner-6__item__head img{
+	width: 40px;
+}
+
+.banner-6__item__body {
+	background: #e8e3e3;
+	padding: 20px;
+	min-height: 200px;
+}
+
+.footer {
+	padding: 50px;
+	border-top: 1px solid #ccc;
+}
+
+.footer__left__email {
+  width: 300px;
+  background: #fff;
+  line-height: 2;
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: 0;
+  outline: 0;
+  float: left;
+  padding-left: 20px;
+  border: 1px solid #ccc;
+}
+
+.footer__left__button {
+	width: 150px;
+  background-color: #b3cd5a;
+  color: #fff;
+  line-height: 2;
+  padding: 0.6rem;
+  font-size: 2rem;
+  border: none;
+  outline: 0;
+  float: left;
+}
+
+.footer__left__text {
+	font-size: 12px;
+	margin-top: 10px;
+	color: #999;
+}
+
+.footer__left__logo {
+	margin-top: 10px;
+}
+
+.footer__right__table {
+	width: 400px;
+	float: right;
+}
+
+.footer__right__table tr td {
+	padding: 10px;
+	color: #999;
+	font-size: 16px;
+}
+
+
+@media screen and (max-width: 1000px) {
+	.footer__right__table {
+		width: 400px;
+		float: left;
+	}
 }
