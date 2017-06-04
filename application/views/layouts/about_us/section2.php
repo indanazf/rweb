@@ -1,7 +1,7 @@
 <div class="banner banner-2">
   <div class="container" style="position: relative;">
     
-    <div class="banner-overlay">
+    <div class="banner-overlay banner-overlay-2">
       <img src="assets/images/banner2.jpg">
     </div>
     <div class="col-md-7 u-pad">&nbsp;</div>
