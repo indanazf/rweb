@@ -14,6 +14,7 @@ class Our_works extends CI_Controller
             redirect(site_url('auth/login'));
         }
         $this->load->model('Our_Works_model');
+        $this->load->model('Content_model');
         $this->load->model('Content_image_model');
         $this->load->library('form_validation');
     }
@@ -52,10 +53,14 @@ class Our_works extends CI_Controller
 
     public function images(){
         $content_image = $this->Content_image_model->get_by_menu('Our Works');
+        $id = $this->Content_model->get_by_subject('partners');
+        $id = $id[0]->ID_CONTENT;
     
         $data = array(
             'content_image_data' => $content_image,
-            'judul' => 'CONTENT_IMAGE',
+            'ID_CONTENT' => $id,
+            'page' => 'our_works',
+            'judul' => 'Our Client',
             'subjudul' =>'',
         );
 
