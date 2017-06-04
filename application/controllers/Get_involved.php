@@ -14,6 +14,8 @@ class Get_involved extends CI_Controller
             redirect(site_url('auth/login'));
         }
         $this->load->model('Get_involved_model');
+        $this->load->model('Faq_question_model');
+        $this->load->model('Join_us_model');
         $this->load->model('Content_image_model');
         $this->load->library('form_validation');
     }
@@ -23,8 +25,12 @@ class Get_involved extends CI_Controller
     public function index()
     {
         $content_main = $this->Get_involved_model->get_by_category('get_involved');
+        $join_us = $this->Join_us_model->get_by_category('join_us');
+        $faq = $this->Faq_question_model->get_all();
         $data = array(
             'content_main' => $content_main,
+            'join_us' => $join_us,
+            'faq' => $faq,
             'judul' => 'Get Involved'
         );
 

@@ -21,13 +21,17 @@ class Our_impact extends CI_Controller
 
     public function index()
     {
-        $background = $this->Our_impact_model->get_by_category('background');
-        $box = $this->Our_impact_model->get_by_category('box');
+        $background = $this->Our_impact_model->get_by_category('background', 'list');
+        $box = $this->Our_impact_model->get_by_category('box','list');
+        $box_chart1 = $this->Our_impact_model->get_by_category('box', 'sector_chart');
+        $box_chart2 = $this->Our_impact_model->get_by_category('box', 'geography_chart');
         $annual_report = $this->Our_impact_model->get_by_category('annual report');
         $success_stories = $this->Our_impact_model->get_by_category('success stories');
         $data = array(
             'background' => $background,
             'box' => $box,
+            'box_chart1' => $box_chart1,
+            'box_chart2' => $box_chart2,
             'annual_report' => $annual_report,
             'success_stories' => $success_stories,
             'judul' => 'Our Impact'

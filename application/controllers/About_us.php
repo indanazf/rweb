@@ -14,6 +14,7 @@ class About_us extends CI_Controller
             redirect(site_url('auth/login'));
         }
         $this->load->model('About_Us_model');
+        $this->load->model('Content_model');
         $this->load->model('Team');
         $this->load->model('Content_image_model');
         $this->load->library('form_validation');
@@ -39,7 +40,13 @@ class About_us extends CI_Controller
             'judul' => 'About Us'
         );
 
-        print_r($data);
+        //print_r($data);
+        $this->load->view('layouts/header');
+        $this->load->view('layouts/about_us/section1');
+        $this->load->view('layouts/about_us/section2');
+        $this->load->view('layouts/about_us/section3');
+        $this->load->view('layouts/about_us/section4');
+        $this->load->view('layouts/footer');
     }
 
     public function admin(){
@@ -58,10 +65,14 @@ class About_us extends CI_Controller
    
    public function images(){
         $content_image = $this->Content_image_model->get_by_menu('About Us');
+        $id = $this->Content_model->get_by_subject('Introduce Team');
+        $id = $id[0]->ID_CONTENT;
     
         $data = array(
             'content_image_data' => $content_image,
-            'judul' => 'CONTENT_IMAGE',
+            'ID_CONTENT' => $id,
+            'page' => 'our_team',
+            'judul' => 'Our Team',
             'subjudul' =>'',
         );
 
