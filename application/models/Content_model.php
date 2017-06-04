@@ -24,7 +24,7 @@ class Content_model extends CI_Model
         $this->db->join('content_type', 'content_type.ID_TYPE = content.ID_TYPE','LEFT');
         $this->db->join('users AS updated_users', 'updated_users.ID = content.UPDATE_BY');
         $this->db->join('users AS created_users', 'created_users.ID = content.CREATED_BY');
-       
+
         return $this->db->get()->result();
     }
 
@@ -44,19 +44,19 @@ class Content_model extends CI_Model
     // get total rows
     function total_rows($q = NULL) {
         $this->db->like('ID_CONTENT', $q);
-	$this->db->or_like('ID_TYPE', $q);
-	$this->db->or_like('ID_CATEGORY', $q);
-	$this->db->or_like('SUBJECT', $q);
-	$this->db->or_like('CONTENT', $q);
-	$this->db->or_like('CONTENT_NUMMBER', $q);
-	$this->db->or_like('TAGS', $q);
-	$this->db->or_like('CREATED_BY', $q);
-	$this->db->or_like('CREATED_DATE', $q);
-	$this->db->or_like('UPDATE_BY', $q);
-	$this->db->or_like('LAST_UPDATE', $q);
-	$this->db->or_like('ICON_TYPE', $q);
-	$this->db->or_like('IMG', $q);
-	$this->db->from($this->table);
+        $this->db->or_like('ID_TYPE', $q);
+        $this->db->or_like('ID_CATEGORY', $q);
+        $this->db->or_like('SUBJECT', $q);
+        $this->db->or_like('CONTENT', $q);
+        $this->db->or_like('CONTENT_NUMMBER', $q);
+        $this->db->or_like('TAGS', $q);
+        $this->db->or_like('CREATED_BY', $q);
+        $this->db->or_like('CREATED_DATE', $q);
+        $this->db->or_like('UPDATE_BY', $q);
+        $this->db->or_like('LAST_UPDATE', $q);
+        $this->db->or_like('ICON_TYPE', $q);
+        $this->db->or_like('IMG', $q);
+        $this->db->from($this->table);
         return $this->db->count_all_results();
     }
 
@@ -64,19 +64,24 @@ class Content_model extends CI_Model
     function get_limit_data($limit, $start = 0, $q = NULL) {
         $this->db->order_by($this->id, $this->order);
         $this->db->like('ID_CONTENT', $q);
-	$this->db->or_like('ID_TYPE', $q);
-	$this->db->or_like('ID_CATEGORY', $q);
-	$this->db->or_like('SUBJECT', $q);
-	$this->db->or_like('CONTENT', $q);
-	$this->db->or_like('CONTENT_NUMMBER', $q);
-	$this->db->or_like('TAGS', $q);
-	$this->db->or_like('CREATED_BY', $q);
-	$this->db->or_like('CREATED_DATE', $q);
-	$this->db->or_like('UPDATE_BY', $q);
-	$this->db->or_like('LAST_UPDATE', $q);
-	$this->db->or_like('ICON_TYPE', $q);
-	$this->db->or_like('IMG', $q);
-	$this->db->limit($limit, $start);
+        $this->db->or_like('ID_TYPE', $q);
+        $this->db->or_like('ID_CATEGORY', $q);
+        $this->db->or_like('SUBJECT', $q);
+        $this->db->or_like('CONTENT', $q);
+        $this->db->or_like('CONTENT_NUMMBER', $q);
+        $this->db->or_like('TAGS', $q);
+        $this->db->or_like('CREATED_BY', $q);
+        $this->db->or_like('CREATED_DATE', $q);
+        $this->db->or_like('UPDATE_BY', $q);
+        $this->db->or_like('LAST_UPDATE', $q);
+        $this->db->or_like('ICON_TYPE', $q);
+        $this->db->or_like('IMG', $q);
+        $this->db->limit($limit, $start);
+        return $this->db->get($this->table)->result();
+    }
+
+    function get_by_subject($q = NULL) {
+        $this->db->like('SUBJECT', $q);
         return $this->db->get($this->table)->result();
     }
 
