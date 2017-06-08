@@ -42,7 +42,12 @@ class About_us extends CI_Controller
 
         //print_r($data);
         $this->load->view('layouts/header');
-        $this->load->view('layouts/about_us/section1', $content_slider);
+        $this->load->view('layouts/about_us/section1', $array = array('content_slider'=>$content_slider));
+        $this->load->view('layouts/about_us/section2', $array = array('content_introducing'=>$content_introducing));
+        $this->load->view('layouts/about_us/section3', $array = array('content_vision'=>$content_vision));
+        $this->load->view('layouts/about_us/section4', $array = array('content_keys_role'=>$content_keys_role));
+        $this->load->view('layouts/about_us/section5', $array = array('content_team'=>$content_team));
+        $this->load->view('layouts/about_us/section6', $array = array('content_director'=>$content_director));
         $this->load->view('layouts/footer');
     }
 
