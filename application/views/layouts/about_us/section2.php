@@ -2,7 +2,7 @@
   <div class="container" style="position: relative;">
     
     <div class="banner-overlay banner-overlay-2">
-      <img src="assets/images/banner2.jpg">
+      <img src="<?= base_url() ?>assets/images/banner2.jpg">
     </div>
     <div class="col-md-7 u-pad">&nbsp;</div>
     <div class="col-md-5 u-pad">
@@ -15,7 +15,7 @@
       <div class="banner-2-2__content">
         <div class="banner-2-2__content__item">
           <div class="banner-2-2__content__item__circle">
-            <img src="assets/images/banner-2-icon-1.png">
+            <img src="<?= base_url() ?>assets/images/banner-2-icon-1.png">
           </div>
           <div class="banner-2-2__content__item__desc">
             Our Past & On Going Oroject
@@ -23,7 +23,7 @@
         </div>
         <div class="banner-2-2__content__item">
           <div class="banner-2-2__content__item__circle">
-            <img src="assets/images/banner-2-icon-2.png">
+            <img src="<?= base_url() ?>assets/images/banner-2-icon-2.png">
           </div>
           <div class="banner-2-2__content__item__desc">
             Project Highlights
@@ -31,7 +31,7 @@
         </div>
         <div class="banner-2-2__content__item">
           <div class="banner-2-2__content__item__circle">
-            <img src="assets/images/banner-2-icon-3.png">
+            <img src="<?= base_url() ?>assets/images/banner-2-icon-3.png">
           </div>
           <div class="banner-2-2__content__item__desc">
             Our Partners

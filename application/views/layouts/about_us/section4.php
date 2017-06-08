@@ -1,7 +1,7 @@
 <div class="banner-4">
 	<div class="col-md-6 u-pad">
 		<div class="banner-overlay">
-      <img src="assets/images/sample-background.jpg">
+      <img src="<?= base_url() ?>assets/images/sample-background.jpg">
     </div>
 		<div class="banner-4__content">
 			<div class="banner-4__content__title">
