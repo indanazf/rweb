@@ -6,32 +6,32 @@
   		<br>
   		<div class="col-md-4">
   			<div class="our-partner__circle__content__item ">
-  				<img src="assets/images/partner-1.png">
+  				<img src="<?= base_url() ?>assets/images/partner-1.png">
   			</div>
   		</div>
   		<div class="col-md-4">
   			<div class="our-partner__circle__content__item ">
-  				<img src="assets/images/partner-2.png">
+  				<img src="<?= base_url() ?>assets/images/partner-2.png">
   			</div>
   		</div>
   		<div class="col-md-4">
   			<div class="our-partner__circle__content__item ">
-  				<img src="assets/images/partner-3.png">
+  				<img src="<?= base_url() ?>assets/images/partner-3.png">
   			</div>
   		</div>
   		<div class="col-md-4">
   			<div class="our-partner__circle__content__item ">
-  				<img src="assets/images/partner-4.png">
+  				<img src="<?= base_url() ?>assets/images/partner-4.png">
   			</div>
   		</div>
   		<div class="col-md-4">
   			<div class="our-partner__circle__content__item ">
-  				<img src="assets/images/partner-5.png">
+  				<img src="<?= base_url() ?>assets/images/partner-5.png">
   			</div>
   		</div>
   		<div class="col-md-4">
   			<div class="our-partner__circle__content__item ">
-  				<img src="assets/images/partner-6.png">
+  				<img src="<?= base_url() ?>assets/images/partner-6.png">
   			</div>
   		</div>
   	</div>

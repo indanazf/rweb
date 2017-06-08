@@ -3,6 +3,10 @@ body {
 	background: #fff;
 }
 
+.bg-black {
+	background: #000;
+}
+
 .container-own {
 	position: relative;
 	min-height: 700px;
@@ -556,7 +560,7 @@ body {
 	font-weight: bold;
 	text-align: center;
 	width: 100%;
-	padding-top: 200px;
+	padding-top: 150px;
 	position: relative;
 }
 
@@ -653,6 +657,154 @@ body {
 .our-partner__circle__content__item {
 	text-align: center;
 }
+
+
+.solution__banner {
+	width: 100%;
+	height: 320px;
+	overflow: hidden;
+	position: relative;
+}
+
+.solution__banner__title {
+	font-size: 50px;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	width: 100%;
+	padding-top: 150px;
+	position: relative;
+}
+
+.solution__content {
+	color: #414042;
+	padding: 60px 20px;
+	font-size: 16px;
+}
+
+.our-team {
+	position: relative;
+	min-height: 700px;
+	overflow: auto;
+}
+
+.our-team__content {
+	margin-top: 180px;
+	color: #fff;
+	position: relative;
+	width: 100%;
+	text-align: center;
+}
+
+.our-team__content__title {
+	font-size: 50px;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+.our-team__content__desc {
+	font-size: 2.5em;
+	margin-bottom: 100px;
+}
+
+.our-team__content__button {
+	border-radius: 2px;
+	background: #fff;
+	color: #2381aa;
+	padding: 10px 20px;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.our-executive {
+	position: relative;
+	min-height: 700px;
+	overflow: auto;
+}
+
+.our-executive__content {
+	margin-top: 150px;
+	color: #fff;
+	position: relative;
+	width: 100%;
+}
+
+.our-executive__content__title {
+	font-size: 50px;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+.our-executive__content__subtitle {
+	font-size: 30px;
+	margin-bottom: 30px;
+}
+
+.our-executive__content__desc {
+	font-size: 1.5em;
+	margin-bottom: 50px;
+}
+
+.our-executive__content__button {
+	border-radius: 2px;
+	background: #2381aa;
+	color: #fff;
+	padding: 10px 20px;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.annual-report__title {
+	font-size: 36px;
+	color: #2381aa;
+	font-weight: bold;
+	line-height: 40px;
+	margin-top: 40px;
+	text-transform: uppercase;
+}
+
+
+.keys-role {
+	position: relative;
+	min-height: 700px;
+	overflow: auto;
+}
+
+.keys-role__content {
+	margin-top: 180px;
+	color: #fff;
+	position: relative;
+	width: 100%;
+	text-align: center;
+}
+
+.keys-role__content__title {
+	font-size: 50px;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+.keys-role__content__item {
+	text-align: center;
+}
+
+.keys-role__content__item__img {
+	width: 150px;
+}
+
+.keys-role__content__item__number {
+	font-size: 72px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+.keys-role__content__item__desc {
+	font-size: 20px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+
 
 @media screen and (max-width: 1000px) {
 	.footer__right__table {

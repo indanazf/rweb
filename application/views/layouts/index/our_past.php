@@ -1,6 +1,6 @@
 <div class="banner">
 	<div class="banner-overlay">
-		<img src="assets/images/our-past.jpg">
+		<img src="<?= base_url() ?>assets/images/our-past.jpg">
 	</div>
 	<div class="container">
 		<div class="col-md-3 u-pad">
@@ -21,7 +21,7 @@
 		  		<div class="our-past__content__body__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </div>
 		  		<table class="our-past__content__body__table">
 		  			<tr> 
-		  				<td valign="top"><img src="assets/images/farmer.png" width="60"></td>
+		  				<td valign="top"><img src="<?= base_url() ?>assets/images/farmer.png" width="60"></td>
 		  				<td>
 		  					<div class="our-past__content__body__title">Total Beneficiaries</div>
 		  					<div class="our-past__content__body__value2">75+</div>
