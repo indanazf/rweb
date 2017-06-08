@@ -35,7 +35,9 @@ class Our_works extends CI_Controller
             'judul' => 'Newsroom'
         );
 
-        print_r($data);
+        $this->load->view('layouts/header');
+        $this->load->view('layouts/about_us/section2');
+        $this->load->view('layouts/footer');
     }
 
     public function admin(){

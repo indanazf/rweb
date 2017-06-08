@@ -21,7 +21,7 @@
 
    <div class="header">
      <div class="container">
-       <img src="assets/images/logo.png" class="header__logo">
+       <img src="<?= base_url() ?>assets/images/logo.png" class="header__logo">
        <div class="header__title">Sahabat Cipta</div>
        <input type="text" class="header__search" placeholder="Search">
        <div class="header__menu">

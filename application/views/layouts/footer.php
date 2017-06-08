@@ -8,7 +8,7 @@
 					</form>
 					<div class="clear"></div>
 					<div class="footer__left__text">Enter your email to get the registration form</div>
-					<img src="assets/images/logo-white.png" class="footer__left__logo">
+					<img src="<?= base_url() ?>assets/images/logo-white.png" class="footer__left__logo">
 				</div>
 			</div>
 			<div class="col-md-6">

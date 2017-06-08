@@ -1,6 +1,7 @@
 <div class="banner">
 	<div class="banner-overlay">
-		<img src="assets/images/banner1.jpg">
+		<?php  print_r($content_slider);  ?>
+		<img src="<?= base_url() ?>assets/images/banner1.jpg">
 	</div>
 	<div class="col-md-5 u-pad">
 	  <div class="banner-1__content">
