@@ -10,7 +10,7 @@ class About_us extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        if(!$this->session->userdata['username']){
+        if(!isset($this->session->userdata['username'])){
             redirect(site_url('auth/login'));
         }
         $this->load->model('About_Us_model');
