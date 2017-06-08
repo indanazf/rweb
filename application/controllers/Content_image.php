@@ -21,6 +21,7 @@ class Content_image extends CI_Controller
         $data = array(
             'content_image_data' => $content_image,
             'judul' => 'CONTENT_IMAGE',
+            'page' => '',
             'subjudul' =>'',
             );
 
