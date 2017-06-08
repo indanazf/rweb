@@ -39,7 +39,7 @@ class Newsroom extends CI_Controller
 
         $data = array(
             'content_data' => $content,
-            'judul' => 'Our Works',
+            'judul' => 'Newsroom',
             'subjudul' =>'',
         );
         

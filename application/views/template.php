@@ -209,5 +209,18 @@
                 });
             });
         </script>
+
+        <script type="text/javascript" src="<?=base_url()?>template/plugins/ckeditor/ckeditor.js"></script>
+        <script src="<?=base_url()?>template/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+
+        <script>
+          $(function () {
+            // Replace the <textarea id="editor1"> with a CKEditor
+            // instance, using default configuration.
+            CKEDITOR.replace('CONTENT');
+            //bootstrap WYSIHTML5 - text editor
+            $(".textarea").wysihtml5();
+          });
+        </script>
     </body>
 </html>

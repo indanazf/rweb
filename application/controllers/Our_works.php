@@ -32,7 +32,7 @@ class Our_works extends CI_Controller
             'content_past_going_projects' => $content_past_going_projects,
             'content_project_highlights' => $content_project_highlights,
             'content_partners' => $content_partners,
-            'judul' => 'Newsroom'
+            'judul' => 'Our Works'
         );
 
         $this->load->view('layouts/header');
@@ -45,7 +45,7 @@ class Our_works extends CI_Controller
 
         $data = array(
             'content_data' => $content,
-            'judul' => 'Newsroom',
+            'judul' => 'Our Works',
             'subjudul' =>'',
         );
         
