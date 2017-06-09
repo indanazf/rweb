@@ -37,6 +37,8 @@ class Our_impact_model extends CI_Model
         if($type != null){
             $this->db->join('content_type', 'content.ID_TYPE = content_type.ID_TYPE');
             $this->db->where('content_type.TYPE', $type);
+        }else{
+            $this->db->where('content.ID_TYPE', 0);
         }
         $this->db->where('menu.NAME', 'Our Impact');
         $this->db->where('content_category.CATEGORY', $category);
