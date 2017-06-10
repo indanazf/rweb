@@ -10,9 +10,6 @@ class Join_us extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        if(!$this->session->userdata['username']){
-            redirect(site_url('auth/login'));
-        }
         $this->load->model('Join_us_model');
         $this->load->library('form_validation');
     }
@@ -27,10 +24,12 @@ class Join_us extends CI_Controller
             'judul' => 'Join Us'
             );
 
-        print_r($data);
     }
 
     public function admin(){
+        if(!$this->session->userdata['username']){
+            redirect(site_url('auth/login'));
+        }
         $content = $this->Join_us_model->get_all();
 
         $data = array(

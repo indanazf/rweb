@@ -10,9 +10,6 @@ class Success_stories extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        if(!$this->session->userdata['username']){
-            redirect(site_url('auth/login'));
-        }
         $this->load->model('Success_stories_model');
         $this->load->library('form_validation');
     }
@@ -31,6 +28,9 @@ class Success_stories extends CI_Controller
     }
 
     public function admin(){
+        if(!$this->session->userdata['username']){
+            redirect(site_url('auth/login'));
+        }
         $content = $this->Success_stories_model->get_all();
 
         $data = array(
@@ -45,6 +45,9 @@ class Success_stories extends CI_Controller
 
     public function read($id) 
     {
+        if(!$this->session->userdata['username']){
+            redirect(site_url('auth/login'));
+        }
         $row = $this->Content_model->get_by_id($id);
         if ($row) {
             $data = array(
@@ -73,6 +76,9 @@ class Success_stories extends CI_Controller
 
     public function create() 
     {
+        if(!$this->session->userdata['username']){
+            redirect(site_url('auth/login'));
+        }
         $data = array(
             'button' => 'Create',
             'action' => site_url('content/create_action'),
@@ -97,6 +103,9 @@ class Success_stories extends CI_Controller
     
     public function create_action() 
     {
+        if(!$this->session->userdata['username']){
+            redirect(site_url('auth/login'));
+        }
         $this->_rules();
 
         if ($this->form_validation->run() == FALSE) {
@@ -125,6 +134,9 @@ class Success_stories extends CI_Controller
     
     public function update($id) 
     {
+        if(!$this->session->userdata['username']){
+            redirect(site_url('auth/login'));
+        }
         $row = $this->Content_model->get_by_id($id);
 
         if ($row) {
@@ -156,6 +168,9 @@ class Success_stories extends CI_Controller
     
     public function update_action() 
     {
+        if(!$this->session->userdata['username']){
+            redirect(site_url('auth/login'));
+        }
         $this->_rules();
 
         if ($this->form_validation->run() == FALSE) {
@@ -184,6 +199,9 @@ class Success_stories extends CI_Controller
     
     public function delete($id) 
     {
+        if(!$this->session->userdata['username']){
+            redirect(site_url('auth/login'));
+        }
         $row = $this->Content_model->get_by_id($id);
 
         if ($row) {
@@ -198,6 +216,9 @@ class Success_stories extends CI_Controller
 
     public function _rules() 
     {
+        if(!$this->session->userdata['username']){
+            redirect(site_url('auth/login'));
+        }
        $this->form_validation->set_rules('ID_TYPE', 'id type', 'trim|required');
        $this->form_validation->set_rules('ID_CATEGORY', 'id category', 'trim|required');
        $this->form_validation->set_rules('SUBJECT', 'subject', 'trim|required');

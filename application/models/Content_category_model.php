@@ -32,11 +32,11 @@ class Content_category_model extends CI_Model
     // get total rows
     function total_rows($q = NULL) {
         $this->db->like('ID_CATEGORY', $q);
-	$this->db->or_like('ID_MENU', $q);
-	$this->db->or_like('CATEGORY', $q);
-	$this->db->or_like('INFORMATION_CATEGORY', $q);
-	$this->db->or_like('ICON_CATEGORY', $q);
-	$this->db->from($this->table);
+        $this->db->or_like('ID_MENU', $q);
+        $this->db->or_like('CATEGORY', $q);
+        $this->db->or_like('INFORMATION_CATEGORY', $q);
+        $this->db->or_like('ICON_CATEGORY', $q);
+        $this->db->from($this->table);
         return $this->db->count_all_results();
     }
 
@@ -44,11 +44,18 @@ class Content_category_model extends CI_Model
     function get_limit_data($limit, $start = 0, $q = NULL) {
         $this->db->order_by($this->id, $this->order);
         $this->db->like('ID_CATEGORY', $q);
-	$this->db->or_like('ID_MENU', $q);
-	$this->db->or_like('CATEGORY', $q);
-	$this->db->or_like('INFORMATION_CATEGORY', $q);
-	$this->db->or_like('ICON_CATEGORY', $q);
-	$this->db->limit($limit, $start);
+        $this->db->or_like('ID_MENU', $q);
+        $this->db->or_like('CATEGORY', $q);
+        $this->db->or_like('INFORMATION_CATEGORY', $q);
+        $this->db->or_like('ICON_CATEGORY', $q);
+        $this->db->limit($limit, $start);
+        return $this->db->get($this->table)->result();
+    }
+
+    function get_by_menu($menu=NULL) {
+        $this->db->order_by($this->id, $this->order);
+        $this->db->join('menu','menu.id=content_category.ID_MENU');
+        $this->db->like('menu.name', $menu);
         return $this->db->get($this->table)->result();
     }
 

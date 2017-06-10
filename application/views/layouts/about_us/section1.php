@@ -1,4 +1,4 @@
-<?php foreach($content_slider as $row){?>
+<?php foreach($about_us as $row){?>
 <div class="banner">
 	<div class="banner-overlay">
 		<img src="<?= base_url('uploads/'.$row->IMG) ?>">
@@ -7,7 +7,7 @@
 		<div class="banner-1__content">
 			<div class="banner-1__content__title"><?=$row->SUBJECT?></div>
 			<div class="banner-1__content__desc"><?=$row->CONTENT?></div>
-			<div class="button__readmore__long">Find out more about us</div>
+			<a href="<?php echo site_url($row->LINK) ?>"><div class="button__readmore__long"><?=$row->TAGS?></div></a>
 		</div>
 	</div>
 </div>

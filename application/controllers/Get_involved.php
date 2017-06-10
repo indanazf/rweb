@@ -10,9 +10,6 @@ class Get_involved extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        if(!$this->session->userdata['username']){
-            redirect(site_url('auth/login'));
-        }
         $this->load->model('Get_involved_model');
         $this->load->model('Faq_question_model');
         $this->load->model('Join_us_model');
@@ -38,6 +35,9 @@ class Get_involved extends CI_Controller
     }
 
     public function admin(){
+        if(!$this->session->userdata['username']){
+            redirect(site_url('auth/login'));
+        }
         $content = $this->Get_involved_model->get_all();
 
         $data = array(
@@ -51,6 +51,9 @@ class Get_involved extends CI_Controller
     }
 
     public function images(){
+        if(!$this->session->userdata['username']){
+            redirect(site_url('auth/login'));
+        }
         $content_image = $this->Content_image_model->get_by_menu('Our Works');
     
         $data = array(

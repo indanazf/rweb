@@ -10,9 +10,6 @@ class Our_works extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        if(!$this->session->userdata['username']){
-            redirect(site_url('auth/login'));
-        }
         $this->load->model('Our_Works_model');
         $this->load->model('Content_model');
         $this->load->model('Content_image_model');
@@ -23,24 +20,41 @@ class Our_works extends CI_Controller
 
     public function index()
     {
-        $content_main = $this->Our_Works_model->get_by_category('main');
-        $content_past_going_projects = $this->Our_Works_model->get_by_category('past_going_projects');
-        $content_project_highlights = $this->Our_Works_model->get_by_category('project_highlights');
-        $content_partners = $this->Our_Works_model->get_by_category_image('partners');
-        $data = array(
-            'content_main' => $content_main,
-            'content_past_going_projects' => $content_past_going_projects,
-            'content_project_highlights' => $content_project_highlights,
-            'content_partners' => $content_partners,
-            'judul' => 'Our Works'
-        );
-
+        $our_works = $this->Our_Works_model->get_by_category('main');
         $this->load->view('layouts/header');
-        $this->load->view('layouts/about_us/section2');
+        $this->load->view('layouts/about_us/section2', $array = array('our_works'=>$our_works));
+        $this->load->view('layouts/footer');
+    }
+
+    public function past_going_projects(){
+        $bg = $this->Our_Works_model->get_by_category_type('past_going_projects','background');
+        $prisma = $this->Our_Works_model->get_by_category_type('past_going_projects','content_peta_header');
+        $content = $this->Our_Works_model->get_by_category_type('past_going_projects','list');
+        $this->load->view('layouts/header');
+        $this->load->view('layouts/index/our_past', $array = array('bg'=>$bg, 'header'=>$prisma, 'content'=>$content));
+        $this->load->view('layouts/footer');
+
+    }
+
+    public function project_highlights(){
+        $bg = $this->Our_Works_model->get_by_category('project_highlights');
+        $this->load->view('layouts/header');
+        $this->load->view('layouts/index/project_highlight', $array = array('bg' => $bg));
+        $this->load->view('layouts/footer');
+    }
+
+    public function partner(){
+        $bg = $this->Our_Works_model->get_by_category('partners');
+        $image = $this->Our_Works_model->get_by_category_image('partners');
+        $this->load->view('layouts/header');
+        $this->load->view('layouts/index/our_partners',  $array = array('bg' => $bg, 'image'=> $image));
         $this->load->view('layouts/footer');
     }
 
     public function admin(){
+        if(!$this->session->userdata['username']){
+            redirect(site_url('auth/login'));
+        }
         $content = $this->Our_Works_model->get_all();
 
         $data = array(
@@ -54,6 +68,9 @@ class Our_works extends CI_Controller
     }
 
     public function images(){
+        if(!$this->session->userdata['username']){
+            redirect(site_url('auth/login'));
+        }
         $content_image = $this->Content_image_model->get_by_menu('Our Works');
         $id = $this->Content_model->get_by_subject('partners');
         $id = $id[0]->ID_CONTENT;

@@ -31,7 +31,7 @@ class Content_model extends CI_Model
     // get data by id
     function get_by_id($id)
     {
-        $this->db->select('content.*,content_category.*, content_type.*, updated_users.username as u_user, created_users.username as c_user');
+        $this->db->select('content.*,content_category.*, content_type.*, updated_users.username as u_user, created_users.username as c_user, content_category.CATEGORY, content_type.TYPE');
         $this->db->from($this->table);
         $this->db->join('content_category', 'content_category.ID_CATEGORY = content.ID_CATEGORY','LEFT');
         $this->db->join('content_type', 'content_type.ID_TYPE = content.ID_TYPE','LEFT');
