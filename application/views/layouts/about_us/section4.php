@@ -2,7 +2,7 @@
 <div class="banner-4" id="involved">
 	<div class="col-md-6 u-pad" style="overflow:auto;">
 		<div class="banner-overlay">
-      <img src="<?= base_url('uploads/'.$row->IMG) ?>" style="min-width: 800px;max-width: 900px;">
+      <img src="<?= base_url('uploads/'.$row->IMG) ?>" style="min-width: 950px;max-width: 950px;">
     </div>
 		<div class="banner-4__content">
 			<div class="banner-4__content__title">
@@ -17,9 +17,9 @@
 	</div>
 		
 	<div class="col-md-6 u-pad">
-		<a href="<?php echo site_url('get_involved/join_us') ?>">
+		<a href="<?php echo site_url('get_involved/join_us') ?>" style="text-decoration: none;">
 		<div class="banner-4__join-us">
-			<div class="banner-4__join-us__circle">Join Us</div>
+			<div class="banner-4__join-us__circle" >Join Us</div>
 		</div>
 		</a>
 		<div>

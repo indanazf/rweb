@@ -3,6 +3,10 @@ body {
 	background: #fff;
 }
 
+.no-underline {
+	text-decoration: none;
+}
+
 .bg-black {
 	background: #000;
 }
@@ -68,16 +72,15 @@ body {
 }
 
 .header__logo {
-	margin-right: 10px;
 	float: left;
-	margin-top: 10px;
 }
 
 .header__title {
 	color: #3C81A7;
-	font-size: 18px;
+	font-size: 20px;
 	display: inline-block;
 	width: 160px;
+	line-height: 100px;
 }
 
 .header__search {
@@ -150,6 +153,7 @@ body {
 	position: absolute;
 	margin-top: 150px;
 	padding: 80px 50px;
+	padding-left: 120px;
 }
 
 .banner-1__content__title {
@@ -340,8 +344,9 @@ body {
 .banner-4__content {
 	width: 80%;
 	margin: 0 auto;
-	margin-top: 350px;
+	margin-top: 382px;
 	margin-bottom: 50px;
+	position: relative;
 }
 
 .banner-4__content__title {
@@ -355,6 +360,7 @@ body {
 	padding: 20px;
 	position: relative;
 	color: #999;
+	min-height: 100px;
 }
 
 .banner-4__join-us {
@@ -1102,6 +1108,20 @@ body {
 	margin-top: 50px;
 }
 
+@media screen and (min-width: 768px) {
+	.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+		border-bottom: 3px solid #2381aa;
+		padding-bottom: 40px;
+	}
+
+	.navbar {
+		border: none;
+	}
+
+	.navbar-inverse .navbar-nav>li>a{
+		cursor: pointer;
+	}
+}
 
 @media screen and (max-width: 1000px) {
 	.footer__right__table {

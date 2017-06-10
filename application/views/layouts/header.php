@@ -15,12 +15,44 @@
     <link href="<?= base_url() ?>assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?= base_url() ?>assets/css/style.css" rel="stylesheet">
     <link href="<?= base_url() ?>assets/css/font.css" rel="stylesheet">
+
+    <!-- full slider -->
+    <link href="<?= base_url() ?>assets/css/jquery.fullPage.css" rel="stylesheet">
+    <link href="<?= base_url() ?>assets/css/fullslider" rel="stylesheet">
+  
     
   </head>
 
   <body>
 
-   <div class="header">
+     <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="<?= base_url() ?>assets/images/logo.png" class="header__logo">
+            <a href="<?php echo site_url('home') ?>"><div class="header__title">Sahabat Cipta</div></a>
+            <input type="text" class="header__search" placeholder="Search">
+          </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li id="aboutus_nav" class="active"><a onclick="GotoPage('aboutus')" >About Us</a></li>
+            <li id="works_nav"><a onclick="GotoPage('works')" >Our Works</a></li>
+            <li id="impact_nav"><a onclick="GotoPage('impact')" >Our Impact</a></li>
+            <li id="involved_nav"><a onclick="GotoPage('involved')" >Get Involved</a></li>
+            <li id="newsroom_nav"><a onclick="GotoPage('newsroom')" >Newsroom</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+   <!-- <div class="header">
      <div class="container">
        <img src="<?= base_url() ?>assets/images/logo.png" class="header__logo">
        <a href="<?php echo site_url('home') ?>"><div class="header__title">Sahabat Cipta</div></a>
@@ -34,5 +66,5 @@
        </div>
      </div>
    </div>
-   <div class="header__frame"></div>
+   <div class="header__frame"></div> -->
 

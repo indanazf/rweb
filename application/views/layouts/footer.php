@@ -44,5 +44,23 @@
     <script src="<?= base_url() ?>assets/js/jquery.min.js"></script>
     <script src="<?= base_url() ?>assets/js/bootstrap.min.js"></script>
     <script src="<?= base_url() ?>assets/js/docs.min.js"></script>
+    <script src="<?= base_url() ?>assets/js/function.js"></script>
+
+    <!-- full slider -->
+    <script src="<?= base_url() ?>assets/js/jquery.fullPage.js"></script>
+    <script src="<?= base_url() ?>assets/js/fullslider.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+				menu: '#menu',
+				scrollingSpeed: 1000
+			});
+		});
+	</script>
+    
+
+
   </body>
 </html>
