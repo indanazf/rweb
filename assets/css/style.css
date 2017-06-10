@@ -497,12 +497,12 @@ body {
 }
 
 .footer {
-	padding: 50px;
+	padding: 50px 0;
 	border-top: 1px solid #ccc;
 }
 
 .footer__left__email {
-  width: 300px;
+  width: 250px;
   background: #fff;
   line-height: 2;
   padding: 0.5rem;
@@ -537,7 +537,6 @@ body {
 }
 
 .footer__right__table {
-	width: 400px;
 	float: right;
 }
 
@@ -763,7 +762,6 @@ body {
 	text-transform: uppercase;
 }
 
-
 .keys-role {
 	position: relative;
 	min-height: 700px;
@@ -804,15 +802,145 @@ body {
 	margin-bottom: 40px;
 }
 
+.team__content {
+	border:1px solid #ccc;
+	padding: 20px;
+	width: 100%;
+	margin: 40px 0;
+	padding-top: 50px;
+}
 
+.team__content__item {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.team__content__item__img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+
+.team__content__item__name {
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: 20px;
+	color: #666;
+}
+
+.team__content__item__position {
+	color: #666;
+}
+
+.director__content {
+	border:1px solid #ccc;
+	padding: 50px;
+	width: 100%;
+	margin: 40px 0;
+}
+
+.director__content__img {
+	width: 320px;
+	height: 320px;
+	border-radius: 50%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+.director__content__name {
+	font-size: 26px;
+}
+
+.director__content__position {
+	color: #999;
+	font-size: 16px;
+}
+
+.director__content__desc {
+	margin-top: 30px;
+}
+
+.map-detail__content {
+	padding: 50px 20px;
+}
+
+.map-detail__content__item {
+	margin-bottom: 20px;
+}
+
+.map-detail__content__item__left {
+	width: 35%;
+	float: left;
+}
+
+.map-detail__content__item__left__img {
+	width: 100%;
+}
+
+.map-detail__content__item__right {
+	width: 65%;
+	float: right;
+	margin-top: 10px;
+}
+
+.map-detail__content__item__right__title {
+	font-size: 12px;
+	color: #666;
+}
+
+.map-detail__content__item__right__value {
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.map-detail__background__img {
+	width: 100%;
+}
+
+.faq__title {
+	font-size: 36px;
+	color: #2381aa;
+	font-weight: bold;
+	line-height: 40px;
+	margin-top: 40px;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+}
+
+.faq {
+	padding: 50px 0;
+}
+
+.faq__question {
+	font-size: 22px;
+	columns: #666;
+	margin-bottom: 10px;
+}
+
+.faq__answer {
+	font-size: 20px;
+	color: #2381aa;
+	margin-bottom: 20px;
+	padding-left: 25px;
+}
 
 @media screen and (max-width: 1000px) {
 	.footer__right__table {
-		width: 400px;
 		float: left;
 	}
 
 	.banner-overlay-2 {
 		display: none;
+	}
+
+	.footer__left__email {
+	  width: 100%;
+    text-align: center;
+	}
+
+	.footer__left__button {
+		width: 100%;
+    text-align: center;
 	}
 }
