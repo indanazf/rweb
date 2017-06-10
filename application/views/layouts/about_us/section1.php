@@ -1,5 +1,5 @@
 <?php foreach($about_us as $row){?>
-<div class="banner">
+<div class="banner" id="aboutus">
 	<div class="banner-overlay">
 		<img src="<?= base_url('uploads/'.$row->IMG) ?>">
 	</div>

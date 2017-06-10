@@ -1,5 +1,5 @@
 <?php foreach($our_works as $row){?>
-<div class="banner banner-2">
+<div class="banner banner-2" id="works">
   <div class="container" style="position: relative;">
     
     <div class="banner-overlay banner-overlay-2" >
