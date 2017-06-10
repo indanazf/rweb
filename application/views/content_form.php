@@ -10,7 +10,7 @@
             <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data"><table class='table table-bordered'>
              <tr><td>TYPE <?php echo form_error('ID_TYPE') ?></td>
               <td>
-                <select name="ID_TYPE" id="ID_TYPE" class="form-control">
+              <select name="ID_TYPE" id="ID_TYPE" class="form-control" <?php if($type=="update") echo "disabled"?>>
                   <option value=''></option>
                   <?php
                   $cat = $this->db->get('content_type');
@@ -24,7 +24,7 @@
               </td>
               <tr><td>CATEGORY <?php echo form_error('ID_CATEGORY') ?></td>
                 <td>
-                  <select name="ID_CATEGORY" id="ID_CATEGORY" class="form-control">
+                  <select name="ID_CATEGORY" id="ID_CATEGORY" class="form-control" <?php if($type=="update") echo "disabled"?>>
                     <?php
                     $cat = $this->db->get('content_category');
                     foreach ($cat->result() as $c){
@@ -39,7 +39,7 @@
                   <td><textarea class="form-control" rows="3" name="SUBJECT" id="SUBJECT" placeholder="SUBJECT"><?php echo $SUBJECT; ?></textarea>
                   </td></tr>
                   <tr><td>CONTENT <?php echo form_error('CONTENT') ?></td>
-                  <td>
+                    <td>
                       <div class="box-body pad">
                         <form>
                           <textarea class="editor1" placeholder="Place some text here" name="CONTENT" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">

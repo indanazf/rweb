@@ -1,6 +1,6 @@
 <?php 
 	$judul = strtolower($judul);
-	$judul = str_replace(" ", "_", $judul)
+	$page = str_replace(" ", "_", $judul)
 ?>
 <!-- Main content -->
 <section class='content'>
@@ -68,9 +68,9 @@
 									</td>
 									<td style="text-align:center" width="140px">
 										<?php 
-										echo anchor(site_url('content/read/'.$content->ID_CONTENT),'<i class="fa fa-eye"></i>',array('title'=>'detail','class'=>'btn btn-primary btn-sm')); 
+										echo anchor(site_url("content/read/?i=$content->ID_CONTENT&p=$page"),'<i class="fa fa-eye"></i>',array('title'=>'detail','class'=>'btn btn-primary btn-sm')); 
 										echo '  '; 
-										echo anchor(site_url('content/update/'.$content->ID_CONTENT),'<i class="fa fa-pencil-square-o"></i>',array('title'=>'edit','class'=>'btn btn-warning btn-sm')); 
+										echo anchor(site_url("content/update/?i=$content->ID_CONTENT&p=$page"),'<i class="fa fa-pencil-square-o"></i>',array('title'=>'edit','class'=>'btn btn-warning btn-sm')); 
 										echo '  '; 
 										echo anchor(site_url('content/delete/'.$content->ID_CONTENT),'<i class="fa fa-trash-o"></i>','title="delete" class="btn btn-danger btn-sm" onclick="javasciprt: return confirm(\'Are You Sure ?\')"'); 
 										?>

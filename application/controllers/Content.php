@@ -30,8 +30,10 @@ class Content extends CI_Controller
         $this->template->load('template','content_list', $data);
     }
 
-    public function read($id) 
+    public function read() 
     {
+        $page = $this->input->get('p',TRUE);
+        $id = $this->input->get('i',TRUE);
         $row = $this->Content_model->get_by_id($id);
         if ($row) {
             $data = array(
@@ -50,11 +52,12 @@ class Content extends CI_Controller
               'IMG' => $row->IMG,
               'judul' => 'CONTENT',
               'subjudul' =>'Read',
+              'page' => $page,
               );
             $this->template->load('template','content_read', $data);
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
-            redirect(site_url('content'));
+            //redirect(site_url($page.'/admin'));
         }
     }
 
@@ -78,6 +81,7 @@ class Content extends CI_Controller
             'IMG' => set_value('IMG'),
             'judul' => 'CONTENT',
             'page' => $page,
+            'type' => 'update',
             'subjudul' =>'Create',
             );
         $this->template->load('template','content_form', $data);
@@ -141,7 +145,7 @@ class Content extends CI_Controller
                         );
                     $this->Content_model->insert($data);
                     $this->session->set_flashdata('message', 'Create Record Success');
-                    redirect(site_url('content'));
+                    redirect(site_url($page.'/admin'));
                 }
 
 
@@ -150,8 +154,10 @@ class Content extends CI_Controller
         }
     }
     
-    public function update($id) 
+    public function update() 
     {
+        $page = $this->input->get('p',TRUE);
+        $id = $this->input->get('i',TRUE);
         $row = $this->Content_model->get_by_id($id);
 
         if ($row) {
@@ -169,13 +175,15 @@ class Content extends CI_Controller
                 'TAGS' => set_value('TAGS', $row->TAGS),
                 'ICON_TYPE' => set_value('ICON_TYPE', $row->ICON_TYPE),
                 'IMG' => set_value('IMG', $row->IMG),
+                'page' => $page,
+                'type' => 'update',
                 'judul' => 'CONTENT',
                 'subjudul' =>'Update',
                 );
             $this->template->load('template','content_form', $data);
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
-            redirect(site_url('content'));
+            redirect(site_url($page.'/admin'));
         }
     }
     
@@ -202,7 +210,7 @@ class Content extends CI_Controller
 
                 $this->Content_model->update($this->input->post('ID_CONTENT', TRUE), $data);
                 $this->session->set_flashdata('message', 'Update Record Success');
-                redirect(site_url('content'));
+                redirect(site_url($page.'/admin'));
             }else{
                 $config['upload_path']          = './uploads/';
                 $config['allowed_types']        = 'gif|jpg|png|jpeg';
@@ -231,7 +239,7 @@ class Content extends CI_Controller
 
                     $this->Content_model->update($this->input->post('ID_CONTENT', TRUE), $data);
                     $this->session->set_flashdata('message', 'Update Record Success');
-                    redirect(site_url('content'));
+                    redirect(site_url($page.'/admin'));
                 }
             }
 
