@@ -1,9 +1,6 @@
 <?php foreach($our_impact as $row){?>
 <div class="banner banner-3">
   <div class="container container-own">
-     <div class="banner-overlay">
-      <img src="<?= base_url('uploads/'.$row->IMG) ?>" style="padding-top: 255px;">
-    </div>
     <div class="col-md-3">
       <div class="banner-3__content-title"><?=$row->SUBJECT?></div>
       <div class="banner-3__content">
@@ -27,6 +24,8 @@
         <br>
       </div>
     </div>
+    <img src="<?= base_url('uploads/'.$row->IMG) ?>" class="banner-3__background">
+    <a href="#"><div class="banner-3__detail-button"></div></a>
   </div>
 </div>
 <?php }?>

@@ -1,6 +1,6 @@
 <?php foreach($get_involved as $row){?>
 <div class="banner-4">
-	<div class="col-md-6 u-pad">
+	<div class="col-md-6 u-pad" style="overflow:auto;">
 		<div class="banner-overlay">
       <img src="<?= base_url('uploads/'.$row->IMG) ?>" style="min-width: 0;">
     </div>
