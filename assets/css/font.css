@@ -24,7 +24,10 @@
 .introducing__banner__title, .solution__banner__title,
 .keys-role__content__title,.keys-role__content__item__number,.our-past__title,
 .our-past__content__head__title,.our-past__content__head__subtitle,
-.our-partner__circle__content__title,.annual-report__title,.faq__title{
+.our-partner__circle__content__title,.annual-report__title,.faq__title,
+.annual-report__title,
+.success-stories__content__item__headline__title,
+.success-stories__badge{
 	font-family: 'Aller';
 }
 
@@ -35,7 +38,7 @@
 .banner-6__item__body, .introducing__content, .solution__content,.keys-role__content__item__desc,
 .our-past__content__body__table,.team__content__item,
 .director__content__name,.director__content__position,.director__content__desc,
-.map-detail__content__item__right{
+.map-detail__content__item__right, .success-stories__content__item__headline__desc{
 	font-family: 'OpenSans';
 }
 

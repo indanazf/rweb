@@ -25,7 +25,7 @@
       </div>
     </div>
     <img src="<?= base_url('uploads/'.$row->IMG) ?>" class="banner-3__background">
-    <a href="#"><div class="banner-3__detail-button"></div></a>
+    <a href="<?php echo site_url('our_impact') ?>"><div class="banner-3__detail-button"></div></a>
   </div>
 </div>
 <?php }?>

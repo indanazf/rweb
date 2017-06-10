@@ -25,6 +25,7 @@ class Our_impact extends CI_Controller
         $box_chart2 = $this->Our_impact_model->get_by_category('box', 'geography_chart');
         $annual_report = $this->Our_impact_model->get_by_category('annual report');
         $success_stories = $this->Our_impact_model->get_by_category('success stories');
+        $count_stories = $this->Our_impact_model->count_stories('success stories');
         $data = array(
             'background' => $background,
             'box' => $box,
@@ -37,6 +38,8 @@ class Our_impact extends CI_Controller
 
         $this->load->view('layouts/header');
         $this->load->view('layouts/index/our_impact_map_detail', $array = array('bg'=>$bg,'detail'=>$box, 'chart1'=>$box_chart1, 'chart2'=>$box_chart2));
+        $this->load->view('layouts/index/annual_report', $array = array('annual' => $annual_report));
+        $this->load->view('layouts/index/success_stories', $array = array('success' => $success_stories, 'counter'=>$count_stories));
         $this->load->view('layouts/footer');
     }
 

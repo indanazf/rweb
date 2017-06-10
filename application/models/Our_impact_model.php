@@ -45,6 +45,16 @@ class Our_impact_model extends CI_Model
         return $this->db->get()->result();
     }
 
+    function count_stories($category=null){
+        $this->db->select('content.*');
+        $this->db->from($this->table);
+        $this->db->join('content_category', 'content_category.ID_CATEGORY = content.ID_CATEGORY');
+        $this->db->join('menu', 'menu.id = content_category.ID_MENU');
+        $this->db->where('menu.NAME', 'Our Impact');
+        $this->db->where('content_category.CATEGORY', $category);
+        return $this->db->count_all_results();
+    }
+
     // get data by id
     function get_by_id($id)
     {
