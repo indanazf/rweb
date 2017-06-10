@@ -10,7 +10,7 @@
             <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data"><table class='table table-bordered'>
              <tr><td>TYPE <?php echo form_error('ID_TYPE') ?></td>
               <td>
-              <select name="ID_TYPE" id="ID_TYPE" class="form-control" <?php if($type=="update") echo "disabled"?>>
+                <select name="ID_TYPE" id="ID_TYPE" class="form-control" <?php if($type=="update") echo "disabled"?>>
                   <option value=''></option>
                   <?php
                   $cat = $this->db->get('content_type');
@@ -26,8 +26,7 @@
                 <td>
                   <select name="ID_CATEGORY" id="ID_CATEGORY" class="form-control" <?php if($type=="update") echo "disabled"?>>
                     <?php
-                    $cat = $this->db->get('content_category');
-                    foreach ($cat->result() as $c){
+                    foreach ($CATEGORY as $c){
                       echo "<option value='$c->ID_CATEGORY' ";
                       echo $c->ID_CATEGORY==$ID_CATEGORY?'selected':'';
                       echo">".  strtoupper($c->CATEGORY)."</option>";
@@ -49,7 +48,7 @@
                       </div>
                     </td></tr>
                     <tr><td>CONTENT NUMBER <?php echo form_error('CONTENT_NUMMBER') ?></td>
-                      <td><input type="text" class="form-control" name="CONTENT_NUMMBER" id="CONTENT_NUMMBER" placeholder="CONTENT NUMBER" value="<?php echo $CONTENT_NUMMBER; ?>" />
+                    <td><input type="text" class="form-control" name="CONTENT_NUMMBER" id="CONTENT_NUMMBER" placeholder="CONTENT NUMBER" value="<?php echo $CONTENT_NUMMBER; ?>" />
                       </td>
                       <tr><td>TAGS <?php echo form_error('TAGS') ?></td>
                         <td><input type="text" class="form-control" name="TAGS" id="TAGS" placeholder="TAGS" value="<?php echo $TAGS; ?>" />
@@ -64,6 +63,10 @@
                             </td>
                           </td>
                           <input type="hidden" name="ID_CONTENT" value="<?php echo $ID_CONTENT; ?>" /> 
+                          <?php if($type == "update"){?>
+                            <input type="hidden" name="ID_CATEGORY" value="<?php echo $ID_CATEGORY; ?>" /> 
+                            <input type="hidden" name="ID_TYPE" value="<?php echo $ID_TYPE; ?>" /> 
+                          <?php } ?>
                           <input type="hidden" name="page" value="<?php echo $page; ?>" /> 
                           <tr><td colspan='2'><button type="submit" class="btn btn-primary"><?php echo $button ?></button> 
                            <a href="<?php echo site_url('content') ?>" class="btn btn-default">Cancel</a></td></tr>

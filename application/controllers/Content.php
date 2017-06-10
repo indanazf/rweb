@@ -14,6 +14,7 @@ class Content extends CI_Controller
             redirect(site_url('auth/login'));
         }
         $this->load->model('Content_model');
+        $this->load->model('Content_category_model');
         $this->load->library('form_validation');
     }
 
@@ -65,12 +66,15 @@ class Content extends CI_Controller
 
     public function create($page) 
     {
+        $menu = str_replace('_', ' ', $page);
+        $category = $this->Content_category_model->get_by_menu($menu);
         $data = array(
             'button' => 'Create',
             'action' => site_url('content/create_action'),
             'ID_CONTENT' => set_value('ID_CONTENT'),
             'ID_TYPE' => set_value('ID_TYPE'),
             'ID_CATEGORY' => set_value('ID_CATEGORY'),
+            'CATEGORY' => $category,
             'SUBJECT' => set_value('SUBJECT'),
             'CONTENT' => set_value('CONTENT'),
             'CONTENT_NUMMBER' => set_value('CONTENT_NUMMBER'),
@@ -83,7 +87,7 @@ class Content extends CI_Controller
             'IMG' => set_value('IMG'),
             'judul' => 'CONTENT',
             'page' => $page,
-            'type' => 'update',
+            'type' => 'create',
             'subjudul' =>'Create',
             );
         $this->template->load('template','content_form', $data);
@@ -161,13 +165,15 @@ class Content extends CI_Controller
         $page = $this->input->get('p',TRUE);
         $id = $this->input->get('i',TRUE);
         $row = $this->Content_model->get_by_id($id);
+        $menu = str_replace('_', ' ', $page);
+        $category = $this->Content_category_model->get_by_menu($menu);
 
         if ($row) {
             $data = array(
                 'button' => 'Update',
                 'action' => site_url('content/update_action'),
-                'ID_CONTENT' => set_value('ID_CONTENT', $row->ID_CONTENT),
-                'CATEGORY' => set_value('CATEGORY', $row->CATEGORY),
+                'ID_CONTENT' =>set_value('TYPE', $row->ID_CONTENT),
+                'CATEGORY' => $category,
                 'TYPE' => set_value('TYPE', $row->TYPE),
                 'ID_TYPE' => set_value('ID_TYPE', $row->ID_TYPE),
                 'ID_CATEGORY' => set_value('ID_CATEGORY', $row->ID_CATEGORY),
@@ -197,6 +203,7 @@ class Content extends CI_Controller
         if ($this->form_validation->run() == FALSE) {
             $this->update($this->input->post('ID_CONTENT', TRUE));
         } else {
+            $page = $this->input->post('page',TRUE); 
             if(isset($_FILES['IMG']) && $_FILES['IMG']['error'] > 0){
                 $data = array(
                     'ID_TYPE' => $this->input->post('ID_TYPE',TRUE),

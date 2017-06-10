@@ -9,7 +9,7 @@
 			<div class='box'>
 				<div class='box-header'>
 					<h3 class='box-title'>CONTENT LIST</h3><div class='pull-right'>
-					<?php echo anchor("content/create/$judul",'<i class="fa fa-plus"></i> Create',array('class'=>'btn btn-default btn-sm'));?>
+					<?php echo anchor("content/create/$page",'<i class="fa fa-plus"></i> Create',array('class'=>'btn btn-default btn-sm'));?>
 					<?php echo anchor(site_url('content/excel'), ' <i class="fa fa-file-excel-o"></i> Excel', 'class="btn btn-success btn-sm"'); ?>
 					<?php echo anchor(site_url('content/word'), '<i class="fa fa-file-word-o"></i> Word', 'class="btn btn-primary btn-sm"'); ?>
 					<?php echo anchor(site_url('content/pdf'), '<i class="fa fa-file-pdf-o"></i> PDF', 'class="btn btn-warning btn-sm"'); ?></div>
