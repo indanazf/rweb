@@ -34,6 +34,13 @@ class Get_involved extends CI_Controller
         print_r($data);
     }
 
+    public function faq(){
+        $faq = $this->Faq_question_model->get_all();
+        $this->load->view('layouts/header');
+        $this->load->view('layouts/index/faq', $array = array('faq'=>$faq));
+        $this->load->view('layouts/footer');
+    }
+
     public function admin(){
         if(!$this->session->userdata['username']){
             redirect(site_url('auth/login'));

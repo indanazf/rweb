@@ -42,6 +42,7 @@ class Content extends CI_Controller
               'ID_TYPE' => $row->ID_TYPE,
               'ID_CATEGORY' => $row->ID_CATEGORY,
               'SUBJECT' => $row->SUBJECT,
+              'SUBTITLE' => $row->SUBTITLE,
               'CONTENT' => $row->CONTENT,
               'CONTENT_NUMMBER' => $row->CONTENT_NUMMBER,
               'TAGS' => $row->TAGS,
@@ -76,6 +77,7 @@ class Content extends CI_Controller
             'ID_CATEGORY' => set_value('ID_CATEGORY'),
             'CATEGORY' => $category,
             'SUBJECT' => set_value('SUBJECT'),
+            'SUBTITLE' => set_value('SUBTITLE'),
             'CONTENT' => set_value('CONTENT'),
             'CONTENT_NUMMBER' => set_value('CONTENT_NUMMBER'),
             'TAGS' => set_value('TAGS'),
@@ -107,6 +109,7 @@ class Content extends CI_Controller
                     'ID_TYPE' => $this->input->post('ID_TYPE',TRUE),
                     'ID_CATEGORY' => $this->input->post('ID_CATEGORY',TRUE),
                     'SUBJECT' => $this->input->post('SUBJECT',TRUE),
+                    'SUBTITLE' => $this->input->post('SUBTITLE',TRUE),
                     'CONTENT' => $this->input->post('CONTENT',TRUE),
                     'CONTENT_NUMMBER' => $this->input->post('CONTENT_NUMMBER',TRUE),
                     'TAGS' => $this->input->post('TAGS',TRUE),
@@ -139,6 +142,7 @@ class Content extends CI_Controller
                         'ID_TYPE' => $this->input->post('ID_TYPE',TRUE),
                         'ID_CATEGORY' => $this->input->post('ID_CATEGORY',TRUE),
                         'SUBJECT' => $this->input->post('SUBJECT',TRUE),
+                        'SUBTITLE' => $this->input->post('SUBTITLE',TRUE),
                         'CONTENT' => $this->input->post('CONTENT',TRUE),
                         'CONTENT_NUMMBER' => $this->input->post('CONTENT_NUMMBER',TRUE),
                         'TAGS' => $this->input->post('TAGS',TRUE),
@@ -178,6 +182,7 @@ class Content extends CI_Controller
                 'ID_TYPE' => set_value('ID_TYPE', $row->ID_TYPE),
                 'ID_CATEGORY' => set_value('ID_CATEGORY', $row->ID_CATEGORY),
                 'SUBJECT' => set_value('SUBJECT', $row->SUBJECT),
+                'SUBTITLE' => set_value('SUBTITLE', $row->SUBJECT),
                 'CONTENT' => set_value('CONTENT', $row->CONTENT),
                 'CONTENT_NUMMBER' => set_value('CONTENT_NUMMBER', $row->CONTENT_NUMMBER),
                 'TAGS' => set_value('TAGS', $row->TAGS),
@@ -209,6 +214,7 @@ class Content extends CI_Controller
                     'ID_TYPE' => $this->input->post('ID_TYPE',TRUE),
                     'ID_CATEGORY' => $this->input->post('ID_CATEGORY',TRUE),
                     'SUBJECT' => $this->input->post('SUBJECT',TRUE),
+                    'SUBTITLE' => $this->input->post('SUBTITLE',TRUE),
                     'CONTENT' => $this->input->post('CONTENT',TRUE),
                     'CONTENT_NUMMBER' => $this->input->post('CONTENT_NUMMBER',TRUE),
                     'TAGS' => $this->input->post('TAGS',TRUE),
@@ -237,6 +243,7 @@ class Content extends CI_Controller
                         'ID_TYPE' => $this->input->post('ID_TYPE',TRUE),
                         'ID_CATEGORY' => $this->input->post('ID_CATEGORY',TRUE),
                         'SUBJECT' => $this->input->post('SUBJECT',TRUE),
+                        'SUBTITLE' => $this->input->post('SUBTITLE',TRUE),
                         'CONTENT' => $this->input->post('CONTENT',TRUE),
                         'CONTENT_NUMMBER' => $this->input->post('CONTENT_NUMMBER',TRUE),
                         'TAGS' => $this->input->post('TAGS',TRUE),
@@ -255,26 +262,29 @@ class Content extends CI_Controller
         }
     }
     
-    public function delete($id) 
+    public function delete() 
     {
+
+        $page = $this->input->get('p',TRUE);
+        $id = $this->input->get('i',TRUE);
         $row = $this->Content_model->get_by_id($id);
 
         if ($row) {
             $this->Content_model->delete($id);
             $this->session->set_flashdata('message', 'Delete Record Success');
-            redirect(site_url('content'));
+            redirect(site_url($page.'/admin'));
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
-            redirect(site_url('content'));
+            redirect(site_url($page.'/admin'));
         }
     }
 
     public function _rules() 
     {
 	//$this->form_validation->set_rules('ID_TYPE', 'id type', 'trim|required');
-       $this->form_validation->set_rules('ID_CATEGORY', 'id category', 'trim|required');
-       $this->form_validation->set_rules('SUBJECT', 'subject', 'trim|required');
-       $this->form_validation->set_rules('CONTENT', 'content', 'trim|required');
+     $this->form_validation->set_rules('ID_CATEGORY', 'id category', 'trim|required');
+     $this->form_validation->set_rules('SUBJECT', 'subject', 'trim|required');
+     $this->form_validation->set_rules('CONTENT', 'content', 'trim|required');
 	//$this->form_validation->set_rules('CONTENT_NUMMBER', 'content nummber', 'trim|required|numeric');
 	//$this->form_validation->set_rules('TAGS', 'tags', 'trim|required');
 	//$this->form_validation->set_rules('CREATED_BY', 'created by', 'trim|required');
@@ -284,12 +294,12 @@ class Content extends CI_Controller
 	//$this->form_validation->set_rules('ICON_TYPE', 'icon type', 'trim|required');
 	//$this->form_validation->set_rules('IMG', 'img', 'trim|required');
 
-       $this->form_validation->set_rules('ID_CONTENT', 'ID_CONTENT', 'trim');
-       $this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
-   }
+     $this->form_validation->set_rules('ID_CONTENT', 'ID_CONTENT', 'trim');
+     $this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
+ }
 
-   public function excel()
-   {
+ public function excel()
+ {
     $this->load->helper('exportexcel');
     $namaFile = "content.xls";
     $judul = "content";

@@ -37,6 +37,9 @@
                 <tr><td>SUBJECT <?php echo form_error('SUBJECT') ?></td>
                   <td><textarea class="form-control" rows="3" name="SUBJECT" id="SUBJECT" placeholder="SUBJECT"><?php echo $SUBJECT; ?></textarea>
                   </td></tr>
+                  <td>SUBTITLE <?php echo form_error('SUBTITLE') ?></td>
+                  <td><textarea class="form-control" rows="3" name="SUBTITLE" id="SUBTITLE" placeholder="SUBTITLE"><?php echo $SUBTITLE; ?></textarea>
+                  </td></tr>
                   <tr><td>CONTENT <?php echo form_error('CONTENT') ?></td>
                     <td>
                       <div class="box-body pad">

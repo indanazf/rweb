@@ -58,16 +58,16 @@ class About_us extends CI_Controller
     }
 
     public function team(){
-        $team = $this->About_Us_model->get_by_category('team');
+        $team = $this->Team->get_by_category('team');
         $this->load->view('layouts/header');
-        //$this->load->view('layouts/index/our_team', $array = array('team'=>$team));
+        $this->load->view('layouts/index/team', $array = array('team'=>$team));
         $this->load->view('layouts/footer');
     }
 
     public function director(){
-        $team = $this->About_Us_model->get_by_category('team');
+        $director = $this->About_Us_model->get_by_category('director');
         $this->load->view('layouts/header');
-        //$this->load->view('layouts/index/our_team', $array = array('team'=>$team));
+        $this->load->view('layouts/index/director', $array = array('director'=>$director));
         $this->load->view('layouts/footer');
     }
 

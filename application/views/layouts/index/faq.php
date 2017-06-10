@@ -5,11 +5,10 @@
 		  <div class="faq__title">
 		  	FAQ
 		  </div>
-		  <?php
-			for($i=1; $i<=4; $i++){
-			?>
-			  <div class="faq__question"><?php echo $i ?>. Bagaimana cara join menjadi member SC?</div>
-			  <div class="faq__answer">Hubungi Kami melalui email</div>
+		  <?php $start = 0;
+		  		foreach($faq as $row){?>
+			  <div class="faq__question"><?php echo ++$start ?>.  <?=$row->QUESTION?></div>
+			  <div class="faq__answer"><?=$row->ANSWER?></div>
 			 <?php
 			 }
 			 ?>

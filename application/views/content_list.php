@@ -72,7 +72,7 @@
 										echo '  '; 
 										echo anchor(site_url("content/update/?i=$content->ID_CONTENT&p=$page"),'<i class="fa fa-pencil-square-o"></i>',array('title'=>'edit','class'=>'btn btn-warning btn-sm')); 
 										echo '  '; 
-										echo anchor(site_url('content/delete/'.$content->ID_CONTENT),'<i class="fa fa-trash-o"></i>','title="delete" class="btn btn-danger btn-sm" onclick="javasciprt: return confirm(\'Are You Sure ?\')"'); 
+										echo anchor(site_url("content/delete/?i=$content->ID_CONTENT&p=$page"),'<i class="fa fa-trash-o"></i>','title="delete" class="btn btn-danger btn-sm" onclick="javasciprt: return confirm(\'Are You Sure ?\')"'); 
 										?>
 									</td>
 								</tr>
