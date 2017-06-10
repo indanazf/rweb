@@ -48,7 +48,7 @@
                       </div>
                     </td></tr>
                     <tr><td>CONTENT NUMBER <?php echo form_error('CONTENT_NUMMBER') ?></td>
-                    <td><input type="number" pattern="[0-9]+([,\.][0-9]+)?" class="form-control" name="CONTENT_NUMMBER" id="CONTENT_NUMMBER" placeholder="CONTENT NUMBER" value="<?php echo $CONTENT_NUMMBER; ?>" />
+                    <td><input type="number" pattern="[0-9]+([,\.][0-9]+)?" class="form-control" name="CONTENT_NUMMBER" id="CONTENT_NUMMBER" placeholder="CONTENT NUMBER" value="<?php echo $CONTENT_NUMMBER; ?>" step="any"/>
                       </td>
                       <tr><td>TAGS <?php echo form_error('TAGS') ?></td>
                         <td><input type="text" class="form-control" name="TAGS" id="TAGS" placeholder="TAGS" value="<?php echo $TAGS; ?>" />
