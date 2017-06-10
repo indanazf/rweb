@@ -10,9 +10,6 @@ class About_us extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        if(!isset($this->session->userdata['username'])){
-            redirect(site_url('auth/login'));
-        }
         $this->load->model('About_Us_model');
         $this->load->model('Content_model');
         $this->load->model('Team');
@@ -72,6 +69,9 @@ class About_us extends CI_Controller
     }
 
     public function admin(){
+        if(!isset($this->session->userdata['username'])){
+            redirect(site_url('auth/login'));
+        }
         $content = $this->About_Us_model->get_all();
 
         $data = array(

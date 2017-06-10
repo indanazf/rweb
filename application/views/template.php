@@ -35,11 +35,11 @@
 
             <header class="main-header">
                 <!-- Logo -->
-                <a href="<?= base_url() ?>" class="logo">
+                <a href="<?= site_url() ?>/about_us/admin" class="logo">
                     <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini"><bA</b>Web</span>
+                    <span class="logo-mini"><bA</b>Admin</span>
                     <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg"><b>Web</b></span>
+                    <span class="logo-lg"><b>Admin</b></span>
                 </a>
                 <!-- Header Navbar: style can be found in header.less -->
                 <nav class="navbar navbar-static-top" role="navigation">
