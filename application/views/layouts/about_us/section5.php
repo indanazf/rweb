@@ -1,4 +1,4 @@
-<div class="banner-5">
+<div class="banner-5" id="newsroom">
 	<?php foreach($content_press as $row){?>
 	<a href="<?php echo site_url('newsroom/press_release') ?>">
 	<div class="col-md-6 u-pad">

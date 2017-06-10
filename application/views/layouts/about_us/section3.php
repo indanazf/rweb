@@ -1,5 +1,5 @@
 <?php foreach($our_impact as $row){?>
-<div class="banner banner-3">
+<div class="banner banner-3" id="impact">
   <div class="container container-own">
     <div class="col-md-3">
       <div class="banner-3__content-title"><?=$row->SUBJECT?></div>
