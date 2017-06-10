@@ -10,9 +10,6 @@ class Home extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        if(!isset($this->session->userdata['username'])){
-            redirect(site_url('auth/login'));
-        }
         $this->load->model('About_Us_model');
         $this->load->model('Our_Works_model');
         $this->load->model('Get_involved_model');
@@ -28,7 +25,9 @@ class Home extends CI_Controller
 
     public function index()
     {
-        $about_us = $this->About_Us_model->get_by_category('slider_image');
+        $about_us = $this->About_Us_model->get_by_category_type('slider_image','background');
+        $team = $this->About_Us_model->get_by_category_type('slider_image','team');
+        $executive = $this->About_Us_model->get_by_category_type('slider_image','list');
         $our_works = $this->Our_Works_model->get_by_category('main');
         $our_impact = $this->Our_impact_model->get_by_category('background');
         $our_impact_list = $this->Our_impact_model->get_by_category('background', 'list');
@@ -40,6 +39,8 @@ class Home extends CI_Controller
         
         $this->load->view('layouts/header');
         $this->load->view('layouts/about_us/section1', $array = array('about_us'=>$about_us));
+        $this->load->view('layouts/index/our_team', $array = array('team'=>$team));
+        $this->load->view('layouts/index/our_executive', $array = array('executive'=>$executive));
         $this->load->view('layouts/about_us/section2', $array = array('our_works'=>$our_works));
         $this->load->view('layouts/about_us/section3', $array = array('our_impact'=>$our_impact, 'our_impact_list'=>$our_impact_list));
         $this->load->view('layouts/about_us/section4', $array = array('get_involved'=>$get_involved));

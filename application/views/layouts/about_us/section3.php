@@ -2,7 +2,7 @@
 <div class="banner banner-3">
   <div class="container container-own">
      <div class="banner-overlay">
-      <img src="<?= base_url('uploads/'.$row->IMG) ?>">
+      <img src="<?= base_url('uploads/'.$row->IMG) ?>" style="padding-top: 255px;">
     </div>
     <div class="col-md-3">
       <div class="banner-3__content-title"><?=$row->SUBJECT?></div>

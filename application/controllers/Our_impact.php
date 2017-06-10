@@ -21,23 +21,15 @@ class Our_impact extends CI_Controller
 
     public function index()
     {
-        $background = $this->Our_impact_model->get_by_category('background', 'list');
-        $box = $this->Our_impact_model->get_by_category('box','list');
-        $box_chart1 = $this->Our_impact_model->get_by_category('box', 'sector_chart');
-        $box_chart2 = $this->Our_impact_model->get_by_category('box', 'geography_chart');
-        $annual_report = $this->Our_impact_model->get_by_category('annual report');
-        $success_stories = $this->Our_impact_model->get_by_category('success stories');
-        $data = array(
-            'background' => $background,
-            'box' => $box,
-            'box_chart1' => $box_chart1,
-            'box_chart2' => $box_chart2,
-            'annual_report' => $annual_report,
-            'success_stories' => $success_stories,
-            'judul' => 'Our Impact'
-            );
-
-        print_r($data);
+        
+        $our_impact = $this->Our_impact_model->get_by_category('background');
+        $our_impact_list = $this->Our_impact_model->get_by_category('background', 'list');
+        
+        //print_r($get_involved);
+        
+        $this->load->view('layouts/header');
+        $this->load->view('layouts/about_us/section3', $array = array('our_impact'=>$our_impact, 'our_impact_list'=>$our_impact_list));
+        $this->load->view('layouts/footer');
     }
 
     public function admin(){

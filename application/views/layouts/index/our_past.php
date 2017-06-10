@@ -1,21 +1,25 @@
+<?php foreach($bg as $row){?>
 <div class="banner">
 	<div class="banner-overlay">
-		<img src="<?= base_url() ?>assets/images/our-past.jpg">
+		<img src="<?= base_url('uploads/'.$row->IMG) ?>">
 	</div>
 	<div class="container">
 		<div class="col-md-3 u-pad">
 		  <div class="our-past__title">
-		  	Our Past<br> & On Going<br>Projects
+		  	<?=$row->SUBJECT?>
 		  </div>
 		  <div class="our-past__content">
+		  	<?php foreach($header as $h){?>
 		  	<div class="our-past__content__head">
 		  		<div class="our-past__content__head__title">
-		  			PRISMA
+		  			<?=$h->SUBJECT?>
 		  		</div>
 		  		<div class="our-past__content__head__subtitle">
-		  			<i>South Sumatera</i> | Sectors
+		  			<?=$h->CONTENT?>
 		  		</div>
 		  	</div>
+		  	<?php } ?>
+		  	
 		  	<div class="our-past__content__body">
 		  		<div class="our-past__content__body__title">Objectives</div>
 		  		<div class="our-past__content__body__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </div>
@@ -33,12 +37,14 @@
 		  				<td valign="top"><img src="assets/images/handshake.png" width="60"></td>
 		  				<td>
 		  					<div class="our-past__content__body__title">Partners</div>
+		  					<div class="our-past__content__body__value1"></div>
 		  				</td>
 		  			</tr>
 		  		</table>
 		  	</div>
+		  	
 		  </div>
 		</div>
 	</div>
 </div>
-   
+<?php }?>

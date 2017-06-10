@@ -24,25 +24,15 @@ class About_us extends CI_Controller
 
     public function index()
     {
-        //UNUSED FUNCTION
-        $content_slider = $this->About_Us_model->get_by_category('slider_image');
-        
-        $content_vision = $this->About_Us_model->get_by_category('vision');
-        $content_keys_role = $this->About_Us_model->get_by_category('keys_role');
-        $content_team = $this->Team->get_by_category('team');
-        $content_director = $this->About_Us_model->get_by_category('director');
-        $data = array(
-            
-        );
+        $about_us = $this->About_Us_model->get_by_category_type('slider_image','background');
+        $team = $this->About_Us_model->get_by_category_type('slider_image','team');
+        $executive = $this->About_Us_model->get_by_category_type('slider_image','list');
 
-        //print_r($data);
         $this->load->view('layouts/header');
-        $this->load->view('layouts/about_us/section1', $array = array('content_slider'=>$content_slider));
-        $this->load->view('layouts/about_us/section3', $array = array('content_vision'=>$content_vision));
-        $this->load->view('layouts/about_us/section4', $array = array('content_keys_role'=>$content_keys_role));
-        $this->load->view('layouts/about_us/section5', $array = array('content_team'=>$content_team));
-        $this->load->view('layouts/about_us/section6', $array = array('content_director'=>$content_director));
-        $this->load->view('layouts/footer');
+        $this->load->view('layouts/about_us/section1', $array = array('about_us'=>$about_us));
+        $this->load->view('layouts/index/our_team', $array = array('team'=>$team));
+        $this->load->view('layouts/index/our_executive', $array = array('executive'=>$executive));
+         $this->load->view('layouts/footer');
     }
 
     public function introducing(){
@@ -56,6 +46,28 @@ class About_us extends CI_Controller
         $vision = $this->About_Us_model->get_by_category('vision');
         $this->load->view('layouts/header');
         $this->load->view('layouts/index/solutions', $array = array('vision'=>$vision));
+        $this->load->view('layouts/footer');
+    }
+
+    public function mission(){
+        $mission = $this->About_Us_model->get_by_category_type('keys_role','background');
+        $mission_list = $this->About_Us_model->get_by_category_type('keys_role','list');
+        $this->load->view('layouts/header');
+        $this->load->view('layouts/index/keys_role', $array = array('mission'=>$mission, 'list'=>$mission_list));
+        $this->load->view('layouts/footer');
+    }
+
+    public function team(){
+        $team = $this->About_Us_model->get_by_category('team');
+        $this->load->view('layouts/header');
+        //$this->load->view('layouts/index/our_team', $array = array('team'=>$team));
+        $this->load->view('layouts/footer');
+    }
+
+    public function director(){
+        $team = $this->About_Us_model->get_by_category('team');
+        $this->load->view('layouts/header');
+        //$this->load->view('layouts/index/our_team', $array = array('team'=>$team));
         $this->load->view('layouts/footer');
     }
 

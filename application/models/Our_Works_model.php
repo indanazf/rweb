@@ -39,6 +39,22 @@ class Our_Works_model extends CI_Model
         return $this->db->get()->result();
     }
 
+    function get_by_category_type($category, $type=null){
+        $this->db->select('content.*');
+        $this->db->from($this->table);
+        $this->db->join('content_category', 'content_category.ID_CATEGORY = content.ID_CATEGORY');
+        $this->db->join('menu', 'menu.id = content_category.ID_MENU');
+        if($type != null){
+            $this->db->join('content_type', 'content.ID_TYPE = content_type.ID_TYPE');
+            $this->db->where('content_type.TYPE', $type);
+        }else{
+            $this->db->where('content.ID_TYPE', null);
+        }
+        $this->db->where('menu.name', 'Our Works');
+        $this->db->where('content_category.CATEGORY', $category);
+        return $this->db->get()->result();
+    }
+
     function get_by_category_image($category=null){
         $this->db->select('content_image.*');
         $this->db->from('content_image');
@@ -47,6 +63,7 @@ class Our_Works_model extends CI_Model
         $this->db->join('menu', 'menu.id = content_category.ID_MENU');
         $this->db->where('menu.name', 'Our Works');
         $this->db->where('content_category.CATEGORY', $category);
+        $this->db->order_by('content_image.ID_IMAGE');
         return $this->db->get()->result();
     }
 
