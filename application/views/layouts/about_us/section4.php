@@ -2,7 +2,7 @@
 <div class="banner-4" id="involved">
 	<div class="col-md-6 u-pad" style="overflow:auto;">
 		<div class="banner-overlay">
-      <img src="<?= base_url('uploads/'.$row->IMG) ?>" style="min-width: 0;">
+      <img src="<?= base_url('uploads/'.$row->IMG) ?>" style="min-width: 800px;max-width: 900px;">
     </div>
 		<div class="banner-4__content">
 			<div class="banner-4__content__title">
@@ -23,7 +23,7 @@
 		</div>
 		</a>
 		<div>
-			<a href="<?php echo site_url('get_involved/contact_us') ?>">
+			<a href="#contact_us">
 			<div class="banner-4__contact-us">
 				<div class="banner-4__contact-us__icon">
 				</div>

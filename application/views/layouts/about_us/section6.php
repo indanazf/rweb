@@ -1,4 +1,4 @@
-<div class="banner-6">
+<div class="banner-6" id="contact_us">
 	<div class="container">
 		<div class="col-md-3">
 			<div class="banner-6__item">

@@ -41,6 +41,14 @@ class Get_involved extends CI_Controller
         $this->load->view('layouts/footer');
     }
 
+    public function join_us(){
+        $join_us = $this->Join_us_model->get_by_category_type('join_us');
+        $join_list = $this->Get_involved_model->get_by_category_type('join_us','list');
+        $this->load->view('layouts/header');
+        $this->load->view('layouts/index/join_us', $array = array('join_us'=>$join_us, 'join_list'=>$join_list));
+        $this->load->view('layouts/footer');
+    }
+
     public function admin(){
         if(!$this->session->userdata['username']){
             redirect(site_url('auth/login'));

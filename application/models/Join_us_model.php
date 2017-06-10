@@ -39,6 +39,22 @@ class Join_us_model extends CI_Model
         return $this->db->get()->result();
     }
 
+    function get_by_category_type($category, $type=null){
+        $this->db->select('content.*');
+        $this->db->from($this->table);
+        $this->db->join('content_category', 'content_category.ID_CATEGORY = content.ID_CATEGORY');
+        $this->db->join('menu', 'menu.id = content_category.ID_MENU');
+        if($type != null){
+            $this->db->join('content_type', 'content.ID_TYPE = content_type.ID_TYPE');
+            $this->db->where('content_type.TYPE', $type);
+        }else{
+            $this->db->where('content.ID_TYPE', 0);
+        }
+        $this->db->where('menu.name', 'Join Us');
+        $this->db->where('content_category.CATEGORY', $category);
+        return $this->db->get()->result();
+    }
+
     // get data by id
     function get_by_id($id)
     {

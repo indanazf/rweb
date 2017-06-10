@@ -38,7 +38,9 @@
 .banner-6__item__body, .introducing__content, .solution__content,.keys-role__content__item__desc,
 .our-past__content__body__table,.team__content__item,
 .director__content__name,.director__content__position,.director__content__desc,
-.map-detail__content__item__right, .success-stories__content__item__headline__desc{
+.map-detail__content__item__right, .success-stories__content__item__headline__desc,
+.join-us__content-3__menu,
+.join-us__content-3__button{
 	font-family: 'OpenSans';
 }
 
@@ -50,7 +52,9 @@
 .banner-3__content__desc, .banner-4__content__desc{
 	font-size: 12px;
 }
-.banner-2-2__content__item__desc, .footer__left__text{
+.banner-2-2__content__item__desc, .footer__left__text, .join-us__banner__title,
+.join-us__content-2__title,
+.join-us__content-3__title{
 	font-family: 'OpenSans-Semibold';
 }
 

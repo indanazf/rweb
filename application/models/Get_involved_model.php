@@ -14,7 +14,7 @@ class Get_involved_model extends CI_Model
     {
         parent::__construct();
     }
-
+    
     // get all
     function get_all()
     {
@@ -29,7 +29,17 @@ class Get_involved_model extends CI_Model
         return $this->db->get()->result();
     }
 
-    function get_by_category($category, $type=null){
+    function get_by_category($category){
+        $this->db->select('content.*');
+        $this->db->from($this->table);
+        $this->db->join('content_category', 'content_category.ID_CATEGORY = content.ID_CATEGORY');
+        $this->db->join('menu', 'menu.id = content_category.ID_MENU');
+        $this->db->where('menu.name', 'Get Involved');
+        $this->db->where('content_category.CATEGORY', $category);
+        return $this->db->get()->result();
+    }
+
+    function get_by_category_type($category, $type=null){
         $this->db->select('content.*');
         $this->db->from($this->table);
         $this->db->join('content_category', 'content_category.ID_CATEGORY = content.ID_CATEGORY');
