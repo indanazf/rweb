@@ -19,6 +19,7 @@ class Our_impact extends CI_Controller
     public function index()
     {
         $background = $this->Our_impact_model->get_by_category('background', 'list');
+        $bg = $this->Our_impact_model->get_by_category('box');
         $box = $this->Our_impact_model->get_by_category('box','list');
         $box_chart1 = $this->Our_impact_model->get_by_category('box', 'sector_chart');
         $box_chart2 = $this->Our_impact_model->get_by_category('box', 'geography_chart');
@@ -34,7 +35,9 @@ class Our_impact extends CI_Controller
             'judul' => 'Our Impact'
             );
 
-        print_r($data);
+        $this->load->view('layouts/header');
+        $this->load->view('layouts/index/our_impact_map_detail', $array = array('bg'=>$bg,'detail'=>$box, 'chart1'=>$box_chart1, 'chart2'=>$box_chart2));
+        $this->load->view('layouts/footer');
     }
 
     public function admin(){

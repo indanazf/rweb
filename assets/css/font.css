@@ -34,7 +34,8 @@
 .banner-5__left__title, .banner-5__right__title,
 .banner-6__item__body, .introducing__content, .solution__content,.keys-role__content__item__desc,
 .our-past__content__body__table,.team__content__item,
-.director__content__name,.director__content__position,.director__content__desc{
+.director__content__name,.director__content__position,.director__content__desc,
+.map-detail__content__item__right{
 	font-family: 'OpenSans';
 }
 
@@ -48,4 +49,16 @@
 }
 .banner-2-2__content__item__desc, .footer__left__text{
 	font-family: 'OpenSans-Semibold';
+}
+
+.map-detail__content__item__left__img {
+	width: initial;
+}
+
+.map-detail__content__item__right__title{
+	font-size: 12px;
+}
+
+.map-detail__content__item__right__value{
+	font-size: 24px;
 }
