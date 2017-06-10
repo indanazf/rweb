@@ -50,6 +50,8 @@ class Content extends CI_Controller
               'LAST_UPDATE' => $row->LAST_UPDATE,
               'ICON_TYPE' => $row->ICON_TYPE,
               'IMG' => $row->IMG,
+              'TYPE' => $row->TYPE,
+              'CATEGORY' => $row->CATEGORY,
               'judul' => 'CONTENT',
               'subjudul' =>'Read',
               'page' => $page,

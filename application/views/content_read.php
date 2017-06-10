@@ -7,8 +7,8 @@
 				<div class='box-header'>
 					<h3 class='box-title'>Content Read</h3>
 					<table class="table table-bordered">
-						<tr><td>ID TYPE</td><td><?php echo $ID_TYPE; ?></td></tr>
-						<tr><td>ID CATEGORY</td><td><?php echo $ID_CATEGORY; ?></td></tr>
+						<tr><td>CONTENT TYPE</td><td><?php echo $TYPE; ?></td></tr>
+						<tr><td>CONTENT CATEGORY</td><td><?php echo $CATEGORY; ?></td></tr>
 						<tr><td>SUBJECT</td><td><?php echo $SUBJECT; ?></td></tr>
 						<tr><td>CONTENT</td><td><?php echo $CONTENT; ?></td></tr>
 						<tr><td>CONTENT NUMMBER</td><td><?php echo $CONTENT_NUMMBER; ?></td></tr>
