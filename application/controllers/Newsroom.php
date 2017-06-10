@@ -10,9 +10,6 @@ class Newsroom extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        if(!$this->session->userdata['username']){
-            redirect(site_url('auth/login'));
-        }
         $this->load->model('Newsroom_model');
         $this->load->model('Content_image_model');
         $this->load->library('form_validation');
@@ -35,6 +32,9 @@ class Newsroom extends CI_Controller
     }
 
     public function admin(){
+        if(!$this->session->userdata['username']){
+            redirect(site_url('auth/login'));
+        }
         $content = $this->Newsroom_model->get_all();
 
         $data = array(
