@@ -9,18 +9,38 @@
 		  	<?=$row->SUBJECT?>
 		  </div>
 		  <div class="our-past__content">
-		  	<?php foreach($header as $h){?>
+		  	<?php foreach($content as $h){?>
 		  	<div class="our-past__content__head">
 		  		<div class="our-past__content__head__title">
 		  			<?=$h->SUBJECT?>
 		  		</div>
 		  		<div class="our-past__content__head__subtitle">
-		  			<?=$h->CONTENT?>
+		  			<?=$h->SUBTITLE?>
 		  		</div>
 		  	</div>
 		  	<?php } ?>
 		  	
 		  	<div class="our-past__content__body">
+		  		<div class="our-past__content__body__title"></div>
+		  		<div class="our-past__content__body__desc"></div>
+		  		<table class="our-past__content__body__table">
+		  			<tr> 
+		  				<td valign="top"><img src="<?= base_url() ?>assets/images/farmer.png" width="60"></td>
+		  				<td>
+		  					<div class="our-past__content__body__title"><?=$content[0]->CONTENT?></div>
+		  				</td>
+		  			</tr>
+		  			<tr> 
+		  				<td valign="top"><img src="<?= base_url() ?>assets/images/handshake.png" width="60"></td>
+		  				<td>
+		  					<div class="our-past__content__body__title"></div>
+		  					<div class="our-past__content__body__value1"></div>
+		  				</td>
+		  			</tr>
+		  		</table>
+		  	</div>
+
+		  	<!-- <div class="our-past__content__body">
 		  		<div class="our-past__content__body__title">Objectives</div>
 		  		<div class="our-past__content__body__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </div>
 		  		<table class="our-past__content__body__table">
@@ -28,9 +48,6 @@
 		  				<td valign="top"><img src="<?= base_url() ?>assets/images/farmer.png" width="60"></td>
 		  				<td>
 		  					<div class="our-past__content__body__title">Total Beneficiaries</div>
-		  					<div class="our-past__content__body__value2">75+</div>
-		  					<div class="our-past__content__body__title">Budges</div>
-		  					<div class="our-past__content__body__value1">Rp1.000.000.000</div>
 		  				</td>
 		  			</tr>
 		  			<tr> 
@@ -41,7 +58,7 @@
 		  				</td>
 		  			</tr>
 		  		</table>
-		  	</div>
+		  	</div> -->
 		  	
 		  </div>
 		</div>
