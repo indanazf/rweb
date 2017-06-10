@@ -51,20 +51,5 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-
-   <!-- <div class="header">
-     <div class="container">
-       <img src="<?= base_url() ?>assets/images/logo.png" class="header__logo">
-       <a href="<?php echo site_url('home') ?>"><div class="header__title">Sahabat Cipta</div></a>
-       <input type="text" class="header__search" placeholder="Search">
-       <div class="header__menu">
-         <a href="<?=site_url()?>/home#newsroom"><div class="header__menu__item">Newsroom</div></a>
-         <a href="<?=site_url()?>/home#involved"><div class="header__menu__item">Get Involved</div></a>
-         <a href="<?=site_url()?>/home#impact"><div class="header__menu__item">Our Impact</div></a>
-         <a href="<?=site_url()?>/home#works"><div class="header__menu__item">Our Works</div></a>
-         <a href="<?=site_url()?>/home#aboutus"><div class="header__menu__item header__menu__item--active">About Us</div></a>
-       </div>
-     </div>
-   </div>
-   <div class="header__frame"></div> -->
+    <div class="header__frame"></div> 
 
