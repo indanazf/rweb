@@ -1,4 +1,6 @@
+
 <?php foreach($annual as $row){?>
+<div class="slide">
 <div class="banner">
 	
 	<div class="container">
@@ -9,5 +11,6 @@
 		  
 		</div>
 	</div>
+</div>
 </div>
 <?php }?>

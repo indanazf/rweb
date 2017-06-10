@@ -1,3 +1,4 @@
+<div class="slide">
 <div class="success-stories">
 	<div class="success-stories__frame">
 	<div class="success-stories__badge">Success Stories</div>
@@ -23,5 +24,6 @@
 			<div class="clear"></div>
 		</div>
 	</div>
+</div>
 </div>
    
