@@ -58,11 +58,11 @@
        <a href="<?php echo site_url('home') ?>"><div class="header__title">Sahabat Cipta</div></a>
        <input type="text" class="header__search" placeholder="Search">
        <div class="header__menu">
-         <a href="#newsroom"><div class="header__menu__item">Newsroom</div></a>
-         <a href="#involved"><div class="header__menu__item">Get Involved</div></a>
-         <a href="#impact"><div class="header__menu__item">Our Impact</div></a>
-         <a href="#works"><div class="header__menu__item">Our Works</div></a>
-         <a href="#aboutus"><div class="header__menu__item header__menu__item--active">About Us</div></a>
+         <a href="<?=site_url()?>/home#newsroom"><div class="header__menu__item">Newsroom</div></a>
+         <a href="<?=site_url()?>/home#involved"><div class="header__menu__item">Get Involved</div></a>
+         <a href="<?=site_url()?>/home#impact"><div class="header__menu__item">Our Impact</div></a>
+         <a href="<?=site_url()?>/home#works"><div class="header__menu__item">Our Works</div></a>
+         <a href="<?=site_url()?>/home#aboutus"><div class="header__menu__item header__menu__item--active">About Us</div></a>
        </div>
      </div>
    </div>
