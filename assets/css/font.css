@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'Aller';
+  src: url('fonts/Aller.ttf') format('truetype')
+}
+
+@font-face{
+	font-family: 'OpenSans';
+  src: url('fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face{
+	font-family: 'OpenSans-Semibold';
+  src: url('fonts/OpenSans-Semibold.ttf') format('truetype');
+}
+
+@font-face{
+	font-family: 'GothamBook';
+  src: url('fonts/Gotham-Book_0.otf') format('woff');
+}
+
+
+.header__title, .banner-1__content__title, .our-team__content__title, .our-executive__content__title,
+.banner-2__content__title, .banner-3__content-title, .banner-4__content__title,
+.introducing__banner__title, .solution__banner__title,
+.keys-role__content__title,.keys-role__content__item__number,.our-past__title,
+.our-past__content__head__title,.our-past__content__head__subtitle,
+.our-partner__circle__content__title,.annual-report__title,.faq__title{
+	font-family: 'Aller';
+}
+
+.header__menu__item, .our-team__content__desc, .banner-2__content__desc, .banner-3__content__desc,
+.banner-3__content__infografis__content, .banner-4__join-us__circle,
+.banner-4__contact-us__title, .banner-4__faq__title,
+.banner-5__left__title, .banner-5__right__title,
+.banner-6__item__body, .introducing__content, .solution__content,.keys-role__content__item__desc,
+.our-past__content__body__table,.team__content__item,
+.director__content__name,.director__content__position,.director__content__desc{
+	font-family: 'OpenSans';
+}
+
+.banner-1__content__desc, .our-executive__content__subtitle , .our-executive__content__desc,
+.footer__right__table, .footer__left__button, .footer__left__email,.faq__answer,.faq__question{
+	font-family: 'GothamBook';
+}
+
+.banner-3__content__desc, .banner-4__content__desc{
+	font-size: 12px;
+}
+.banner-2-2__content__item__desc, .footer__left__text{
+	font-family: 'OpenSans-Semibold';
+}

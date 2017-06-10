@@ -38,9 +38,7 @@ class Home extends CI_Controller
         //print_r($get_involved);
         
         $this->load->view('layouts/header');
-        $this->load->view('layouts/about_us/section1', $array = array('about_us'=>$about_us));
-        $this->load->view('layouts/index/our_team', $array = array('team'=>$team));
-        $this->load->view('layouts/index/our_executive', $array = array('executive'=>$executive));
+        $this->load->view('layouts/about_us/section1', $array = array('about_us'=>$about_us,'team'=>$team,'executive'=>$executive));
         $this->load->view('layouts/about_us/section2', $array = array('our_works'=>$our_works));
         $this->load->view('layouts/about_us/section3', $array = array('our_impact'=>$our_impact, 'our_impact_list'=>$our_impact_list));
         $this->load->view('layouts/about_us/section4', $array = array('get_involved'=>$get_involved));

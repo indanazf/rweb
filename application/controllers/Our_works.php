@@ -43,7 +43,7 @@ class Our_works extends CI_Controller
         $this->load->view('layouts/footer');
     }
 
-    public function partner(){
+    public function partners(){
         $bg = $this->Our_Works_model->get_by_category('partners');
         $image = $this->Our_Works_model->get_by_category_image('partners');
         $this->load->view('layouts/header');
