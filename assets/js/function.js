@@ -12,8 +12,8 @@ function GotoPage(page){
         scrollTop: $('#'+page).offset().top-100
     }, 1000);
 
-	$('.navbar-nav li').removeClass('active');
-    $('#'+page+'_nav').addClass('active');
+	// $('.navbar-nav li').removeClass('active');
+ //    $('#'+page+'_nav').addClass('active');
 
 
 }
