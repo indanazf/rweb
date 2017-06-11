@@ -881,6 +881,10 @@ body {
 	margin-top: 30px;
 }
 
+.map-detail {
+	position: relative;
+}
+
 .map-detail__content {
 	padding: 50px 20px;
 }
@@ -916,7 +920,45 @@ body {
 
 .map-detail__background__img {
 	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0; 
+	right: 0; 
+	margin-left: auto; 
+	margin-right: auto; 
+	max-width: 1000px;
+	pointer-events: none;
 }
+
+.map-detail__content__title {
+	font-size: 20px;
+	color: #2381aa;
+	font-weight: bold;
+}
+
+.map-detail__content__subtitle {
+	font-size: 14px;
+	font-weight: bold;
+	color: #666;
+	margin-bottom: 10px;
+}
+
+.map-detail__content__desc {
+	width: 300px;
+	text-align: right;
+	font-size: 16px;
+	color: #999;
+	font-weight: bold;
+	position: absolute;
+	right: 30px;
+	top: 0;
+}
+
+.map-detail__content__chart{
+	margin-left: -100px;
+	padding-top: 20px;
+}
+
 
 .faq__title {
 	font-size: 36px;
@@ -1130,6 +1172,10 @@ body {
 @media screen and (max-width: 1000px) {
 	.footer__right__table {
 		float: left;
+	}
+
+	.map-detail__content__chart{
+		margin-left: 0px;
 	}
 
 	.banner-overlay-2 {
