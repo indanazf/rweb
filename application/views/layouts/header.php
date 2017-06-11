@@ -25,6 +25,7 @@
 
   <body>
 
+    
      <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -38,8 +39,14 @@
             <img src="<?= base_url() ?>assets/images/logo.png" class="header__logo">
             <a href="<?php echo site_url('home') ?>"><div class="header__title">Sahabat Cipta</div></a>
             <input type="text" class="header__search" placeholder="Search">
+
           </a>
         </div>
+
+        <?php
+        $controller_name = $this->router->class;
+        if($controller_name == 'home') {
+        ?>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li id="aboutus_nav" class="active"><a onclick="GotoPage('aboutus')" >About Us</a></li>
@@ -49,7 +56,24 @@
             <li id="newsroom_nav"><a onclick="GotoPage('newsroom')" >Newsroom</a></li>
           </ul>
         </div><!--/.nav-collapse -->
+        <?php
+        } else {
+        ?>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li id="aboutus_nav" class="active"><a href="<?php echo site_url('home#aboutus') ?>" >About Us</a></li>
+            <li id="works_nav"><a href="<?php echo site_url('home#works') ?>">Our Works</a></li>
+            <li id="impact_nav"><a href="<?php echo site_url('home#impact') ?>">Our Impact</a></li>
+            <li id="involved_nav"><a href="<?php echo site_url('home#involved') ?>">Get Involved</a></li>
+            <li id="newsroom_nav"><a href="<?php echo site_url('home#newsroom') ?>">Newsroom</a></li>
+          </ul>
+        </div>
+        <?php
+        }
+        ?>
       </div>
     </nav>
+    
+
     <div class="header__frame"></div> 
 
