@@ -39,7 +39,7 @@ class Get_involved_model extends CI_Model
         return $this->db->get()->result();
     }
 
-    function get_by_category_type($category, $type=null){
+    function get_by_category_type($category=null, $type=null){
         $this->db->select('content.*');
         $this->db->from($this->table);
         $this->db->join('content_category', 'content_category.ID_CATEGORY = content.ID_CATEGORY');
