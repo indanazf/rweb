@@ -61,7 +61,7 @@
         ?>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li id="aboutus_nav" class="active"><a href="<?php echo site_url('home#aboutus') ?>" >About Us</a></li>
+            <li id="aboutus_nav"><a href="<?php echo site_url('home#aboutus') ?>" >About Us</a></li>
             <li id="works_nav"><a href="<?php echo site_url('home#works') ?>">Our Works</a></li>
             <li id="impact_nav"><a href="<?php echo site_url('home#impact') ?>">Our Impact</a></li>
             <li id="involved_nav"><a href="<?php echo site_url('home#involved') ?>">Get Involved</a></li>
