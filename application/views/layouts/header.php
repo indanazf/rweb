@@ -19,6 +19,13 @@
     <!-- full slider -->
     <link href="<?= base_url() ?>assets/css/jquery.fullPage.css" rel="stylesheet">
     <link href="<?= base_url() ?>assets/css/fullslider" rel="stylesheet">
+
+    <!-- animate -->
+    <link href="<?= base_url() ?>assets/css/animate.css" rel="stylesheet">
+
+    <script src="<?= base_url() ?>assets/js/jquery.min.js"></script>
+    <script src="<?= base_url() ?>assets/js/bootstrap.min.js"></script>
+    <script src="<?= base_url() ?>assets/js/docs.min.js"></script>
   
     
   </head>

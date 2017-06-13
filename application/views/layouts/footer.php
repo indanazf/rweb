@@ -41,10 +41,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="<?= base_url() ?>assets/js/jquery.min.js"></script>
-    <script src="<?= base_url() ?>assets/js/bootstrap.min.js"></script>
-    <script src="<?= base_url() ?>assets/js/docs.min.js"></script>
-    <script src="<?= base_url() ?>assets/js/function.js"></script>
+   
 
     <!-- full slider -->
     <script src="<?= base_url() ?>assets/js/jquery.fullPage.js"></script>
@@ -55,11 +52,16 @@
 				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
 				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
 				menu: '#menu',
-				scrollingSpeed: 1000
+				scrollingSpeed: 1000,
+				slidesNavigation: true,
 			});
 		});
 	</script>
     
+    <script src="<?= base_url() ?>assets/js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
 
 
   </body>

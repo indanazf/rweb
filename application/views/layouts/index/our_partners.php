@@ -3,16 +3,20 @@
 
   	<div class="our-partner__circle__content">
     <?php foreach($bg as $row){?>
-  	<div class="our-partner__circle__content__title"><?=$row->SUBJECT?></div>
+  	<div class="our-partner__circle__content__title wow animated fadeInUp"><?=$row->SUBJECT?></div>
     <?php }?>
   		<br>
-      <?php foreach($image as $img){?>
+      <?php 
+      $wow_delay = 0.25;
+      foreach($image as $img){?>
   		<div class="col-md-4">
-  			<div class="our-partner__circle__content__item " >
+  			<div class="our-partner__circle__content__item wow animated fadeIn" data-wow-delay="<?= $wow_delay ?>s" >
   				<img src="<?= base_url('uploads/'.$img->IMAGE) ?>" >
   			</div>
   		</div>
-      <?php }?>
+      <?php 
+      $wow_delay = $wow_delay + 0.25;
+      }?>
       <!--
   		<div class="col-md-4">
   			<div class="our-partner__circle__content__item ">
