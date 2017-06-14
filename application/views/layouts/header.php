@@ -18,7 +18,7 @@
 
     <!-- full slider -->
     <link href="<?= base_url() ?>assets/css/jquery.fullPage.css" rel="stylesheet">
-    <link href="<?= base_url() ?>assets/css/fullslider" rel="stylesheet">
+    <link href="<?= base_url() ?>assets/css/fullslider.css" rel="stylesheet">
   
     
   </head>
