@@ -1,16 +1,18 @@
+<script src="<?= base_url() ?>assets/js/function.js"></script>
+
 <div id="fullpage">
 	<div class="section active" id="section1">
 		
 		<?php foreach($about_us as $row){?>
 			<div class="slide">
 				<div class="banner" id="aboutus">
-					<div class="banner-overlay">
+					<div class="banner-overlay wow animated zoomIn">
 						<img src="<?= base_url('uploads/'.$row->IMG) ?>">
 					</div>
 					<div class="col-md-5 u-pad">
 						<div class="banner-1__content">
-							<div class="banner-1__content__title"><?=$row->SUBJECT?></div>
-							<div class="banner-1__content__desc"><?=$row->CONTENT?></div>
+							<div class="banner-1__content__title  wow animated fadeInUp"><?=$row->SUBJECT?></div>
+							<div class="banner-1__content__desc wow animated fadeInUp" data-wow-delay="1s"><?=$row->CONTENT?></div>
 							<a href="<?php echo site_url($row->LINK) ?>"><div class="button__readmore__long"><?=$row->TAGS?></div></a>
 						</div>
 					</div>
@@ -21,7 +23,7 @@
 		<div class="slide">
 			<?php foreach($team as $t){?>
 				<div class="our-team">
-					<div class="banner-overlay">
+					<div class="banner-overlay  wow animated zoomIn">
 						<img src="<?= base_url('uploads/'.$t->IMG) ?>">
 					</div>
 					
@@ -37,7 +39,7 @@
 		<div class="slide">
 			<?php foreach($executive as $e){?>
 				<div class="our-executive">
-					<div class="banner-overlay">
+					<div class="banner-overlay wow animated zoomIn">
 						<img src="<?= base_url('uploads/'.$e->IMG) ?>">
 					</div>
 					

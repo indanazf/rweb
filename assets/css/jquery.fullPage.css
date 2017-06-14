@@ -21,7 +21,8 @@
     -webkit-box-sizing: border-box; /* Safari<=5 Android<=3 */
     -moz-box-sizing: border-box; /* <=28 */
     box-sizing: border-box;
-    height: 700px !important;
+    height: 100% !important;
+    min-height: 700px !important;
 }
 .fp-slide {
     float: left;
@@ -131,8 +132,8 @@
 #fp-nav ul li,
 .fp-slidesNav ul li {
     display: block;
-    width: 14px;
-    height: 13px;
+    width: 60px;
+    height: 12px;
     margin: 7px;
     position:relative;
 }
@@ -153,20 +154,16 @@
 .fp-slidesNav ul li a.active span,
 #fp-nav ul li:hover a.active span,
 .fp-slidesNav ul li:hover a.active span{
-    height: 12px;
-    width: 12px;
-    margin: -6px 0 0 -6px;
-    border-radius: 100%;
+    background: #eee;
  }
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
-    border-radius: 50%;
     position: absolute;
     z-index: 1;
-    height: 4px;
-    width: 4px;
+    height: 6px;
+    width: 60px;
     border: 0;
-    background: #333;
+    background: #3C81A7;
     left: 50%;
     top: 50%;
     margin: -2px 0 0 -2px;
@@ -177,9 +174,7 @@
 }
 #fp-nav ul li:hover a span,
 .fp-slidesNav ul li:hover a span{
-    width: 10px;
-    height: 10px;
-    margin: -5px 0px 0px -5px;
+    
 }
 #fp-nav ul li .fp-tooltip {
     position: absolute;

@@ -1,14 +1,14 @@
 <?php foreach($bg as $row){?>
 <div class="banner">
-	<div class="banner-overlay">
+	<div class="banner-overlay wow animated fadeIn" data-wow-delay="0.5s">
 		<img src="<?= base_url('uploads/'.$row->IMG) ?>">
 	</div>
 	<div class="container">
 		<div class="col-md-3 u-pad">
-		  <div class="our-past__title">
+		  <div class="our-past__title  wow animated fadeInLeft">
 		  	<?=$row->SUBJECT?>
 		  </div>
-		  <div class="our-past__content">
+		  <div class="our-past__content wow animated fadeInUp" data-wow-delay="1s">
 		  	<?php foreach($content as $h){?>
 		  	<div class="our-past__content__head">
 		  		<div class="our-past__content__head__title">

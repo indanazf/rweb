@@ -5,7 +5,7 @@
 	
 	<div class="container">
 		<div class="col-md-3 u-pad">
-		  <div class="annual-report__title">
+		  <div class="annual-report__title wow animated fadeInLeft">
 		  	<?=$row->SUBJECT?> 
 		  </div>
 		  

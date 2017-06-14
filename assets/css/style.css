@@ -383,6 +383,10 @@ body {
 	color: #2381aa;
 	font-weight: bold;
 	line-height: 200px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
 }
 
 .banner-4__contact-us {
@@ -390,6 +394,12 @@ body {
 	float: left;
 	height: 300px;
 	background: #3ead4b;
+	position: relative;
+}
+.banner-4__contact-us__frame {
+	position: absolute;
+	left: 0;
+	right: 0;
 }
 
 .banner-4__contact-us__icon {
@@ -414,7 +424,15 @@ body {
 	float: right;
 	height: 300px;
 	background: #b3cd5a;
+	position: relative;
 }
+
+.banner-4__faq__frame {
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
 
 .banner-4__faq__icon {
 	width: 117px;
@@ -881,6 +899,10 @@ body {
 	margin-top: 30px;
 }
 
+.map-detail {
+	position: relative;
+}
+
 .map-detail__content {
 	padding: 50px 20px;
 }
@@ -916,7 +938,45 @@ body {
 
 .map-detail__background__img {
 	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0; 
+	right: 0; 
+	margin-left: auto; 
+	margin-right: auto; 
+	max-width: 1000px;
+	pointer-events: none;
 }
+
+.map-detail__content__title {
+	font-size: 20px;
+	color: #2381aa;
+	font-weight: bold;
+}
+
+.map-detail__content__subtitle {
+	font-size: 14px;
+	font-weight: bold;
+	color: #666;
+	margin-bottom: 10px;
+}
+
+.map-detail__content__desc {
+	width: 300px;
+	text-align: right;
+	font-size: 16px;
+	color: #999;
+	font-weight: bold;
+	position: absolute;
+	right: 30px;
+	top: 0;
+}
+
+.map-detail__content__chart{
+	margin-left: -100px;
+	padding-top: 20px;
+}
+
 
 .faq__title {
 	font-size: 36px;
@@ -1018,9 +1078,10 @@ body {
 	font-size: 50px;
 	color: #fff;
 	text-align: center;
-	width: 100%;
-	padding-top: 200px;
+	width: 50%;
+	padding-top: 240px;
 	position: relative;
+	margin: 0 auto;
 }
 
 .join-us__content-1 {
@@ -1118,6 +1179,11 @@ body {
 		padding-bottom: 40px;
 	}
 
+	.navbar-inverse .navbar-nav> li>a:hover {
+		border-bottom: 3px solid #2381aa;
+		padding-bottom: 40px;
+	}
+
 	.navbar {
 		border: none;
 	}
@@ -1128,8 +1194,15 @@ body {
 }
 
 @media screen and (max-width: 1000px) {
+	.join-us__banner__title {
+		width: 100%;
+	}
 	.footer__right__table {
 		float: left;
+	}
+
+	.map-detail__content__chart{
+		margin-left: 0px;
 	}
 
 	.banner-overlay-2 {
