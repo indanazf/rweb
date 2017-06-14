@@ -26,7 +26,6 @@
     <script src="<?= base_url() ?>assets/js/jquery.min.js"></script>
     <script src="<?= base_url() ?>assets/js/bootstrap.min.js"></script>
     <script src="<?= base_url() ?>assets/js/docs.min.js"></script>
->>>>>>> 7a7776ec9751a5cacc2ef81a0756e13cdd42fe19
   
     
   </head>
