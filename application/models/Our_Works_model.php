@@ -39,11 +39,18 @@ class Our_Works_model extends CI_Model
         return $this->db->get()->result();
     }
 
-    function get_by_category_type($category, $type=null){
+    function get_by_category_type($category, $type=null, $maps=null){
         $this->db->select('content.*');
+        if($maps!=null){
+            $this->db->select('our_past.*');
+        }
         $this->db->from($this->table);
         $this->db->join('content_category', 'content_category.ID_CATEGORY = content.ID_CATEGORY');
         $this->db->join('menu', 'menu.id = content_category.ID_MENU');
+        if($maps!=null){
+            $this->db->join('our_past', 'our_past.ID_CONTENT = content.ID_CONTENT');
+        }
+
         if($type != null){
             $this->db->join('content_type', 'content.ID_TYPE = content_type.ID_TYPE');
             $this->db->where('content_type.TYPE', $type);
@@ -52,6 +59,7 @@ class Our_Works_model extends CI_Model
         }
         $this->db->where('menu.name', 'Our Works');
         $this->db->where('content_category.CATEGORY', $category);
+        //echo $this->db->get_compiled_select();
         return $this->db->get()->result();
     }
 

@@ -27,8 +27,8 @@ class Our_works extends CI_Controller
     }
 
     public function past_going_projects(){
-        $bg = $this->Our_Works_model->get_by_category_type('past_going_projects','background');
-        $data = $this->Our_Works_model->get_by_category_type('past_going_projects','content_peta_header');
+        $bg = $this->Our_Works_model->get_by_category_type('past_going_projects','background','');
+        $data = $this->Our_Works_model->get_by_category_type('past_going_projects','content_peta_header','map');
         $this->load->view('layouts/header');
         $this->load->view('layouts/index/our_past', $array = array('bg'=>$bg, 'content'=>$data));
         $this->load->view('layouts/footer');

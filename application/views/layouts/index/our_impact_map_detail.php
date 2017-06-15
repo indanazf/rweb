@@ -4,7 +4,7 @@
 			<div class="map-detail__content">
 				<div class="row">
 					<?php 
-                    $wow_delay = 1;
+                    $wow_delay = 0;
                     foreach($detail as $row){?>
 					<div class="col-md-3">
 						<div class="map-detail__content__item wow animated fadeIn" data-wow-delay="<?= $wow_delay ?>s">

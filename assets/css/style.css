@@ -132,11 +132,22 @@ body {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
+	min-width: 1100px;
 }
 
 .banner-overlay img{
 	width: 100%;
-	min-width: 1200px;
+}
+
+.banner-overlay-map {
+	position: absolute; 
+	width: 100%;
+	height: 100%;	
+	min-width: 1100px;
+}
+
+.banner-overlay-map img{
+	width: 100%;
 }
 
 .banner-2 {
@@ -618,8 +629,6 @@ body {
 
 .our-past__content {
 	border: 1px solid #ccc;
-	margin-top: 200px;
-	margin-bottom: 60px;
 }
 
 .our-past__content__head {
@@ -636,17 +645,23 @@ body {
 
 .our-past__content__head__subtitle {
 	font-size: 12px;
+	color: #414042;
 }
 
 .our-past__content__body {
 	padding: 20px;
 	background: #2381aa;
 	color: #fff;
+	position: relative;	
 }
 
 .our-past__content__body__table {
-	width: 100%;
+	width: 200px;
 	margin-top: 20px;	
+}
+
+.our-past__content__body__table tr td{
+	padding: 10px;
 }
 
 .our-past__content__body__title {
@@ -663,6 +678,74 @@ body {
 
 .our-past__content__body__value2 {
 	font-size: 30px;
+}
+
+.our-past__content__map {
+  width: 50px;
+	height: 50px;
+	background: url("../images/location-pointer.png");
+	position: absolute;
+	background-size: cover;
+	top: 150px;
+	left: 300px;
+	cursor: pointer;
+  -webkit-transform: translateZ(0); /* webkit flicker fix */
+  -webkit-font-smoothing: antialiased; /* webkit text rendering fix */
+  cursor: pointer;
+}
+
+.our-past__content__map:hover {
+	background: url("../images/location-pointer-hover.png");
+	background-size: cover;
+}
+
+
+.our-past__content__map .tooltip {
+  background: #1496bb;
+  top: 50px;
+  color: #fff;
+  display: block;
+  left: -250px;
+  margin-bottom: 15px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 250px;
+  -webkit-transform: translateY(10px);
+     -moz-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+       -o-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: all .25s ease-out;
+     -moz-transition: all .25s ease-out;
+      -ms-transition: all .25s ease-out;
+       -o-transition: all .25s ease-out;
+          transition: all .25s ease-out;
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+     -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+      -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+       -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+          box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+}
+  
+.our-past__content__map:hover .tooltip {
+	top: 0px;
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateY(0px);
+     -moz-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+       -o-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+/* IE can just show/hide with no transition */
+.lte8 .our-past__content__map .tooltip {
+  display: none;
+}
+
+.lte8 .our-past__content__map:hover .tooltip {
+  display: block;
 }
 
 .our-partner {
