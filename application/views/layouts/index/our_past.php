@@ -13,7 +13,8 @@
 			  
 			</div>
 			<?php foreach($content as $h){?>
-			  	<div class="our-past__content__map" style="top: <?=$content[0]->MARGIN_Y; ?>%; left: <?=$content[0]->MARGIN_X; ?>%">
+				
+			  	<div class="our-past__content__map" style="top: <?=$h->MARGIN_Y; ?>%; left: <?=$h->MARGIN_X; ?>%">
 
 			    	<div class="tooltip">
 			    		<div class="our-past__content">
@@ -36,7 +37,7 @@
 						  			<tr> 
 						  				<td valign="top"><img src="<?= base_url() ?>assets/images/farmer.png" width="60"></td>
 						  				<td>
-						  					<div class="our-past__content__body__title"><?=$content[0]->CONTENT?></div>
+						  					<div class="our-past__content__body__title"><?=$h->CONTENT?></div>
 						  				</td>
 						  			</tr>
 						  			<tr> 
