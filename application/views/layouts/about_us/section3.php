@@ -29,7 +29,12 @@
       </div>
     </div>
     <img src="<?= base_url('uploads/'.$row->IMG) ?>" class="banner-3__background  wow animated fadeInUp" data-wow-delay="1s">
-    <a href="<?php echo site_url('our_impact') ?>"><div class="banner-3__detail-button  wow animated fadeInUp" data-wow-delay="1.5s"></div></a>
+    <a href="<?php echo site_url('our_impact') ?>">
+      <div class="banner-3__detail-button  wow animated fadeInUp" data-wow-delay="1.5s">
+        <div class="banner-3__detail-button__title">Scoreboard</div>
+      </div>
+
+    </a>
   </div>
 </div>
 <?php }?>
