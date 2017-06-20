@@ -33,12 +33,54 @@ body {
 }
 
 .button__readmore {
+	font-size: 12px;
+	line-height: 36px;
+	color: #fff;
+	overflow: hidden;
+	padding-left: 36px;
 	position: absolute;
 	right: 0;
 	bottom: 0;
 	width: 36px;
 	height: 36px;
-	background: url("../images/read-more.png");
+	background: url("../images/read-more.png") #2381aa no-repeat;
+	cursor: pointer;
+    -webkit-transition: all .25s ease-out;
+     -moz-transition: all .25s ease-out;
+      -ms-transition: all .25s ease-out;
+       -o-transition: all .25s ease-out;
+          transition: all .25s ease-out;
+}
+
+.button__readmore:hover {
+	width: 180px;
+	text-align: center;
+}
+
+.button__readmore-white {
+	display: block;
+	font-size: 12px;
+	line-height: 36px;
+	color: #2381aa;
+	overflow: hidden;
+	padding-left: 36px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 36px;
+	height: 36px;
+	background: url("../images/button-white.png") #fff no-repeat;
+	cursor: pointer;
+    -webkit-transition: all .25s ease-out;
+     -moz-transition: all .25s ease-out;
+      -ms-transition: all .25s ease-out;
+       -o-transition: all .25s ease-out;
+          transition: all .25s ease-out;
+}
+
+.button__readmore-white:hover {
+	width: 180px;
+	text-align: center;
 }
 
 .u-pad {
@@ -73,7 +115,7 @@ body {
 
 .header__logo {
 	float: left;
-	margin-top: 20px;
+	margin-top: 12px;
 }
 
 .header__title {
@@ -82,6 +124,7 @@ body {
 	display: inline-block;
 	width: 160px;
 	line-height: 100px;
+	padding-left: 5px;
 }
 
 .header__search {
@@ -261,6 +304,31 @@ body {
 	margin-top: 20px;
 }
 
+.banner-2-2__content__item__circle__item-1 {
+	background: url("../images/banner-2-icon-1.png") no-repeat center center;
+}
+
+.banner-2-2__content__item:hover .banner-2-2__content__item__circle__item-1 {
+	background: url("../images/banner-2-icon-1-hover.png") no-repeat center center;
+}
+
+.banner-2-2__content__item__circle__item-2 {
+	background: url("../images/banner-2-icon-2.png") no-repeat center center;
+}
+
+.banner-2-2__content__item:hover .banner-2-2__content__item__circle__item-2 {
+	background: url("../images/banner-2-icon-2-hover.png") no-repeat center center;
+}
+
+.banner-2-2__content__item__circle__item-3 {
+	background: url("../images/banner-2-icon-3.png") no-repeat center center;
+}
+
+.banner-2-2__content__item:hover .banner-2-2__content__item__circle__item-3 {
+	background: url("../images/banner-2-icon-3-hover.png") no-repeat center center;
+}
+
+
 .banner-2-2__content__item__desc {
 	text-align: center;
 	margin-top: 20px;
@@ -342,9 +410,9 @@ body {
 .banner-3__detail-button {
 	position: absolute;
 	right: 0;
-	bottom: 100px;
+	bottom: 80px;
 	width: 100px;
-	height: 100px;
+	height: 120px;
 	background: url("../images/our-impact-detail-button.png") no-repeat center top;
 }
 
@@ -352,7 +420,60 @@ body {
 	color: #2381aa;
 	font-weight: bold;
 	text-align: center;
-	padding-top: 80px;
+	padding-top: 100px;
+}
+
+
+.banner-3__circle-button {
+	width: 300px;
+	position: absolute;
+	left: 0;
+	bottom: 50px;
+}
+
+.banner-3__circle-button__item {
+	float: left;
+	width: 50%;
+}
+
+.banner-3__circle-button__item:hover .banner-3__circle-button__item__circle {
+	border: 15px solid #A7CDDD;
+}
+
+.banner-3__circle-button__item:hover .banner-3__circle-button__item__desc {
+	color: #3C81A7;
+}
+
+.banner-3__circle-button__item__circle {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	border:12px solid #F1F1F2;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.banner-3__circle-button__item__desc {
+	text-align: center;
+	margin-top: 10px;
+	color: #666;
+	font-weight: bold;
+}
+
+.banner-3__circle-button__item__circle__item-1 {
+	background: url("../images/banner-5-icon-2.png") no-repeat center center;
+}
+
+.banner-3__circle-button__item:hover .banner-3__circle-button__item__circle__item-1 {
+	background: url("../images/banner-5-icon-2.png") no-repeat center center;
+}
+
+.banner-3__circle-button__item__circle__item-2 {
+	background: url("../images/banner-5-icon-1.png") no-repeat center center;
+}
+
+.banner-3__circle-button__item:hover .banner-3__circle-button__item__circle__item-2 {
+	background: url("../images/banner-5-icon-1.png") no-repeat center center;
 }
 
 .banner-4 {

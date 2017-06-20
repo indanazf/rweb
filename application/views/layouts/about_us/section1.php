@@ -13,7 +13,7 @@
 						<div class="banner-1__content">
 							<div class="banner-1__content__title  wow animated fadeInUp"><?=$row->SUBJECT?></div>
 							<div class="banner-1__content__desc wow animated fadeInUp" data-wow-delay="1s"><?=$row->CONTENT?></div>
-							<a href="<?php echo site_url($row->LINK) ?>"><div class="button__readmore__long"><?=$row->TAGS?></div></a>
+							<a href="<?php echo site_url($row->LINK) ?>"><div class="button__readmore"><?=$row->TAGS?></div></a>
 						</div>
 					</div>
 				</div>

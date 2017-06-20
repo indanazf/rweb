@@ -11,7 +11,7 @@
 
 			<div class="banner-4__content__desc">
 				<?=$row->CONTENT?> 
-				<div class="button__readmore"></div>
+				<div class="button__readmore">Read More</div>
 			</div>
 		</div>
 	</div>
