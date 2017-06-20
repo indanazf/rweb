@@ -7,7 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="<?= base_url() ?>assets/favicon.ico">
 
     <title>Sahabat Cipta</title>
 
@@ -43,8 +43,8 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#">
-            <img src="<?= base_url() ?>assets/images/logo.png" class="header__logo">
-            <a href="<?php echo site_url('home') ?>"><div class="header__title">Sahabat Cipta</div></a>
+            <a href="<?php echo site_url('home') ?>"><img src="<?= base_url() ?>assets/images/logo-white.png" class="header__logo"></a>
+           <!-- <div class="header__title">Sahabat Cipta</div> -->
             <input type="text" class="header__search" placeholder="Search">
 
           </a>
