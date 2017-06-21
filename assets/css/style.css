@@ -83,6 +83,21 @@ body {
 	text-align: center;
 }
 
+.button__close-white {
+	font-size: 12px;
+	line-height: 36px;
+	color: #666;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 36px;
+	height: 36px;
+	background: url("../images/close.png") #fff no-repeat center center;
+	cursor: pointer;
+	display: none;
+}
+
 .u-pad {
 	padding: 0 !important;
 }
@@ -256,6 +271,8 @@ body {
 
 .banner-2__content__desc {
 	font-size: 16px;
+	height: 110px;
+	overflow: hidden;
 }
 
 .banner-2__content__button {

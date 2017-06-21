@@ -10,9 +10,12 @@
 
       <div class="banner-2__content wow animated fadeInRight" data-wow-delay="0.2s"> 
         <div class="banner-2__content__title"><?=$row->SUBJECT?></div>
-        <div class="banner-2__content__desc"><?=$row->CONTENT?></div>
-        <div class="button__readmore-white">Read More</div>
+        <!-- <div class="banner-2__content__desc"><?=$row->CONTENT?></div> -->
+        <div class="banner-2__content__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div> 
+        <div class="button__readmore-white" id="banner-2__content__readmore" onclick="banner2_readmore()">Read More</div>
+        <div class="button__close-white" id="banner-2__content__close" onclick="banner2_close()"></div>
       </div>
+      <div class="clear"></div>
       <div class="banner-2-2__content">
         <a href="<?php echo site_url('our_works/past_going_projects') ?>">
         <div class="banner-2-2__content__item  wow animated fadeInUp" data-wow-delay="0.4s">
