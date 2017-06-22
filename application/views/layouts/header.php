@@ -43,8 +43,8 @@
             <span class="icon-bar"></span>
           </button>
           
-            <a href="<?php echo site_url('home') ?>"><img src="<?= base_url() ?>assets/images/logo.png" class="header__logo">
-           <div class="header__title">Sahabat Cipta</div></a>
+            <a href="<?php echo site_url('home') ?>"><img src="<?= base_url() ?>assets/images/logo-white.png" class="header__logo">
+           </a>
             <input type="text" class="header__search" placeholder="Search">
 
           

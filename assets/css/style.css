@@ -150,6 +150,9 @@ body {
   height: 30px;
   outline: none;
   color: #999;
+    margin-top: 38px;
+    margin-left: 40px;
+    margin-bottom: 35px;
 }
 
 .header__menu {
