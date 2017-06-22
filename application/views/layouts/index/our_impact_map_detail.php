@@ -1,12 +1,15 @@
 <div class="slide">
 	<div class="map-detail">
 		<div class="container" style="position: relative;">
+        <div class="annual-report__title  wow animated fadeInLeft">
+                <?=$bg[0]->SUBTITLE?>
+        </div>
 			<div class="map-detail__content">
 				<div class="row">
 					<?php 
                     $wow_delay = 0;
                     foreach($detail as $row){?>
-					<div class="col-md-3">
+					<div class="col-md-4">
 						<div class="map-detail__content__item wow animated fadeIn" data-wow-delay="<?= $wow_delay ?>s">
 							<div class="map-detail__content__item__left">
 								<img src="<?= base_url('uploads/'.$row->LINK) ?>" class="map-detail__content__item__left__img">

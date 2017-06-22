@@ -34,8 +34,6 @@ class Home extends CI_Controller
         $get_involved = $this->Get_involved_model->get_by_category_type('get_involved','background');
         $content_press_release = $this->Newsroom_model->get_by_category('press_release');
         $content_in_news = $this->Newsroom_model->get_by_category('in_news');
-
-        //print_r($get_involved);
         
         $this->load->view('layouts/header');
         $this->load->view('layouts/about_us/section1', $array = array('about_us'=>$about_us,'team'=>$team,'executive'=>$executive));

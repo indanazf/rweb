@@ -35,16 +35,16 @@
 						  		<div class="our-past__content__body__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
 						  		<table class="our-past__content__body__table">
 						  			<tr> 
-						  				<td valign="top"><img src="<?= base_url() ?>assets/images/farmer.png" width="60"></td>
+						  				<td valign="top"><img src="<?= base_url() ?>assets/images/farmer.png" style="width:50px; height:50px"></td>
 						  				<td>
-						  					<div class="our-past__content__body__title"><?=$h->CONTENT?></div>
+						  					<div class="our-past__content__body__value1" style="font-size: 6px"><?=$h->CONTENT?></div>
 						  				</td>
 						  			</tr>
 						  			<tr> 
-						  				<td valign="top"><img src="<?= base_url() ?>assets/images/handshake.png" width="60"></td>
+						  				<td valign="top"><img src="<?= base_url() ?>assets/images/handshake.png" style="width:50px; height:50px"></td>
 						  				<td>
 						  					<div class="our-past__content__body__title"></div>
-						  					<div class="our-past__content__body__value1"></div>
+						  					<div class="our-past__content__body__value1"><!-- <?=$h->CONTENT?> --></div>
 						  				</td>
 						  			</tr>
 						  		</table>
