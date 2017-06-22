@@ -15,7 +15,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="row">
+	
 	<div class="col-md-6 u-pad">
 		<a href="<?php echo site_url('get_involved/join_us') ?>" style="text-decoration: none;">
 			<div class="banner-4__join-us wow animated fadeInRight">
@@ -48,6 +48,6 @@
 			</a>
 		</div>
 	</div>
-	</div>
+	
 </div>
 <?php }?>
