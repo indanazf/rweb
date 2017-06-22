@@ -38,10 +38,10 @@ function banner2_readmore(){
   var media = window.innerWidth;
   if(media >= 1000){
     $(".banner-2__content").css({'float': 'right', 'right': '0'});
-    $(".banner-2__content").stop().animate({width:'150%'}, 500);
-    $(".banner-2__content__desc").stop().animate({'height': '200px'}, 500);
+    $(".banner-2__content").stop().animate({width:'150%'}, 250);
+    $(".banner-2__content__desc").stop().animate({'height': '200px'}, 250);
   }else{
-    $(".banner-2__content__desc").stop().animate({'height': '240px'}, 500);
+    $(".banner-2__content__desc").stop().animate({'height': '240px'}, 250);
   }
   $("#banner-2__content__readmore").hide();
   $("#banner-2__content__close").show();
@@ -49,9 +49,9 @@ function banner2_readmore(){
 
 function banner2_close(){
   $(".banner-2__content").css({'float': 'right', 'right': '0'});
-  $(".banner-2__content").stop().animate({width:'100%'}, 500);
+  $(".banner-2__content").stop().animate({width:'100%'}, 250);
   $("#banner-2__content__close").hide();
   $("#banner-2__content__readmore").show();
-  $(".banner-2__content__desc").stop().animate({'height': '110px'}, 500);
+  $(".banner-2__content__desc").stop().animate({'height': '110px'}, 250);
   
 }
