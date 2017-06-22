@@ -2,12 +2,12 @@
 		<div class="container">
 			<div class="col-md-6">
 				<div class="footer__left">
-					<form>
+					<!--<form>
 					<input type="email" name="email" id="email" required="" placeholder="Alamat Email" class="footer__left__email">
 					<input type="submit" value="Join Us" class="footer__left__button">
 					</form>
 					<div class="clear"></div>
-					<div class="footer__left__text">Enter your email to get the registration form</div>
+					<div class="footer__left__text">Enter your email to get the registration form</div>-->
 					<img src="<?= base_url() ?>assets/images/logo-white.png" class="footer__left__logo">
 				</div>
 			</div>
@@ -28,7 +28,7 @@
 						</tr>
 						<tr>
 							<td valign="top">Address</td>
-							<td>Jl. Mampang Prapatan XIV No. 47 <br>RT 01/RW 04 Jakarta 12790 Indonesia</td>
+							<td>Jl. Mampang Prapatan XIV No. 47 <br>RT 01/RW 02, Jakarta 12790, Indonesia</td>
 						</tr>
 					</table>
 				</div>

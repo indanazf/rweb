@@ -1,5 +1,8 @@
 <div class="slide">
 	<div class="map-detail">
+        <div class="annual-report__title wow animated fadeInLeft">
+                SC's Scorecard
+              </div>
 		<div class="container" style="position: relative;">
 			<div class="map-detail__content">
 				<div class="row">
