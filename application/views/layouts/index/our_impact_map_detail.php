@@ -45,14 +45,14 @@
 					</div>
 
 				</div>
-				<div class="col-md-6">
+				<!-- <div class="col-md-6">
 					<div class="map-detail__content__subtitle">&nbsp;</div>
 					<div class="map-detail__content__title">Geography</div>
 					<div class="map-detail__content__chart">
 						<div id="container_chart-2" style="height: 250px; width: 100%; margin: 0 auto"></div>
 					</div>
 
-				</div>
+				</div> -->
 				
 				<div class="map-detail__content__desc">Working with partners to create<br>opportunities and empower<br>the less fortunate</div>
 					
@@ -154,69 +154,69 @@ $(document).ready(function () {
     });
 
     // Build the chart
-    Highcharts.chart('container_chart-2', {
-        chart: {
-            plotBackgroundColor: null,
-            plotBorderWidth: null,
-            plotShadow: false,
-            type: 'pie'
-        },
-        title: {
-            text: ''
-        },
-        tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-        },
-        plotOptions: {
-            pie: {
-                colors: [
-			     '#8eb73f', 
-			     '#27a557', 
-			     '#2b9070', 
-			     '#0093b6', 
-			     '#55bac9'
-			   ],
-                dataLabels: {
-                    enabled: true,
-                    distance: -50,
-                    style: {
-                        fontWeight: 'bold',
-                        color: 'white'
-                    },
-                    format: ' {point.percentage:.1f} %',
-                },
-                showInLegend: true,
+    // Highcharts.chart('container_chart-2', {
+    //     chart: {
+    //         plotBackgroundColor: null,
+    //         plotBorderWidth: null,
+    //         plotShadow: false,
+    //         type: 'pie'
+    //     },
+    //     title: {
+    //         text: ''
+    //     },
+    //     tooltip: {
+    //         pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    //     },
+    //     plotOptions: {
+    //         pie: {
+    //             colors: [
+			 //     '#8eb73f', 
+			 //     '#27a557', 
+			 //     '#2b9070', 
+			 //     '#0093b6', 
+			 //     '#55bac9'
+			 //   ],
+    //             dataLabels: {
+    //                 enabled: true,
+    //                 distance: -50,
+    //                 style: {
+    //                     fontWeight: 'bold',
+    //                     color: 'white'
+    //                 },
+    //                 format: ' {point.percentage:.1f} %',
+    //             },
+    //             showInLegend: true,
                 
-            }
-        },
-        legend: {
-            align: 'right',
-            layout: 'vertical',
-            verticalAlign: 'top',
-            x: -100,
-            y: 60
-        },
-        series: [{
-            name: 'Brands',
-            colorByPoint: true,
+    //         }
+    //     },
+    //     legend: {
+    //         align: 'right',
+    //         layout: 'vertical',
+    //         verticalAlign: 'top',
+    //         x: -100,
+    //         y: 60
+    //     },
+    //     series: [{
+    //         name: 'Brands',
+    //         colorByPoint: true,
             
-            data: [{
-                name: 'Java',
-                y: 45
-            }, {
-                name: 'Sumatera',
-                y: 15
-            }, {
-                name: 'Kalimantan',
-                y: 10
-            }, {
-                name: 'NTT',
-                y: 25
-            }, {
-                name: 'Sulawesi',
-                y: 5
-            }]
-        }]
-    });
+    //         data: [{
+    //             name: 'Java',
+    //             y: 45
+    //         }, {
+    //             name: 'Sumatera',
+    //             y: 15
+    //         }, {
+    //             name: 'Kalimantan',
+    //             y: 10
+    //         }, {
+    //             name: 'NTT',
+    //             y: 25
+    //         }, {
+    //             name: 'Sulawesi',
+    //             y: 5
+    //         }]
+    //     }]
+    // });
 });
 </script>
