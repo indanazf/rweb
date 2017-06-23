@@ -13,6 +13,7 @@
         <?php 
         $wow_delay = 0.2;
         foreach($our_impact_list as $r){?>
+        <div class="col-md-6">
         <div class="banner-3__content__infografis  wow animated zoomIn" data-wow-delay="<?= $wow_delay ?>s">
           <div class="banner-3__content__infografis__img">
             <img src="<?= base_url('assets/images/'.$r->LINK) ?>">
@@ -21,6 +22,7 @@
             <div class="banner-3__content__infografis__content__title"><?=$r->SUBJECT?></div>
             <div class="banner-3__content__infografis__content__value"><?=$r->CONTENT?></div>
           </div>
+        </div>
         </div>
         <?php 
         $wow_delay = $wow_delay + 0.2;

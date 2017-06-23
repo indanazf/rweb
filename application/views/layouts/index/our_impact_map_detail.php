@@ -9,7 +9,7 @@
 					<?php 
                     $wow_delay = 0;
                     foreach($detail as $row){?>
-					<div class="col-md-3">
+					<div class="col-md-4">
 						<div class="map-detail__content__item wow animated fadeIn" data-wow-delay="<?= $wow_delay ?>s">
 							<div class="map-detail__content__item__left">
 								<img src="<?= base_url('uploads/'.$row->LINK) ?>" class="map-detail__content__item__left__img">

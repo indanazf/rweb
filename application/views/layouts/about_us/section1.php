@@ -6,7 +6,7 @@
 		<?php foreach($about_us as $row){?>
 			<div class="slide">
 				<div class="banner" id="aboutus">
-					<div class="banner-overlay wow animated zoomIn">
+					<div class="banner-overlay__slider wow animated zoomIn">
 						<img src="<?= base_url('uploads/'.$row->IMG) ?>">
 					</div>
 					<div class="col-md-5 u-pad">
@@ -23,7 +23,7 @@
 		<div class="slide">
 			<?php foreach($team as $t){?>
 				<div class="our-team">
-					<div class="banner-overlay  wow animated zoomIn">
+					<div class="banner-overlay__slider  wow animated zoomIn">
 						<img src="<?= base_url('uploads/'.$t->IMG) ?>">
 					</div>
 					
@@ -39,7 +39,7 @@
 		<div class="slide">
 			<?php foreach($executive as $e){?>
 				<div class="our-executive">
-					<div class="banner-overlay wow animated zoomIn">
+					<div class="banner-overlay__slider wow animated zoomIn">
 						<img src="<?= base_url('uploads/'.$e->IMG) ?>">
 					</div>
 					
