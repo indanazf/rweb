@@ -35,9 +35,9 @@
 						  		<div class="our-past__content__body__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
 						  		<table class="our-past__content__body__table">
 						  			<tr> 
-						  				<td valign="top"><img src="<?= base_url() ?>assets/images/farmer.png" width="60"></td>
+						  				<td width="60" valign="top"><img src="<?= base_url() ?>assets/images/farmer.png" width="60"></td>
 						  				<td>
-						  					<div class="our-past__content__body__title"><?=$h->CONTENT?></div>
+						  					<div class="our-past__content__body__desc"><?=$h->CONTENT?></div>
 						  				</td>
 						  			</tr>
 						  			<tr> 

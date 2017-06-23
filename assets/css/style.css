@@ -820,7 +820,7 @@ body {
 }
 
 .our-past__content__body__table {
-	width: 200px;
+	width: 100%;
 	margin-top: 20px;	
 }
 
@@ -832,7 +832,7 @@ body {
 	font-size: 16px;
 }
 
-.our-past__content__body__desc {
+.our-past__content__body__desc__table {
 	font-size:10px;
 }
 
