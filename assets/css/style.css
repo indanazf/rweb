@@ -216,13 +216,27 @@ body {
 .banner-overlay__slider {
 	position: absolute; 
 	width: 100%;
-	height: 100%;
 	overflow: hidden;
 }
 
 .banner-overlay__slider img{
 	width: 100%;
-	min-width: 1200px;
+}
+
+.banner-overlay__slider__animate {
+	position: absolute; 
+	width: 0%;
+	overflow: hidden;
+	top: 50%;
+	left:0;
+	right: 0;
+	opacity: 0.5;
+	margin-left: auto; 
+  	margin-right: auto; 
+}
+
+.banner-overlay__slider__animate img{
+	width: 100%;
 }
 
 .banner-2 {
@@ -242,6 +256,11 @@ body {
 	padding-left: 120px;
 }
 
+.banner-1__content__animate {
+	opacity: 0;
+}
+
+
 .banner-1__content__title {
 	font-size: 48px;
 	color: #3C81A7;
@@ -249,10 +268,20 @@ body {
 	margin-bottom: 20px;
 }
 
+.banner-1__content__title__animate {
+	margin-top: 50px;
+	opacity: 0;
+}
+
 .banner-1__content__desc {
 	font-size: 24px;
 	font-style: italic;
 	color: #777;
+}
+
+.banner-1__content__desc__animate {
+	opacity: 0;
+	margin-top: 50px;
 }
 
 .banner-1__content__button {
@@ -980,6 +1009,10 @@ body {
 	text-align: center;
 }
 
+.our-team__content__animate {
+	opacity: 0;
+}
+
 .our-team__content__title {
 	font-size: 50px;
 	font-weight: bold;
@@ -1012,6 +1045,11 @@ body {
 	position: relative;
 	width: 100%;
 }
+
+.our-executive__content__animate {
+	opacity: 0;
+}
+
 
 .our-executive__content__title {
 	font-size: 50px;
