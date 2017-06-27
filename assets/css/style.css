@@ -57,6 +57,21 @@ body {
 	text-align: center;
 }
 
+.button__close {
+	font-size: 12px;
+	line-height: 36px;
+	color: #666;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 36px;
+	height: 36px;
+	background: url("../images/close-white.png") #2381aa no-repeat center center;
+	cursor: pointer;
+	display: none;
+}
+
 .button__readmore-white {
 	display: block;
 	font-size: 12px;
@@ -414,6 +429,8 @@ body {
 .banner-3__content__desc {
 	font-size: 18px;
 	color: #777;
+	height: 105px;
+	overflow-y: hidden;
 }
 
 .banner-3__content__button {
@@ -544,25 +561,37 @@ body {
 }
 
 .banner-4__content {
-	width: 80%;
+	width: 100%;
 	margin: 0 auto;
-	margin-top: 382px;
-	margin-bottom: 50px;
-	position: relative;
+	min-height: 600px;
 }
+
+.banner-4__content__frame {
+	padding-left: 50px;
+	padding-right: 50px;
+	position: absolute;
+	bottom: 50px;
+}
+
 
 .banner-4__content__title {
 	font-size: 48px;
 	color: #fff;
 	font-weight: bold;
+	position: relative;
 }
 
-.banner-4__content__desc {
+.banner-4__content__desc__frame {
 	background: #231f20;
 	padding: 20px;
 	position: relative;
 	color: #999;
-	min-height: 100px;
+	padding-bottom: 50px;
+}
+
+.banner-4__content__desc {
+	height: 50px;
+	overflow: hidden;
 }
 
 .banner-4__join-us {
@@ -1430,6 +1459,7 @@ body {
 	color: #fff;
 	background: #3ead4b;
 	padding: 50px 0;
+
 }
 
 .join-us__content-3__title {
