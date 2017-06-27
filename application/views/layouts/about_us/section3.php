@@ -5,7 +5,8 @@
       <div class="banner-3__content-title"><?=$row->SUBJECT?></div>
       <div class="banner-3__content">
         <div class="banner-3__content__desc"><?=$row->CONTENT?></div>
-        <div class="button__readmore">Read More</div>
+        <div class="button__readmore" id="banner-3__content__readmore" onclick="banner3_readmore()">Read More</div>
+        <div class="button__close" id="banner-3__content__close" onclick="banner3_close()"></div>
       </div>
     </div>
     <div class="col-md-9">

@@ -29,21 +29,21 @@
 		</div>
 		<div class="join-us__content-2">
 			<div class="row">
-				<div class="join-us__content-2__title wow animated fadeIn" data-wow-delay="1s">Employee Testimonials</div>
+				<div class="join-us__content-2__title wow animated fadeIn">Employee Testimonials</div>
 
-				<div class="col-md-4 wow animated fadeInUp" data-wow-delay="1s">
+				<div class="col-md-4 wow animated fadeInUp">
 					<iframe width="300" height="200" src="https://www.youtube.com/embed/IwzsXv4sw6k"></iframe>
 					<div class="join-us__content-2__video__title">
 						Testimonial 1
 					</div>
 				</div>
-				<div class="col-md-4 wow animated fadeInUp" data-wow-delay="1s">
+				<div class="col-md-4 wow animated fadeInUp" >
 					<iframe width="300" height="200" src="https://www.youtube.com/embed/IwzsXv4sw6k"></iframe>
 					<div class="join-us__content-2__video__title">
 						Testimonial 2
 					</div>
 				</div>
-				<div class="col-md-4 wow animated fadeInUp" data-wow-delay="1s">
+				<div class="col-md-4 wow animated fadeInUp" >
 					<iframe width="300" height="200" src="https://www.youtube.com/embed/IwzsXv4sw6k"></iframe>
 					<div class="join-us__content-2__video__title">
 						Testimonial 3
