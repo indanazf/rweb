@@ -78,4 +78,3 @@ function banner4_close(){
   $("#banner-4__content__readmore").show();
   $("#banner-4__content__close").hide();
 }
->>>>>>> 72eb8ea38dfe1565081c90325418fe7d96ee85a9

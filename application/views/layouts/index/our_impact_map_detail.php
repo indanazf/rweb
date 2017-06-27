@@ -38,6 +38,7 @@
 
 		</div>
 		<div class="container" style="position: relative;">
+
 			<div class="row wow animated fadeIn">
 				<div class="col-md-6">
 					<div class="map-detail__content__subtitle">Portfolio Split by:</div>
@@ -58,7 +59,6 @@
 				</div>
 				
 				<div class="map-detail__content__desc">Working with partners to create<br>opportunities and empower<br>the less fortunate</div>
-					
 
 			</div>
 			
