@@ -75,6 +75,12 @@ class Our_Works_model extends CI_Model
         return $this->db->get()->result();
     }
 
+    function get_map(){
+        $this->db->select('our_past.*');
+        $this->db->from('our_past');
+        return $this->db->get()->result();
+    }
+
     // get data by id
     function get_by_id($id)
     {

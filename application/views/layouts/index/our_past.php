@@ -21,39 +21,63 @@
 						  	
 						  	<div class="our-past__content__head">
 						  		<div class="our-past__content__head__title">
-						  			<?=$h->SUBJECT?>
+						  			<?=$h->JUDUL?>
 						  		</div>
 						  		<div class="our-past__content__head__subtitle">
-						  			<?=$h->SUBTITLE?>
+						  			<?=$h->LOCATION?> | <?=$h->SECTOR?>
 
 						  		</div>
 						  	</div>
 						  	
 						  	
 						  	<div class="our-past__content__body">
-						  		<!-- <div class="our-past__content__body__title">Objectives</div>
-						  		<div class="our-past__content__body__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div> -->
+						  		<div class="our-past__content__body__title">Objectives</div>
+						  		<div class="our-past__content__body__desc"><?=$h->OBJECTIVE?></div>
 						  		<table class="our-past__content__body__table">
 						  			<tr> 
-						  				<td valign="top"><img src="<?= base_url() ?>assets/images/farmer.png" style="width:50px; height:50px"></td>
-						  				<td rowspan="2">
-						  					<div class="our-past__content__body__value1" style="font-size: 12px"><?=$h->CONTENT?></div>
-						  				</td>
-						  				<!-- <td width="60" valign="top"><img src="<?= base_url() ?>assets/images/farmer.png" width="60"></td> -->
-						  				<!-- 
+						  				<td valign="top"><img src="<?= base_url() ?>assets/images/farmer.png" style="width:30px; height:30px"></td>
 						  				<td>
-						  					<div class="our-past__content__body__desc"><?=$h->CONTENT?></div>
-						  				</td> -->
+						  					<div class="our-past__content__body__value1" style="font-size: 12px">
+						  					Total Beneficiaries <br><?=$h->BENEFICIARIES?>
+						  					</div>
+						  				</td>
 						  			</tr>
 						  			<tr> 
-						  				<td valign="top"><img src="<?= base_url() ?>assets/images/handshake.png" style="width:50px; height:50px"></td>
+						  				<td valign="top"><img src="<?= base_url() ?>assets/images/" style="width:30px; height:30px"></td>
 						  				<td>
-						  					<!-- <div class="our-past__content__body__title"></div>
-						  					<div class="our-past__content__body__value1"> <?=$h->CONTENT?> </div> -->
+						  					<div class="our-past__content__body__value1" style="font-size: 12px">
+						  					Budgets <br><?=$h->VALUE?>
+						  					</div>
+						  				</td>
+						  			</tr>
+						  			<tr> 
+						  				<td valign="top"><img src="<?= base_url() ?>assets/images/handshake.png" style="width:30px; height:30px"></td>
+						  				<td>
+						  					<div class="our-past__content__body__value1" style="font-size: 12px">
+						  					Partners <br><?=$h->PARTNER?>
+						  					</div>
+						  				</td>
+						  			</tr>
+						  			<tr> 
+						  				<td valign="top"><img src="<?= base_url() ?>assets/images/....png" style="width:30px; height:30px"></td>
+						  				<td>
+						  					<div class="our-past__content__body__value1" style="font-size: 12px">
+						  					Year Awarded <br><?=$h->YEAR_AWARDED?>
+						  					</div>
+						  				</td>
+						  			</tr>
+						  			<tr> 
+						  				<td valign="top"><img src="<?= base_url() ?>assets/images/....png" style="width:30px; height:30px"></td>
+						  				<td>
+						  					<div class="our-past__content__body__value1" style="font-size: 12px">
+						  					Year Completed <br><?=$h->YEAR_COMPLETED?>
+						  					</div>
 						  				</td>
 						  			</tr>
 						  		</table>
 						  	</div>
+
+
 						  </div>
 			    	</div>
 			  	</div>
