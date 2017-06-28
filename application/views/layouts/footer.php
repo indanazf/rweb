@@ -2,13 +2,13 @@
 		<div class="container">
 			<div class="col-md-6">
 				<div class="footer__left">
-					<!-- <form>
-					<!--<form>
-					<input type="email" name="email" id="email" required="" placeholder="Alamat Email" class="footer__left__email">
-					<input type="submit" value="Join Us" class="footer__left__button">
-					</form> -->
+					<form>
+					<!-- <input type="email" name="email" id="email" required="" placeholder="Alamat Email" class="footer__left__email"> -->
+					<a href="" class="footer__left__button" align="center">Donate</a>
+					</form> 
 					<div class="clear"></div>
 					<!-- <div class="footer__left__text">Enter your email to get the registration form</div>  -->
+					<br>
 					<img src="<?= base_url() ?>assets/images/logo-white.png" class="footer__left__logo">
 				</div>
 			</div>
