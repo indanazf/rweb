@@ -32,8 +32,8 @@ class Home extends CI_Controller
         $our_impact = $this->Our_impact_model->get_by_category('background');
         $our_impact_list = $this->Our_impact_model->get_by_category('background', 'list');
         $get_involved = $this->Get_involved_model->get_by_category_type('get_involved','background');
-        $content_press_release = $this->Newsroom_model->get_by_category('press_release');
-        $content_in_news = $this->Newsroom_model->get_by_category('in_news');
+        $content_press_release = $this->Newsroom_model->get_by_category2('press_release');
+        $content_in_news = $this->Newsroom_model->get_by_category2('in_news');
         
         $this->load->view('layouts/header');
         $this->load->view('layouts/about_us/section1', $array = array('about_us'=>$about_us,'team'=>$team,'executive'=>$executive));

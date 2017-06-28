@@ -5,12 +5,13 @@ if (!defined('BASEPATH'))
 
 class Newsroom extends CI_Controller
 {
-    
-        
+
+
     function __construct()
     {
         parent::__construct();
         $this->load->model('Newsroom_model');
+        $this->load->model('Our_impact_model');
         $this->load->model('Content_image_model');
         $this->load->library('form_validation');
     }
@@ -26,7 +27,7 @@ class Newsroom extends CI_Controller
             'content_press_release' => $content_press_release,
             'content_in_news' => $content_in_news,
             'judul' => 'Newsroom'
-        );
+            );
 
         print_r($data);
     }
@@ -41,10 +42,28 @@ class Newsroom extends CI_Controller
             'content_data' => $content,
             'judul' => 'Newsroom',
             'subjudul' =>'',
-        );
+            );
         
 
         $this->template->load('template','content_list', $data);
+    }
+
+    public function press_release(){
+        $success_stories = $this->Newsroom_model->get_by_category('press release');
+        $count_stories = $this->Newsroom_model->count_stories('press release');
+
+        $this->load->view('layouts/header');
+        $this->load->view('layouts/index/success_stories', $array = array('success' => $success_stories, 'counter'=>$count_stories,'judul' => 'Press Release'));
+        $this->load->view('layouts/footer'); 
+    }
+
+     public function news(){
+        $success_stories = $this->Newsroom_model->get_by_category('news');
+        $count_stories = $this->Newsroom_model->count_stories('news');
+
+        $this->load->view('layouts/header');
+        $this->load->view('layouts/index/success_stories', $array = array('success' => $success_stories, 'counter'=>$count_stories,'judul' => 'SC in News'));
+        $this->load->view('layouts/footer'); 
     }
 
 
