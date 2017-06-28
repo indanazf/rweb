@@ -31,7 +31,6 @@
 			<div class="row">
 				<div class="join-us__content-2__title wow animated fadeIn" data-wow-delay="1s">Employee Testimonials</div>
 				<div class="h4 wow animated fadeIn" data-wow-delay="1s">Let's hear what the employees themselves have to say about Sahabat Cipta</div>
-				<div class="join-us__content-2__title wow animated fadeIn">Employee Testimonials</div>
 
 				<div class="col-md-4 wow animated fadeInUp">
 					<iframe width="300" height="200" src="https://www.youtube.com/embed/IwzsXv4sw6k"></iframe>
