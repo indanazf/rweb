@@ -25,7 +25,6 @@
 
     <script src="<?= base_url() ?>assets/js/jquery.min.js"></script>
     <script src="<?= base_url() ?>assets/js/bootstrap.min.js"></script>
-    <script src="<?= base_url() ?>assets/js/docs.min.js"></script>
   
     
   </head>
@@ -42,12 +41,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">
-            <a href="<?php echo site_url('home') ?>"><img src="<?= base_url() ?>assets/images/logo.png" class="header__logo">
-           <div class="header__title">Sahabat Cipta</div></a>
+          
+            <a href="<?php echo site_url('home') ?>"><img src="<?= base_url() ?>assets/images/logo-white.png" class="header__logo">
+           </a>
             <input type="text" class="header__search" placeholder="Search">
 
-          </a>
+          
         </div>
 
         <?php

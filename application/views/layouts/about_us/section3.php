@@ -5,7 +5,8 @@
       <div class="banner-3__content-title"><?=$row->SUBJECT?></div>
       <div class="banner-3__content">
         <div class="banner-3__content__desc"><?=$row->CONTENT?></div>
-        <div class="button__readmore">Read More</div>
+        <div class="button__readmore" id="banner-3__content__readmore" onclick="banner3_readmore()">Read More</div>
+        <div class="button__close" id="banner-3__content__close" onclick="banner3_close()"></div>
       </div>
     </div>
     <div class="col-md-9">
@@ -13,6 +14,7 @@
         <?php 
         $wow_delay = 0.2;
         foreach($our_impact_list as $r){?>
+        <div class="col-md-6">
         <div class="banner-3__content__infografis  wow animated zoomIn" data-wow-delay="<?= $wow_delay ?>s">
           <div class="banner-3__content__infografis__img">
             <img src="<?= base_url('assets/images/'.$r->LINK) ?>">
@@ -21,6 +23,7 @@
             <div class="banner-3__content__infografis__content__title"><?=$r->SUBJECT?></div>
             <div class="banner-3__content__infografis__content__value"><?=$r->CONTENT?></div>
           </div>
+        </div>
         </div>
         <?php 
         $wow_delay = $wow_delay + 0.2;

@@ -31,20 +31,25 @@
 						  	
 						  	
 						  	<div class="our-past__content__body">
-						  		<div class="our-past__content__body__title">Objectives</div>
-						  		<div class="our-past__content__body__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
+						  		<!-- <div class="our-past__content__body__title">Objectives</div>
+						  		<div class="our-past__content__body__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div> -->
 						  		<table class="our-past__content__body__table">
 						  			<tr> 
 						  				<td valign="top"><img src="<?= base_url() ?>assets/images/farmer.png" style="width:50px; height:50px"></td>
-						  				<td>
-						  					<div class="our-past__content__body__value1" style="font-size: 6px"><?=$h->CONTENT?></div>
+						  				<td rowspan="2">
+						  					<div class="our-past__content__body__value1" style="font-size: 12px"><?=$h->CONTENT?></div>
 						  				</td>
+						  				<!-- <td width="60" valign="top"><img src="<?= base_url() ?>assets/images/farmer.png" width="60"></td> -->
+						  				<!-- 
+						  				<td>
+						  					<div class="our-past__content__body__desc"><?=$h->CONTENT?></div>
+						  				</td> -->
 						  			</tr>
 						  			<tr> 
 						  				<td valign="top"><img src="<?= base_url() ?>assets/images/handshake.png" style="width:50px; height:50px"></td>
 						  				<td>
-						  					<div class="our-past__content__body__title"></div>
-						  					<div class="our-past__content__body__value1"><!-- <?=$h->CONTENT?> --></div>
+						  					<!-- <div class="our-past__content__body__title"></div>
+						  					<div class="our-past__content__body__value1"> <?=$h->CONTENT?> </div> -->
 						  				</td>
 						  			</tr>
 						  		</table>
