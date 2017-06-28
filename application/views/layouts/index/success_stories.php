@@ -13,9 +13,12 @@
 				</div>
 				
 				<div class="success-stories__content__item__headline">
-
-					<div class="success-stories__content__item__headline__title"><?=$row->SUBJECT?></div>		
-					<div class="success-stories__content__item__headline__desc"><?=$row->CONTENT?></div>		
+					<?php 
+						$subject = substr($row->SUBJECT, 0,10);
+						$content = substr($row->CONTENT, 0,220);
+					?>
+					<a href="" style="color:white"><div class="success-stories__content__item__headline__title"><?=$subject?>...</div></a>
+					<div class="success-stories__content__item__headline__desc"><?=$content?>... <a href=""><b>read more</b></a></div>		
 				</div>
 			</div>
 
