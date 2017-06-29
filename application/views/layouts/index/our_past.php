@@ -1,14 +1,14 @@
 <?php foreach($bg as $row){?>
 <div class="banner" style="min-height: 800px">
 
-	<a href="<?php echo site_url('our_works/downloads') ?>" >
+	<a href="<?php echo site_url('our_works/downloads') ?>" style="z-index: 999">
 		<div class="past__circle-button__item__circle past__circle-button__item__circle__item-1" style="margin-right: 10px"></div>
 	</a>
 	<div class="container" style="position: relative;">
 
 		<div class="row">
 			
-			<div class="banner-overlay-map wow animated fadeIn" data-wow-delay="0.5s" style="min-height: 700px;">
+			<div class="banner-overlay-map wow animated fadeIn" data-wow-delay="0.5s" style="min-height: 700px;z-index: 99">
 			<div class="col-md-3 u-pad" style="position: absolute;">
 			  <div class="our-past__title  wow animated fadeInLeft">
 			  	<?=$row->SUBJECT?>
@@ -16,7 +16,7 @@
 			</div>
 			<?php foreach($content as $h){?>
 				
-			  	<div class="our-past__content__map" style="top: <?=$h->MARGIN_Y; ?>%; left: <?=$h->MARGIN_X; ?>%">
+			  	<div class="our-past__content__map" style="top: <?=$h->MARGIN_Y; ?>%; left: <?=$h->MARGIN_X; ?>%;">
 
 			    	<div class="tooltip">
 			    		<div class="our-past__content">
@@ -32,7 +32,7 @@
 						  	</div>
 						  	
 						  	
-						  	<div class="our-past__content__body">
+						  	<div class="our-past__content__body" style="z-index: 999">
 						  		<div class="our-past__content__body__title">Objectives</div>
 						  		<div class="our-past__content__body__desc"><?=$h->OBJECTIVE?></div>
 						  		<table class="our-past__content__body__table">
