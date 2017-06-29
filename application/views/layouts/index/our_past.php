@@ -43,7 +43,7 @@
 						  				</td>
 						  			</tr>
 						  			<tr> 
-						  				<td valign="top"><img src="<?= base_url() ?>assets/images/" style="width:30px; height:30px"></td>
+						  				<td valign="top"><img src="<?= base_url() ?>assets/images/budget.png" style="width:30px; height:30px"></td>
 						  				<td>
 						  					<div class="our-past__content__body__value1" style="font-size: 12px">
 						  					Budgets <br><?=$h->VALUE?>
@@ -59,7 +59,7 @@
 						  				</td>
 						  			</tr>
 						  			<tr> 
-						  				<td valign="top"><img src="<?= base_url() ?>assets/images/....png" style="width:30px; height:30px"></td>
+						  				<td valign="top"><img src="<?= base_url() ?>assets/images/award.png" style="width:30px; height:30px"></td>
 						  				<td>
 						  					<div class="our-past__content__body__value1" style="font-size: 12px">
 						  					Year Awarded <br><?=$h->YEAR_AWARDED?>
@@ -67,7 +67,7 @@
 						  				</td>
 						  			</tr>
 						  			<tr> 
-						  				<td valign="top"><img src="<?= base_url() ?>assets/images/....png" style="width:30px; height:30px"></td>
+						  				<td valign="top"><img src="<?= base_url() ?>assets/images/year.png" style="width:30px; height:30px"></td>
 						  				<td>
 						  					<div class="our-past__content__body__value1" style="font-size: 12px">
 						  					Year Completed <br><?=$h->YEAR_COMPLETED?>
@@ -168,24 +168,33 @@ $(document).ready(function () {
             y: 60
         },
         series: [{
-            name: 'Brands',
+            name: 'Percentage',
             colorByPoint: true,
             
             data: [{
-                name: 'Agriculture',
-                y: 45
+                name: 'Sustainable farming',
+                y: 13
             }, {
-                name: 'Micro-finance',
-                y: 15
+                name: 'Integrated sustainable farming',
+                y: 1
             }, {
-                name: 'Health',
-                y: 10
+                name: 'Intellectual property rights',
+                y: 1
             }, {
-                name: 'Environment',
-                y: 25
+                name: 'Public Health',
+                y: 3
             }, {
                 name: 'Research',
+                y: 6
+            }, {
+                name: 'Technical/vocational training',
                 y: 5
+            }, {
+                name: 'Market improvement',
+                y: 1
+            }, {
+                name: 'SME promotion & microfinance',
+                y: 9
             }]
         }]
     });
