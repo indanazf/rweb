@@ -11,6 +11,7 @@ class Our_works extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Our_Works_model');
+        $this->load->model('Our_impact_model');
         $this->load->model('Content_model');
         $this->load->model('Content_image_model');
         $this->load->library('form_validation');
@@ -28,9 +29,10 @@ class Our_works extends CI_Controller
 
     public function past_going_projects(){
         $bg = $this->Our_Works_model->get_by_category_type('past_going_projects','background','');
+        $bg2 = $this->Our_impact_model->get_by_category('box');
         $data = $this->Our_Works_model->get_map();
         $this->load->view('layouts/header');
-        $this->load->view('layouts/index/our_past', $array = array('bg'=>$bg, 'content'=>$data));
+        $this->load->view('layouts/index/our_past', $array = array('bg'=>$bg, 'content'=>$data, 'bg2'=>$bg2));
         $this->load->view('layouts/footer');
 
     }

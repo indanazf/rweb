@@ -146,7 +146,8 @@ body {
 .header__logo {
 	float: left;
 	margin-top: 20px;
-	width: 180px;
+	width: 188px;
+	overflow: hidden;
 }
 
 .header__title {

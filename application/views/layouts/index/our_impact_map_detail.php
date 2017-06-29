@@ -40,7 +40,7 @@
 		<div class="container" style="position: relative;">
 
 			<div class="row wow animated fadeIn">
-				<div class="col-md-6">
+				<!--<div class="col-md-6">
 					<div class="map-detail__content__subtitle">Portfolio Split by:</div>
 					<div class="map-detail__content__title">Sectore Coverage</div>
 					<div class="map-detail__content__chart">
@@ -48,7 +48,7 @@
 
 					</div>
 
-				</div>
+				</div>-->
 				<!-- <div class="col-md-6">
 					<div class="map-detail__content__subtitle">&nbsp;</div>
 					<div class="map-detail__content__title">Geography</div>
@@ -58,15 +58,15 @@
 
 				</div> -->
 				
-				<div class="map-detail__content__desc">Working with partners to create<br>opportunities and empower<br>the less fortunate</div>
+				<!--<div class="map-detail__content__desc">Working with partners to create<br>opportunities and empower<br>the less fortunate</div>-->
 
 			</div>
 			
-			<?php foreach($bg as $bg){?>
+			<!--<?php foreach($bg as $bg){?>
 				
 				<img src="<?= base_url('uploads/'.$bg->IMG) ?>" class="map-detail__background__img wow animated fadeIn">
 			
-			<?php }?>
+			<?php }?>-->
 		</div>
 	</div>
 </div>
@@ -91,7 +91,7 @@ $(document).ready(function () {
     });
 
     // Build the chart
-    Highcharts.chart('container_chart-1', {
+    /*Highcharts.chart('container_chart-1', {
         chart: {
             plotBackgroundColor: null,
             plotBorderWidth: null,
@@ -155,7 +155,7 @@ $(document).ready(function () {
             }]
         }]
     });
-
+    */
     // Build the chart
     // Highcharts.chart('container_chart-2', {
     //     chart: {
