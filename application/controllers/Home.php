@@ -45,5 +45,36 @@ class Home extends CI_Controller
         $this->load->view('layouts/footer');
     }
 
+    public function twitter(){
+        $twitterID = "sahabat_cipta";
+        $tweetNum = 10;
+        $consumerKey = "C9h0wAKKaHZ0tirjv85mCnZ2N";
+        $consumerSecret = "7wuNTGGx6KT4PeGNLPzoPrS1TYNOJblC5chMFNl4uXu5Ozi7pi";
+        $accessToken = "56952435-jbPb96ppz5pDYORq5NntG20kWeen57TeaYqpswQ77";
+        $accessTokenSecret = "0nHeJUiuARV0sT2jdiYcdsZUn2BM9pcSUFRW6D43zeKnq"; 
+        if($twitterID && $consumerKey && $consumerSecret && $accessToken && $accessTokenSecret) {
+              //Authentication with twitter
+              $twitterConnection = new TwitterOAuth(
+                  $consumerKey,
+                  $consumerSecret,
+                  $accessToken,
+                  $accessTokenSecret
+              );
+              //Get user timeline feeds
+              $twitterData = $twitterConnection->get(
+                  'statuses/user_timeline',
+                  array(
+                      'screen_name'     => $twitterID,
+                      'count'           => $tweetNum,
+                      'exclude_replies' => false
+                  )
+              );
+        }
+
+        print_r($twitterData);
+    
+    }
+
+
 
 }

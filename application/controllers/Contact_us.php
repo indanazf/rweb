@@ -17,6 +17,7 @@ class Contact_us extends CI_Controller
         $this->load->library('form_validation');
     }
 
+    
     public function index()
     {
         $contact_us = $this->Contact_us_model->get_all();
