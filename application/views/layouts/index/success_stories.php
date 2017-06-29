@@ -10,7 +10,7 @@
 			<?php foreach($success as $row){?>
 			<div class="success-stories__content__item">
 				<div class="banner-overlay">
-					<img src="<?= base_url('uploads/'.$row->IMG) ?>">
+					<img src="<?= base_url('uploads/'.$row->IMG) ?>" style="min-width: 700px;">
 				</div>
 				
 				<div class="success-stories__content__item__headline">
