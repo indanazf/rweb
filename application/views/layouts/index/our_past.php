@@ -48,7 +48,7 @@
 						  				<td valign="top"><img src="<?= base_url() ?>assets/images/budget.png" style="width:30px; height:30px"></td>
 						  				<td>
 						  					<div class="our-past__content__body__value1" style="font-size: 12px">
-						  					Budgets <br><?=$h->VALUE?>
+						  					Budgets <br>Rp. <?=$h->VALUE?>
 						  					</div>
 						  				</td>
 						  			</tr>
@@ -61,7 +61,7 @@
 						  				</td>
 						  			</tr>
 						  			<tr> 
-						  				<td valign="top"><img src="<?= base_url() ?>assets/images/award.png" style="width:30px; height:30px"></td>
+						  				<td valign="top"><img src="<?= base_url() ?>assets/images/award.png" style="width:20px; height:30px"></td>
 						  				<td>
 						  					<div class="our-past__content__body__value1" style="font-size: 12px">
 						  					Year Awarded <br><?=$h->YEAR_AWARDED?>
