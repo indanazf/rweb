@@ -4,7 +4,7 @@
 				<div class="footer__left">
 					<form>
 					<!-- <input type="email" name="email" id="email" required="" placeholder="Alamat Email" class="footer__left__email"> -->
-					<a href="" class="footer__left__button" align="center">Donate</a>
+					<a href="<?php echo site_url('donation') ?>" class="footer__left__button" align="center">Donate</a>
 					</form> 
 					<div class="clear"></div>
 					<!-- <div class="footer__left__text">Enter your email to get the registration form</div>  -->

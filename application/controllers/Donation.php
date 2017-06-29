@@ -15,6 +15,16 @@ class Donation extends CI_Controller
         $this->load->library('form_validation');
     }
 
+    public function index(){
+        $donation_type = $this->Donation_type_model->get_all();
+
+        print_r($donation_type);
+        $this->load->view('layouts/header');
+        $this->load->view('layouts/index/donation', $array = array('DONATION_TYPE'=>$donation_type, 'action' => site_url('donation/create_action')));
+        $this->load->view('layouts/about_us/section6');
+        $this->load->view('layouts/footer');
+    }
+
     public function admin()
     {
         $donation = $this->Donation_model->get_all();
@@ -97,7 +107,8 @@ class Donation extends CI_Controller
 
             $this->Donation_model->insert($data);
             $this->session->set_flashdata('message', 'Create Record Success');
-            redirect(site_url('donation/admin'));
+            redirect($_SERVER['HTTP_REFERER']);
+            //redirect(site_url('donation/admin'));
         }
     }
     
@@ -173,16 +184,14 @@ class Donation extends CI_Controller
     public function _rules() 
     {
 	$this->form_validation->set_rules('NAME', 'name', 'trim|required');
-	$this->form_validation->set_rules('ACTIVITY', 'activity', 'trim|required');
 	$this->form_validation->set_rules('EMAIL', 'email', 'trim|required');
 	$this->form_validation->set_rules('PHONE', 'phone', 'trim|required');
 	$this->form_validation->set_rules('ADDRESS', 'address', 'trim|required');
 	$this->form_validation->set_rules('PAYMENT', 'payment', 'trim|required');
 	$this->form_validation->set_rules('ID_DONATION_TYPE', 'id donation type', 'trim|required');
 	$this->form_validation->set_rules('NUMBER_OF_DONATION', 'number of donation', 'trim|required|numeric');
-	$this->form_validation->set_rules('NOTES', 'notes', 'trim|required');
 
-	$this->form_validation->set_rules('ID_DONATION', 'ID_DONATION', 'trim');
+	//$this->form_validation->set_rules('ID_DONATION', 'ID_DONATION', 'trim');
 	$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
     }
 

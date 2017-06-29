@@ -27,7 +27,7 @@
 .our-partner__circle__content__title,.annual-report__title,.faq__title,
 .annual-report__title,
 .success-stories__content__item__headline__title,
-.success-stories__badge{
+.success-stories__badge,.donation__banner__title{
 	font-family: 'Aller';
 }
 
@@ -40,12 +40,13 @@
 .director__content__name,.director__content__position,.director__content__desc,
 .map-detail__content__item__right, .success-stories__content__item__headline__desc,
 .join-us__content-3__menu,
-.join-us__content-3__button{
+.join-us__content-3__button,.donation-2__banner__title,.donation__button{
 	font-family: 'OpenSans';
 }
 
 .banner-1__content__desc, .our-executive__content__subtitle , .our-executive__content__desc,
-.footer__right__table, .footer__left__button, .footer__left__email,.faq__answer,.faq__question{
+.footer__right__table, .footer__left__button, .footer__left__email,.faq__answer,.faq__question,.donation__banner__subtitle,
+.donation-2__banner__subtitle,.donation-form{
 	font-family: 'GothamBook';
 }
 

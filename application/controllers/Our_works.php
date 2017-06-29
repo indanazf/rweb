@@ -52,6 +52,18 @@ class Our_works extends CI_Controller
         $this->load->view('layouts/footer');
     }
 
+    public function downloads(){
+        //load the download helper
+        $this->load->helper('download');
+        //Get the file from whatever the user uploaded (NOTE: Users needs to upload first), @See http://localhost/CI/index.php/upload
+        $data = file_get_contents("./uploads/Past and on-going SC projects.xlsx");
+        //Read the file's contents
+        $name = 'Past and on-going SC projects.xlsx';
+
+        //use this function to force the session/browser to download the file uploaded by the user 
+        force_download($name, $data);
+    }
+
     public function admin(){
         if(!$this->session->userdata['username']){
             redirect(site_url('auth/login'));

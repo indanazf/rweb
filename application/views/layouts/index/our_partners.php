@@ -11,7 +11,7 @@
       foreach($image as $img){?>
   		<div class="col-md-4">
   			<div class="our-partner__circle__content__item wow animated fadeIn" data-wow-delay="<?= $wow_delay ?>s" >
-  				<img src="<?= base_url('uploads/'.$img->IMAGE) ?>" >
+  				<img src="<?= base_url('uploads/'.$img->IMAGE) ?>" style="max-height: 80px;margin-bottom: 50px">
   			</div>
   		</div>
       <?php 
