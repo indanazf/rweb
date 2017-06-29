@@ -18,8 +18,8 @@
 						$subject = substr($row->SUBJECT, 0,10);
 						$content = substr($row->CONTENT, 0,220);
 					?>
-					<a href="" style="color:white"><div class="success-stories__content__item__headline__title"><?=$subject?>...</div></a>
-					<div class="success-stories__content__item__headline__desc"><?=$content?>... <a href=""><b>read more</b></a></div>		
+					<a href="#" onclick="Readmore(<?php echo $row->ID_CONTENT; ?>);" class="title-readmore" style="color:white;text-decoration: none;"><div class="success-stories__content__item__headline__title"><?=$subject?>...</div></a>
+					<div class="success-stories__content__item__headline__desc"><?=$content?>... <a href="#" onclick="Readmore(<?php echo $row->ID_CONTENT; ?>);" class="readmore"style="text-decoration: none;"><b>read more</b></a></div>		
 				</div>
 			</div>
 
@@ -36,10 +36,46 @@
 				</div>
 			</div>
 			<?php }?>
+			<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="reservation_detail_model" class="modal fade">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">x</button>
+                            <h4 class="modal-title"></h4>
+                        </div>
+                        <div class="modal-body" id="reservation_detail_model_body">
+                            <!--reservation_list_view goes here-->
 
+
+                        </div>
+                        <div class="modal-footer">
+                            <button data-dismiss="modal" class="btn btn-info" type="button">Close</button>
+                        </div>
+                    </div>
+                </div>    
+            </div>   
 			<div class="clear"></div>
 		</div>
 	</div>
 </div>
 </div>
    
+<script type="text/javascript">
+        function Readmore(id) {
+            $.ajax({
+                type: 'POST',
+                url: '<?php echo site_url(); ?>/our_impact/readmore',
+                data: "&id=" + id,
+                success: function(msg) {
+                	console.log(msg.konten.CONTENT);
+                    $('#reservation_detail_model').modal('toggle').modal('show');
+                    $('#reservation_detail_model_body').html(msg.konten.CONTENT);
+
+                },
+                error: function(msg) {
+                    alert("Error Occured!");
+                },
+    			dataType:"json"
+            });
+        };
+</script>

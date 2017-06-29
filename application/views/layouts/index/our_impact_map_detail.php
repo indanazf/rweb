@@ -72,11 +72,11 @@
 </div>
 
 
-<script src="<?= base_url() ?>assets/js/highchart/jquery-3.1.1.min.js"></script>
-<script src="<?= base_url() ?>assets/js/highchart/highcharts.js"></script>
+<!--<script src="<?= base_url() ?>assets/js/highchart/jquery-3.1.1.min.js"></script>
+<script src="<?= base_url() ?>assets/js/highchart/highcharts.js"></script>-->
 
 <!-- counter -->
-<script src="<?= base_url() ?>assets/js/counter/jquery.min.js"></script> 
+<!--<script src="<?= base_url() ?>assets/js/counter/jquery.min.js"></script>--> 
 <script src="<?= base_url() ?>assets/js/counter/waypoints.min.js"></script> 
 <script src="<?= base_url() ?>assets/js/counter/jquery.counterup.min.js"></script> 
 

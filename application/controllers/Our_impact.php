@@ -61,5 +61,11 @@ class Our_impact extends CI_Controller
         $this->template->load('template','content_list', $data);
     }
 
+    public function readmore(){
+        $id = $this->input->post('id', TRUE);
+
+        $data['konten'] = $this->Our_impact_model->get_by_id($id);
+        echo json_encode($data);
+    }
 
 }
