@@ -1356,6 +1356,7 @@ body {
 	float: left;
 	overflow: hidden;
 	position: relative;
+	display: none;
 }
 
 .success-stories__content__item__headline {

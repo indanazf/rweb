@@ -8,9 +8,10 @@
 				<div class="row">
 					<?php 
                     $wow_delay = 0;
+                    $our_slider = 1;
                     foreach($detail as $row){?>
 					<div class="col-md-4">
-						<div class="map-detail__content__item wow animated fadeIn" data-wow-delay="<?= $wow_delay ?>s">
+						<div class="map-detail__content__item wow animated fadeIn" data-wow-delay="<?= $wow_delay ?>s" id="map-detail__content__item__animate-<?= $our_slider?>">
 							<div class="map-detail__content__item__left">
 								<img src="<?= base_url('uploads/'.$row->LINK) ?>" class="map-detail__content__item__left__img">
 							</div>
@@ -29,6 +30,7 @@
 						</div>
 					</div>
 					<?php 
+                    $our_slider++;
                     $wow_delay = $wow_delay + 0.25;
                     } ?>
 				</div>

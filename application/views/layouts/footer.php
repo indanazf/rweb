@@ -100,6 +100,48 @@
 					}
 				}
 			});
+
+			$('#fullpage_ourimpact').fullpage({
+				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+				menu: '#menu',
+				scrollingSpeed: 1000,
+				slidesNavigation: true,
+				onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
+					
+					if(slideIndex==0){
+						for(var i=2; i<=6; i++){
+							$("#map-detail__content__item__animate-"+i).hide();
+						}
+					}else if(slideIndex==2){
+						for(var i=1; i<=4; i++){
+							$("#success-stories__content__item__animate-"+i).hide();
+						}
+					}
+				},
+				
+				afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+					if(slideIndex==0){
+						var delay = 0;
+						for(var i=2; i<=6; i++){
+							$("#map-detail__content__item__animate-"+i).delay(delay).fadeIn();
+
+						delay = delay + 100;
+						}
+					}else if(slideIndex==2){
+						var delay_ss = 0;
+						for(var i=1; i<=4; i++){
+							$("#success-stories__content__item__animate-"+i).delay(delay_ss).fadeIn();
+						delay_ss = delay_ss + 300;
+						}
+					}
+					
+					$('.counter').counterUp({
+				        delay: 10,
+				        time: 3000
+				    });
+				}
+			});
 		});
 	</script>
     

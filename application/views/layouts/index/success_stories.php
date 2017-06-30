@@ -1,14 +1,19 @@
 <div class="slide">
 <div class="success-stories">
 	<div class="success-stories__frame">
-	<div class="success-stories__badge"><?=$judul?></div>
+	
 	<?php
 	$data = $counter;
 	?>
 		<div class="success-stories__content" style="width: <?php echo $counter * 380; ?>px;">
 		<?php if($success){?>
-			<?php foreach($success as $row){?>
-			<div class="success-stories__content__item">
+			<?php 
+			$ss_slider = 1;
+			foreach($success as $row){?>
+			<div class="success-stories__content__item" id="success-stories__content__item__animate-<?= $ss_slider?>">
+				<?php if($ss_slider==1){ ?>
+				<div class="success-stories__badge"><?=$judul?></div>
+				<?php } ?>
 				<div class="banner-overlay__height">
 					<img src="<?= base_url('uploads/'.$row->IMG) ?>">
 				</div>
@@ -23,7 +28,11 @@
 				</div>
 			</div>
 
-			<?php }?>
+			<?php 
+			$ss_slider++;
+			}
+
+			?>
 			<?php }else{ ?>
 			<div class="success-stories__content__item">
 				<div class="banner-overlay">
