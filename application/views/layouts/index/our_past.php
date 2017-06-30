@@ -1,8 +1,8 @@
 <?php foreach($bg as $row){?>
 <div class="banner" style="min-height: 800px">
 
-	<a href="<?php echo site_url('our_works/downloads') ?>" style="z-index: 999">
-		<div class="past__circle-button__item__circle past__circle-button__item__circle__item-1" style="margin-right: 10px"></div>
+	<a href="<?php echo site_url('our_works/downloads') ?>" style="z-index: 999;position: relative;">
+		<div class="past__circle-button__item__circle past__circle-button__item__circle__item-1" style="margin-right: 10px;z-index: 999;position: relative;"></div>
 	</a>
 	<div class="container" style="position: relative;">
 
