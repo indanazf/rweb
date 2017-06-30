@@ -5,7 +5,7 @@
 		?>
 			<div class="slide">
  				<div class="banner" id="aboutus">
- 					<div class="banner-overlay__slider wow animated zoomIn" id="banner-overlay__slider__animate-<?=$index__slider?>">
+ 					<div class="banner-overlay__slider__animate" id="banner-overlay__slider__animate-<?=$index__slider?>">
  						<img src="<?= base_url('uploads/'.$row->IMG) ?>">
  					</div>
  					<div class="col-md-5 u-pad">

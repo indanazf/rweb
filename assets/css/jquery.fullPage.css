@@ -30,6 +30,7 @@
 .fp-slide, .fp-slidesContainer {
     height: 100%;
     display: block;
+    overflow: hidden;
 }
 .fp-slides {
     z-index:1;

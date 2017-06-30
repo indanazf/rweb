@@ -1590,6 +1590,7 @@ body {
 	width: 100%;
 	height: 620px;
 	position: relative;
+	overflow: hidden;
 }
 
 .donation-2-right__banner {
