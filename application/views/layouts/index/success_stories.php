@@ -9,8 +9,8 @@
 		<?php if($success){?>
 			<?php foreach($success as $row){?>
 			<div class="success-stories__content__item">
-				<div class="banner-overlay">
-					<img src="<?= base_url('uploads/'.$row->IMG) ?>" style="min-width: 700px;">
+				<div class="banner-overlay__height">
+					<img src="<?= base_url('uploads/'.$row->IMG) ?>">
 				</div>
 				
 				<div class="success-stories__content__item__headline">
@@ -18,8 +18,8 @@
 						$subject = substr($row->SUBJECT, 0,10);
 						$content = substr($row->CONTENT, 0,220);
 					?>
-					<a href="#" onclick="Readmore(<?php echo $row->ID_CONTENT; ?>);" class="title-readmore" style="color:white;text-decoration: none;"><div class="success-stories__content__item__headline__title"><?=$subject?>...</div></a>
-					<div class="success-stories__content__item__headline__desc"><?=$content?>... <a href="#" onclick="Readmore(<?php echo $row->ID_CONTENT; ?>);" class="readmore"style="text-decoration: none;"><b>read more</b></a></div>		
+					<a href="#firstPage/2" onclick="Readmore(<?php echo $row->ID_CONTENT; ?>);" class="title-readmore" style="color:white;text-decoration: none;"><div class="success-stories__content__item__headline__title"><?=$subject?>...</div></a>
+					<div class="success-stories__content__item__headline__desc"><?=$content?>... <a href="#firstPage/2" onclick="Readmore(<?php echo $row->ID_CONTENT; ?>);" class="readmore"style="text-decoration: none;"><b>read more</b></a></div>		
 				</div>
 			</div>
 

@@ -1,6 +1,26 @@
 		<?php 
 		$index__slider = 1;
-		foreach($about_us as $row){?>
+		foreach($about_us as $row){
+		if($index__slider == 1){
+		?>
+			<div class="slide">
+ 				<div class="banner" id="aboutus">
+ 					<div class="banner-overlay__slider wow animated zoomIn" id="banner-overlay__slider__animate-<?=$index__slider?>">
+ 						<img src="<?= base_url('uploads/'.$row->IMG) ?>">
+ 					</div>
+ 					<div class="col-md-5 u-pad">
+ 						<div class="banner-1__content" id="banner-1__content__animate-<?=$index__slider?>">
+ 							<div class="banner-1__content__title  wow animated fadeInUp" id="banner-1__content__title__animate-<?=$index__slider?>"><?=$row->SUBJECT?></div>
+ 							<div class="banner-1__content__desc wow animated fadeInUp" data-wow-delay="1s" id="banner-1__content__desc__animate-<?=$index__slider?>"><?=$row->CONTENT?></div>
+ 							<a href="<?php echo site_url($row->LINK) ?>"><div class="button__readmore"><?=$row->TAGS?></div></a>
+ 						</div>
+ 					</div>
+ 				</div>
+ 			</div>
+		<?php
+		} else {
+		?>
+		
 			<div class="slide">
 				<div class="banner" id="aboutus">
 					<div class="banner-overlay__slider__animate" id="banner-overlay__slider__animate-<?=$index__slider?>">
@@ -16,6 +36,7 @@
 				</div>
 			</div>
 		<?php 
+		}
 		$index__slider++;
 		} ?>
 		

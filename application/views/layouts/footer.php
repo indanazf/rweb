@@ -56,6 +56,22 @@
 				menu: '#menu',
 				scrollingSpeed: 1000,
 				slidesNavigation: true,
+				onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
+					var own_index = slideIndex + 1;
+					if(slideIndex==0 || slideIndex==1 || slideIndex==2){
+						$("#banner-overlay__slider__animate-"+own_index).css({width: "120%", opacity: "0.2"});
+						$("#banner-1__content__animate-"+own_index).css({opacity: "0"});
+						$("#banner-1__content__title__animate-"+own_index).css({opacity: "0", marginTop: "50px"});
+						$("#banner-1__content__desc__animate-"+own_index).css({opacity: "0", marginTop: "50px"});
+					}else if(slideIndex==3 || slideIndex==4){
+						$("#banner-overlay__slider__animate-"+own_index).css({width: "120%", opacity: "0.2"});
+						if (slideIndex==3){
+							$("#our-team__content__animate").css({opacity: "0"});
+						}else{
+							$("#our-executive__content__animate").css({opacity: "0"});
+						}
+					}
+				},
 				afterLoad: function(anchorLink, index, slideAnchor, slideIndex){
 					$("#banner-overlay__slider__animate-1").animate({width: "100%", height: "100%", left: "0", top: "0px", opacity: "1"}, 250);
 					$("#banner-1__content__animate-1").animate({opacity: "1"}, 500);
@@ -67,6 +83,7 @@
 					// deleteLog = true;
 					// console.log("afterSlideLoad--" + "anchorLink: " + anchorLink + " index: " + index + " slideAnchor: " + slideAnchor + " slideIndex: " + slideIndex);
 					// console.log("----------------");
+
 					var own_index = slideAnchor + 1;
 					if(slideAnchor==0 || slideAnchor==1 || slideAnchor==2){
 						$("#banner-overlay__slider__animate-"+own_index).animate({width: "100%", height: "100%", left: "0", top: "0px", opacity: "1"}, 250);
@@ -80,7 +97,6 @@
 						}else{
 							$("#our-executive__content__animate").delay(500).animate({opacity: "1"}, 500);
 						}
-						
 					}
 				}
 			});
@@ -88,9 +104,31 @@
 	</script>
     
     <script src="<?= base_url() ?>assets/js/wow.min.js"></script>
+    <script src="<?= base_url() ?>assets/js/scrollspy.js"></script>
     <script>
-      new WOW().init();
-    </script>
+	  
+
+	  // Helper function for add element box list in WOW
+	  WOW.prototype.addBox = function(element) {
+	    this.boxes.push(element);
+	  };
+
+	  // Init WOW.js and get instance
+	  var wow = new WOW();
+	  wow.init();
+
+	  // Attach scrollSpy to .wow elements for detect view exit events,
+	  // then reset elements and add again for animation
+	  $('.wow').on('scrollSpy:exit', function() {
+	    $(this).css({
+	      'visibility': 'hidden',
+	      'animation-name': 'none'
+	    }).removeClass('animated');
+	    wow.addBox(this);
+	  }).scrollSpy();
+
+	</script>
+
 
 
   </body>
