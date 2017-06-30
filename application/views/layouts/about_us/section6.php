@@ -21,7 +21,7 @@
 		<div class="col-md-4">
 			<div class="banner-6__item wow animated fadeIn" data-wow-delay="1s">
 				<div class="banner-6__item__head"><img src="<?= base_url() ?>assets/images/youtube.png"></div>
-				<div class="banner-6__item__body">test</div>
+				<div class="banner-6__item__body"></div>
 			</div>
 		</div>
 	</div>
