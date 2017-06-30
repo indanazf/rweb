@@ -1659,6 +1659,10 @@ body {
 	padding: 3px;
 }
 
+.donation-2__left__images{
+	float: right;
+}
+
 @media screen and (max-width: 1000px) {
 	.join-us__banner__title {
 		width: 100%;
@@ -1694,6 +1698,10 @@ body {
 	}
 	.donation-2__left__images{
 		width: 100%;
+	}
+
+	.donation-2-left__banner {
+		height: auto;
 	}
 }
 
