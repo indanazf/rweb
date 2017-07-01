@@ -23,10 +23,14 @@
 						$subject = substr($row->SUBJECT, 0,10);
 						$content = substr($row->CONTENT, 0,220);
 					?>
-					<a href="#firstPage/2" onclick="Readmore(<?php echo $row->ID_CONTENT; ?>);" class="title-readmore" style="color:white;text-decoration: none;"><div class="success-stories__content__item__headline__title"><?=$subject?>...</div></a>
-					<div class="success-stories__content__item__headline__desc"><?=$content?>... <a href="#firstPage/2" onclick="Readmore(<?php echo $row->ID_CONTENT; ?>);" class="readmore"style="text-decoration: none;"><b>read more</b></a></div>		
+					<a href="#" data-toggle="modal" data-target="#myModal-<?= $ss_slider?>" class="title-readmore" style="color:white;text-decoration: none;"><div class="success-stories__content__item__headline__title"><?=$subject?>...</div></a>
+					<div class="success-stories__content__item__headline__desc"><?=$content?>... 
+					<a href="#" data-toggle="modal" data-target="#myModal-<?= $ss_slider?>" class="readmore"style="text-decoration: none;"><b>read more</b></a></div>		
 				</div>
 			</div>
+
+			
+			
 
 			<?php 
 			$ss_slider++;
@@ -45,46 +49,84 @@
 				</div>
 			</div>
 			<?php }?>
-			<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="reservation_detail_model" class="modal fade">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">x</button>
-                            <h4 class="modal-title"></h4>
-                        </div>
-                        <div class="modal-body" id="reservation_detail_model_body">
-                            <!--reservation_list_view goes here-->
-
-
-                        </div>
-                        <div class="modal-footer">
-                            <button data-dismiss="modal" class="btn btn-info" type="button">Close</button>
-                        </div>
-                    </div>
-                </div>    
-            </div>   
+			
 			<div class="clear"></div>
 		</div>
 	</div>
 </div>
 </div>
-   
-<script type="text/javascript">
-        function Readmore(id) {
-            $.ajax({
-                type: 'POST',
-                url: '<?php echo site_url(); ?>/our_impact/readmore',
-                data: "&id=" + id,
-                success: function(msg) {
-                	console.log(msg.konten.CONTENT);
-                    $('#reservation_detail_model').modal('toggle').modal('show');
-                    $('#reservation_detail_model_body').html(msg.konten.CONTENT);
 
-                },
-                error: function(msg) {
-                    alert("Error Occured!");
-                },
-    			dataType:"json"
-            });
-        };
-</script>
+<?php 
+$ss_slider_modal = 1;
+foreach($success as $row_modal){?>
+<div class="modal fade" id="myModal-<?= $ss_slider_modal?>" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <div class="modal-title__own"><?=$row_modal->SUBJECT; ?></div>
+        </div>
+        <div class="modal-body">
+          <div class="modal-body__own"><?=$row_modal->CONTENT; ?></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+<?php
+$ss_slider_modal++;
+}
+?>
+
+<script type="text/javascript">
+    	var deleteLog = false;
+		$(document).ready(function() {
+
+			$('#fullpage_ourimpact').fullpage({
+				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+				menu: '#menu',
+				scrollingSpeed: 1000,
+				slidesNavigation: true,
+				onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
+					
+					if(slideIndex==0){
+						for(var i=1; i<=6; i++){
+							$("#map-detail__content__item__animate-"+i).hide();
+						}
+					}else if(slideIndex==2){
+						for(var i=1; i<=<?= $ss_slider-1?>; i++){
+							$("#success-stories__content__item__animate-"+i).hide();
+						}
+					}
+				},
+				
+				afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+					if(slideIndex==0){
+						var delay = 0;
+						for(var i=1; i<=6; i++){
+							$("#map-detail__content__item__animate-"+i).delay(delay).fadeIn();
+
+						delay = delay + 100;
+						}
+					}else if(slideIndex==2){
+						var delay_ss = 0;
+						for(var i=1; i<=<?= $ss_slider-1?>; i++){
+							$("#success-stories__content__item__animate-"+i).delay(delay_ss).fadeIn();
+						delay_ss = delay_ss + 300;
+						}
+					}
+					
+					$('.counter').counterUp({
+				        delay: 10,
+				        time: 3000
+				    });
+				}
+			});
+		});
+	</script>

@@ -1663,6 +1663,17 @@ body {
 	float: right;
 }
 
+.modal-title__own {
+	font-size: 20px;
+	color: #333;
+}
+
+.modal-body__own {
+	font-size: 16px;
+	line-height: 24px;
+	padding: 10px;
+}
+
 @media screen and (max-width: 1000px) {
 	.join-us__banner__title {
 		width: 100%;
