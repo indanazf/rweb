@@ -17,8 +17,6 @@ class Donation extends CI_Controller
 
     public function index(){
         $donation_type = $this->Donation_type_model->get_all();
-
-        print_r($donation_type);
         $this->load->view('layouts/header');
         $this->load->view('layouts/index/donation', $array = array('DONATION_TYPE'=>$donation_type, 'action' => site_url('donation/create_action')));
         $this->load->view('layouts/about_us/section6');
