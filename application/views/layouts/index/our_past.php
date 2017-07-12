@@ -25,17 +25,33 @@
 						  		<div class="our-past__content__head__title">
 						  			<?=$h->JUDUL?>
 						  		</div>
-						  		<div class="our-past__content__head__subtitle">
+						  		<!--<div class="our-past__content__head__subtitle">
 						  			<?=$h->LOCATION?> | <?=$h->SECTOR?>
 
-						  		</div>
+						  		</div>-->
 						  	</div>
 						  	
 						  	
 						  	<div class="our-past__content__body" style="z-index: 999">
-						  		<div class="our-past__content__body__title">Objectives</div>
-						  		<div class="our-past__content__body__desc"><?=$h->OBJECTIVE?></div>
+						  		<!--<div class="our-past__content__body__title">Objectives</div>
+						  		<div class="our-past__content__body__desc"><?=$h->OBJECTIVE?></div>-->
 						  		<table class="our-past__content__body__table">
+						  			<tr> 
+						  				<td valign="top"><img src="<?= base_url() ?>assets/images/farmer.png" style="width:30px; height:30px"></td>
+						  				<td>
+						  					<div class="our-past__content__body__value1" style="font-size: 12px">
+						  					Sector <br><?=$h->SECTOR?>
+						  					</div>
+						  				</td>
+						  			</tr>
+						  			<tr> 
+						  				<td valign="top"><img src="<?= base_url() ?>assets/images/farmer.png" style="width:30px; height:30px"></td>
+						  				<td>
+						  					<div class="our-past__content__body__value1" style="font-size: 12px">
+						  					Location <br><?=$h->LOCATION?>
+						  					</div>
+						  				</td>
+						  			</tr>
 						  			<tr> 
 						  				<td valign="top"><img src="<?= base_url() ?>assets/images/farmer.png" style="width:30px; height:30px"></td>
 						  				<td>
@@ -44,14 +60,14 @@
 						  					</div>
 						  				</td>
 						  			</tr>
-						  			<tr> 
+						  			<!--<tr> 
 						  				<td valign="top"><img src="<?= base_url() ?>assets/images/budget.png" style="width:30px; height:30px"></td>
 						  				<td>
 						  					<div class="our-past__content__body__value1" style="font-size: 12px">
 						  					Budgets <br>Rp. <?=$h->VALUE?>
 						  					</div>
 						  				</td>
-						  			</tr>
+						  			</tr>-->
 						  			<tr> 
 						  				<td valign="top"><img src="<?= base_url() ?>assets/images/handshake.png" style="width:30px; height:30px"></td>
 						  				<td>

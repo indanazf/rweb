@@ -49,7 +49,7 @@
 					
 					  <div class="our-team__content our-team__content__animate" id="our-team__content__animate">
 					    <div class="our-team__content__title"><?=$t->SUBJECT?></div>
-					    <div class="our-team__content__desc">In SC we take pride in our well-trainer, experience,<br> highly committed specialist.</div>
+					    <div class="our-team__content__desc"><?=$t->CONTENT?></div>
 					    <a href="<?php echo site_url($t->LINK) ?>"><span class="our-team__content__button"><?=$t->TAGS?></span></a>
 					  </div>
 					 

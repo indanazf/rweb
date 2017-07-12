@@ -25,7 +25,7 @@
               
             </div>
             <div class="banner-2-2__content__item__desc wow animated zoomIn" >
-              Our Past & On-Going Project
+              Our Past & On-going Projects
             </div>
           </div>
         </a>
