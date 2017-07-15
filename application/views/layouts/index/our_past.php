@@ -14,11 +14,12 @@
 			  	<?=$row->SUBJECT?>
 			  </div>
 			</div>
-			<?php foreach($content as $h){?>
+			<?php 
+			$pin_number = 1;
+			foreach($content as $h){?>
 				
-			  	<div class="our-past__content__map" style="top: <?=$h->MARGIN_Y; ?>%; left: <?=$h->MARGIN_X; ?>%;">
-
-			    	<div class="tooltip">
+			  	<div class="our-past__content__map" id="our-past__content__map-<?= $pin_number?>"style="top: <?=$h->MARGIN_Y; ?>%; left: <?=$h->MARGIN_X; ?>%;">
+			  	<div class="my-tooltip" >
 			    		<div class="our-past__content">
 						  	
 						  	<div class="our-past__content__head">
@@ -98,8 +99,22 @@
 
 						  </div>
 			    	</div>
+			    	
 			  	</div>
-			  	<?php } ?>
+
+			  	<script type="text/javascript">
+			  		$(document).ready(function(){
+					    $("#our-past__content__map-<?= $pin_number?>").hover(function(){
+					        	$(this).css("z-index", "9998");
+					        }, function(){
+					        	$(this).css("z-index", "1");
+					    });
+					});
+			  	</script>
+
+			  	<?php 
+			  	$pin_number++;
+			  	} ?>
 				<img src="<?= base_url('uploads/'.$row->IMG) ?>">
 			</div>
 		</div>

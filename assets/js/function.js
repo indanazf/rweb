@@ -78,3 +78,12 @@ function banner4_close(){
   $("#banner-4__content__readmore").show();
   $("#banner-4__content__close").hide();
 }
+
+function viewPinDetail(id){
+  $('#my-tooltip-'+id).addClass('my-tooltip--hover');
+}
+
+
+function closeViewPinDetail(id){
+  $('#my-tooltip-'+id).removeClass('my-tooltip--hover');
+}

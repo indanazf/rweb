@@ -74,13 +74,29 @@
     left: 15px;
     width: 68px;
     height: 68px;
-    background: url("../images/back.png") no-repeat;
+    background: url("../images/arrow-left-grey.png")  no-repeat;
+    background-size: 68px 68px;
+    border-radius: 50%;
+
 }
+
+.fp-controlArrow.fp-prev:hover {
+    box-shadow: 5px 5px 10px #ccc;
+    filter: brightness(30%);
+}
+
 .fp-controlArrow.fp-next {
     right: 15px;
     width: 68px;
     height: 68px;
-    background: url("../images/next.png") no-repeat;
+    background: url("../images/arrow-right-grey.png")  no-repeat;
+    background-size: 68px 68px;
+    border-radius: 50%;
+}
+
+.fp-controlArrow.fp-next:hover {
+    box-shadow: 5px 5px 10px #ccc;
+    filter: brightness(30%);
 }
 .fp-scrollable {
     overflow: hidden;
@@ -133,7 +149,7 @@
 #fp-nav ul li,
 .fp-slidesNav ul li {
     display: block;
-    width: 60px;
+    width: 20px;
     height: 12px;
     margin: 7px;
     position:relative;
@@ -155,19 +171,20 @@
 .fp-slidesNav ul li a.active span,
 #fp-nav ul li:hover a.active span,
 .fp-slidesNav ul li:hover a.active span{
-    background: #eee;
+    background: #fff;
  }
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
     position: absolute;
     z-index: 1;
-    height: 6px;
-    width: 60px;
+    height: 10px;
+    width: 10px;
     border: 0;
-    background: #3C81A7;
+    background: #ccc;
     left: 50%;
     top: 50%;
     margin: -2px 0 0 -2px;
+    border-radius: 50%;
     -webkit-transition: all 0.1s ease-in-out;
     -moz-transition: all 0.1s ease-in-out;
     -o-transition: all 0.1s ease-in-out;
