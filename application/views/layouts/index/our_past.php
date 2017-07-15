@@ -191,28 +191,28 @@ $(document).ready(function () {
             
             data: [{
                 name: 'Sustainable farming',
-                y: 13
+                y: 14
             }, {
-                name: 'Integrated sustainable farming',
+                name: 'Values/supply chain',
                 y: 1
             }, {
-                name: 'Intellectual property rights',
-                y: 1
-            }, {
-                name: 'Public Health',
-                y: 3
+                name: 'Environmental management',
+                y: 5
             }, {
                 name: 'Research',
-                y: 6
+                y: 4
             }, {
                 name: 'Technical/vocational training',
                 y: 5
             }, {
-                name: 'Market improvement',
+                name: 'Market development',
                 y: 1
             }, {
-                name: 'SME promotion & microfinance',
-                y: 9
+                name: 'SME promotion',
+                y: 6
+            }, {
+                name: 'Microfinance',
+                y: 3
             }]
         }]
     });
