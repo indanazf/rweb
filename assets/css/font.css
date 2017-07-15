@@ -70,3 +70,11 @@
 .map-detail__content__item__right__value{
 	font-size: 24px;
 }
+
+.navbar-inverse .navbar-nav>li>a, .header__search{
+	font-size: 13px;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover{
+	font-size: 13px;
+}

@@ -285,19 +285,19 @@ body {
 
 
 .banner-1__content__title {
-	font-size: 48px;
+	font-size: 32px;
 	color: #3C81A7;
 	font-weight: bold;
 	margin-bottom: 20px;
 }
 
 .banner-1__content__title__animate {
-	margin-top: 50px;
+	margin-top: 34px;
 	opacity: 0;
 }
 
 .banner-1__content__desc {
-	font-size: 24px;
+	font-size: 18px;
 	font-style: italic;
 	color: #777;
 }
@@ -330,7 +330,7 @@ body {
 }
 
 .banner-2__content__title {
-	font-size: 40px;
+	font-size: 32px;
 	color: #fff;
 	font-weight: bold;
 	margin-bottom: 20px;
@@ -420,7 +420,7 @@ body {
 }
 
 .banner-3__content-title {
-	font-size: 40px;
+	font-size: 32px;
 	color: #3C81A7;
 	font-weight: bold;
 	margin-bottom: 20px;
@@ -583,7 +583,7 @@ body {
 
 
 .banner-4__content__title {
-	font-size: 48px;
+	font-size: 34px;
 	color: #fff;
 	font-weight: bold;
 	position: relative;
@@ -618,7 +618,7 @@ body {
 	margin-top: 50px;
 	border-radius: 50%;
 	text-align: center;
-	font-size: 36px;
+	font-size: 28px;
 	color: #2381aa;
 	font-weight: bold;
 	line-height: 200px;
@@ -654,7 +654,7 @@ body {
 	width: 100%;
 	text-align: center;
 	color: #fff;
-	font-size: 36px;
+	font-size: 28px;
 	font-weight: bold;
 }
 
@@ -686,7 +686,7 @@ body {
 	width: 100%;
 	text-align: center;
 	color: #fff;
-	font-size: 36px;
+	font-size: 28px;
 	font-weight: bold;
 }
 
@@ -822,7 +822,7 @@ body {
 .footer__right__table tr td {
 	padding: 10px;
 	color: #444;
-	font-size: 16px;
+	font-size: 14px;
 }
 
 .introducing__banner {
@@ -1051,13 +1051,13 @@ body {
 }
 
 .our-team__content__title {
-	font-size: 50px;
+	font-size: 43px;
 	font-weight: bold;
 	margin-bottom: 30px;
 }
 
 .our-team__content__desc {
-	font-size: 2.5em;
+	font-size: 28px;
 	margin-bottom: 100px;
 }
 
@@ -1077,7 +1077,7 @@ body {
 }
 
 .our-executive__content {
-	margin-top: 150px;
+	margin-top: 300px;
 	color: #fff;
 	position: relative;
 	width: 100%;
@@ -1089,13 +1089,13 @@ body {
 
 
 .our-executive__content__title {
-	font-size: 50px;
+	font-size: 43px;
 	font-weight: bold;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
 
 .our-executive__content__subtitle {
-	font-size: 30px;
+	font-size: 28px;
 	margin-bottom: 30px;
 }
 

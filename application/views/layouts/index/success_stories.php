@@ -25,7 +25,7 @@
 					?>
 					<a href="#" data-toggle="modal" data-target="#myModal-<?= $ss_slider?>" class="title-readmore" style="color:white;text-decoration: none;"><div class="success-stories__content__item__headline__title"><?=$subject?>...</div></a>
 					<div class="success-stories__content__item__headline__desc"><?=$content?>... 
-					<a href="#" data-toggle="modal" data-target="#myModal-<?= $ss_slider?>" class="readmore"style="text-decoration: none;"><b>read more</b></a></div>		
+					<a href="#" data-toggle="modal" data-target="#myModal-<?= $ss_slider?>" class="readmore" style="text-decoration: none;"><b>read more</b></a></div>		
 				</div>
 			</div>
 
