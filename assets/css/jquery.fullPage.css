@@ -72,31 +72,25 @@
 }
 .fp-controlArrow.fp-prev {
     left: 15px;
-    width: 68px;
-    height: 68px;
-    background: url("../images/arrow-left-grey.png")  no-repeat;
-    background-size: 68px 68px;
-    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: url("../images/left-new.png")  no-repeat;
 
 }
 
 .fp-controlArrow.fp-prev:hover {
-    box-shadow: 5px 5px 10px #ccc;
-    filter: brightness(30%);
+    background: url("../images/left-new-hover.png")  no-repeat;
 }
 
 .fp-controlArrow.fp-next {
     right: 15px;
-    width: 68px;
-    height: 68px;
-    background: url("../images/arrow-right-grey.png")  no-repeat;
-    background-size: 68px 68px;
-    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: url("../images/right-new.png")  no-repeat;
 }
 
 .fp-controlArrow.fp-next:hover {
-    box-shadow: 5px 5px 10px #ccc;
-    filter: brightness(30%);
+    background: url("../images/right-new-hover.png")  no-repeat;
 }
 .fp-scrollable {
     overflow: hidden;

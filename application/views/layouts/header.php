@@ -42,8 +42,13 @@
             <span class="icon-bar"></span>
           </button>
           
-            <a href="<?php echo site_url('home') ?>"><img src="<?= base_url() ?>assets/images/logo-white.png" class="header__logo">
-           </a>
+            <a href="<?php echo site_url('home') ?>">
+                <div class="header__logo">
+                    <img src="<?= base_url() ?>assets/images/logo-white.png">
+                    <div class="my-title">Empower the nation</div>
+                </div>
+                
+            </a>
             <input type="text" class="header__search" placeholder="Search">
 
           

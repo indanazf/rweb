@@ -68,6 +68,13 @@ class About_us extends CI_Controller
         $this->load->view('layouts/footer');
     }
 
+    public function volunteer(){
+        
+        $this->load->view('layouts/header');
+        $this->load->view('layouts/index/volunteer');
+        $this->load->view('layouts/footer');
+    }
+
     public function admin(){
         if(!isset($this->session->userdata['username'])){
             redirect(site_url('auth/login'));

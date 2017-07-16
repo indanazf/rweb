@@ -149,6 +149,45 @@ body {
 	width: 188px;
 }
 
+.header__logo img {
+	width: 100%;
+}
+
+.header__logo:hover {
+	opacity: 1;
+}
+
+.header__logo .my-title {
+	width: 188px;
+	padding-top: 25px;	
+	height: 53px;
+	background: #F9F9F9;
+  color: #2381aa;
+  text-align: center;
+  font-weight: bold;
+  pointer-events: none;
+  opacity: 0;
+  margin-left: 188px;
+  position: absolute;
+  margin-top: -63px;
+  -webkit-transform: translateY(10px);
+     -moz-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+       -o-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: all .25s ease-out;
+     -moz-transition: all .25s ease-out;
+      -ms-transition: all .25s ease-out;
+       -o-transition: all .25s ease-out;
+          transition: all .25s ease-out;
+}
+  
+.header__logo:hover .my-title {
+  opacity: 1;
+  margin-left: 0px;
+  pointer-events: auto;
+}
+
 .header__title {
 	color: #3C81A7;
 	font-size: 20px;
@@ -1167,6 +1206,194 @@ body {
 	margin-bottom: 40px;
 }
 
+.volunteer {
+	position: relative;
+	min-height: 700px;
+	overflow: auto;
+}
+
+.volunteer__content {
+	margin-top: 180px;
+	color: #fff;
+	position: relative;
+	width: 100%;
+	text-align: center;
+}
+
+.volunteer__content__title {
+	font-size: 50px;
+	margin-bottom: 30px;
+}
+
+.volunteer__content__desc {
+	font-size: 24px;
+}
+
+.volunteer__content2 {
+	margin-top: 180px;
+	color: #fff;
+	position: relative;
+	width: 100%;
+}
+.volunteer__content2__icon {
+	text-align: center;
+}
+.volunteer__content2__icon img {
+	width: 160px;
+}
+
+
+.volunteer__content2__desc {
+	font-size: 50px;
+	margin-top: 20px;
+}
+
+.volunteer__content2__desc__icon {
+	width: 80px;
+	height: 15px;
+	background: #fff;
+	margin-bottom: 20px;
+}
+
+.volunteer__content3 {
+	margin-top: 100px;
+	color: #fff;
+	position: relative;
+	width: 100%;
+}
+
+.volunteer__content3__title {
+	font-size: 30px;
+	text-align: right;
+	margin-bottom: 100px;
+}
+
+.volunteer__content3__item1__icon {
+	width: 120px;
+	height: 120px;
+	float: left;
+	margin-right: 20px;
+}
+
+.volunteer__content3__item1__icon img{
+	width: 100%;
+}
+
+.volunteer__content3__item1__title {
+	font-size: 50px;
+}
+
+.volunteer__content3__item1__desc {
+	font-size: 20px;
+}
+
+.volunteer__content3__item2__subtitle {
+	font-size: 20px;
+	text-align: center;
+}
+
+.volunteer__content3__item2__title {
+	font-size: 50px;
+	width: 50%;
+	float: left;
+	text-align: right;
+	padding-right: 10px;
+}
+
+.volunteer__content3__item2__desc {
+	width: 50%;
+	float: right;
+	font-size: 20px;
+	text-align: left;
+	padding-left: 10px;
+	padding-top: 5px;
+
+}
+
+.volunteer__content3__item3__subtitle {
+	font-size: 20px;
+	text-align: center;
+}
+
+.volunteer__content3__item3__title {
+	font-size: 60px;
+	width: 50%;
+	float: left;
+	text-align: right;
+	padding-right: 10px;
+}
+
+.volunteer__content3__item3__desc {
+	width: 50%;
+	float: right;
+	font-size: 20px;
+	text-align: left;
+	padding-left: 10px;
+	padding-top: 5px;
+}
+
+.volunteer__content3__item3__desc img {
+	height: 60px;
+	margin-top: 5px;
+}
+
+.volunteer__content__select {
+	
+   background: url('../images/select.png') no-repeat 100% 0;
+   height: 50px;
+   overflow: hidden;
+   width: 100%;
+   background-color: #fff;
+   border-radius: 25px;
+   color: #2381aa;
+   padding: 10px;
+   font-size: 20px;
+}
+
+.volunteer__content__select select {
+	background: transparent;
+   border: none;
+   font-size: 20px;
+   height: 20px;
+   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   width: 120%;	
+}
+
+.volunteer__content__button{
+	width: 100%;
+	height: 50px;
+	border-radius: 25px;
+	background:#2381aa;
+	color: #fff;
+	text-align: center;
+	font-size: 20px;
+	line-height: 50px;
+	cursor: pointer;
+}
+
+.volunteer__form__title {
+	font-size: 50px;
+	color: #2381aa;
+	margin-bottom: 20px;
+	margin-top: 100px;
+}
+
+.volunteer__content5__title {
+	font-size: 70px;
+	color: #2381aa;
+	margin-top: 100px;
+}
+
+.volunteer__content5__button {
+	background: #2381aa;
+	color: #fff;
+	width: 200px;
+	text-align: center;
+	font-size: 50px;
+	float: right;
+	margin-bottom: 100px;
+}
+
 .team__content {
 	border:1px solid #ccc;
 	padding: 20px;
@@ -1653,8 +1880,14 @@ body {
   border: none;
   outline: 0;
   border-radius: 35px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+
+.box-footer{
+	text-align: center;
+}
 .donation-form {
 	margin-bottom: 400px;
 	font-size: 16px;
@@ -1662,6 +1895,7 @@ body {
 
 .donation-box {
 	padding: 3px;
+	margin-bottom: 20px;
 }
 
 .donation-2__left__images{

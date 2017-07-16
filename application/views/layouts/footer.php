@@ -56,11 +56,11 @@
 				menu: '#menu',
 				scrollingSpeed: 1000,
 				slidesNavigation: true,
-				// afterRender: function () {
-		  //           setInterval(function () {
-		  //               $.fn.fullpage.moveSlideRight();
-		  //           }, 10000);
-		  //       },
+				afterRender: function () {
+		            setInterval(function () {
+		                $.fn.fullpage.moveSlideRight();
+		            }, 10000);
+		        },
 				onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
 					var own_index = slideIndex + 1;
 					if(slideIndex==0 || slideIndex==1 || slideIndex==2){

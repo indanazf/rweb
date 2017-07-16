@@ -87,6 +87,7 @@
         <div class="form-horizontal">
                 <div class="box-body">
                   <div class="form-group donation-box">
+                  
                     <label for="PAYMENT" class="col-sm-4 control-label">Payment Via<span style="color:red;">*</span></label>
 
                     <div class="col-sm-8">
