@@ -27,7 +27,8 @@
 .our-partner__circle__content__title,.annual-report__title,.faq__title,
 .annual-report__title,
 .success-stories__content__item__headline__title,
-.success-stories__badge,.donation__banner__title{
+.success-stories__badge,.donation__banner__title,
+.volunteer__content__title{
 	font-family: 'Aller';
 }
 
@@ -39,14 +40,19 @@
 .our-past__content__body__table,.team__content__item,
 .director__content__name,.director__content__position,.director__content__desc,
 .map-detail__content__item__right, .success-stories__content__item__headline__desc,
-.join-us__content-3__menu,
-.join-us__content-3__button,.donation-2__banner__title,.donation__button{
+.join-us__content-3__menu,.join-us__content-3__button,.donation-2__banner__title,.donation__button, .volunteer__content2__desc,
+.volunteer__content3__title,.volunteer__content3__item1__title,.volunteer__content3__item1__desc,
+.volunteer__content3__item1__desc,
+.volunteer__content3__item2__subtitle,
+.volunteer__content3__item2__title,.volunteer__content3__item2__desc,
+.volunteer__content3__item3__title,.volunteer__content3__item3__desc,.volunteer__content3__item3__subtitle,
+.volunteer__content5__title,.volunteer__content5__button,.volunteer__form__title,.donation__button{
 	font-family: 'OpenSans';
 }
 
 .banner-1__content__desc, .our-executive__content__subtitle , .our-executive__content__desc,
 .footer__right__table, .footer__left__button, .footer__left__email,.faq__answer,.faq__question,.donation__banner__subtitle,
-.donation-2__banner__subtitle,.donation-form{
+.donation-2__banner__subtitle,.donation-form,.volunteer__content__desc{
 	font-family: 'GothamBook';
 }
 

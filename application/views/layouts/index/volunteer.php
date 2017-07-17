@@ -1,7 +1,7 @@
 
 <div class="volunteer">
 	<div class="banner-overlay wow animated fadeIn">
-		<img src="<?= base_url('/assets/images/sample-background.jpg') ?>">
+		<img src="<?= base_url('/assets/images/volunteer1.png') ?>">
 	</div>
 	
 	<div class="container">
@@ -17,7 +17,7 @@
 
 <div class="volunteer">
 	<div class="banner-overlay wow animated fadeIn">
-		<img src="<?= base_url('/assets/images/sample-background.jpg') ?>">
+		<img src="<?= base_url('/assets/images/bg5.png') ?>">
 	</div>
 	
 	<div class="container">
@@ -36,7 +36,7 @@
 
 <div class="volunteer">
 	<div class="banner-overlay wow animated fadeIn">
-		<img src="<?= base_url('/assets/images/sample-background.jpg') ?>">
+		<img src="<?= base_url('/assets/images/volunteer2.png') ?>">
 	</div>
 	
 	<div class="container">
@@ -45,14 +45,14 @@
 	  <div class="volunteer__content3__title">Volunteering with Sahabat Cipta<br>by The Numbers</div>
 	  <div class="row">
 		  <div class="col-md-4">
-		  	<div class="volunteer__content3__item1__icon"><img src="<?= base_url('/assets/images/farmer-yellow.png') ?>"></div>
+		  	<div class="volunteer__content3__item1__icon"><img src="<?= base_url('/assets/images/Asset 7.png') ?>"></div>
 		  	<div class="volunteer__content3__item1__title">52 K</div>
 		  	<div class="volunteer__content3__item1__desc">FARMERS</div>
 		  	<div class="volunteer__content3__item1__desc">as your NEW Family</div>
 		  </div>
 
 		  <div class="col-md-4">
-		  	<div class="volunteer__content3__item2__subtitle">from</div>
+		  	<div class="volunteer__content3__item2__subtitle"><img src="<?= base_url('/assets/images/Asset 8.png') ?>">from</div>
 		  	<div class="volunteer__content3__item2__title">57</div>
 		  	<div class="volunteer__content3__item2__desc">regions in <br>Indonesia</div>
 		  </div>
@@ -60,7 +60,7 @@
 		  <div class="col-md-4">
 		  	
 		  	<div class="volunteer__content3__item3__title">7</div>
-		  	<div class="volunteer__content3__item3__desc"><img src="<?= base_url('/assets/images/badge-star.png') ?>"></div>
+		  	<div class="volunteer__content3__item3__desc"><img src="<?= base_url('/assets/images/Asset 9.png') ?>"></div>
 		  	<div class="clear"></div>
 		  	<div class="volunteer__content3__item3__subtitle">special program <br>provided</div>
 		  </div>
@@ -174,7 +174,7 @@
 
 	<div class="volunteer__content5">
 	<div class="container">
-		<div class="volunteer__content5__title">Lets make a difference!</div>
+		<div class="volunteer__content5__title">Let's make a difference!</div>
 
 		<div class="volunteer__content5__button">NOW</div>
 		</div>
