@@ -14,7 +14,14 @@ class Volunteer extends CI_Controller
         $this->load->library('form_validation');
     }
 
-    public function index()
+    public function index(){
+        $this->load->view('layouts/header');
+        $this->load->view('layouts/index/volunteer');
+        $this->load->view('layouts/footer');
+
+    }
+
+    public function admin()
     {
         $volunteer = $this->Volunteer_model->get_all();
 
