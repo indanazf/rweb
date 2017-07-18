@@ -59,7 +59,7 @@
 				afterRender: function () {
 		            setInterval(function () {
 		                $.fn.fullpage.moveSlideRight();
-		            }, 10000);
+		            }, 5000);
 		        },
 				onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
 					var own_index = slideIndex + 1;

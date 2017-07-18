@@ -1,6 +1,6 @@
 
 <div class="volunteer">
-	<div class="banner-overlay wow animated fadeIn">
+	<div class="banner-overlay  banner-overlay-volunteer wow animated fadeIn">
 		<img src="<?= base_url('/assets/images/volunteer1.png') ?>">
 	</div>
 	
@@ -11,12 +11,17 @@
 
 	    
 	  </div>
+	  <div class="volunter__content__icon">
+	  	<div class="volunter__content__icon__item"><img src="<?= base_url('/assets/images/Asset-2.png') ?>"></div>
+	  	<div class="volunter__content__icon__item"><img src="<?= base_url('/assets/images/Asset-3.png') ?>"></div>
+	  	<div class="volunter__content__icon__item"><img src="<?= base_url('/assets/images/Asset-4.png') ?>"></div>
+	  </div>
 	 </div>
 	 
 </div>
 
 <div class="volunteer">
-	<div class="banner-overlay wow animated fadeIn">
+	<div class="banner-overlay banner-overlay-volunteer wow animated fadeIn">
 		<img src="<?= base_url('/assets/images/bg5.png') ?>">
 	</div>
 	
@@ -27,15 +32,13 @@
 	    	<div class="volunteer__content2__desc__icon"></div>
 	    	Enjoy your youth by <br>becoming a volunteer!
 	    </div>
-
-	    
 	  </div>
 	 </div>
 	 
 </div>
 
 <div class="volunteer">
-	<div class="banner-overlay wow animated fadeIn">
+	<div class="banner-overlay banner-overlay-volunteer wow animated fadeIn">
 		<img src="<?= base_url('/assets/images/volunteer2.png') ?>">
 	</div>
 	
@@ -45,16 +48,28 @@
 	  <div class="volunteer__content3__title">Volunteering with Sahabat Cipta<br>by The Numbers</div>
 	  <div class="row">
 		  <div class="col-md-4">
-		  	<div class="volunteer__content3__item1__icon"><img src="<?= base_url('/assets/images/Asset 7.png') ?>"></div>
-		  	<div class="volunteer__content3__item1__title">52 K</div>
-		  	<div class="volunteer__content3__item1__desc">FARMERS</div>
-		  	<div class="volunteer__content3__item1__desc">as your NEW Family</div>
+		  	<div class="col-md-5">
+			  	<div class="volunteer__content3__item1__icon"><img src="<?= base_url('/assets/images/Asset 7.png') ?>"></div>
+			</div>
+			<div class="col-md-7">
+			  	<div class="volunteer__content3__item1__title">52 K</div>
+			  	<div class="volunteer__content3__item1__desc">FARMERS</div>
+			  	<div class="volunteer__content3__item1__desc">as your NEW Family</div>
+			 </div>
 		  </div>
 
 		  <div class="col-md-4">
-		  	<div class="volunteer__content3__item2__subtitle"><img src="<?= base_url('/assets/images/Asset 8.png') ?>">from</div>
-		  	<div class="volunteer__content3__item2__title">57</div>
-		  	<div class="volunteer__content3__item2__desc">regions in <br>Indonesia</div>
+		  	<div class="volunteer__content3__margin">
+			  	<div class="volunteer__content3__background"></div>
+			  	<div class="volunteer__content3__item2__subtitle">from</div>
+			  	<div class="col-xs-6">
+			  		<div class="volunteer__content3__item2__title">57</div>
+			  	</div>
+			  	<div class="col-xs-6">
+			  		<div class="volunteer__content3__item2__desc">regions in <br>Indonesia</div>
+			  	</div>
+			  	<div class="clear"></div>
+			 </div>
 		  </div>
 
 		  <div class="col-md-4">

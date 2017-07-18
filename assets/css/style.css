@@ -140,12 +140,11 @@ body {
 
 .header__frame {
 	width: 100%;
-	height: 98px;
+	height: 60px;
 }
 
 .header__logo {
 	float: left;
-	margin-top: 20px;
 	width: 188px;
 }
 
@@ -205,9 +204,9 @@ body {
   height: 30px;
   outline: none;
   color: #999;
-    margin-top: 38px;
+    margin-top: 18px;
     margin-left: 40px;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
 }
 
 .header__menu {
@@ -1229,6 +1228,22 @@ body {
 	font-size: 24px;
 }
 
+.volunter__content__icon {
+	margin-top: 200px;
+	width: 300px;
+	height: 50px;
+	text-align: right;
+	float: right;
+	position: relative;
+}
+
+.volunter__content__icon__item {
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	margin-right: 20px;
+}
+
 .volunteer__content2 {
 	margin-top: 180px;
 	color: #fff;
@@ -1288,21 +1303,28 @@ body {
 }
 
 .volunteer__content3__item2__subtitle {
+	position: relative;
 	font-size: 20px;
 	text-align: center;
 }
+.volunteer__content3__background {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: url('../images/Asset 8.png');
+}
 
 .volunteer__content3__item2__title {
+	position: relative;
 	font-size: 50px;
-	width: 50%;
-	float: left;
+	width: 100%;
 	text-align: right;
 	padding-right: 10px;
 }
 
 .volunteer__content3__item2__desc {
-	width: 50%;
-	float: right;
+	position: relative;
+	width: 100%;
 	font-size: 20px;
 	text-align: left;
 	padding-left: 10px;
@@ -1369,6 +1391,7 @@ body {
 	font-size: 20px;
 	line-height: 50px;
 	cursor: pointer;
+	margin-bottom: 30px;
 }
 
 .volunteer__form__title {
@@ -1953,17 +1976,27 @@ body {
 	.donation-2-left__banner {
 		height: auto;
 	}
+
+	.banner-overlay-volunteer img{
+		width: auto;
+		height: 100%;
+	}
+
+	.volunteer__content3__margin {
+		margin: 50px 0;
+	}
 }
 
 @media screen and (min-width: 768px) {
 	.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
 		border-bottom: 3px solid #2381aa;
-		padding-bottom: 40px;
+		padding-bottom: 20px;
+		padding-top: 20px;
 	}
 
 	.navbar-inverse .navbar-nav> li>a:hover {
 		border-bottom: 3px solid #2381aa;
-		padding-bottom: 40px;
+		padding-bottom: 20px;
 	}
 
 	.navbar {
@@ -1972,7 +2005,10 @@ body {
 
 	.navbar-inverse .navbar-nav>li>a{
 		cursor: pointer;
+		padding-top:20px;
 	}
+
+
 }
 
 
