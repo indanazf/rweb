@@ -1,0 +1,15 @@
+
+# Created by https://www.gitignore.io/api/codeigniter
+
+#codeigniter 3
+application/logs/*
+!application/logs/index.html
+!application/logs/.htaccess
+/vendor/
+application/config/config.php
+application/config/database.php
+
+### CodeIgniter Patch ###
+#codeigniter 3
+
+# End of https://www.gitignore.io/api/codeigniter
