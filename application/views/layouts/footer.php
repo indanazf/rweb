@@ -15,10 +15,6 @@
 			<div class="col-md-6">
 				<div class="footer__right">
 					<table class="footer__right__table">
-						<tr >
-							<td>Email</td>
-							<td>info@sahabatcipta.or.id</td>
-						</tr>
 						<tr>
 							<td>Phone</td>
 							<td>+62 21 7919 8690</td>

@@ -147,7 +147,7 @@
 
 	                  <div class="form-group donation-box">
 	                  <div class="row">
-	                    <label for="phone" class="col-sm-4 control-label">Email<span style="color:red;">*</span></label>
+	                    <label for="phone" class="col-sm-4 control-label">Phone<span style="color:red;">*</span></label>
 
 	                    <div class="col-sm-8">
 	                      <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone" >

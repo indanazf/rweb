@@ -28,7 +28,7 @@
 .annual-report__title,
 .success-stories__content__item__headline__title,
 .success-stories__badge,.donation__banner__title,
-.volunteer__content__title, .my-title{
+.volunteer__content__title, {
 	font-family: 'Aller';
 }
 
@@ -52,7 +52,7 @@
 
 .banner-1__content__desc, .our-executive__content__subtitle , .our-executive__content__desc,
 .footer__right__table, .footer__left__button, .footer__left__email,.faq__answer,.faq__question,.donation__banner__subtitle,
-.donation-2__banner__subtitle,.donation-form,.volunteer__content__desc{
+.donation-2__banner__subtitle,.donation-form,.volunteer__content__desc, .my-title{
 	font-family: 'GothamBook';
 }
 
@@ -78,9 +78,9 @@
 }
 
 .navbar-inverse .navbar-nav>li>a, .header__search{
-	font-size: 13px;
+	font-size: 12px;
 }
 
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover{
-	font-size: 13px;
+	font-size: 12px;
 }
