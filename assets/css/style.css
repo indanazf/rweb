@@ -166,9 +166,9 @@ body {
   font-weight: bold;
   pointer-events: none;
   opacity: 0;
-  margin-left: 188px;
+  margin-left: 0px;
   position: absolute;
-  margin-top: -63px;
+  margin-top: 3px;
   -webkit-transform: translateY(10px);
      -moz-transform: translateY(10px);
       -ms-transform: translateY(10px);
@@ -182,6 +182,7 @@ body {
 }
   
 .header__logo:hover .my-title {
+	margin-top: -63px;
   opacity: 1;
   margin-left: 0px;
   pointer-events: auto;
@@ -540,6 +541,10 @@ body {
 	background: url("../images/our-impact-detail-button.png") no-repeat center top;
 }
 
+.banner-3__detail-button:hover { 
+	background: url("../images/our-impact-detail-button-hover.png") no-repeat center top;
+}
+
 .banner-3__detail-button__title {
 	color: #2381aa;
 	font-weight: bold;
@@ -626,7 +631,6 @@ body {
 	font-weight: bold;
 	position: relative;
 }
-
 .banner-4__content__desc__frame {
 	background: #231f20;
 	padding: 20px;
@@ -643,7 +647,7 @@ body {
 .banner-4__join-us {
 	width: 100%;
 	height: 300px;
-	background: #2381aa;
+	background: url('../images/join-us_siluet.png') no-repeat #2381aa center center;
 	overflow: auto;
 }
 
@@ -684,6 +688,7 @@ body {
 	height: 117px;
 	text-align: center;
 	background: url("../images/banner-4__contact-us.png") no-repeat center center;
+	background-size: 117px 117px;
 	margin: 0 auto;
 	margin-top: 60px;
 }
@@ -716,6 +721,7 @@ body {
 	height: 117px;
 	text-align: center;
 	background: url("../images/banner-4__faq.png") no-repeat center center;
+	background-size: 117px 117px;
 	margin: 0 auto;
 	margin-top: 60px;
 }
@@ -949,8 +955,8 @@ body {
 }
 
 .our-past__content__map {
-  width: 50px;
-	height: 50px;
+  width: 30px;
+	height: 30px;
 	background: url("../images/location-pointer.png");
 	position: absolute;
 	background-size: cover;
@@ -1553,7 +1559,7 @@ body {
 }
 
 .map-detail__content__chart{
-	margin-left: -100px;
+	margin-left: 100px;
 	padding-top: 20px;
 }
 

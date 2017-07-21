@@ -124,7 +124,7 @@
 <div class="banner" style="min-height: 400px">
 <div class="container" style="position: relative;">
 <div class="row wow animated fadeIn">
-				<div class="col-md-6">
+				<div class="col-md-12">
 					<div class="map-detail__content__title">Sectore Coverage</div>
 					<div class="map-detail__content__chart">
 						<div id="container_chart-1" data-wow-delay="2.5s" style="height: 250px; width: 100%; margin: 0 auto"></div>
@@ -134,7 +134,7 @@
 			</div>
 			<?php foreach($bg2 as $bg){?>
 				
-				<img src="<?= base_url('uploads/'.$bg->IMG) ?>" class="map-detail__background__img wow animated fadeIn">
+				<!-- <img src="<?= base_url('uploads/'.$bg->IMG) ?>" class="map-detail__background__img wow animated fadeIn"> -->
 			
 			<?php }?>
 </div>
