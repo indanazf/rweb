@@ -8,9 +8,9 @@
 
 		<div class="row">
 			
-			<div class="banner-overlay-map wow animated fadeIn" data-wow-delay="0.5s" style="min-height: 700px;z-index: 99">
+			<div class="banner-overlay-map" data-wow-delay="0.5s" style="min-height: 700px;z-index: 99">
 			<div class="col-md-3 u-pad" style="position: absolute;">
-			  <div class="our-past__title  wow animated fadeInLeft">
+			  <div class="our-past__title">
 			  	<?=$row->SUBJECT?>
 			  </div>
 			</div>
@@ -123,7 +123,7 @@
 <?php }?>
 <div class="banner" style="min-height: 400px">
 <div class="container" style="position: relative;">
-<div class="row wow animated fadeIn">
+<div class="row">
 				<div class="col-md-12">
 					<div class="map-detail__content__title">Sectore Coverage</div>
 					<div class="map-detail__content__chart">
