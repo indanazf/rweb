@@ -19,7 +19,8 @@
       </div>
       <div class="clear"></div>
       <div class="banner-2-2__content">
-        <a href="<?php echo site_url('our_works/past_going_projects') ?>">
+        <!-- <a href="<?php echo site_url('our_works/past_going_projects') ?>"> -->
+        <a href="#" data-toggle="modal" data-target="#myModal-1">
           <div class="banner-2-2__content__item  wow animated fadeInUp" data-wow-delay="0.4s">
             <div class="banner-2-2__content__item__circle banner-2-2__content__item__circle__item-1">
               
@@ -29,7 +30,8 @@
             </div>
           </div>
         </a>
-        <a href="<?php echo site_url('our_works/project_highlights') ?>">
+        <!-- <a href="<?php echo site_url('our_works/project_highlights') ?>"> -->
+        <a href="#" data-toggle="modal" data-target="#myModal-2">
           <div class="banner-2-2__content__item wow animated fadeInUp" data-wow-delay="0.6s">
             <div class="banner-2-2__content__item__circle banner-2-2__content__item__circle__item-2">
             </div>
@@ -38,7 +40,8 @@
             </div>
           </div>
         </a>
-        <a href="<?php echo site_url('our_works/partners') ?>">
+        <!-- <a href="<?php echo site_url('our_works/partners') ?>"> -->
+        <a href="#" data-toggle="modal" data-target="#myModal-3">
           <div class="banner-2-2__content__item wow animated fadeInUp" data-wow-delay="0.8s">
             <div class="banner-2-2__content__item__circle banner-2-2__content__item__circle__item-3">
             </div>
@@ -49,6 +52,67 @@
         </a>
         <div class="clear"></div>
       </div>
+
+      <div class="modal fade" id="myModal-1" role="dialog">
+        <div class="modal-dialog new-modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              
+            </div>
+            <div class="modal-body">
+              
+              <?php $this->load->view('layouts/index/our_past'); ?>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="myModal-2" role="dialog">
+        <div class="modal-dialog new-modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              
+            </div>
+            <div class="modal-body">
+              
+              <?php $this->load->view('layouts/index/project_highlight'); ?>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="myModal-3" role="dialog">
+        <div class="modal-dialog new-modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              
+            </div>
+            <div class="modal-body">
+              
+              <?php $this->load->view('layouts/index/our_partners'); ?>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
