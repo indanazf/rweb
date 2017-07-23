@@ -2,7 +2,7 @@
 	<div class="map-detail">
 		<div class="container" style="position: relative;">
         <div class="annual-report__title  wow animated fadeInLeft">
-                <?=$bg[0]->SUBTITLE?>
+                <?=strtolower($bg[0]->SUBTITLE)?>
         </div>
 			<div class="map-detail__content">
 				<div class="row">

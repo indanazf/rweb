@@ -149,7 +149,8 @@ body {
 }
 
 .header__logo img {
-	width: 100%;
+	width: 70%;
+	margin-top:10px;
 }
 
 .header__logo:hover {
