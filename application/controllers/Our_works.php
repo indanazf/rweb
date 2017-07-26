@@ -52,6 +52,14 @@ class Our_works extends CI_Controller
         $this->load->view('layouts/footer');
     }
 
+    public function all_partners(){
+        $bg = $this->Our_Works_model->get_by_category('partners');
+        $image = $this->Our_Works_model->get_by_category_image('partners');
+        $this->load->view('layouts/header');
+        $this->load->view('layouts/index/all_partners',  $array = array('bg' => $bg, 'image'=> $image));
+        $this->load->view('layouts/footer');
+    }
+
     public function downloads(){
         //load the download helper
         $this->load->helper('download');
