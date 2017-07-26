@@ -65,12 +65,20 @@ class Newsroom extends CI_Controller
         $this->load->view('layouts/footer'); 
     }
 
-     public function news(){
+    public function news(){
         $success_stories = $this->Newsroom_model->get_by_category('news');
         $count_stories = $this->Newsroom_model->count_stories('news');
 
         $this->load->view('layouts/header');
         $this->load->view('layouts/index/news', $array = array('success' => $success_stories, 'counter'=>$count_stories,'judul' => 'SC in News'));
+        $this->load->view('layouts/footer'); 
+    }
+
+    public function detail_news(){
+       
+
+        $this->load->view('layouts/header');
+        $this->load->view('layouts/index/detail_news');
         $this->load->view('layouts/footer'); 
     }
 

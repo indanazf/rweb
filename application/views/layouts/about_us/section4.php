@@ -28,7 +28,7 @@
 	
 	<div class="col-md-6 u-pad">
 		<a href="<?php echo site_url('get_involved/join_us') ?>" style="text-decoration: none;">
-			<div class="banner-4__join-us wow animated fadeInRight">
+			<div class="banner-4__join-us wow animated fadeIn" data-wow-delay="0.25s">
 				
 			</div>
 			<div class="banner-4__join-us__circle  wow animated fadeIn" data-wow-delay="0.5s">Join Us</div>
