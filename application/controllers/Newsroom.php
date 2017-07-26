@@ -53,7 +53,15 @@ class Newsroom extends CI_Controller
         $count_stories = $this->Newsroom_model->count_stories('press release');
 
         $this->load->view('layouts/header');
-        $this->load->view('layouts/index/success_stories', $array = array('success' => $success_stories, 'counter'=>$count_stories,'judul' => 'Press Release'));
+        $this->load->view('layouts/index/press_release', $array = array('success' => $success_stories, 'counter'=>$count_stories,'judul' => 'Press Release'));
+        $this->load->view('layouts/footer'); 
+    }
+
+    public function detail_press_release(){
+       
+
+        $this->load->view('layouts/header');
+        $this->load->view('layouts/index/detail_press_release');
         $this->load->view('layouts/footer'); 
     }
 
@@ -62,7 +70,7 @@ class Newsroom extends CI_Controller
         $count_stories = $this->Newsroom_model->count_stories('news');
 
         $this->load->view('layouts/header');
-        $this->load->view('layouts/index/success_stories', $array = array('success' => $success_stories, 'counter'=>$count_stories,'judul' => 'SC in News'));
+        $this->load->view('layouts/index/news', $array = array('success' => $success_stories, 'counter'=>$count_stories,'judul' => 'SC in News'));
         $this->load->view('layouts/footer'); 
     }
 

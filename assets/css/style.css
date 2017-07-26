@@ -1955,6 +1955,50 @@ body {
 	width: 90% !important;
 }
 
+.press-release__title {
+	font-size: 26px;
+	color: #2381aa;
+	font-weight: bold;
+	margin-top: 50px;
+	margin-left: 10px;
+}
+
+.press-release__content {
+	margin-top: 40px;
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+.press-release__content__img img {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.press-release__content__date {
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+
+.press-release__content__title {
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.press-release__content__desc {
+	font-size: 16px;
+	margin-bottom: 20px;
+	max-height: 90px;
+	overflow: hidden;
+}
+
+
+.press-release__content__detail__desc {
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+
+
 @media screen and (max-width: 1000px) {
 	.join-us__banner__title {
 		width: 100%;
