@@ -11,10 +11,10 @@
 
 	    
 	  </div>
-	  <div class="volunter__content__icon">
-	  	<div class="volunter__content__icon__item"><img src="<?= base_url('/assets/images/Asset-2.png') ?>"></div>
-	  	<div class="volunter__content__icon__item"><img src="<?= base_url('/assets/images/Asset-3.png') ?>"></div>
-	  	<div class="volunter__content__icon__item"><img src="<?= base_url('/assets/images/Asset-4.png') ?>"></div>
+	  <div class="volunteer__content__icon">
+	  	<div class="volunteer__content__icon__item"><img src="<?= base_url('/assets/images/Asset-2.png') ?>"></div>
+	  	<div class="volunteer__content__icon__item"><img src="<?= base_url('/assets/images/Asset-3.png') ?>"></div>
+	  	<div class="volunteer__content__icon__item"><img src="<?= base_url('/assets/images/Asset-4.png') ?>"></div>
 	  </div>
 	 </div>
 	 
