@@ -29,12 +29,12 @@
 	  <div class="volunteer__content2">
 	    <div class="volunteer__content2__icon">
 	    <!-- <img src="<?= base_url('/assets/images/play-arrow.png') ?>"> -->
-	    <iframe style="margin-left: -105px" width="1348" height="640" src="https://www.youtube.com/embed/IwzsXv4sw6k" frameborder="0"></iframe>
+	    <iframe style="margin-left: -105px;margin-top: -179px;" width="1348" height="756" src="https://www.youtube.com/embed/IwzsXv4sw6k" frameborder="0"></iframe>
 	    </div>
-	    <div class="volunteer__content2__desc">
+	    <!--<div class="volunteer__content2__desc">
 	    	<div class="volunteer__content2__desc__icon"></div>
 	    	Enjoy your youth by <br>becoming a volunteer!
-	    </div>
+	    </div>-->
 	  </div>
 	 </div>
 	 
