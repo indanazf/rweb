@@ -26,6 +26,18 @@ class Join_us extends CI_Controller
 
     }
 
+    public function career(){
+      $this->load->view('layouts/header');
+      $this->load->view('layouts/index/career');
+      $this->load->view('layouts/footer');
+    }
+
+     public function partner(){
+      $this->load->view('layouts/header');
+      $this->load->view('layouts/index/become_partner');
+      $this->load->view('layouts/footer');
+    }
+
     public function admin(){
         if(!$this->session->userdata['username']){
             redirect(site_url('auth/login'));

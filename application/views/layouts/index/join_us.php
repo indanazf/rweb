@@ -11,18 +11,21 @@
 		<div class="join-us__content-1">
 			<div class="row">
 				<div class="col-md-4">
+					<a href="<?php echo site_url('join_us/career') ?>">
 					<img src="<?= base_url() ?>assets/images/join-us__icon-1.png" class="join-us__content-1__img  wow animated fadeInUp" data-wow-delay="1s">
-					<div class="join-us__content-1__title  wow animated fadeIn">Career with Us</div>
+					<div class="join-us__content-1__title  wow animated fadeIn">Career with Us</div></a>
 					<div class="join-us__content-1__desc wow animated fadeIn" data-wow-delay="1s">Be a part of our diverse professional team</div>
 				</div>
 				<div class="col-md-4">
+					<a href="<?php echo site_url('volunteer') ?>">
 					<img src="<?= base_url() ?>assets/images/join-us__icon-2.png" class="join-us__content-1__img  wow animated fadeInUp" data-wow-delay="1s">
-					<div class="join-us__content-1__title wow animated fadeIn"><a href="<?php echo site_url('volunteer') ?>">Volunteering</a></div>
+					<div class="join-us__content-1__title wow animated fadeIn">Volunteering</div></a>
 					<div class="join-us__content-1__desc wow animated fadeIn" data-wow-delay="1s">Join our volunteer program</div>
 				</div>
 				<div class="col-md-4">
+					<a href="<?php echo site_url('join_us/partner') ?>">
 					<img src="<?= base_url() ?>assets/images/join-us__icon-3.png" class="join-us__content-1__img  wow animated fadeInUp" data-wow-delay="1s">
-					<div class="join-us__content-1__title wow animated fadeIn">Become a Partner</div>
+					<div class="join-us__content-1__title wow animated fadeIn">Become a Partner</div></a>
 					<div class="join-us__content-1__desc wow animated fadeIn" data-wow-delay="1s">Allow us to help you design an impactful community empowerment program</div>
 				</div>
 			</div>

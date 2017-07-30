@@ -96,7 +96,7 @@
 	    	</div>
 	    	<div class="col-md-4">
 	    		
-	    		<div class="volunteer__content__button">join now</div>
+	    		<div class="volunteer__content__button">Join Now</div>
 	    	</div>
 	    </div>
 	  </div>
@@ -183,7 +183,7 @@
 	        </div>
 	        <div class="clear"></div>
 	        <div class="box-footer">
-	            <button type="submit" class="donation__button"><b>submit my form</b></button>
+	            <button type="submit" class="donation__button"><b>Submit My Form</b></button>
 	          </div>
 		</div>
 	</div>
