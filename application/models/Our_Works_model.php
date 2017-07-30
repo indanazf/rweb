@@ -71,9 +71,37 @@ class Our_Works_model extends CI_Model
         $this->db->join('menu', 'menu.id = content_category.ID_MENU');
         $this->db->where('menu.name', 'Our Works');
         $this->db->where('content_category.CATEGORY', $category);
+        $this->db->order_by('content_image.INFO');
+        return $this->db->get()->result();
+    }
+
+
+    function get_by_category_image1($category=null){
+        $this->db->select('content_image.*');
+        $this->db->from('content_image');
+        $this->db->join('content', 'content_image.ID_CONTENT = content.ID_CONTENT');
+        $this->db->join('content_category', 'content_category.ID_CATEGORY = content.ID_CATEGORY');
+        $this->db->join('menu', 'menu.id = content_category.ID_MENU');
+        $this->db->where('menu.name', 'Our Works');
+        $this->db->where('content_category.CATEGORY', $category);
+        $this->db->where_in('info', array('1','2','3','4'));
         $this->db->order_by('content_image.ID_IMAGE');
         return $this->db->get()->result();
     }
+
+    function get_by_category_image2($category=null){
+        $this->db->select('content_image.*');
+        $this->db->from('content_image');
+        $this->db->join('content', 'content_image.ID_CONTENT = content.ID_CONTENT');
+        $this->db->join('content_category', 'content_category.ID_CATEGORY = content.ID_CATEGORY');
+        $this->db->join('menu', 'menu.id = content_category.ID_MENU');
+        $this->db->where('menu.name', 'Our Works');
+        $this->db->where('content_category.CATEGORY', $category);
+        $this->db->where_in('info', array('5','6','7'));
+        $this->db->order_by('content_image.ID_IMAGE');
+        return $this->db->get()->result();
+    }
+
 
     function get_map(){
         $this->db->select('our_past.*');

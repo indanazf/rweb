@@ -10,12 +10,23 @@
       <div class="col-md-12">
       <?php 
       $wow_delay = 0.25;
-      foreach($image_p as $img){?>
-  		<div class="col-md-4">
+      foreach($image_p1 as $img){?>
+  		<div class="col-md-3">
   			<div class="our-partner__circle__content__item" data-wow-delay="<?= $wow_delay ?>s" >
   				<img src="<?= base_url('uploads/'.$img->IMAGE) ?>" style="height: 80px;margin-bottom: 50px">
   			</div>
   		</div>
+      <?php 
+      $wow_delay = $wow_delay + 0.25;
+      }?>
+      <?php 
+      $wow_delay = 0.25;
+      foreach($image_p2 as $img){?>
+      <div class="col-md-4">
+        <div class="our-partner__circle__content__item" data-wow-delay="<?= $wow_delay ?>s" >
+          <img src="<?= base_url('uploads/'.$img->IMAGE) ?>" style="height: 80px;margin-bottom: 50px">
+        </div>
+      </div>
       <?php 
       $wow_delay = $wow_delay + 0.25;
       }?>

@@ -42,11 +42,12 @@ class Home extends CI_Controller
         $bg_ph = $this->Our_Works_model->get_by_category('project_highlights');
 
         $bg_p = $this->Our_Works_model->get_by_category('partners');
-        $image_p = $this->Our_Works_model->get_by_category_image('partners');
+        $image_p1 = $this->Our_Works_model->get_by_category_image1('partners');
+        $image_p2 = $this->Our_Works_model->get_by_category_image2('partners');
         
         $this->load->view('layouts/header');
         $this->load->view('layouts/about_us/section1', $array = array('about_us'=>$about_us,'team'=>$team,'executive'=>$executive));
-        $this->load->view('layouts/about_us/section2', $array = array('our_works'=>$our_works, 'bg'=>$bg, 'content'=>$data, 'bg2'=>$bg2, 'bg_ph'=>$bg_ph, 'bg_p'=>$bg_p, 'image_p'=>$image_p));
+        $this->load->view('layouts/about_us/section2', $array = array('our_works'=>$our_works, 'bg'=>$bg, 'content'=>$data, 'bg2'=>$bg2, 'bg_ph'=>$bg_ph, 'bg_p'=>$bg_p, 'image_p1'=>$image_p1,'image_p2'=>$image_p2));
         $this->load->view('layouts/about_us/section3', $array = array('our_impact'=>$our_impact, 'our_impact_list'=>$our_impact_list));
         $this->load->view('layouts/about_us/section4', $array = array('get_involved'=>$get_involved));
         $this->load->view('layouts/about_us/section5', $array = array('content_press'=>$content_press_release, 'content_news'=>$content_in_news));

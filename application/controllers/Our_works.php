@@ -46,9 +46,10 @@ class Our_works extends CI_Controller
 
     public function partners(){
         $bg = $this->Our_Works_model->get_by_category('partners');
-        $image = $this->Our_Works_model->get_by_category_image('partners');
+        $image1 = $this->Our_Works_model->get_by_category_image1('partners');
+        $image2 = $this->Our_Works_model->get_by_category_image2('partners');
         $this->load->view('layouts/header');
-        $this->load->view('layouts/index/our_partners',  $array = array('bg' => $bg, 'image'=> $image));
+        $this->load->view('layouts/index/our_partners',  $array = array('bg' => $bg, 'image1'=> $image1, 'image2'=>$image2));
         $this->load->view('layouts/footer');
     }
 

@@ -1,7 +1,6 @@
 <div class="banner our-partner" style="height: 700px;">
-  
 
-  	<div class="our-partner__circle__content">
+  	<div class="our-partner__circle__content__all">
     <?php foreach($bg as $row){?>
   	<div class="our-partner__circle__content__title">All Partners</div>
     <?php }?>
