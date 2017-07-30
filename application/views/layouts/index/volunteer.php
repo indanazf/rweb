@@ -27,7 +27,10 @@
 	
 	<div class="container">
 	  <div class="volunteer__content2">
-	    <div class="volunteer__content2__icon"><img src="<?= base_url('/assets/images/play-arrow.png') ?>"></div>
+	    <div class="volunteer__content2__icon">
+	    <!-- <img src="<?= base_url('/assets/images/play-arrow.png') ?>"> -->
+	    <iframe style="margin-left: -105px" width="1348" height="640" src="https://www.youtube.com/embed/IwzsXv4sw6k" frameborder="0"></iframe>
+	    </div>
 	    <div class="volunteer__content2__desc">
 	    	<div class="volunteer__content2__desc__icon"></div>
 	    	Enjoy your youth by <br>becoming a volunteer!
