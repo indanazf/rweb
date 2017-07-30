@@ -20,6 +20,7 @@
 								<span class="map-detail__content__item__right__value counter">
                                 <?php
                                 $data_number = intval(preg_replace('/[^0-9]+/', '', $row->CONTENT), 10);
+                                $data_number = number_format($data_number)."<br>";
                                 echo $data_number;
                                 ?>
                                     
