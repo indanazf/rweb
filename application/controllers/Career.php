@@ -19,7 +19,14 @@ class Career extends CI_Controller
     {
         $this->load->view('layouts/header');
         $this->load->view('layouts/index/career');
-         $this->load->view('layouts/footer');
+        $this->load->view('layouts/footer');
+    }
+
+    public function detail()
+    {
+        $this->load->view('layouts/header');
+        $this->load->view('layouts/index/career_detail');
+        $this->load->view('layouts/footer');
     }
 
 }

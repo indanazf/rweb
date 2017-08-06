@@ -25,20 +25,20 @@
 	
 <div class="container">
   <div class="career__content2">
-    <div class="career__content2__title">Together we provide people skills and create new opportunities<br> so that improve thier lives. Want to be part of this expreience?<br>Find your role.</div>
+    <div class="career__content2__title">Available Vacancies at Sahabat Cipta</div>
 	<?php 
 	for($i=0;$i<=3;$i++){
 	?>
 	<div class="col-md-6">
     	
     	<div class="career__content2__item">
-    		<div class="col-md-6">
+    		<div class="col-md-5">
 	    		<div class="career__content2__item__img"><img src="<?= base_url('/assets/images/career-1.jpg') ?>"></div>
 	    	</div>
-	    	<div class="col-md-6">
-	    		<div class="career__content2__item__title">People</div>
-	    		<div class="career__content2__item__desc">Find, grow, and support the people inside the team</div>
-	    		<div class="career__content2__item__read-more"><a href="#" data-toggle="modal" data-target="#myModal-<?=$i?>">SEE JOBS</a></div>
+	    	<div class="col-md-7">
+	    		<div class="career__content2__item__title">Project Manager PRISMA Program</div>
+	    		<div class="career__content2__item__desc">Deliver the analysis and insights we use to innovate.</div>
+	    		<div class="career__content2__item__read-more"><a href="<?php echo site_url('/career/detail') ?>">Click here for more details</a></div>
 	    	</div>
 	    </div>
 	    
@@ -92,6 +92,7 @@ dreams.</div>
 	
 	<div class="container">
 	  <div class="career__content3">
+	  	<div class="career__content3__title2">How to Apply</div>
 	  	<div class="career__content3__subtitle">Send your application, CV,<br> and motivation letter to</div>
 	    <div class="career__content3__title">career@sahabatcipta.com</div>
 

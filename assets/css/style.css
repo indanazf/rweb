@@ -2055,7 +2055,7 @@ body {
 }
 
 .career__content2__title {
-	font-size: 24px;
+	font-size: 36px;
 	text-align: center;
 	margin: 20px 0;
 }
@@ -2067,17 +2067,18 @@ body {
 .career__content2__item__img img{
 	width: 100%;
 	margin-bottom: 20px;
+	margin-top: 10px;
 }
 
 .career__content2__item__title {
-	font-size: 30px;
+	font-size: 26px;
 	font-weight: bold;
 	color: #2381aa;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 }
 
 .career__content2__item__desc {
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 }
 
 .career__content2__item__read-more {
@@ -2099,6 +2100,12 @@ body {
 	text-shadow: 0px 10px 30px #333;
 }
 
+.career__content3__title2 {
+	font-size: 50px;
+	margin-bottom: 40px;
+	text-shadow: 0px 10px 30px #333;
+}
+
 .career__content3__subtitle {
 	font-size: 26px;
 	margin-bottom: 30px;
@@ -2107,7 +2114,7 @@ body {
 }
 
 .career__content-detail {
-	margin:20px;
+	margin:50px 0;
 }
 
 .career__content-detail__img img {
@@ -2130,6 +2137,7 @@ body {
 .career__content-detail__position {
 	color: #333;
 	font-size: 20px;
+	margin-bottom: 50px;
 }
 
 
@@ -2151,6 +2159,27 @@ body {
 	margin-top: 30px;
 	float: right;
 }
+
+.career__content-detail__value__title {
+	font-size: 30px;
+	color: #2381aa;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+.career__content-detail__value__desc {
+	font-size: 20px;
+	line-height: 32px;
+	margin-bottom: 50px;
+}
+
+.career__content-detail__value__footer {
+	font-size: 20px;
+	color: #2381aa;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
 
 .become-partner {
 	position: relative;
