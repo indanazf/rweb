@@ -1,4 +1,4 @@
-
+<!--
 <div class="career">
 	<div class="banner-overlay  banner-overlay-career wow animated fadeIn ">
 		
@@ -9,7 +9,7 @@
 	
 	<div class="container">
 	  <div class="career__content">
-	    <div class="career__content__title">Be Part of The Experience</div>
+	    <div class="career__content__title"></div>
 
 	    
 	  </div>
@@ -20,15 +20,13 @@
 	  </div>
 	 </div>
 	 
-</div>
+</div>-->
 
 	
 <div class="container">
   <div class="career__content2">
-    <div class="career__content2__title">Available Vacancies at Sahabat Cipta</div>
-	<?php 
-	for($i=0;$i<=3;$i++){
-	?>
+    <div class="career__content2__title">Together we provide people skills and create new opportunities<br> so that improve their lives. Want to be part of this experience?<br> Find your role.</div>
+	
 	<div class="col-md-6">
     	
     	<div class="career__content2__item">
@@ -36,13 +34,58 @@
 	    		<div class="career__content2__item__img"><img src="<?= base_url('/assets/images/career-1.jpg') ?>"></div>
 	    	</div>
 	    	<div class="col-md-7">
-	    		<div class="career__content2__item__title">Project Manager PRISMA Program</div>
-	    		<div class="career__content2__item__desc">Deliver the analysis and insights we use to innovate.</div>
-	    		<div class="career__content2__item__read-more"><a href="<?php echo site_url('/career/detail') ?>">Click here for more details</a></div>
+	    		<div class="career__content2__item__title">Communication Officer</div>
+	    		<div class="career__content2__item__desc">Find, grow, and support the people inside the team.</div>
+	    		<div class="career__content2__item__read-more"><a href="<?php echo site_url('/career/detail') ?>">SEE JOBS</a></div>
 	    	</div>
 	    </div>
 	    
     </div>
+    <div class="col-md-6">
+    	
+    	<div class="career__content2__item">
+    		<div class="col-md-5">
+	    		<div class="career__content2__item__img"><img src="<?= base_url('/assets/images/career-1.jpg') ?>"></div>
+	    	</div>
+	    	<div class="col-md-7">
+	    		<div class="career__content2__item__title">Project Manager Prisma</div>
+	    		<div class="career__content2__item__desc">Create beautiful and proper visual for the campaigns.</div>
+	    		<div class="career__content2__item__read-more"><a href="<?php echo site_url('/career/detail') ?>">SEE JOBS</a></div>
+	    	</div>
+	    </div>
+	    
+    </div>
+    <div class="col-md-6">
+    	
+    	<div class="career__content2__item">
+    		<div class="col-md-5">
+	    		<div class="career__content2__item__img"><img src="<?= base_url('/assets/images/career-1.jpg') ?>"></div>
+	    	</div>
+	    	<div class="col-md-7">
+	    		<div class="career__content2__item__title">Project Manager Berau</div>
+	    		<div class="career__content2__item__desc">Design and manage solutions to support our business.</div>
+	    		<div class="career__content2__item__read-more"><a href="<?php echo site_url('/career/detail') ?>">SEE JOBS</a></div>
+	    	</div>
+	    </div>
+	    
+    </div>
+    <div class="col-md-6">
+    	
+    	<div class="career__content2__item">
+    		<div class="col-md-5">
+	    		<div class="career__content2__item__img"><img src="<?= base_url('/assets/images/career-1.jpg') ?>"></div>
+	    	</div>
+	    	<div class="col-md-7">
+	    		<div class="career__content2__item__title">Human Resource</div>
+	    		<div class="career__content2__item__desc">Deliver the analysis and insights we use to innovate.</div>
+	    		<div class="career__content2__item__read-more"><a href="<?php echo site_url('/career/detail') ?>">SEE JOBS</a></div>
+	    	</div>
+	    </div>
+	    
+    </div>
+    <?php 
+	for($i=0;$i<=3;$i++){
+	?>
 
     <div class="modal fade" id="myModal-<?= $i?>" role="dialog">
         <div class="modal-dialog">

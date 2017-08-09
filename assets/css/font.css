@@ -28,7 +28,7 @@
 .annual-report__title,
 .success-stories__content__item__headline__title,
 .success-stories__badge,.donation__banner__title,
-.volunteer__content__title,{
+.volunteer__content__title,.career__content2__item__title,.career__content2__title{
 	font-family: 'Aller';
 }
 
@@ -54,7 +54,9 @@
 ,.become-partner__content__title
 ,.become-partner__content__subtitle,.become-partner__content2__desc,
 .become-partner__content2__title,.become-partner__content3__title,
-.become-partner__content4__subtitle,.become-partner__content4__title,.become-partner__content2__item__title{
+.become-partner__content4__subtitle,.become-partner__content4__title,.become-partner__content2__item__title,.career__content2__item__read-more,
+.career__content3__title2,.career__content3__title,.career__content-detail__desc
+{
 	font-family: 'OpenSans';
 }
 
@@ -62,7 +64,7 @@
 .footer__right__table, .footer__left__button, .footer__left__email,.faq__answer,.faq__question,.donation__banner__subtitle,
 .donation-2__banner__subtitle,.donation-form, .my-title,.our-past__title,
 .map-detail__content__title,.highcharts-legend,
-.highcharts-label, .highcharts-data-label,.volunteer__content__title,{
+.highcharts-label, .highcharts-data-label,.volunteer__content__title,.career__content3__subtitle,{
 	font-family: 'GothamBook';
 }
 
@@ -71,7 +73,8 @@
 }
 .banner-2-2__content__item__desc, .footer__left__text, .join-us__banner__title,
 .join-us__content-2__title,
-.join-us__content-3__title{
+.join-us__content-3__title,.career__content2__item__desc,.career__content-detail__title,.career__content-detail__position,
+.career__content-detail__value__title,.career__content-detail__value__desc{
 	font-family: 'OpenSans-Semibold';
 }
 
