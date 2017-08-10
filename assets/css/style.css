@@ -1446,6 +1446,272 @@ body {
 	margin-bottom: 100px;
 }
 
+
+.internship {
+	position: relative;
+	min-height: 700px;
+	overflow: auto;
+}
+
+.internship__content {
+	margin-top: 180px;
+	color: #fff;
+	position: relative;
+	width: 100%;
+	text-align: center;
+}
+
+.internship__content__title {
+	font-size: 60px;
+	margin-bottom: 30px;
+	text-align: left;
+	font-weight: bold;
+}
+
+.internship__content__arrow-play {
+	width: 150px;
+	height: 150px;
+	background: url("../images/play-arrow.png");
+	margin: 0 auto;
+	background-size: 150px;
+}
+
+.internship__content__line {
+	background: #fff;
+	width: 100px;
+	height: 20px;
+	margin-bottom: 40px;
+	margin-top: 20px;
+}
+
+.internship__content__desc {
+	font-size: 18px;
+}
+
+.internship__content__icon {
+	margin-top: 200px;
+	width: 300px;
+	height: 50px;
+	text-align: right;
+	float: right;
+	position: relative;
+}
+
+.internship__content__icon__item {
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+.internship__content2 {
+	margin-top: 180px;
+	color: #fff;
+	position: relative;
+	width: 100%;
+}
+.internship__content2__icon {
+	text-align: center;
+}
+.internship__content2__icon img {
+	width: 160px;
+}
+
+
+.internship__content2__desc {
+	font-size: 46px;
+	margin-top: 20px;
+}
+
+.internship__content2__desc__icon {
+	width: 80px;
+	height: 15px;
+	background: #fff;
+	margin-bottom: 20px;
+}
+
+.internship__content3 {
+	margin-top: 100px;
+	color: #fff;
+	position: relative;
+	width: 100%;
+}
+
+.internship__content4 {
+	margin-bottom: 100px;
+	position: relative;
+	width: 100%;
+}
+
+.internship__content3__title {
+	font-size: 46px;
+	text-align: center;
+	margin-bottom: 60px;
+	font-weight: bold;
+}
+
+.internship__content3__item1__icon {
+	width: 120px;
+	height: 120px;
+	float: left;
+	margin-right: 20px;
+}
+
+.internship__content3__item1__icon img{
+	width: 100%;
+}
+
+.internship__content3__item1__title {
+	font-size: 50px;
+}
+
+.internship__content3__item1__desc {
+	font-size: 20px;
+}
+
+.internship__content3__item2__subtitle {
+	position: relative;
+	font-size: 20px;
+	text-align: center;
+}
+.internship__content3__background {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: url('../images/Asset 8.png');
+}
+
+.internship__content3__item2__title {
+	position: relative;
+	font-size: 50px;
+	width: 100%;
+	text-align: right;
+	padding-right: 10px;
+}
+
+.internship__content3__item2__desc {
+	position: relative;
+	width: 100%;
+	font-size: 20px;
+	text-align: left;
+	padding-left: 10px;
+	padding-top: 5px;
+
+}
+
+.internship__content3__item3__subtitle {
+	font-size: 20px;
+	text-align: center;
+}
+
+.internship__content3__item3__title {
+	font-size: 60px;
+	width: 50%;
+	float: left;
+	text-align: right;
+	padding-right: 10px;
+}
+
+.internship__content3__item3__desc {
+	width: 50%;
+	float: right;
+	font-size: 20px;
+	text-align: left;
+	padding-left: 10px;
+	padding-top: 5px;
+}
+
+.internship__content3__item3__desc img {
+	height: 60px;
+	margin-top: 5px;
+}
+
+.internship__content3__new__icon {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.internship__content3__new__icon img{
+	width: 200px;
+}
+
+.internship__content3__new__title {
+	font-size: 32px;
+	font-weight: bold;
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+.internship__content3__new__desc {
+	font-size: 22px;
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+
+.internship__content__select {
+	
+   background: url('../images/select.png') no-repeat 100%;
+   height: 50px;
+   overflow: hidden;
+   width: 100%;
+   background-color: #fff;
+   border-radius: 25px;
+   color: #2381aa;
+   padding: 10px;
+   font-size: 20px;
+   font-weight: bold;
+}
+
+.internship__content__select select {
+	background: transparent;
+   border: none;
+   font-size: 20px;
+   height: 30px;
+   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   width: 120%;	
+   text-transform: uppercase;
+}
+
+
+.internship__content__button{
+	width: 100%;
+	height: 50px;
+	border-radius: 25px;
+	background:#2381aa;
+	color: #fff;
+	text-align: center;
+	font-size: 24px;
+	line-height: 50px;
+	cursor: pointer;
+	margin-bottom: 30px;
+	font-weight: bold;
+}
+
+.internship__form__title {
+	font-size: 32px;
+	color: #2381aa;
+	margin-bottom: 20px;
+	margin-top: 100px;
+}
+
+.internship__content5__title {
+	font-size: 50px;
+	color: #2381aa;
+	margin-top: 100px;
+}
+
+.internship__content5__button {
+	background: #2381aa;
+	color: #fff;
+	width: 200px;
+	text-align: center;
+	font-size: 30px;
+	float: right;
+	margin-bottom: 100px;
+}
+
 .team__content {
 	border:1px solid #ccc;
 	padding: 20px;
@@ -1937,6 +2203,22 @@ body {
 }
 
 
+.internship__button {
+  width: 300px;
+  background-color: #2581AA;
+  color: #fff;
+  line-height: 2;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  outline: 0;
+  border-radius: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+}
+
+
 .box-footer{
 	text-align: center;
 }
@@ -2386,6 +2668,11 @@ body {
 		height: 100%;
 	}
 
+	.banner-overlay-internship img{
+		width: auto;
+		height: 100%;
+	}
+
 	.banner-overlay-career img{
 		width: auto;
 		height: 100%;
@@ -2397,6 +2684,10 @@ body {
 	}
 
 	.volunteer__content3__margin {
+		margin: 50px 0;
+	}
+
+	.internship__content3__margin {
 		margin: 50px 0;
 	}
 
