@@ -13,7 +13,7 @@
 	                    <label for="name" class="col-sm-4 control-label">Name<span style="color:red;">*</span></label>
 
 	                    <div class="col-sm-8">
-	                      <input type="text" class="form-control" name="NAME" id="name" placeholder="Name" >
+	                      <input type="text" class="form-control" name="NAME" id="name" placeholder="Name" required="true">
 	                    </div>
 	                    </div>
 	                  </div>
@@ -23,7 +23,7 @@
 	                    <label for="university" class="col-sm-4 control-label">University<span style="color:red;">*</span></label>
 
 	                    <div class="col-sm-8">
-	                      <input type="text" class="form-control" name="UNIVERSITY" id="university" placeholder="University" >
+	                      <input type="text" class="form-control" name="UNIVERSITY" id="university" placeholder="University" required="true">
 	                    </div>
 	                    </div>
 	                  </div>
@@ -33,7 +33,7 @@
 	                    <label for="skill" class="col-sm-4 control-label">Skill<span style="color:red;">*</span></label>
 
 	                    <div class="col-sm-8">
-	                      <input type="text" class="form-control" name="SKILL" id="skill" placeholder="Skill" >
+	                      <input type="text" class="form-control" name="SKILL" id="skill" placeholder="Skill" required="true">
 	                    </div>
 	                    </div>
 	                  </div>
@@ -44,7 +44,7 @@
 	                    <label for="email" class="col-sm-4 control-label">Email<span style="color:red;">*</span></label>
 
 	                    <div class="col-sm-8">
-	                      <input type="text" class="form-control" name="EMAIL" id="email" placeholder="Email" >
+	                      <input type="text" class="form-control" name="EMAIL" id="email" placeholder="Email" required="true" required="true">
 	                    </div>
 	                    </div>
 	                  </div>
@@ -55,7 +55,7 @@
 	                    <label for="phone" class="col-sm-4 control-label">Phone<span style="color:red;">*</span></label>
 
 	                    <div class="col-sm-8">
-	                      <input type="text" class="form-control" name="PHONE" id="phone" placeholder="Phone" >
+	                      <input type="text" class="form-control" name="PHONE" id="phone" placeholder="Phone" required="true">
 	                    </div>
 	                    </div>
 	                  </div>
@@ -65,7 +65,7 @@
 	                    <label for="NOTES" class="col-sm-4 control-label">Position<span style="color:red;">*</span></label>
 
 	                    <div class="col-sm-8">
-	                      <select name="ID_POSITION" id="ID_POSITION" class="form-control">
+	                      <select name="ID_POSITION" id="ID_POSITION" class="form-control" required="true">
 	                      		<option>Choose one</option>
 	                      		<?php
 				                    foreach ($position as $c){
@@ -86,7 +86,7 @@
 	        	<div class="form-group donation-box">
                     
                     <div class="col-sm-12">
-                      <textarea class="form-control" rows="13" name="MOTIVATION" id="NOTES" placeholder="Tell us your motivation!"></textarea>
+                      <textarea class="form-control" rows="13" name="MOTIVATION" id="NOTES" placeholder="Tell us your motivation!" required="true"></textarea>
                     </div>
                   </div>
                   

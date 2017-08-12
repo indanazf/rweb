@@ -18,14 +18,18 @@ class Internship_model extends CI_Model
     // get all
     function get_all()
     {
+        $this->db->select("internship.*,internship_position.TITLE");
         $this->db->order_by($this->id, $this->order);
+        $this->db->join("internship_position","internship_position.id=internship.id_position");
         return $this->db->get($this->table)->result();
     }
 
     // get data by id
     function get_by_id($id)
     {
-        $this->db->where($this->id, $id);
+        $this->db->select("internship.*,internship_position.TITLE");
+        $this->db->where("internship.ID", $id);
+        $this->db->join("internship_position","internship_position.id=internship.id_position");
         return $this->db->get($this->table)->row();
     }
     

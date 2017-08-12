@@ -10,6 +10,9 @@ class Internship_type extends CI_Controller
     function __construct()
     {
         parent::__construct();
+        if(!isset($this->session->userdata['username'])){
+            redirect(site_url('auth/login'));
+        }
         $this->load->model('Internship_type_model');
         $this->load->library('form_validation');
     }
@@ -24,7 +27,7 @@ class Internship_type extends CI_Controller
 			'subjudul' =>'',
         );
 
-        $this->template->load('template','internship_type_list', $data);
+        $this->template->load('template2','internship_type_list', $data);
     }
 
     public function read($id) 
@@ -37,7 +40,7 @@ class Internship_type extends CI_Controller
 		'judul' => 'INTERNSHIP_TYPE',
 		'subjudul' =>'Read',
 	    );
-            $this->template->load('template','internship_type_read', $data);
+            $this->template->load('template2','internship_type_read', $data);
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
             redirect(site_url('internship_type'));
@@ -54,7 +57,7 @@ class Internship_type extends CI_Controller
 		'judul' => 'INTERNSHIP_TYPE',
 		'subjudul' =>'Create',
 	);
-        $this->template->load('template','internship_type_form', $data);
+        $this->template->load('template2','internship_type_form', $data);
     }
     
     public function create_action() 
@@ -87,7 +90,7 @@ class Internship_type extends CI_Controller
 		'judul' => 'INTERNSHIP_TYPE',
 		'subjudul' =>'Update',
 	    );
-            $this->template->load('template','internship_type_form', $data);
+            $this->template->load('template2','internship_type_form', $data);
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
             redirect(site_url('internship_type'));

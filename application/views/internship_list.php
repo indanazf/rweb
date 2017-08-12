@@ -16,14 +16,13 @@
             <thead>
                 <tr>
                     <th width="80px">No</th>
-		    <th>ID</th>
 		    <th>NAME</th>
 		    <th>UNIVERSITY</th>
 		    <th>SKILL</th>
 		    <th>EMAIL</th>
 		    <th>PHONE</th>
 		    <th>MOTIVATION</th>
-		    <th>ID POSITION</th>
+		    <th>POSITION</th>
 		    <th>Action</th>
                 </tr>
             </thead>
@@ -35,21 +34,20 @@
                 ?>
                 <tr>
 		    <td><?php echo ++$start ?></td>
-		    <td><?php echo $internship->ID ?></td>
 		    <td><?php echo $internship->NAME ?></td>
 		    <td><?php echo $internship->UNIVERSITY ?></td>
 		    <td><?php echo $internship->SKILL ?></td>
 		    <td><?php echo $internship->EMAIL ?></td>
 		    <td><?php echo $internship->PHONE ?></td>
 		    <td><?php echo $internship->MOTIVATION ?></td>
-		    <td><?php echo $internship->ID_POSITION ?></td>
+		    <td><?php echo $internship->TITLE ?></td>
 		    <td style="text-align:center" width="140px">
 			<?php 
-			echo anchor(site_url('internship/read/'.$internship->),'<i class="fa fa-eye"></i>',array('title'=>'detail','class'=>'btn btn-primary btn-sm')); 
+			echo anchor(site_url('internship/read/'.$internship->ID),'<i class="fa fa-eye"></i>',array('title'=>'detail','class'=>'btn btn-primary btn-sm')); 
 			echo '  '; 
-			echo anchor(site_url('internship/update/'.$internship->),'<i class="fa fa-pencil-square-o"></i>',array('title'=>'edit','class'=>'btn btn-warning btn-sm')); 
+			echo anchor(site_url('internship/update/'.$internship->ID),'<i class="fa fa-pencil-square-o"></i>',array('title'=>'edit','class'=>'btn btn-warning btn-sm')); 
 			echo '  '; 
-			echo anchor(site_url('internship/delete/'.$internship->),'<i class="fa fa-trash-o"></i>','title="delete" class="btn btn-danger btn-sm" onclick="javasciprt: return confirm(\'Are You Sure ?\')"'); 
+			echo anchor(site_url('internship/delete/'.$internship->ID),'<i class="fa fa-trash-o"></i>','title="delete" class="btn btn-danger btn-sm" onclick="javasciprt: return confirm(\'Are You Sure ?\')"'); 
 			?>
 		    </td>
 	        </tr>

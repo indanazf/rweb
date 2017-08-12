@@ -10,6 +10,9 @@ class Position_volunteer extends CI_Controller
     function __construct()
     {
         parent::__construct();
+        if(!isset($this->session->userdata['username'])){
+            redirect(site_url('auth/login'));
+        }
         $this->load->model('Position_volunteer_model');
         $this->load->library('form_validation');
     }
@@ -24,7 +27,7 @@ class Position_volunteer extends CI_Controller
 			'subjudul' =>'',
         );
 
-        $this->template->load('template','position_volunteer_list', $data);
+        $this->template->load('template2','position_volunteer_list', $data);
     }
 
     public function read($id) 
@@ -37,7 +40,7 @@ class Position_volunteer extends CI_Controller
 		'judul' => 'POSITION_VOLUNTEER',
 		'subjudul' =>'Read',
 	    );
-            $this->template->load('template','position_volunteer_read', $data);
+            $this->template->load('template2','position_volunteer_read', $data);
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
             redirect(site_url('position_volunteer'));
@@ -54,7 +57,7 @@ class Position_volunteer extends CI_Controller
 		'judul' => 'POSITION_VOLUNTEER',
 		'subjudul' =>'Create',
 	);
-        $this->template->load('template','position_volunteer_form', $data);
+        $this->template->load('template2','position_volunteer_form', $data);
     }
     
     public function create_action() 
@@ -87,7 +90,7 @@ class Position_volunteer extends CI_Controller
 		'judul' => 'POSITION_VOLUNTEER',
 		'subjudul' =>'Update',
 	    );
-            $this->template->load('template','position_volunteer_form', $data);
+            $this->template->load('template2','position_volunteer_form', $data);
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
             redirect(site_url('position_volunteer'));

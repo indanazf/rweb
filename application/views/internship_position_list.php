@@ -16,7 +16,7 @@
             <thead>
                 <tr>
                     <th width="80px">No</th>
-		    <th>ID TYPE</th>
+		    <th>TYPE</th>
 		    <th>TITLE</th>
 		    <th>DETAIL</th>
 		    <th>Action</th>
@@ -30,7 +30,7 @@
                 ?>
                 <tr>
 		    <td><?php echo ++$start ?></td>
-		    <td><?php echo $internship_position->ID_TYPE ?></td>
+		    <td><?php echo $internship_position->POSITION ?></td>
 		    <td><?php echo $internship_position->TITLE ?></td>
 		    <td><?php echo $internship_position->DETAIL ?></td>
 		    <td style="text-align:center" width="140px">

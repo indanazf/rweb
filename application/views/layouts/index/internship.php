@@ -86,8 +86,8 @@
 	    	<div class="col-md-8">
 	    		
 	    		<div class="internship__content__select">
-	    		<select name="id_type">
-	    		<option value="">Available Position</option>
+	    		<select name="id_type" required="true">
+	    		<option value="" required>Available Position</option>
 	    		<?php
                     $type = $this->db->get('internship_type');
                     foreach ($type->result() as $c){

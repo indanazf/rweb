@@ -57,7 +57,11 @@ class Auth extends CI_Controller {
                 //if the login is successful
                 //redirect them back to the home page
                 $this->session->set_flashdata('message', $this->ion_auth->messages());
-                redirect(site_url('about_us/admin'), 'refresh');
+                if($this->ion_auth->is_admin($this->session->userdata['user_id'])){
+                    redirect(site_url('about_us/admin'), 'refresh');
+                }else{
+                    redirect(site_url('scadmin'), 'refresh');
+                }
             } else {
                 // if the login was un-successful
                 // redirect them back to the login page
@@ -72,7 +76,7 @@ class Auth extends CI_Controller {
             $this->data['identity'] = array('name' => 'identity',
                 'id' => 'identity',
                 'class' => 'form-control',
-                'placeholder' => 'Email / Username',
+                'placeholder' => 'Email',
                 'type' => 'text',
                 'value' => $this->form_validation->set_value('identity'),
                 );

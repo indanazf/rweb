@@ -49,6 +49,9 @@ class Internship extends CI_Controller
 
     public function admin()
     {
+        if(!isset($this->session->userdata['username'])){
+            redirect(site_url('auth/login'));
+        }
         $internship = $this->Internship_model->get_all();
 
         $data = array(
@@ -57,7 +60,7 @@ class Internship extends CI_Controller
 			'subjudul' =>'',
         );
 
-        $this->template->load('template','internship_list', $data);
+        $this->template->load('template2','internship_list', $data);
     }
 
     public function read($id) 
@@ -72,14 +75,14 @@ class Internship extends CI_Controller
 		'EMAIL' => $row->EMAIL,
 		'PHONE' => $row->PHONE,
 		'MOTIVATION' => $row->MOTIVATION,
-		'ID_POSITION' => $row->ID_POSITION,
+		'ID_POSITION' => $row->TITLE,
 		'judul' => 'INTERNSHIP',
 		'subjudul' =>'Read',
 	    );
-            $this->template->load('template','internship_read', $data);
+            $this->template->load('template2','internship_read', $data);
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
-            redirect(site_url('internship'));
+            redirect(site_url('internship/admin'));
         }
     }
 
@@ -99,7 +102,7 @@ class Internship extends CI_Controller
 		'judul' => 'INTERNSHIP',
 		'subjudul' =>'Create',
 	);
-        $this->template->load('template','internship_form', $data);
+        $this->template->load('template2','internship_form', $data);
     }
     
     public function create_action() 
@@ -145,7 +148,7 @@ class Internship extends CI_Controller
 		'judul' => 'INTERNSHIP',
 		'subjudul' =>'Update',
 	    );
-            $this->template->load('template','internship_form', $data);
+            $this->template->load('template2','internship_form', $data);
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
             redirect(site_url('internship'));

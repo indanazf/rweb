@@ -18,7 +18,7 @@ class Internship_position_model extends CI_Model
     // get all
     function get_all()
     {
-        $this->db->order_by($this->id, $this->order);
+        $this->db->join("internship_type","internship_type.id=internship_position.id_type");
         return $this->db->get($this->table)->result();
     }
 
@@ -32,7 +32,9 @@ class Internship_position_model extends CI_Model
     // get data by id type
     function get_by_id_type($id)
     {
+        if($id){
         $this->db->where('ID_TYPE', $id);
+        }
         return $this->db->get($this->table)->result();
     }
     

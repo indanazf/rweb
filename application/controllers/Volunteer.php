@@ -23,6 +23,9 @@ class Volunteer extends CI_Controller
 
     public function admin()
     {
+        if(!isset($this->session->userdata['username'])){
+            redirect(site_url('auth/login'));
+        }
         $volunteer = $this->Volunteer_model->get_all();
 
         $data = array(
@@ -31,11 +34,14 @@ class Volunteer extends CI_Controller
 			'subjudul' =>'',
         );
 
-        $this->template->load('template','volunteer_list', $data);
+        $this->template->load('template2','volunteer_list', $data);
     }
 
     public function read($id) 
     {
+        if(!isset($this->session->userdata['username'])){
+            redirect(site_url('auth/login'));
+        }
         $row = $this->Volunteer_model->get_by_id($id);
         if ($row) {
             $data = array(
@@ -49,7 +55,7 @@ class Volunteer extends CI_Controller
 		'judul' => 'VOLUNTEER',
 		'subjudul' =>'Read',
 	    );
-            $this->template->load('template','volunteer_read', $data);
+            $this->template->load('template2','volunteer_read', $data);
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
             redirect(site_url('volunteer'));
@@ -58,6 +64,9 @@ class Volunteer extends CI_Controller
 
     public function create() 
     {
+        if(!isset($this->session->userdata['username'])){
+            redirect(site_url('auth/login'));
+        }
         $data = array(
             'button' => 'Create',
             'action' => site_url('volunteer/create_action'),
@@ -71,11 +80,14 @@ class Volunteer extends CI_Controller
 		'judul' => 'VOLUNTEER',
 		'subjudul' =>'Create',
 	);
-        $this->template->load('template','volunteer_form', $data);
+        $this->template->load('template2','volunteer_form', $data);
     }
     
     public function create_action() 
     {
+        if(!isset($this->session->userdata['username'])){
+            redirect(site_url('auth/login'));
+        }
         $this->_rules();
 
         if ($this->form_validation->run() == FALSE) {
@@ -98,6 +110,9 @@ class Volunteer extends CI_Controller
     
     public function update($id) 
     {
+        if(!isset($this->session->userdata['username'])){
+            redirect(site_url('auth/login'));
+        }
         $row = $this->Volunteer_model->get_by_id($id);
 
         if ($row) {
@@ -114,7 +129,7 @@ class Volunteer extends CI_Controller
 		'judul' => 'VOLUNTEER',
 		'subjudul' =>'Update',
 	    );
-            $this->template->load('template','volunteer_form', $data);
+            $this->template->load('template2','volunteer_form', $data);
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
             redirect(site_url('volunteer'));
@@ -123,6 +138,9 @@ class Volunteer extends CI_Controller
     
     public function update_action() 
     {
+        if(!isset($this->session->userdata['username'])){
+            redirect(site_url('auth/login'));
+        }
         $this->_rules();
 
         if ($this->form_validation->run() == FALSE) {
@@ -145,6 +163,9 @@ class Volunteer extends CI_Controller
     
     public function delete($id) 
     {
+        if(!isset($this->session->userdata['username'])){
+            redirect(site_url('auth/login'));
+        }
         $row = $this->Volunteer_model->get_by_id($id);
 
         if ($row) {
@@ -159,6 +180,9 @@ class Volunteer extends CI_Controller
 
     public function _rules() 
     {
+        if(!isset($this->session->userdata['username'])){
+            redirect(site_url('auth/login'));
+        }
 	$this->form_validation->set_rules('id_position', 'id position', 'trim|required');
 	$this->form_validation->set_rules('name', 'name', 'trim|required');
 	$this->form_validation->set_rules('activity', 'activity', 'trim|required');
@@ -172,6 +196,9 @@ class Volunteer extends CI_Controller
 
     public function excel()
     {
+        if(!isset($this->session->userdata['username'])){
+            redirect(site_url('auth/login'));
+        }
         $this->load->helper('exportexcel');
         $namaFile = "volunteer.xls";
         $judul = "volunteer";
@@ -221,6 +248,9 @@ class Volunteer extends CI_Controller
 
     public function word()
     {
+        if(!isset($this->session->userdata['username'])){
+            redirect(site_url('auth/login'));
+        }
         header("Content-type: application/vnd.ms-word");
         header("Content-Disposition: attachment;Filename=volunteer.doc");
 
@@ -234,6 +264,9 @@ class Volunteer extends CI_Controller
 
     function pdf()
     {
+        if(!isset($this->session->userdata['username'])){
+            redirect(site_url('auth/login'));
+        }
         $data = array(
             'volunteer_data' => $this->Volunteer_model->get_all(),
             'start' => 0
