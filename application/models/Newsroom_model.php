@@ -36,6 +36,7 @@ class Newsroom_model extends CI_Model
         $this->db->join('menu', 'menu.id = content_category.ID_MENU');
         $this->db->where('menu.name', 'Newsroom');
         $this->db->where('content_category.CATEGORY', $category);
+        $this->db->where('content.ID_TYPE', 0);
         return $this->db->get()->result();
     }
 
