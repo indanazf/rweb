@@ -77,34 +77,39 @@
 	        
 	    </div>
 
-		 
-
-
 	    </div>
 	    <br>
 	    <br>
 	    <br>
 	    <div class="row">
+	    <form action="<?php echo site_url('/internship/form/') ?>" method="post" name="intern-form">
 	    	<div class="col-md-8">
 	    		
 	    		<div class="internship__content__select">
-	    		<select>
-				  <option value="volvo">Available Position</option>
-				  <option value="volvo">Internship</option>
+	    		<select name="id_type">
+	    		<option value="">Available Position</option>
+	    		<?php
+                    $type = $this->db->get('internship_type');
+                    foreach ($type->result() as $c){
+                        echo "<option value='$c->ID' ";
+                        echo">".  strtoupper($c->POSITION)."</option>";
+                    }
+                ?>
 				</select>
 				</div>
 	    	</div>
 	    	<div class="col-md-4">
 	    		
-	    		<div class="internship__content__button">Join Now!</div>
+	    		<div type="submit" class="internship__content__button" onClick="document.forms['intern-form'].submit();">Join Now!</div>
 	    	</div>
+	    </form>
 	    </div>
 	  </div>
 	</div>
 	 
 </div>
 
-
+<!--
 	
 	<div class="internship__content4">
 		<div class="container">
@@ -203,3 +208,4 @@
 	        
 		</div>
 	</div>
+-->

@@ -49,36 +49,31 @@ class Newsroom extends CI_Controller
     }
 
     public function press_release(){
-        $success_stories = $this->Newsroom_model->get_by_category('press release');
-        $count_stories = $this->Newsroom_model->count_stories('press release');
-
+        $row = $this->Newsroom_model->get_by_category('press_release','list');
+        
         $this->load->view('layouts/header');
-        $this->load->view('layouts/index/press_release', $array = array('success' => $success_stories, 'counter'=>$count_stories,'judul' => 'Press Release'));
+        $this->load->view('layouts/index/press_release', $array = array('row' => $row));
         $this->load->view('layouts/footer'); 
     }
 
-    public function detail_press_release(){
-       
-
+    public function detail_press_release($id){
+        $row = $this->Newsroom_model->get_by_id($id);
         $this->load->view('layouts/header');
-        $this->load->view('layouts/index/detail_press_release');
+        $this->load->view('layouts/index/detail_press_release', $array = array('row'=>$row));
         $this->load->view('layouts/footer'); 
     }
 
     public function news(){
-        $success_stories = $this->Newsroom_model->get_by_category('news');
-        $count_stories = $this->Newsroom_model->count_stories('news');
-
+        $row = $this->Newsroom_model->get_by_category('in_news','list');
         $this->load->view('layouts/header');
-        $this->load->view('layouts/index/news', $array = array('success' => $success_stories, 'counter'=>$count_stories,'judul' => 'SC in News'));
+        $this->load->view('layouts/index/news', $array = array('row' => $row));
         $this->load->view('layouts/footer'); 
     }
 
     public function detail_news(){
-       
-
+        $row = $this->Newsroom_model->get_by_id($id);
         $this->load->view('layouts/header');
-        $this->load->view('layouts/index/detail_news');
+        $this->load->view('layouts/index/detail_news', $array = array('row'=>$row));
         $this->load->view('layouts/footer'); 
     }
 

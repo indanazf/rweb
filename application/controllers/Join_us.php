@@ -11,6 +11,7 @@ class Join_us extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Join_us_model');
+        $this->load->model('Career_model');
         $this->load->library('form_validation');
     }
 
@@ -27,9 +28,10 @@ class Join_us extends CI_Controller
     }
 
     public function career(){
-      $this->load->view('layouts/header');
-      $this->load->view('layouts/index/career');
-      $this->load->view('layouts/footer');
+      $c = $this->Career_model->get_all();
+        $this->load->view('layouts/header');
+        $this->load->view('layouts/index/career', $array = array('career'=>$c));
+        $this->load->view('layouts/footer');
     }
 
      public function partner(){

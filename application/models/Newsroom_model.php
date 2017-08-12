@@ -50,7 +50,7 @@ class Newsroom_model extends CI_Model
         }else{
             $this->db->where('content.ID_TYPE', 0);
         }
-        $this->db->where('menu.NAME', 'Our Impact');
+        $this->db->where('menu.NAME', 'Newsroom');
         $this->db->where('content_category.CATEGORY', $category);
         return $this->db->get()->result();
     }
