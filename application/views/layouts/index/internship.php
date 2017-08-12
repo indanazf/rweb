@@ -1,15 +1,16 @@
 
 <div class="internship">
-	<div class="banner-overlay  banner-overlay-internship wow animated fadeIn">
-		<img src="<?= base_url('/assets/images/bg5.png') ?>">
-	</div>
+	<!--<div class="banner-overlay  banner-overlay-internship wow animated fadeIn">
+		<!--<img src="<?= base_url('/assets/images/bg5.png') ?>">
+	</div>-->
 	
 	<div class="container">
 	  <div class="internship__content">
-	    <div class="internship__content__arrow-play"></div>
+	  	<iframe style="margin-left: -30px;margin-top: -140px;" width="1200" height="550" src="https://www.youtube.com/embed/IwzsXv4sw6k" frameborder="0"></iframe>
+	    <!--<div class="internship__content__arrow-play"></div>
 	    <div class="internship__content__line"></div>
 	    <div class="internship__content__title">What It’s Like To Be <br>Sahabat Cipta’s Intern!</div>
-	    
+	    -->
 	    
 	  </div>
 	  
@@ -26,7 +27,7 @@
 	<div class="container">
 	  <div class="internship__content3">
 	    
-	  <div class="internship__content3__title">3 Reasons Why Sahabat Cipta’s Internship is A Great Experience</div>
+	  <div class="internship__content3__title">3 Reasons Why Sahabat Cipta’s Internship<br> is A Great Experience</div>
 	  <div class="row">
 
 	  	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -39,7 +40,7 @@
 	          <div class="item active">
 	            <div class="col-md-4">
 				  	<div class="internship__content3__new__icon">
-				  		<img src="<?= base_url('/assets/images/sample-icon.png') ?>">
+				  		<img src="<?= base_url('/assets/images/intern-1.png') ?>">
 				  	</div>
 				</div>
 
@@ -51,7 +52,7 @@
 	          <div class="item">
 	            <div class="col-md-4">
 				  	<div class="internship__content3__new__icon">
-				  		<img src="<?= base_url('/assets/images/sample-icon.png') ?>">
+				  		<img src="<?= base_url('/assets/images/intern-2.png') ?>">
 				  	</div>
 				</div>
 
@@ -63,7 +64,7 @@
 	          <div class="item">
 	            <div class="col-md-4">
 				  	<div class="internship__content3__new__icon">
-				  		<img src="<?= base_url('/assets/images/sample-icon.png') ?>">
+				  		<img src="<?= base_url('/assets/images/intern-3.png') ?>">
 				  	</div>
 				</div>
 
@@ -187,7 +188,7 @@
 	        	<div class="form-group donation-box">
                     
                     <div class="col-sm-12">
-                      <textarea class="form-control" rows="13" name="NOTES" id="NOTES" placeholder="Tell us your motivation"></textarea>
+                      <textarea class="form-control" rows="13" name="NOTES" id="NOTES" placeholder="Tell us your motivation!"></textarea>
                     </div>
                   </div>
                   

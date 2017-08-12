@@ -21,7 +21,12 @@
           </div>  
           <div class="banner-3__content__infografis__content">
             <div class="banner-3__content__infografis__content__title"><?=$r->SUBJECT?></div>
-            <div class="banner-3__content__infografis__content__value"><?=$r->CONTENT?></div>
+            <div class="banner-3__content__infografis__content__value">
+              <?php
+                  $data_number = intval(preg_replace('/[^0-9]+/', '', $r->CONTENT), 10);
+                  $data_number = number_format($data_number)."<br>";
+                  echo $data_number;
+              ?></div>
           </div>
         </div>
         </div>

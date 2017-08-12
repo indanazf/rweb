@@ -28,7 +28,7 @@
 .annual-report__title,
 .success-stories__content__item__headline__title,
 .success-stories__badge,.donation__banner__title,
-.volunteer__content__title,.career__content2__item__title,.career__content2__title{
+.volunteer__content__title,.career__content2__item__title,.career__content2__title,{
 	font-family: 'Aller';
 }
 
@@ -55,16 +55,18 @@
 ,.become-partner__content__subtitle,.become-partner__content2__desc,
 .become-partner__content2__title,.become-partner__content3__title,
 .become-partner__content4__subtitle,.become-partner__content4__title,.become-partner__content2__item__title,.career__content2__item__read-more,
-.career__content3__title2,.career__content3__title,.career__content-detail__desc
+.career__content3__title2,.career__content3__title,.career__content-detail__desc,
+.internship__button,.donation-box
 {
 	font-family: 'OpenSans';
 }
 
 .banner-1__content__desc, .our-executive__content__subtitle , .our-executive__content__desc,
 .footer__right__table, .footer__left__button, .footer__left__email,.faq__answer,.faq__question,.donation__banner__subtitle,
-.donation-2__banner__subtitle,.donation-form, .my-title,.our-past__title,
+.donation-2__banner__subtitle,.donation-form, .our-past__title,
 .map-detail__content__title,.highcharts-legend,
-.highcharts-label, .highcharts-data-label,.volunteer__content__title,.career__content3__subtitle,{
+.highcharts-label, .highcharts-data-label,.volunteer__content__title,.career__content3__subtitle,.my-title,
+.internship__form__title,{
 	font-family: 'GothamBook';
 }
 
@@ -74,7 +76,8 @@
 .banner-2-2__content__item__desc, .footer__left__text, .join-us__banner__title,
 .join-us__content-2__title,
 .join-us__content-3__title,.career__content2__item__desc,.career__content-detail__title,.career__content-detail__position,
-.career__content-detail__value__title,.career__content-detail__value__desc{
+.career__content-detail__value__title,.career__content-detail__value__desc,.internship__content3__title,.internship__content3__new__title,
+.internship__content3__new__desc{
 	font-family: 'OpenSans-Semibold';
 }
 

@@ -17,10 +17,10 @@
 					<div class="join-us__content-1__desc wow animated fadeIn" data-wow-delay="1s">Be a part of our diverse professional team</div>
 				</div>
 				<div class="col-md-4">
-					<a href="<?php echo site_url('volunteer') ?>">
+					<a href="<?php echo site_url('internship') ?>">
 					<img src="<?= base_url() ?>assets/images/join-us__icon-2.png" class="join-us__content-1__img  wow animated fadeInUp" data-wow-delay="1s">
-					<div class="join-us__content-1__title wow animated fadeIn">Volunteering</div></a>
-					<div class="join-us__content-1__desc wow animated fadeIn" data-wow-delay="1s">Join our volunteer program</div>
+					<div class="join-us__content-1__title wow animated fadeIn">Internship</div></a>
+					<div class="join-us__content-1__desc wow animated fadeIn" data-wow-delay="1s">Join our internship program</div>
 				</div>
 				<div class="col-md-4">
 					<a href="<?php echo site_url('join_us/partner') ?>">
