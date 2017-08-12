@@ -132,13 +132,8 @@
                             </a>
                         </li>
                         <li>
-                            <a href="<?=site_url('volunteer/admin');?>">
-                                <i class="fa fa-laptop"></i> <span>Volunteer</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?=site_url('position_volunteer');?>">
-                                <i class="fa fa-laptop"></i> <span>Volunteer Position</span>
+                            <a href="<?=site_url('career/admin');?>">
+                                <i class="fa fa-laptop"></i> <span>Career</span>
                             </a>
                         </li>
                     </ul>

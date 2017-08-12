@@ -32,7 +32,7 @@ class Career extends CI_Controller
 			'subjudul' =>'',
         );
 
-        $this->template->load('template','career_list', $data);
+        $this->template->load('template2','career_list', $data);
     }
 
     public function read($id) 
@@ -127,7 +127,7 @@ class Career extends CI_Controller
 		'judul' => 'CAREER',
 		'subjudul' =>'Update',
 	    );
-            $this->template->load('template','career_form', $data);
+            $this->template->load('template2','career_form', $data);
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
             redirect(site_url('career'));
@@ -166,10 +166,10 @@ class Career extends CI_Controller
         if ($row) {
             $this->Career_model->delete($id);
             $this->session->set_flashdata('message', 'Delete Record Success');
-            redirect(site_url('career'));
+            redirect(site_url('career/admin'));
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
-            redirect(site_url('career'));
+            redirect(site_url('career/admin'));
         }
     }
 

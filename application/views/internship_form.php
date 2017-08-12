@@ -32,7 +32,6 @@
 	    <tr><td>ID POSITION <?php echo form_error('ID_POSITION') ?></td>
             <td><input type="text" class="form-control" name="ID_POSITION" id="ID_POSITION" placeholder="ID POSITION" value="<?php echo $ID_POSITION; ?>" />
         </td>
-	    <input type="hidden" name="" value="<?php echo $; ?>" /> 
 	    <tr><td colspan='2'><button type="submit" class="btn btn-primary"><?php echo $button ?></button> 
 	    <a href="<?php echo site_url('internship') ?>" class="btn btn-default">Cancel</a></td></tr>
 	
