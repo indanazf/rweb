@@ -603,7 +603,7 @@ body {
 }
 
 .banner-3__circle-button__item:hover .banner-3__circle-button__item__circle__item-1 {
-	background: url("../images/banner-5-icon-2.png") no-repeat center center;
+	background: url("../images/banner-5-icon-2-hover.png") no-repeat center center;
 }
 
 .banner-3__circle-button__item__circle__item-2 {
@@ -611,7 +611,7 @@ body {
 }
 
 .banner-3__circle-button__item:hover .banner-3__circle-button__item__circle__item-2 {
-	background: url("../images/banner-5-icon-1.png") no-repeat center center;
+	background: url("../images/banner-5-icon-1-hover.png") no-repeat center center;
 }
 
 .banner-4 {
@@ -880,7 +880,7 @@ body {
 
 .introducing__banner {
 	width: 100%;
-	height: 320px;
+	height: 420px;
 	overflow: hidden;
 	position: relative;
 }
@@ -1081,7 +1081,7 @@ body {
 
 .solution__banner {
 	width: 100%;
-	height: 320px;
+	height: 420px;
 	overflow: hidden;
 	position: relative;
 }
@@ -2622,6 +2622,10 @@ body {
 	margin-bottom: 40px;
 }
 
+.media-social-icon {
+	margin-top: 50px;
+}
+
 @media screen and (max-width: 1000px) {
 	.join-us__banner__title {
 		width: 100%;
@@ -2634,8 +2638,9 @@ body {
 		margin-left: 0px;
 	}
 
-	.banner-overlay-2 {
-		display: none;
+	.banner-overlay-2 img {
+		width: auto;
+		height: 100%;
 	}
 
 	.footer__left__email {

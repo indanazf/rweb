@@ -1,6 +1,6 @@
 <?php foreach($mission as $row){?>
 <div class="keys-role">
-	<div class="banner-overlay wow animated fadeIn">
+	<div class="banner-overlay banner-overlay-volunteer wow animated fadeIn">
 		<img src="<?= base_url('uploads/'.$row->IMG) ?>">
 	</div>
 	
@@ -20,6 +20,11 @@
 	    <?php 
 	    $wow_delay = $wow_delay + 0.25;
 	    }?>
+	  </div>
+	  <div class="volunteer__content__icon media-social-icon">
+	  	<div class="volunteer__content__icon__item"><img src="<?= base_url('/assets/images/Asset-2.png') ?>"></div>
+	  	<div class="volunteer__content__icon__item"><img src="<?= base_url('/assets/images/Asset-3.png') ?>"></div>
+	  	<div class="volunteer__content__icon__item"><img src="<?= base_url('/assets/images/Asset-4.png') ?>"></div>
 	  </div>
 	 </div>
 	 
