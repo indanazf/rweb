@@ -36,7 +36,7 @@
         <br>
       </div>
     </div>
-    <img src="<?= base_url('uploads/'.$row->IMG) ?>" class="banner-3__background  wow animated fadeInUp" data-wow-delay="1s">
+    <img style=" margin-top:10px;" src="<?= base_url('uploads/'.$row->IMG) ?>" class="banner-3__background  wow animated fadeInUp" data-wow-delay="1s">
     
 
     <div class="banner-3__circle-button">
