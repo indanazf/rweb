@@ -7,8 +7,9 @@
 		 	<div class="col-md-9">
 				 
 				  	<div class="career__content-detail__title"><?=$career->title?></div>
+				  	<div class="career__content-detail__position" style="margin-top: -30px; margin-bottom: 20px"><?=$career->subtitle?></div>
 				  	<div class="career__content-detail__desc"><?=$career->descriptions?></div>
-					<div class="career__content-detail__position"><b><?=$career->positions_available?> positions availables<b> | Deadline <?=$career->deadline?></div>
+					<!-- <div class="career__content-detail__position"><b><?=$career->positions_available?> positions availables<b> | Deadline <?=$career->deadline?></div> -->
 				      
 				      <div class="clear"></div>
 				  

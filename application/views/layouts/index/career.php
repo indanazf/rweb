@@ -37,7 +37,7 @@
 	    	<div class="col-md-7">
 	    		<div class="career__content2__item__title"><?=$row->title?></div>
 	    		<div class="career__content2__item__desc"><?=$row->subtitle?></div>
-	    		<div class="career__content2__item__read-more"><a href="<?php echo site_url('/career/detail/'.$row->id) ?>">SEE JOBS</a></div>
+	    		<div class="career__content2__item__read-more"><a href="<?php echo site_url('/career/detail/'.$row->id) ?>">SEE DETAILS</a></div>
 	    	</div>
 	    </div>
     </div>
@@ -85,7 +85,7 @@ dreams.</div>
   </div>
  </div>
 	 
-<div class="career">
+<!-- <div class="career">
 	<div class="banner-overlay  banner-overlay-career wow animated fadeIn ">
 		
 			<img src="<?= base_url('/assets/images/volunteer1.png') ?>">
@@ -103,7 +103,7 @@ dreams.</div>
 	  </div>
 	 </div>
 	 
-</div>
+</div> -->
 
 
 
