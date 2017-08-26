@@ -46,8 +46,7 @@
 .volunteer__content3__item2__subtitle,
 .volunteer__content3__item2__title,.volunteer__content3__item2__desc,
 .volunteer__content3__item3__title,.volunteer__content3__item3__desc,.volunteer__content3__item3__subtitle,
-.volunteer__content5__title,.volunteer__content5__button,.volunteer__form__title,.donation__button,
-.map-detail__content__desc,.volunteer__content__desc,.career__content__title,.career__content2__title
+.volunteer__content5__title,.volunteer__content5__button,.volunteer__form__title,.donation__button,.volunteer__content__desc,.career__content__title,.career__content2__title
 .career__content2__item__title, .career__content2__item__desc,.career__content2__item__read-more
 .career__content3__subtitle
 ,.career__content3__title
@@ -66,7 +65,8 @@
 .donation-2__banner__subtitle,.donation-form, .our-past__title,
 .map-detail__content__title,.highcharts-legend,
 .highcharts-label, .highcharts-data-label,.volunteer__content__title,.career__content3__subtitle,.my-title,
-.internship__form__title,{
+.internship__form__title,
+.map-detail__content__desc{
 	font-family: 'GothamBook';
 }
 

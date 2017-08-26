@@ -8,7 +8,7 @@
 
 		<div class="row">
 			
-			<div class="banner-overlay-map" data-wow-delay="0.5s" style="min-height: 700px;z-index: 99">
+			<div class="banner-overlay-map" data-wow-delay="0.5s" style="min-height: 700px;z-index: 99;">
 			<div class="col-md-3 u-pad" style="position: absolute;">
 			  <div class="our-past__title">
 			  	<?=$row->SUBJECT?>
@@ -115,7 +115,7 @@
 			  	<?php 
 			  	$pin_number++;
 			  	} ?>
-				<img src="<?= base_url('uploads/'.$row->IMG) ?>">
+				<img src="<?= base_url('uploads/'.$row->IMG) ?>" style="padding-top: 140px;">
 			</div>
 		</div>
 	</div>

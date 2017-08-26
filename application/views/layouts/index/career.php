@@ -25,7 +25,7 @@
 	
 <div class="container">
   <div class="career__content2">
-    <div class="career__content2__title">Together we provide people skills and create new opportunities<br> so that improve their lives. Want to be part of this experience?<br> Find your role.</div>
+    <!--<div class="career__content2__title">Together we provide people skills and create new opportunities<br> so that improve their lives. Want to be part of this experience?<br> Find your role.</div>-->
     
 	<?php foreach($career as $row){?>
 		<div class="col-md-6">
