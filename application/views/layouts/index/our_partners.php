@@ -33,7 +33,7 @@
       </div>
 
       <div class="col-md-12">
-        <a href="<?php echo site_url('our_works/all_partners') ?>"><div class="our-partner__circle__content__subtitle">All Partner</div>
+        <a href="<?php echo site_url('our_works/all_partners') ?>"><div class="our-partner__circle__content__subtitle">All Partner</div></a>
       </div>
       
   	</div>
