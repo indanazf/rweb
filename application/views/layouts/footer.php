@@ -84,16 +84,15 @@
 					// deleteLog = true;
 					// console.log("afterSlideLoad--" + "anchorLink: " + anchorLink + " index: " + index + " slideAnchor: " + slideAnchor + " slideIndex: " + slideIndex);
 					// console.log("----------------");
-
-					var own_index = slideAnchor + 1;
-					if(slideAnchor==0 || slideAnchor==1 || slideAnchor==2){
+					var own_index = slideIndex + 1;
+					if(slideIndex==0 || slideIndex==1 || slideIndex==2){
 						$("#banner-overlay__slider__animate-"+own_index).animate({width: "100%", height: "100%", left: "0", top: "0px", opacity: "1"}, 250);
 						$("#banner-1__content__animate-"+own_index).animate({opacity: "1"}, 500);
 						$("#banner-1__content__title__animate-"+own_index).delay(250).animate({opacity: "1", marginTop: "0"}, 500);
 						$("#banner-1__content__desc__animate-"+own_index).delay(500).animate({opacity: "1", marginTop: "0"}, 500);
-					}else if(slideAnchor==3 || slideAnchor==4){
+					}else if(slideIndex==3 || slideIndex==4){
 						$("#banner-overlay__slider__animate-"+own_index).animate({width: "100%", height: "100%", left: "0", top: "0px", opacity: "1"}, 250);
-						if (slideAnchor==3){
+						if (slideIndex==3){
 							$("#our-team__content__animate").delay(500).animate({opacity: "1"}, 500);
 						}else{
 							$("#our-executive__content__animate").delay(500).animate({opacity: "1"}, 500);

@@ -21,7 +21,7 @@
 		} else {
 		?>
 		
-			<div class="slide" <?php if ($index__slider==2){ ?>data-anchor="ourworks"<?php }else{ ?>data-anchor="ourimpact"<?php } ?>>
+			<div class="slide" data-anchor="<?php if ($index__slider==2){ echo "ourworks"; }else{ echo "ourimpact"; } ?>">
 				<div class="banner" id="aboutus">
 					<div class="banner-overlay__slider__animate" id="banner-overlay__slider__animate-<?=$index__slider?>">
 						<img src="<?= base_url('uploads/'.$row->IMG) ?>" class="banner-overlay__slider__img">
