@@ -9,8 +9,10 @@ function GotoPage(page){
 	
 
 	$('html, body').animate({
-        scrollTop: $('#'+page).offset().top-100
-    }, 1000);
+      scrollTop: $('#'+page).offset().top-100
+  }, 1000);
+ //window.history.pushState('page2', 'Title', window.location.pathname + page);
+ parent.location.hash = page;
 
 	// $('.navbar-nav li').removeClass('active');
  //    $('#'+page+'_nav').addClass('active');

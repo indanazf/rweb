@@ -3,7 +3,7 @@
 		foreach($about_us as $row){
 		if($index__slider == 1){
 		?>
-			<div class="slide" data-anchor="aboutus">
+			<div class="slide" data-anchor="1">
  				<div class="banner" id="aboutus">
  					<div class="banner-overlay__slider__animate" id="banner-overlay__slider__animate-<?=$index__slider?>">
  						<img src="<?= base_url('uploads/'.$row->IMG) ?>">
@@ -21,7 +21,7 @@
 		} else {
 		?>
 		
-			<div class="slide" data-anchor="<?php if ($index__slider==2){ echo "ourworks"; }else{ echo "ourimpact"; } ?>">
+			<div class="slide" data-anchor="<?php if ($index__slider==2){ echo "2"; }else{ echo "3"; } ?>">
 				<div class="banner" id="aboutus">
 					<div class="banner-overlay__slider__animate" id="banner-overlay__slider__animate-<?=$index__slider?>">
 						<img src="<?= base_url('uploads/'.$row->IMG) ?>" class="banner-overlay__slider__img">
@@ -40,7 +40,7 @@
 		$index__slider++;
 		} ?>
 		
-		<div class="slide" data-anchor="getinvolved">
+		<div class="slide" data-anchor="4">
 			<?php foreach($team as $t){?>
 				<div class="our-team">
 					<div class="banner-overlay__slider__animate" id="banner-overlay__slider__animate-4">
@@ -56,7 +56,7 @@
 				</div>
 			<?php }?>
 		</div>
-		<div class="slide" data-anchor="newsroom">
+		<div class="slide" data-anchor="5">
 			<?php foreach($executive as $e){?>
 				<div class="our-executive">
 					<div class="banner-overlay__slider__animate" id="banner-overlay__slider__animate-5">
