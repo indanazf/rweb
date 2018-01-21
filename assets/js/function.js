@@ -7,10 +7,15 @@ $("#GotoPage").click(function() {
 function GotoPage(page){
 
 	
-
-	$('html, body').animate({
-      scrollTop: $('#'+page).offset().top-100
-  }, 1000);
+  if ($( window ).width() < 769) {
+    $('html, body').animate({
+        scrollTop: $('#'+page).offset().top-64
+    }, 1000);
+  } else {
+  	$('html, body').animate({
+        scrollTop: $('#'+page).offset().top-100
+    }, 1000);
+  }
  //window.history.pushState('page2', 'Title', window.location.pathname + page);
  parent.location.hash = page;
 
