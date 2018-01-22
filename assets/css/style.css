@@ -1,3 +1,4 @@
+
 body {
 	font-family: arial;
 	background: #fff;
@@ -3208,6 +3209,10 @@ body {
 }
 
 
-
-
-
+/* Important part */
+.modal-dialog{
+    overflow-x: initial !important
+}
+.modal-body{
+    overflow-x: auto;
+}
