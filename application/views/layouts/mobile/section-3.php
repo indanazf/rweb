@@ -1,4 +1,3 @@
-
 <?php foreach($our_impact as $row){?>
 <div class="container" id="impact">
   <div class="u-mrgn-top--20 u-mrgn-bottom--20">
@@ -52,4 +51,5 @@
     <div class="clear"></div>
   </div>
 </div>
+
 <?php } ?>
