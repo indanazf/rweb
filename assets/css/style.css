@@ -3188,5 +3188,10 @@ body {
 
 
 
-
-
+/* Important part */
+.modal-dialog{
+    overflow-x: initial !important
+}
+.modal-body{
+    overflow-x: auto;
+}
