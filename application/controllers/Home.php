@@ -19,6 +19,7 @@ class Home extends CI_Controller
         $this->load->model('Team');
         $this->load->model('Content_image_model');
         $this->load->library('form_validation');
+        $this->load->library('user_agent');
     }
 
     
@@ -45,14 +46,26 @@ class Home extends CI_Controller
         $image_p1 = $this->Our_Works_model->get_by_category_image1('partners');
         $image_p2 = $this->Our_Works_model->get_by_category_image2('partners');
         
-        $this->load->view('layouts/header');
-        $this->load->view('layouts/about_us/section1', $array = array('about_us'=>$about_us,'team'=>$team,'executive'=>$executive));
-        $this->load->view('layouts/about_us/section2', $array = array('our_works'=>$our_works, 'bg'=>$bg, 'content'=>$data, 'bg2'=>$bg2, 'bg_ph'=>$bg_ph, 'bg_p'=>$bg_p, 'image_p1'=>$image_p1,'image_p2'=>$image_p2));
-        $this->load->view('layouts/about_us/section3', $array = array('our_impact'=>$our_impact, 'our_impact_list'=>$our_impact_list));
-        $this->load->view('layouts/about_us/section4', $array = array('get_involved'=>$get_involved));
-        $this->load->view('layouts/about_us/section5', $array = array('content_press'=>$content_press_release, 'content_news'=>$content_in_news));
-        $this->load->view('layouts/about_us/section6');
-        $this->load->view('layouts/footer');
+        if ($this->agent->is_mobile()){
+          $this->load->view('layouts/header_mobile');
+          $this->load->view('layouts/mobile/home', $array = array(
+            'about_us' => $about_us, 'team' => $team, 'executive' => $executive,
+            'our_works'=>$our_works, 'bg'=>$bg, 'content'=>$data, 'bg2'=>$bg2, 'bg_ph'=>$bg_ph, 'bg_p'=>$bg_p, 'image_p1'=>$image_p1,'image_p2'=>$image_p2,
+            'our_impact'=>$our_impact, 'our_impact_list'=>$our_impact_list,
+            'get_involved'=>$get_involved,
+            'content_press'=>$content_press_release, 'content_news'=>$content_in_news
+          ));
+          $this->load->view('layouts/footer_mobile');
+        } else {
+          $this->load->view('layouts/header');
+          $this->load->view('layouts/about_us/section1', $array = array('about_us'=>$about_us,'team'=>$team,'executive'=>$executive));
+          $this->load->view('layouts/about_us/section2', $array = array('our_works'=>$our_works, 'bg'=>$bg, 'content'=>$data, 'bg2'=>$bg2, 'bg_ph'=>$bg_ph, 'bg_p'=>$bg_p, 'image_p1'=>$image_p1,'image_p2'=>$image_p2));
+          $this->load->view('layouts/about_us/section3', $array = array('our_impact'=>$our_impact, 'our_impact_list'=>$our_impact_list));
+          $this->load->view('layouts/about_us/section4', $array = array('get_involved'=>$get_involved));
+          $this->load->view('layouts/about_us/section5', $array = array('content_press'=>$content_press_release, 'content_news'=>$content_in_news));
+          $this->load->view('layouts/about_us/section6');
+          $this->load->view('layouts/footer');
+        }  
     }
 
     public function twitter(){
