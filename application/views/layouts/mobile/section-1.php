@@ -35,6 +35,7 @@
               <div class="u-mrgn-top--20 u-mrgn-bottom--20">
                 <div class="u-txt--20"><?=$row->SUBJECT?></div>
                 <div class=""><?=$row->CONTENT?></div>
+                <a href="<?php echo site_url($row->LINK) ?>"><?=$row->TAGS?></a>
               </div>
             </div>
         </div>
@@ -47,8 +48,9 @@
           <img src="<?= base_url('uploads/'.$t->IMG) ?>">
            <div class="container">
               <div class="u-mrgn-top--20 u-mrgn-bottom--20">
-                <div class="u-txt--20"><?=$row->SUBJECT?></div>
-                <div class=""><?=$row->CONTENT?></div>
+                <div class="u-txt--20"><?=$t->SUBJECT?></div>
+                <div class=""><?=$t->CONTENT?></div>
+                <a href="<?php echo site_url($t->LINK) ?>"><span><?=$t->TAGS?></span></a>
               </div>
             </div>
         </div>
@@ -61,8 +63,9 @@
           <img src="<?= base_url('uploads/'.$e->IMG) ?>">
            <div class="container">
               <div class="u-mrgn-top--20 u-mrgn-bottom--20">
-                <div class="u-txt--20"><?=$row->SUBJECT?></div>
-                <div class=""><?=$row->CONTENT?></div>
+                <div class="u-txt--20"><?=$e->SUBJECT?></div>
+                <div class=""><?=$e->CONTENT?></div>
+                <a href="<?php echo site_url($e->LINK) ?>"><?=$e->TAGS?></a>
               </div>
             </div>
         </div>
