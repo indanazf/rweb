@@ -2627,9 +2627,12 @@ body {
 }
 
 .fp-controlArrow {
-	top: 60%;
+	top: 36%;
 }
 
+.carousel-indicators {
+	top: 50%;
+}
 
 /*------------- Utilities -----------------*/
 .u-hidden {
@@ -2952,6 +2955,14 @@ body {
 	height: 100%;
 }
 
+.carousel-control.left {
+	background-image: none;
+}
+
+.carousel-control.right {
+	background-image: none;
+}
+
 @media screen and (max-width: 768px) {
 	.banner-2__content {
 		margin-top: 40px;
@@ -3067,6 +3078,16 @@ body {
 	.banner-6__item {
 		width: 60%;
 		margin: 20px auto;
+	}
+
+	.banner-3__detail-button {
+		position: unset;
+		float: left;
+    	width: 30%;
+	}
+
+	.banner-3__circle-button__item {
+		width: 33%;
 	}
 }
 

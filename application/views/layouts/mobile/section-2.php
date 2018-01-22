@@ -1,9 +1,5 @@
 <?php foreach($our_works as $row){?>
 <div class="container" id="works">
-  <div class="u-mrgn-top--20">
-    <div class="u-txt--20">Sahabat Cipta</div>
-    <div class="">is an Indonesian social enterprise that focuses on community's economic and social empowerment.</div>
-  </div>
   <div class="banner-2__content wow animated fadeInRight animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInRight;"> 
     <div class="banner-2__content__title"><?=$row->SUBJECT?></div>
     <div class="banner-2__content__desc"><p><?=$row->CONTENT?></p></div>

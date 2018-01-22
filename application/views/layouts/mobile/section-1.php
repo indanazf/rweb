@@ -31,6 +31,12 @@
         ?>
         <div class="item <?php if($index__slider==1){ ?>active<?php } ?>">
           <img src="<?= base_url('uploads/'.$row->IMG) ?>">
+          <div class="container">
+              <div class="u-mrgn-top--20 u-mrgn-bottom--20">
+                <div class="u-txt--20"><?=$row->SUBJECT?></div>
+                <div class=""><?=$row->CONTENT?></div>
+              </div>
+            </div>
         </div>
         <?php 
         $index__slider++;
@@ -39,6 +45,12 @@
         <?php foreach($team as $t){?>
         <div class="item <?php if($index__slider==1){ ?>active<?php } ?>">
           <img src="<?= base_url('uploads/'.$t->IMG) ?>">
+           <div class="container">
+              <div class="u-mrgn-top--20 u-mrgn-bottom--20">
+                <div class="u-txt--20"><?=$row->SUBJECT?></div>
+                <div class=""><?=$row->CONTENT?></div>
+              </div>
+            </div>
         </div>
         <?php 
         $index__slider++;
@@ -47,6 +59,12 @@
         <?php foreach($executive as $e){?>
         <div class="item <?php if($index__slider==1){ ?>active<?php } ?>">
           <img src="<?= base_url('uploads/'.$e->IMG) ?>">
+           <div class="container">
+              <div class="u-mrgn-top--20 u-mrgn-bottom--20">
+                <div class="u-txt--20"><?=$row->SUBJECT?></div>
+                <div class=""><?=$row->CONTENT?></div>
+              </div>
+            </div>
         </div>
         <?php 
         $index__slider++;

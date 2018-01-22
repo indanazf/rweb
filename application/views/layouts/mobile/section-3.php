@@ -30,24 +30,29 @@
 </div>
 
   <div class="banner-3__circle-button">
-    <a href="<?= base_url() ?>index.php/our_impact#firstPage/1">
-    <div class="banner-3__circle-button__item  wow animated fadeInUp animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+    <a href="<?= base_url() ?>our_impact#firstPage/1">
+    <div class="banner-3__circle-button__item  wow animated fadeInUp animated" data-wow-delay="0.4s" >
       <div class="banner-3__circle-button__item__circle banner-3__circle-button__item__circle__item-1">
         
       </div>
-      <div class="banner-3__circle-button__item__desc wow animated zoomIn animated" style="visibility: visible; animation-name: zoomIn;">
+      <div class="banner-3__circle-button__item__desc wow animated zoomIn animated">
         Annual Report 2016-2017
       </div>
     </div>
     </a>
-    <a href="<?= base_url() ?>index.php/our_impact#firstPage/2">
-    <div class="banner-3__circle-button__item wow animated fadeInUp animated" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+    <a href="<?= base_url() ?>our_impact#firstPage/2">
+    <div class="banner-3__circle-button__item wow animated fadeInUp animated" data-wow-delay="0.6s" >
       <div class="banner-3__circle-button__item__circle banner-3__circle-button__item__circle__item-2">
       </div>
       <div class="banner-3__circle-button__item__desc">
         Success Stories
       </div>
     </div>
+    </a>
+    <a href="<?= base_url() ?>our_impact">
+      <div class="banner-3__detail-button  wow fadeInUp animated" data-wow-delay="1.5s" >
+        <div class="banner-3__detail-button__title">Scoreboard</div>
+      </div>
     </a>
     <div class="clear"></div>
   </div>
