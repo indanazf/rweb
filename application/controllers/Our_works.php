@@ -15,6 +15,7 @@ class Our_works extends CI_Controller
         $this->load->model('Content_model');
         $this->load->model('Content_image_model');
         $this->load->library('form_validation');
+        $this->load->library('user_agent');
     }
 
     
@@ -48,17 +49,32 @@ class Our_works extends CI_Controller
         $bg = $this->Our_Works_model->get_by_category('partners');
         $image1 = $this->Our_Works_model->get_by_category_image1('partners');
         $image2 = $this->Our_Works_model->get_by_category_image2('partners');
+
+        if ($this->agent->is_mobile()){
+          $this->load->view('layouts/header_mobile');
+          //$this->load->view('layouts/index/our_partners',  $array = array('bg' => $bg, 'image1'=> $image1, 'image2'=>$image2));
+          $this->load->view('layouts/footer_mobile');
+        } else {
+
         $this->load->view('layouts/header');
         $this->load->view('layouts/index/our_partners',  $array = array('bg' => $bg, 'image1'=> $image1, 'image2'=>$image2));
         $this->load->view('layouts/footer');
+        }
     }
 
     public function all_partners(){
         $bg = $this->Our_Works_model->get_by_category('partners');
         $image = $this->Our_Works_model->get_by_category_image('partners');
-        $this->load->view('layouts/header');
-        $this->load->view('layouts/index/all_partners',  $array = array('bg' => $bg, 'image'=> $image));
-        $this->load->view('layouts/footer');
+
+        if ($this->agent->is_mobile()){
+            $this->load->view('layouts/header_mobile');
+            $this->load->view('layouts/mobile/all_partners',  $array = array('bg' => $bg, 'image'=> $image));
+            $this->load->view('layouts/footer_mobile');
+        } else {
+            $this->load->view('layouts/header');
+            $this->load->view('layouts/index/all_partners',  $array = array('bg' => $bg, 'image'=> $image));
+            $this->load->view('layouts/footer');
+        }
     }
 
     public function downloads(){

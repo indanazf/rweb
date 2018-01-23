@@ -15,6 +15,7 @@ class About_us extends CI_Controller
         $this->load->model('Team');
         $this->load->model('Content_image_model');
         $this->load->library('form_validation');
+        $this->load->library('user_agent');
     }
 
     
@@ -34,24 +35,45 @@ class About_us extends CI_Controller
 
     public function introducing(){
         $content_introducing = $this->About_Us_model->get_by_category('introducing');
-        $this->load->view('layouts/header');
-        $this->load->view('layouts/index/introducing', $array = array('content_introducing'=>$content_introducing));
-        $this->load->view('layouts/footer');
+
+        if ($this->agent->is_mobile()){
+          $this->load->view('layouts/header_mobile');
+          $this->load->view('layouts/mobile/introducing', $array = array('content_introducing'=>$content_introducing));
+          $this->load->view('layouts/footer_mobile');
+        }else{
+            $this->load->view('layouts/header');
+            $this->load->view('layouts/index/introducing', $array = array('content_introducing'=>$content_introducing));
+            $this->load->view('layouts/footer');
+        }
     }
 
     public function vision(){
         $vision = $this->About_Us_model->get_by_category('vision');
-        $this->load->view('layouts/header');
-        $this->load->view('layouts/index/solutions', $array = array('vision'=>$vision));
-        $this->load->view('layouts/footer');
+
+        if ($this->agent->is_mobile()){
+          $this->load->view('layouts/header_mobile');
+          $this->load->view('layouts/mobile/solutions', $array = array('vision'=>$vision));
+          $this->load->view('layouts/footer_mobile');
+        }else{
+            $this->load->view('layouts/header');
+            $this->load->view('layouts/index/solutions', $array = array('vision'=>$vision));
+            $this->load->view('layouts/footer');
+        }
     }
 
     public function mission(){
         $mission = $this->About_Us_model->get_by_category_type('keys_role','background');
         $mission_list = $this->About_Us_model->get_by_category_type('keys_role','list');
-        $this->load->view('layouts/header');
-        $this->load->view('layouts/index/keys_role', $array = array('mission'=>$mission, 'list'=>$mission_list));
-        $this->load->view('layouts/footer');
+
+        if ($this->agent->is_mobile()){
+          $this->load->view('layouts/header_mobile');
+          $this->load->view('layouts/mobile/keys_role', $array = array('mission'=>$mission, 'list'=>$mission_list));
+          $this->load->view('layouts/footer_mobile');
+        }else{
+            $this->load->view('layouts/header');
+            $this->load->view('layouts/index/keys_role', $array = array('mission'=>$mission, 'list'=>$mission_list));
+            $this->load->view('layouts/footer');
+        }
     }
 
     public function team(){

@@ -91,7 +91,7 @@
         </div>
         <div class="modal-body">
           
-          <?php $this->load->view('layouts/index/our_partners'); ?>
+          <?php $this->load->view('layouts/mobile/our_partners'); ?>
 
         </div>
         <div class="modal-footer">
