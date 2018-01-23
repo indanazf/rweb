@@ -31,6 +31,7 @@
     </div>
   </div>
 
+  <div id="contact_us">
   <div id="carousel-example-generic-2" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
       
@@ -69,6 +70,7 @@
     <a class="right carousel-control" href="#carousel-example-generic-2" role="button" data-slide="next">
       <div class="fp-controlArrow fp-next"></div>
     </a>
+  </div>
   </div>
 </div>
 
