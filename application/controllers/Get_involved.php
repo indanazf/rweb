@@ -15,6 +15,7 @@ class Get_involved extends CI_Controller
         $this->load->model('Join_us_model');
         $this->load->model('Content_image_model');
         $this->load->library('form_validation');
+        $this->load->library('user_agent');
     }
 
     
@@ -44,9 +45,16 @@ class Get_involved extends CI_Controller
     public function join_us(){
         $join_us = $this->Join_us_model->get_by_category_type('join_us');
         $join_list = $this->Get_involved_model->get_by_category_type('join_us','list');
-        $this->load->view('layouts/header');
-        $this->load->view('layouts/index/join_us', $array = array('join_us'=>$join_us, 'join_list'=>$join_list));
-        $this->load->view('layouts/footer');
+
+        if ($this->agent->is_mobile()){
+            $this->load->view('layouts/header_mobile');
+            $this->load->view('layouts/mobile/join_us', $array = array('join_us'=>$join_us, 'join_list'=>$join_list));
+            $this->load->view('layouts/footer_mobile');
+        }else{
+            $this->load->view('layouts/header');
+            $this->load->view('layouts/index/join_us', $array = array('join_us'=>$join_us, 'join_list'=>$join_list));
+            $this->load->view('layouts/footer');
+        }
     }
 
     public function admin(){
