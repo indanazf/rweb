@@ -1,3 +1,9 @@
+<?php
+if ($this->agent->is_mobile()){
+    include 'footer_mobile.php';
+} else {
+?>
+
 	<div class="footer">
 		<div class="container">
 			<div class="col-md-6">
@@ -134,3 +140,6 @@
 
   </body>
 </html>
+<?php
+}
+?>

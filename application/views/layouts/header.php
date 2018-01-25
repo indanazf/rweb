@@ -1,3 +1,9 @@
+<?php
+if ($this->agent->is_mobile()){
+    include 'header_mobile.php';
+} else {
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -87,4 +93,6 @@
     
 
     <div class="header__frame"></div> 
-
+<?php
+}
+?>

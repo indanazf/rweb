@@ -46,8 +46,8 @@ class Home extends CI_Controller
         $image_p1 = $this->Our_Works_model->get_by_category_image1('partners');
         $image_p2 = $this->Our_Works_model->get_by_category_image2('partners');
         
+        $this->load->view('layouts/header');
         if ($this->agent->is_mobile()){
-          $this->load->view('layouts/header_mobile');
           $this->load->view('layouts/mobile/home', $array = array(
             'about_us' => $about_us, 'team' => $team, 'executive' => $executive,
             'our_works'=>$our_works, 'bg'=>$bg, 'content'=>$data, 'bg2'=>$bg2, 'bg_ph'=>$bg_ph, 'bg_p'=>$bg_p, 'image_p1'=>$image_p1,'image_p2'=>$image_p2,
@@ -57,7 +57,6 @@ class Home extends CI_Controller
           ));
           $this->load->view('layouts/footer_mobile');
         } else {
-          $this->load->view('layouts/header');
           $this->load->view('layouts/about_us/section1', $array = array('about_us'=>$about_us,'team'=>$team,'executive'=>$executive));
           $this->load->view('layouts/about_us/section2', $array = array('our_works'=>$our_works, 'bg'=>$bg, 'content'=>$data, 'bg2'=>$bg2, 'bg_ph'=>$bg_ph, 'bg_p'=>$bg_p, 'image_p1'=>$image_p1,'image_p2'=>$image_p2));
           $this->load->view('layouts/about_us/section3', $array = array('our_impact'=>$our_impact, 'our_impact_list'=>$our_impact_list));

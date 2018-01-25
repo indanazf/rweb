@@ -15,7 +15,7 @@ class Get_involved extends CI_Controller
         $this->load->model('Join_us_model');
         $this->load->model('Content_image_model');
         $this->load->library('form_validation');
-        $this->load->library('user_agent');
+        // $this->load->library('user_agent');
     }
 
     

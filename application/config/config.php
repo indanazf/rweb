@@ -25,7 +25,7 @@ date_default_timezone_set('Asia/Jakarta');
 */
 //$config['base_url'] = 'http://sahabatcipta.or.id/';
 //$config['base_url'] = 'http://localhost:8888/sahabat_cipta/';
-$config['base_url'] = 'http://localhost/rweb/';
+$config['base_url'] = 'http://localhost:8888/sahabat_cipta/';
 
 /*
 |--------------------------------------------------------------------------
